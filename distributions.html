@@ -1,0 +1,2627 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Probability Distributions | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <meta name="description" content="This is a free textbook written for students in my research methods classes." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Probability Distributions | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Probability Distributions | Data Analysis for Leadership &amp; Public Affairs:" />
+  
+  <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+<meta name="author" content="Anirudh V. S. Ruhil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="prob.html"/>
+<link rel="next" href="sampling.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/d3-4.10.2/d3.min.js"></script>
+<link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"],
+      bcancel: ["Extension","cancel"],
+      xcancel: ["Extension","cancel"],
+      cancelto: ["Extension","cancel"]
+    });
+  });
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-2');
+</script>
+
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="yihui_style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Public Affairs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#the-chapters-that-follow"><i class="fa fa-check"></i><b>1.2</b> The chapters that follow</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#keys-to-learning-data-analysis"><i class="fa fa-check"></i><b>1.3</b> Keys to Learning Data Analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Core Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#statistics-versus-statistic"><i class="fa fa-check"></i><b>2.1</b> Statistics versus Statistic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#parameters-versus-estimates"><i class="fa fa-check"></i><b>2.1.1</b> Parameters versus Estimates</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#sampling-error-and-bias"><i class="fa fa-check"></i><b>2.1.2</b> Sampling Error and Bias</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#key-elements-of-random-sampling"><i class="fa fa-check"></i><b>2.1.3</b> Key Elements of Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#useful-research-designs"><i class="fa fa-check"></i><b>2.2</b> Useful Research Designs</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#experimental"><i class="fa fa-check"></i><b>2.2.1</b> Experimental</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#natural-experiments"><i class="fa fa-check"></i><b>2.2.2</b> Natural Experiments</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#quasi-experiments"><i class="fa fa-check"></i><b>2.2.3</b> Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#elements-of-a-data-set"><i class="fa fa-check"></i><b>2.3</b> Elements of a Data-set</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#variable-types"><i class="fa fa-check"></i><b>2.4</b> Variable Types</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#cross-sectional-time-series-and-panel-data"><i class="fa fa-check"></i><b>2.5</b> Cross-sectional, Time-Series, and Panel Data</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="intro.html"><a href="intro.html#cross-sectional-data"><i class="fa fa-check"></i><b>2.5.1</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="intro.html"><a href="intro.html#time-series-data"><i class="fa fa-check"></i><b>2.5.2</b> Time-Series Data</a></li>
+<li class="chapter" data-level="2.5.3" data-path="intro.html"><a href="intro.html#panel-data"><i class="fa fa-check"></i><b>2.5.3</b> Panel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#levels-of-measurement"><i class="fa fa-check"></i><b>2.6</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#nominal"><i class="fa fa-check"></i><b>2.6.1</b> Nominal</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#ordinal"><i class="fa fa-check"></i><b>2.6.2</b> Ordinal</a></li>
+<li class="chapter" data-level="2.6.3" data-path="intro.html"><a href="intro.html#intervalratio"><i class="fa fa-check"></i><b>2.6.3</b> Interval/Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#the-tricky-business-of-cause-and-effect"><i class="fa fa-check"></i><b>2.7</b> The Tricky Business of Cause-and-Effect</a></li>
+<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#chapter-2-practice-problems"><i class="fa fa-check"></i><b>2.8</b> Chapter 2 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dataviz.html"><a href="dataviz.html"><i class="fa fa-check"></i><b>3</b> Visualizing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dataviz.html"><a href="dataviz.html#visualizing-nominalordinal-data"><i class="fa fa-check"></i><b>3.1</b> Visualizing Nominal/Ordinal Data</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dataviz.html"><a href="dataviz.html#bar-charts-and-frequency-tables"><i class="fa fa-check"></i><b>3.1.1</b> Bar-charts and Frequency Tables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dataviz.html"><a href="dataviz.html#contingency-tables-and-bar-charts"><i class="fa fa-check"></i><b>3.1.2</b> Contingency Tables and Bar-charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dataviz.html"><a href="dataviz.html#visualizing-intervalratio-data"><i class="fa fa-check"></i><b>3.2</b> Visualizing Interval/Ratio Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dataviz.html"><a href="dataviz.html#the-histogram"><i class="fa fa-check"></i><b>3.2.1</b> The Histogram</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dataviz.html"><a href="dataviz.html#grouped-frequency-tables"><i class="fa fa-check"></i><b>3.2.2</b> Grouped Frequency Tables</a></li>
+<li class="chapter" data-level="3.2.3" data-path="dataviz.html"><a href="dataviz.html#scatterplots"><i class="fa fa-check"></i><b>3.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="dataviz.html"><a href="dataviz.html#line-graphs"><i class="fa fa-check"></i><b>3.2.4</b> Line Graphs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="dataviz.html"><a href="dataviz.html#polar-charts"><i class="fa fa-check"></i><b>3.2.5</b> Polar Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="dataviz.html"><a href="dataviz.html#some-essential-rules-for-good-visualizations"><i class="fa fa-check"></i><b>3.3</b> Some Essential Rules for Good Visualizations</a></li>
+<li class="chapter" data-level="3.4" data-path="dataviz.html"><a href="dataviz.html#chapter-3-practice-problems"><i class="fa fa-check"></i><b>3.4</b> Chapter 3 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meansd.html"><a href="meansd.html"><i class="fa fa-check"></i><b>4</b> Central Tendency and Dispersion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="meansd.html"><a href="meansd.html#central-tendency"><i class="fa fa-check"></i><b>4.1</b> Central Tendency</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="meansd.html"><a href="meansd.html#mean"><i class="fa fa-check"></i><b>4.1.1</b> Mean</a></li>
+<li class="chapter" data-level="4.1.2" data-path="meansd.html"><a href="meansd.html#median"><i class="fa fa-check"></i><b>4.1.2</b> Median</a></li>
+<li class="chapter" data-level="4.1.3" data-path="meansd.html"><a href="meansd.html#mode"><i class="fa fa-check"></i><b>4.1.3</b> Mode</a></li>
+<li class="chapter" data-level="4.1.4" data-path="meansd.html"><a href="meansd.html#some-features-of-measures-of-central-tendency"><i class="fa fa-check"></i><b>4.1.4</b> Some Features of Measures of Central Tendency</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="meansd.html"><a href="meansd.html#dispersion-aka-variability"><i class="fa fa-check"></i><b>4.2</b> Dispersion (aka Variability)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="meansd.html"><a href="meansd.html#range"><i class="fa fa-check"></i><b>4.2.1</b> Range</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meansd.html"><a href="meansd.html#quartiles-and-interquartile-range"><i class="fa fa-check"></i><b>4.2.2</b> Quartiles and Interquartile Range</a></li>
+<li class="chapter" data-level="4.2.3" data-path="meansd.html"><a href="meansd.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.3</b> Variance and Standard Deviation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="meansd.html"><a href="meansd.html#why-n-1"><i class="fa fa-check"></i><b>4.2.4</b> Why <span class="math inline">\(n-1\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meansd.html"><a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation"><i class="fa fa-check"></i><b>4.3</b> Properties of the Mean and Variance/Standard Deviation</a></li>
+<li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
+<li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
+<li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
+<li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
+<li class="chapter" data-level="4.11" data-path="meansd.html"><a href="meansd.html#beware-the-flawed-rule"><i class="fa fa-check"></i><b>4.11</b> Beware the flawed rule</a></li>
+<li class="chapter" data-level="4.12" data-path="meansd.html"><a href="meansd.html#chapter-4-practice-problems"><i class="fa fa-check"></i><b>4.12</b> Chapter 4 Practice Problems</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-1-2"><i class="fa fa-check"></i>Problem 1</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-2-2"><i class="fa fa-check"></i>Problem 2</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-3-2"><i class="fa fa-check"></i>Problem 3</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-4-2"><i class="fa fa-check"></i>Problem 4</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-5-2"><i class="fa fa-check"></i>Problem 5</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-6-2"><i class="fa fa-check"></i>Problem 6</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-7-2"><i class="fa fa-check"></i>Problem 7</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-8-2"><i class="fa fa-check"></i>Problem 8</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>5</b> Probability</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="prob.html"><a href="prob.html#basic-concepts-and-terminology-of-probability-theory"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts and Terminology of Probability Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="prob.html"><a href="prob.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
+<li class="chapter" data-level="5.3" data-path="prob.html"><a href="prob.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="prob.html"><a href="prob.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
+<li class="chapter" data-level="5.3.2" data-path="prob.html"><a href="prob.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
+<li class="chapter" data-level="5.3.3" data-path="prob.html"><a href="prob.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
+<li class="chapter" data-level="5.3.4" data-path="prob.html"><a href="prob.html#example-4-fortune-500-companies"><i class="fa fa-check"></i><b>5.3.4</b> Example 4: Fortune 500 Companies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="prob.html"><a href="prob.html#the-complement-of-an-event"><i class="fa fa-check"></i><b>5.4</b> The Complement of an Event</a></li>
+<li class="chapter" data-level="5.5" data-path="prob.html"><a href="prob.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>5.5</b> Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.6" data-path="prob.html"><a href="prob.html#the-addition-rule-for-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.6</b> The Addition Rule for Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.7" data-path="prob.html"><a href="prob.html#addition-rule-for-non-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.7</b> Addition Rule for Non-Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.8" data-path="prob.html"><a href="prob.html#independent-events-and-the-multiplication-rule"><i class="fa fa-check"></i><b>5.8</b> Independent Events and the Multiplication Rule</a></li>
+<li class="chapter" data-level="5.9" data-path="prob.html"><a href="prob.html#decision-trees"><i class="fa fa-check"></i><b>5.9</b> Decision Trees</a></li>
+<li class="chapter" data-level="5.10" data-path="prob.html"><a href="prob.html#conditional-probability"><i class="fa fa-check"></i><b>5.10</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="prob.html"><a href="prob.html#the-gender-bias-example"><i class="fa fa-check"></i><b>5.10.1</b> The Gender-bias Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="prob.html"><a href="prob.html#dependent-events"><i class="fa fa-check"></i><b>5.11</b> Dependent Events</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="prob.html"><a href="prob.html#the-monty-hall-problem"><i class="fa fa-check"></i><b>5.11.1</b> The Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="prob.html"><a href="prob.html#bayes-theorem"><i class="fa fa-check"></i><b>5.12</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="5.12.1" data-path="prob.html"><a href="prob.html#another-example"><i class="fa fa-check"></i><b>5.12.1</b> Another Example</a></li>
+<li class="chapter" data-level="5.12.2" data-path="prob.html"><a href="prob.html#extending-bayes-rule"><i class="fa fa-check"></i><b>5.12.2</b> Extending Bayes Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="prob.html"><a href="prob.html#key-things-to-remember"><i class="fa fa-check"></i><b>5.13</b> Key Things to Remember</a></li>
+<li class="chapter" data-level="5.14" data-path="prob.html"><a href="prob.html#chapter-5-practice-problems"><i class="fa fa-check"></i><b>5.14</b> Chapter 5 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="distributions.html"><a href="distributions.html#random-variables"><i class="fa fa-check"></i><b>6.1</b> Random Variables</a></li>
+<li class="chapter" data-level="6.2" data-path="distributions.html"><a href="distributions.html#probability-distributions"><i class="fa fa-check"></i><b>6.2</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="distributions.html"><a href="distributions.html#discrete-probability-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Discrete Probability Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="distributions.html"><a href="distributions.html#continuous-probability-distributions"><i class="fa fa-check"></i><b>6.3</b> Continuous Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="distributions.html"><a href="distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>6.3.1</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="distributions.html"><a href="distributions.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>6.3.2</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="distributions.html"><a href="distributions.html#chapter-6-practice-problems"><i class="fa fa-check"></i><b>6.4</b> Chapter 6 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>7</b> The Theory of Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sampling.html"><a href="sampling.html#the-standard-error"><i class="fa fa-check"></i><b>7.1</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.2" data-path="sampling.html"><a href="sampling.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>7.2</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.3" data-path="sampling.html"><a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>7.3</b> Applying the Standard Error and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="sampling.html"><a href="sampling.html#example-1-2"><i class="fa fa-check"></i><b>7.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sampling.html"><a href="sampling.html#example-2-2"><i class="fa fa-check"></i><b>7.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sampling.html"><a href="sampling.html#the-sampling-distribution-of-binary-proportions"><i class="fa fa-check"></i><b>7.4</b> The Sampling Distribution of Binary Proportions</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="sampling.html"><a href="sampling.html#example-1-3"><i class="fa fa-check"></i><b>7.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.4.2" data-path="sampling.html"><a href="sampling.html#example-2-3"><i class="fa fa-check"></i><b>7.4.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="sampling.html"><a href="sampling.html#point-estimates"><i class="fa fa-check"></i><b>7.5</b> Point Estimates</a></li>
+<li class="chapter" data-level="7.6" data-path="sampling.html"><a href="sampling.html#interval-estimates"><i class="fa fa-check"></i><b>7.6</b> Interval Estimates</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="sampling.html"><a href="sampling.html#example-1-4"><i class="fa fa-check"></i><b>7.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.2" data-path="sampling.html"><a href="sampling.html#example-2-4"><i class="fa fa-check"></i><b>7.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.6.3" data-path="sampling.html"><a href="sampling.html#interval-estimates-for-binary-proportions"><i class="fa fa-check"></i><b>7.6.3</b> Interval Estimates for Binary Proportions</a></li>
+<li class="chapter" data-level="7.6.4" data-path="sampling.html"><a href="sampling.html#example-1-5"><i class="fa fa-check"></i><b>7.6.4</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.5" data-path="sampling.html"><a href="sampling.html#example-2-5"><i class="fa fa-check"></i><b>7.6.5</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="sampling.html"><a href="sampling.html#students-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Student’s t distribution</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="sampling.html"><a href="sampling.html#example-1-6"><i class="fa fa-check"></i><b>7.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.7.2" data-path="sampling.html"><a href="sampling.html#example-2-6"><i class="fa fa-check"></i><b>7.7.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.7.3" data-path="sampling.html"><a href="sampling.html#example-3"><i class="fa fa-check"></i><b>7.7.3</b> Example 3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="sampling.html"><a href="sampling.html#key-concepts-to-remember"><i class="fa fa-check"></i><b>7.8</b> Key Concepts to Remember</a></li>
+<li class="chapter" data-level="7.9" data-path="sampling.html"><a href="sampling.html#chapter-7-practice-problems"><i class="fa fa-check"></i><b>7.9</b> Chapter 7 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> The Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#articulating-the-hypotheses-to-be-tested"><i class="fa fa-check"></i><b>8.1</b> Articulating the Hypotheses to be tested</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.2</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#the-process-of-hypothesis-testing-an-example"><i class="fa fa-check"></i><b>8.3</b> The Process of Hypothesis Testing: An Example</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-7"><i class="fa fa-check"></i><b>8.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-7"><i class="fa fa-check"></i><b>8.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis.html"><a href="hypothesis.html#confidence-intervals-for-hypothesis-tests"><i class="fa fa-check"></i><b>8.4</b> Confidence Intervals for Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis.html"><a href="hypothesis.html#the-one-sample-t-test"><i class="fa fa-check"></i><b>8.5</b> The One-Sample t-test</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis.html"><a href="hypothesis.html#assumptions"><i class="fa fa-check"></i><b>8.5.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis.html"><a href="hypothesis.html#the-two-group-or-two-sample-t-test"><i class="fa fa-check"></i><b>8.6</b> The Two-group (or Two-sample) t-test</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-1"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-8"><i class="fa fa-check"></i><b>8.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-8"><i class="fa fa-check"></i><b>8.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="8.6.3" data-path="hypothesis.html"><a href="hypothesis.html#caution"><i class="fa fa-check"></i><b>8.6.3</b> Caution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis.html"><a href="hypothesis.html#paired-t-tests"><i class="fa fa-check"></i><b>8.7</b> Paired t-tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-2"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#the-testing-protocol"><i class="fa fa-check"></i>The Testing Protocol</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-9"><i class="fa fa-check"></i><b>8.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-9"><i class="fa fa-check"></i><b>8.7.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Leadership &amp; Public Affairs:</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="distributions" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Probability Distributions<a href="distributions.html#distributions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter and the next we build a bridge between the one sample we almost always have to work with and the population from which our sample was drawn. This is a crucial stage of our statistics knowledge-building for one major reason. Specifically, it is always easy to guess (correctly) what the sample will look like if we know what the population looks like. For example, imagine I show you a jar filled with 100 black marbles. I then blindfold you and ask you to pick 20 marbles. What color are they? Of course, all 20 marbles are black since that is the population. I then show you another jar, this one with 60 black, 20 white, and 20 red marbles. I then blindfold you again and ask you to pick 20 marbles and guess their colors. You might guess that the sample will show the same mix as the population: You might have 12 black, 4 white, and 4 red marbles. You could have a different mix but 12 black, 4 white and 4 red would be a reasonable guess.</p>
+<p>Now I blindfold you, place a jar before you and ask you to pick 20 marbles <em>without telling you the distribution of colored marbles in the jar</em>. What would you expect in your sample? You have no clue and nor should you since the population is unknown. This is what you face in statistics all the time: A population beyond your purview, flying blind so to speak. How then can you really generalize from your sample to the population? Only by way of the <code>theory of sampling distributions</code>, by knowing how much drift to expect between your sample and the population it represents. Understanding the finer points of the theory of sampling distributions is our goal in this chapter. To ease our understanding we start by grasping what is meant by <code>random variables</code> that are <code>discrete</code> versus <code>continuous</code>, looking at some <code>discrete versus continuous probability distributions</code>, and then working our way to the concepts of a <code>standard error</code>, the <code>central limit theorem</code>, and <code>confidence intervals</code>.</p>
+<div id="random-variables" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Random Variables<a href="distributions.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <code>random variable</code> is a numerical description of the outcome of an experiment. A <code>discrete random variable</code> assumes discrete values while a <code>continuous random variable</code> may assume any value in an interval or collection of intervals.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tabrv">TABLE 6.1: </span>Examples of Discrete Random Variables
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Random Variable
+</th>
+<th style="text-align:left;">
+Possible Values
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+No. of defective iPhones
+</td>
+<td style="text-align:left;">
+(0, 1, 2, 3,…, 49)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sex of car buyer
+</td>
+<td style="text-align:left;">
+(Male, Female)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+No. of Mountain Lions seen
+</td>
+<td style="text-align:left;">
+(0, 1, 2, 3, …, 419
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gene length (in nucleotides)
+</td>
+<td style="text-align:left;">
+(60, …, 100000)
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tabcv">TABLE 6.2: </span>Examples of Continuous Random Variables
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Random Variable
+</th>
+<th style="text-align:left;">
+Possible Values
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Gene length (in nucleotides)
+</td>
+<td style="text-align:left;">
+60 &lt;= x &lt;= 100000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Spending per week
+</td>
+<td style="text-align:left;">
+0 &lt;= x &lt;= infinity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Travel times to CMH
+</td>
+<td style="text-align:left;">
+55.4 &lt;= x &lt;= 118.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Undulation rates of gliding snakes
+</td>
+<td style="text-align:left;">
+0 &lt;= x &lt;= 1.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal length of the virginica Iris
+</td>
+<td style="text-align:left;">
+1 &lt;= x &lt;= 6.7
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="probability-distributions" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Probability Distributions<a href="distributions.html#probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A probability distribution is a list of the probabilities of all mutually exclusive events (aka outcomes) of a random trial. While both discrete and continuous variables have probability distributions, discrete probability distributions are easier to understand so let us begin with them.</p>
+<div id="discrete-probability-distributions" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Discrete Probability Distributions<a href="distributions.html#discrete-probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose we have an experiment whose outcome <span class="math inline">\((x)\)</span> depends on chance (i.e., is a <code>random variable</code>) and the sample space of the experiment is, as usual, the set of all possible outcomes of the experiment. If the sample space is either finite or countably infinite, the random variable is said to be <code>discrete</code>. A <code>probability distribution</code> of a discrete random variable (<span class="math inline">\(x\)</span>) describes how probabilities are distributed over the values of the random variable, and is denoted by <span class="math inline">\(f(x)\)</span>. Discrete probability functions must meet two conditions …</p>
+<p>The table below shows the number of persons waiting for service at a local office of the state’s Department of Motor Vehicles when the first employee walks up to open the counter. Let us assume that these data were gathered for a random stretch of 300 business days, and span two years.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:waiting">TABLE 6.3: </span>An Example of a Discrete Probability Distribution
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+No. waiting (x)
+</th>
+<th style="text-align:right;">
+Frequency (f)
+</th>
+<th style="text-align:right;">
+x * f(x)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+117
+</td>
+<td style="text-align:right;">
+0.39
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that <span class="math inline">\(\sum f = 300\)</span> and <span class="math inline">\(\sum x*f(x) = 1.00\)</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xrays"></span>
+<img src="stats_files/figure-html/xrays-1.svg" alt="Frequency Distribution of Number Waiting" width="100%" />
+<p class="caption">
+FIGURE 6.1: Frequency Distribution of Number Waiting
+</p>
+</div>
+<p>If you scan the table or the bar chart it is obvious what you should expect if you were the individual manning the counter. On any given day you should expect to see 1 person waiting to be served. Why? Because this is what seems to happen most often (117 out of the 300 days you kept logs).</p>
+<p>What if you were rolling dice instead?</p>
+<p>Note, again, that the first row with columns 1, 2, 3, 4, 5, and 6 are the numbers that show up on a roll of Dice 1 and the first column with rows 1, 2, 3, 4, 5, and 6 are the numbers that show up on a roll of Dice 2.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dice"></span>
+<img src="stats_files/figure-html/dice-1.svg" alt="Rolling Two Dice" width="100%" />
+<p class="caption">
+FIGURE 6.2: Rolling Two Dice
+</p>
+</div>
+<p>You have seen Table 6.4 before so it should be easy to figure out what would be the most likely sum of the numbers showing up on the faces of two dice you roll: <span class="math inline">\(7\)</span>. Why? Because that happens most often.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sumdice"></span>
+<img src="stats_files/figure-html/sumdice-1.svg" alt="Sum from Rolling Two Dice" width="100%" />
+<p class="caption">
+FIGURE 6.3: Sum from Rolling Two Dice
+</p>
+</div>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:diceagain">TABLE 6.4: </span>Sum of Two Dice
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+</tbody>
+</table>
+<div id="the-binomial-distribution" class="section level4 hasAnchor" number="6.2.1.1">
+<h4><span class="header-section-number">6.2.1.1</span> The Binomial Distribution<a href="distributions.html#the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let us take up another example, this time of flipping a coin. Say you flip a coin 10 times. So long as I know that it is a fair coin, what should I expect in terms of the distribution of the number of heads I would see? One way to answer this question would be to setup all possible outcomes such as no heads, 1 head, 2 heads, 3 heads, and so on but this would be a very tedious way of doing things. Instead, we rely on the <code>binomial distribution</code> which characterizes the distribution of binary outcomes, with the outcome of interest being tagged as a <strong>success</strong> and the other category tagged as a <strong>failure</strong>. Note that success could mean a patient survives (versus dies), a candidate for political office wins (versus loses), a tax audit catches a tax evader (versus fails to detect evasion), the job-training program works (versus it does not), and so on. The binomial distribution is premised upon some assumptions:</p>
+<ol style="list-style-type: decimal">
+<li>The number of trials (<span class="math inline">\(n\)</span>) is fixed</li>
+<li>Each trial is independent of all other trials</li>
+<li>Only two mutually exclusive and mutually exhaustive outcomes likely to occur in any given trial, with one outcome defined as <code>success</code> and the other defined as <code>failure</code></li>
+<li>The probability of observing a success (<span class="math inline">\(p\)</span>) does not vary across trials. Because there are only two outcomes, this means the probability of observing a failure (<span class="math inline">\(q\)</span>) also does not vary across trials. Further, <span class="math inline">\(p = 1 - q\)</span> and <span class="math inline">\(q = 1 - p\)</span></li>
+</ol>
+<p>Mathematically, the probability of observing <span class="math inline">\(x\)</span> successes in <span class="math inline">\(n\)</span> trials of a binomial process is given by</p>
+<p><span class="math display">\[\begin{eqnarray*}   
+P\left[x \text{ successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
+\text{where } \binom{n}{x} = \dfrac{n!}{x!(n-x)!} \text{ and } n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
+\end{eqnarray*}\]</span></p>
+<p>Let us understand this distribution with a simple example. If I toss a coin 2 times, what is the probability of getting exactly 1 head? Let success be the variable <span class="math inline">\(x\)</span> and then, in our present example, <span class="math inline">\(x=1\)</span>. Now we know that for unbiased coins there is a 50:50 chance of getting heads on any single toss, i.e., <span class="math inline">\(p(Heads)=0.50\)</span>. We are also conducting <span class="math inline">\(n=2\)</span> independent trials since we are flipping a coin twice and what happens on the first toss has no impact on what happens in the second toss.</p>
+<p>How many outcomes are likely in our 2 independent trials? We know this to be <span class="math inline">\((2)^{2} = 4\)</span> … these are <span class="math inline">\(\left[HH, HT, TH, TT \right]\)</span>. In how many ways can we get 1 head out of 2 tosses? … <span class="math inline">\(\left[HT, TH \right]\)</span>. So the probability of getting exactly 1 head in 2 tosses is <span class="math inline">\(\dfrac{2}{4} = 0.5\)</span>. This was easy to calculate manually, by spelling out all possible outcomes and then seeing how many of these outcomes match our definition of success. The binomial distribution would have given you the same answer:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P\left[x \text{ Successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
+    \therefore P\left[1 \text{ Success}\right] = \binom{2}{1}(0.50)^{1}\left(1 - 0.50\right)^{2-1} = \binom{2}{1}(0.50)^{1}\left(0.50\right)^{1} \\
+    \binom{2}{1} = \dfrac{2\times 1}{\left(1\right) \left(1 \right)} = 2 \\
+    \therefore, P\left[1 \text{ Success}\right] = (2) \times (0.5) \times (0.5) = 0.50
+\end{eqnarray*}\]</span></p>
+<p>If I toss a coin 3 times, what is the probability of getting exactly 1 head? Let <span class="math inline">\(x=1\)</span>. We know for unbiased coins <span class="math inline">\(p(Heads)=0.50\)</span>. We are also conducting <span class="math inline">\(n=3\)</span> independent trials. How many outcomes are likely in 3 independent trials? We know this to be <span class="math inline">\((2)^{3} = 8\)</span> … these are <span class="math inline">\(\left[HHH, HHT, HTH, HTT, TTT, TTH, THT, THH \right]\)</span>. In how many ways can we get 1 Head out of 3 tosses? … <span class="math inline">\(\left[HTT, THT, TTH \right]\)</span>. So the probability of getting exactly 1 Head in 3 tosses is <span class="math inline">\(\dfrac{3}{8} = 0.375\)</span> Using the binomial distribution,</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P\left[x \text{ Successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
+    \therefore P\left[1 \text{ Success}\right] = \binom{3}{1}(0.50)^{1}\left(1 - 0.50\right)^{3-1} = \binom{3}{1}(0.50)^{1}\left(0.50\right)^{2} \\
+    \binom{3}{1} = \dfrac{3 \times 2\times 1}{\left(1\right) \left(2 \times 1 \right)} = 3 \\
+    \therefore, P\left[1 \text{ Success}\right] = (3) \times (0.5) \times (0.25) = 0.375
+\end{eqnarray*}\]</span></p>
+<p>If I had to now answer the question we began with – what would the distribution of heads look like if I flipped a coin 10 times? – and I went the manual route I would be doing a lot of tedious calculations. Instead, I can use the binomial to calculate the probability of 0 heads, 1 head, 2 heads, and so on. For example, for 0 heads it would be</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P\left[x \text{ Successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
+    \therefore P\left[0 \text{ Success}\right] = \binom{10}{0}(0.50)^{0}\left(1 - 0.50\right)^{10-0} = \binom{10}{0}(0.50)^{0}\left(0.50\right)^{10} \\
+    \binom{10}{0} = \dfrac{10 \times 9 \times 8 \times \ldots\times 2\times 1}{\left(0\right) \left(10 \times 9 \times 8 \times \ldots \times 2 \times 1 \right)} = 1 \\
+    \therefore, P\left[0 \text{ Successes}\right] = (1) \times (0.5) \times (0.0009765625) = 0.0009765625
+\end{eqnarray*}\]</span></p>
+<p>For 1 head it would be</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P\left[x \text{ Successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
+    \therefore P\left[1 \text{ Success}\right] = \binom{10}{1}(0.50)^{1}\left(1 - 0.50\right)^{10-1} = \binom{10}{1}(0.50)^{1}\left(0.50\right)^{9} \\
+    \binom{10}{1} = \dfrac{10 \times 9 \times 8 \times \ldots\times 2\times 1}{\left(1\right) \left(9 \times 8 \times \ldots \times 2 \times 1 \right)} = 10 \\
+    \therefore, P\left[1 \text{ Success}\right] = (10) \times (0.5) \times (0.001953125) = 0.009765625
+\end{eqnarray*}\]</span></p>
+<p>and so on. The rest of the calculations are done similarly and listed in the table below:</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:binomexample">TABLE 6.5: </span>Number of Heads in 10 Coin Flips
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+No. of Heads
+</th>
+<th style="text-align:right;">
+Relative frequency f(x)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.0010
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0098
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0439
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.1172
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.2051
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.2461
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0.2051
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0.1172
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.0439
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.0098
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0.0010
+</td>
+</tr>
+</tbody>
+</table>
+<p>These relative frequencies (the probabilities) can also be seen in the plot below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:flips"></span>
+<img src="stats_files/figure-html/flips-1.svg" alt="Proportion of Heads in 10 Coin Flips" width="100%" />
+<p class="caption">
+FIGURE 6.4: Proportion of Heads in 10 Coin Flips
+</p>
+</div>
+<p>Now the question is, if you flip a coin 10 times, how many heads should you expect to see, on average? In the language of statistics we speak of probabilistic outcomes in terms of <code>expected value</code> where the expected value of a random variable is a measure of the <code>central tendency</code> of the random variable, and is given by <span class="math inline">\(E(x) = \mu = \Sigma xf(x)\)</span>. For our 10 flips, the expected value would be …</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:binomexample2">TABLE 6.6: </span>Number of Heads in 10 Coin Flips
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+No. of Heads (x)
+</th>
+<th style="text-align:right;">
+Relative Frequency (f(x))
+</th>
+<th style="text-align:right;">
+Expected Value (x * fx())
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.0010
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0098
+</td>
+<td style="text-align:right;">
+0.0097656
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0439
+</td>
+<td style="text-align:right;">
+0.0878906
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.1172
+</td>
+<td style="text-align:right;">
+0.3515625
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.2051
+</td>
+<td style="text-align:right;">
+0.8203125
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.2461
+</td>
+<td style="text-align:right;">
+1.2304688
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0.2051
+</td>
+<td style="text-align:right;">
+1.2304687
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0.1172
+</td>
+<td style="text-align:right;">
+0.8203125
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.0439
+</td>
+<td style="text-align:right;">
+0.3515625
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.0098
+</td>
+<td style="text-align:right;">
+0.0878906
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0.0010
+</td>
+<td style="text-align:right;">
+0.0097656
+</td>
+</tr>
+</tbody>
+</table>
+<p>Makes sense, doesn’t it? On average you would expect to see 5 heads in 10 flips of an unbiased coin. However, as the table makes quite clear, there is a small but non-zero probability of ending up with fewer or more heads as well.</p>
+<p>How does any of this apply to the real world? In more ways than one can imagine. For example, based on more than a century of birth statistics we know that the next birth will be a boy is 0.512 and hence that it will be a girl is 0.488. So if you wanted to predict the sex of the child born next the better bet would be that it is a boy. Let us put the binomial distribution into action with a few examples.</p>
+<div id="example-1" class="section level5 unnumbered hasAnchor">
+<h5>Example 1<a href="distributions.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Your city council has been charged with sex discrimination in hiring. In the last fiscal year your city council hired only 3 women out of a candidate pool numbering 12 qualified applicants. On average, some 40% of women tend to make up the qualified applicant pool for these positions. If the city council was not discriminating based on the applicant’s sex, what is the probability of the city hiring three or fewer women?</p>
+<p>We know the number of experiments/trials is <span class="math inline">\(n=12\)</span>. We also know that the number of successes, defined as the number of women hired, is <span class="math inline">\(x=3\)</span>. The probability of success, here the probability of hiring a qualified woman applicant, is known to be <span class="math inline">\(p=0.40\)</span>. Using the binomial theorem, then, we can calculate the probability of hiring no qualified woman applicant is given by</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P\left[x \text{ Successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
+    \therefore P\left[0 \text{ Successes}\right] = \binom{12}{0}(0.40)^{0}\left(1 - 0.40\right)^{12-0} = \binom{12}{0}(0.40)^{0}\left(0.60\right)^{12} \\
+    \binom{12}{0} = \dfrac{12 \times 10 \times 9 \times \ldots\times 2\times 1}{\left(0\right) \left(12 \times 10 \times 9 \times \ldots \times 2 \times 1 \right)} = 1 \\
+    \therefore, P\left[0 \text{ Successes}\right] = (1) \times (1) \times (0.002176782) = 0.002176782
+\end{eqnarray*}\]</span></p>
+<p>Similarly, calculating the probability of 1, 2 and 3 successes yields estimates of 0.01741426, 0.06385228 and 0.141894, respectively. Thus, the probability of seeing 3 or fewer women hired works out to <span class="math inline">\(0.002176782 + 0.01741426 + 0.06385228 + 0.141894 = 0.2253373\)</span>. Formally, then, <span class="math inline">\(P(x \leq 3) = 0.2253373\)</span>.</p>
+<p>Note that we could have used the online <a href="http://stattrek.com/m/online-calculator/binomial.aspx">binomial calculator</a> to do these calculations for us, saving precious time.</p>
+</div>
+<div id="example-2" class="section level5 unnumbered hasAnchor">
+<h5>Example 2<a href="distributions.html#example-2" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Seaman David Brady is one of 16 seamen in Petty Officer Rickels’ unit. Daily, four seamen are assigned to chip paint while the rest are assigned to screen movies suitable for viewing on the naval base. Assume that duty assignments are independent across days. Seamen Brady believes Rickels does not like him because he has ended up chipping paint 16 of the past 20 days.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that this would happen if Rickels was not discriminating against Brady?</li>
+</ol>
+<p>The probability of being assigned to chip paint is 0.25 for any individual. Setting <span class="math inline">\(p=0.25; n = 20; x = 16\)</span> in the calculator yields <span class="math inline">\(P(x=16)\)</span> <span class="math inline">\(&lt; 0.000001\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Do the data suggest Rickels is discriminating against Brady? Why do you conclude as you do?</li>
+</ol>
+<p>Yes, given the almost zero probability of this happening by chance it seems as if Brady is being picked on by Rickels.</p>
+</div>
+</div>
+<div id="the-poisson-distribution" class="section level4 hasAnchor" number="6.2.1.2">
+<h4><span class="header-section-number">6.2.1.2</span> The Poisson Distribution<a href="distributions.html#the-poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We can also track hurricanes, cyclones, earthquakes, etc. and measure their intensity. Or perhaps you are interested in figuring out the probability of a Shark Attack in a given year in a given place. You could look at the historical data and figure out the average number of attacks in this place per year. These data are <a href="http://www.sharkattackfile.net/spreadsheets/GSAF5.xls">available here</a>.</p>
+<p>Say I am only interested in incidents in the USA and Australia over the 1900-2017 period and want to know the number of incidents per year per country. This evident in the plot that follows.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sharks2"></span>
+<img src="stats_files/figure-html/sharks2-1.svg" alt="Shark Incidents in the USA and Australia (1900-2017)" width="100%" />
+<p class="caption">
+FIGURE 6.5: Shark Incidents in the USA and Australia (1900-2017)
+</p>
+</div>
+<p>The average number of incidents per country turns out to be almost 10 for Australia and about 17 for the USA. This would tell us that in any given year we should expect, on average, these many shark incidents in each country, respectively. Of course, something has gone on since about 2000 as reflected by the surge in the number of incidents. If we calculated the averages just for the 2000-2017 period we would likely see higher averages than for the pre-2000 period. In passing, note the surprising results both in the plot and in these means: Australia has fewer shark incidents, on average, than does the USA, but the news media usually carry stories of attacks in Australian waters.</p>
+<p>As it turns out, the variable of interest – number of shark incidents per country per year – is a discrete variable that can never drop below 0 but can assume any value <span class="math inline">\(x = 0, 1, 2, 3, 4, 5, \ldots, n\)</span>. Variables such as these are called count variables and belong to a specific distribution: The <code>Poisson distribution</code>. Mathematically, the Poisson probability distribution is expressed as:</p>
+<p><span class="math display">\[f(x) = \dfrac{e^{-x}\lambda^{x}}{x!}\]</span></p>
+<p>where <span class="math inline">\(x = 0, 1, 2, 3, \ldots\)</span>, <span class="math inline">\(\lambda &gt; 0\)</span> is the mean and variance of the distribution, and <span class="math inline">\(e=2.71828\)</span>.</p>
+<p>Several discrete random variables are assumed to be Poisson distributed – number of highway fatalities, number of persons in a household, number of patient visits to the Emergency Room, number of traffic stops, number of terrorist attacks, number of hurricanes rated Category 5 on the <a href="http://www.nhc.noaa.gov/aboutsshws.php">Saffir-Simpson Hurricane Wind Scale</a>, the number of citizen complaints filed with the City Clerk, the number of hazardous waste sites per county, the number of parolees violating the conditions of their parole per month, and so on. Say, for example, that on average 10 complaints are filed per month with the City Clerk. If you pick a month at random, what would be the probability of seeing no complaint?; 1 complaint?; 2 complaints; <span class="math inline">\(\ldots\)</span> 20 complaints? These turn out to be:</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:pois">TABLE 6.7: </span>Probability of Complaints
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+No. of Complaints
+</th>
+<th style="text-align:right;">
+Probability
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.0067379
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0336897
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0842243
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.1403739
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.1754674
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.1754674
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0.1462228
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0.1044449
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.0652780
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.0362656
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0.0181328
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+0.0082422
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0.0034342
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+0.0013209
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+0.0004717
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+0.0001572
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:complaints"></span>
+<img src="stats_files/figure-html/complaints-1.svg" alt="Probability Distribution of Complaints" width="100%" />
+<p class="caption">
+FIGURE 6.6: Probability Distribution of Complaints
+</p>
+</div>
+<div id="dispersion-versus-clumping" class="section level5 unnumbered hasAnchor">
+<h5>Dispersion versus Clumping<a href="distributions.html#dispersion-versus-clumping" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>If a discrete random variable is indeed Poisson generated, the mean should equal the variance. In passing, note that the Poisson distribution is premised on the following assumptions:</p>
+<ol style="list-style-type: decimal">
+<li>The probability <span class="math inline">\((p)\)</span> of observing a success in a small space or interval of time is approximately proportional to the area of the space or the length of the time interval</li>
+<li>The probability of two successes occurring in the same narrow interval of time or in a small space is negligible</li>
+<li>The probability <span class="math inline">\((p)\)</span> of observing a success in a small space or interval of time does not vary across space or time</li>
+<li>The probability <span class="math inline">\((p)\)</span> of observing a success in a small space or interval of time is independent of the probability <span class="math inline">\((p)\)</span> of observing a success in the next small space or interval of time</li>
+</ol>
+<p>If the mean exceeds the variance then we have a <code>dispersed</code> variable (i.e., events occur farther apart in space/time than would be expected by chance). An example of dispersion might be observed in the behavior of territorial animals such as lions and tigers that mark their own territory and guard it from competitors. So if you see one “success” (say, a lion), the probability of seeing another nearby/soon decreases. If the variance exceeds the mean we have <code>clumping</code> (i.e., events occur closer together in space/time than would be expected by chance). An example of clumping might be social animals (that herd together) and contagious diseases (outbreaks will occur within a spatial group). So if you see one “success” (say, a wildebeest), the probability of seeing another nearby/soon increases.</p>
+<p>Before we move on, note what happens to the distribution as the mean <span class="math inline">\((\lambda)\)</span> increases. The more commonly the event occurs, the more “normal” does the distribution look. The lower is the mean, the more likely you are to see a <code>positively skewed</code> distribution, and the higher the mean the more likely you will see a <code>negatively skewed</code> distribution.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pois2"></span>
+<img src="stats_files/figure-html/pois2-1.svg" alt="Some Poisson Distributions" width="100%" />
+<p class="caption">
+FIGURE 6.7: Some Poisson Distributions
+</p>
+</div>
+<p>When <span class="math inline">\(n \rightarrow \infty\)</span> and <span class="math inline">\(p \rightarrow 0\)</span>, the Poisson distribution approximates the Binomial distribution. Likewise, as <span class="math inline">\(\lambda \rightarrow \infty\)</span>, the Poisson distribution approximates the Normal distribution. This pattern is visible in the plots that follow.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pois3"></span>
+<img src="stats_files/figure-html/pois3-1.svg" alt="Some Poisson Distributions tending to the Binomial" width="100%" />
+<p class="caption">
+FIGURE 6.8: Some Poisson Distributions tending to the Binomial
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pois4"></span>
+<img src="stats_files/figure-html/pois4-1.svg" alt="Some Poisson Distributions tending to the Normal" width="100%" />
+<p class="caption">
+FIGURE 6.9: Some Poisson Distributions tending to the Normal
+</p>
+</div>
+<p>Poisson distributions have been used to tackle some very fascinating problems in both academic and applied research, including, but not limited to, <a href="http://www.signaltiming.com/The_Signal_Timing_Manual_08082008.pdf">traffic signal design and operation</a>, <a href="http://www.stat.cmu.edu/~vlachos/courses/724/final/mosteller.pdf">authorship of the Federalist Papers</a>, <a href="https://ntl.bts.gov/lib/26000/26800/26814/USE_OF_POISSON_DISTRIBUTION_IN_HIGHWAY_TRAFFIC.PDF">highway traffic</a>, <a href="https://stuff.mit.edu/afs/sipb/user/biyeun/Public/8.13/poisson/poisson_statistics_biyeun.pdf">radioactive decay</a>, <a href="https://www.wired.com/2012/12/what-does-randomness-look-like/">German air-raids on London during World War II</a>, and <a href="https://www.wired.com/2012/12/what-does-randomness-look-like/">positions of glowworms on the ceiling of the Waitomo cave in New Zealand</a>. Two practical applications of the Poisson distribution follow.</p>
+</div>
+<div id="example-1-1" class="section level5 unnumbered hasAnchor">
+<h5>Example 1<a href="distributions.html#example-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>The mean number of crime reports filed per hour during Halloween by the Athens City Police Department is 0.833.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that in a 24 hour period the ACPD will see 10 or fewer crime reports filed?</li>
+</ol>
+<p><span class="math display">\[f(x) = \dfrac{e^{-x}\lambda^{x}}{x!} = \dfrac{e^{-10}0.833^{10}}{10!}\]</span></p>
+<p>Let us use the <a href="http://stattrek.com/m/online-calculator/poisson.aspx">online calculator for the poisson distribution</a>. We have <span class="math inline">\(\lambda=19.992\)</span> since the mean for a 24-hour period would be <span class="math inline">\(= 0.833 \times 24 = 19.992\)</span>, and are given <span class="math inline">\(x = 10\)</span>. Entering these values into the calculator yields <span class="math inline">\(P(x \leq 10) = 0.0108583424514613 \approx 0.0108\)</span>. Note that the calculator also generates other probabilities: <span class="math inline">\(P(x = 10) = 0.0058396136640344; P(x &lt; 10) = 0.0050187287874269; P(x &gt; 10) = 0.989141657548539; P(x \geq 10) = 0.9949812712125\)</span>. The answer: There is 1.08% chance of seeing 10 or fewer reports filed within a 24-hour period.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability of 20 or more crime reports being filed in the 24 hour period?</li>
+</ol>
+<p>Again, using the online calculator will yield <span class="math inline">\(P(x \geq 20) = 0.529031908826421\)</span>; there is 52.90% chance of seeing 20 or more reports filed within a 24-hour period. Note: The high probability shouldn’t be surprising given that the average is almost 20 (<span class="math inline">\(19.992\)</span> to be exact).</p>
+</div>
+<div id="example-2-1" class="section level5 unnumbered hasAnchor">
+<h5>Example 2<a href="distributions.html#example-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>In Berksdale, Nebraska, the average number of fire per day is 0.071. What is the probability of seeing no fires on any given week (7 days)? What is the probability of seeing more than four fires in this week?</p>
+<p>For the week we know <span class="math inline">\(\lambda = 0.071 \times 7 = 0.497\)</span> and <span class="math inline">\(x=0\)</span>. The calculator yields <span class="math inline">\(P(x=0) = 0.608352983811176 \approx 0.6084\)</span>. Similarly, <span class="math inline">\(P(x &gt; 4) = 0.000167426629467005 \approx 0.0002\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="continuous-probability-distributions" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Continuous Probability Distributions<a href="distributions.html#continuous-probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In contrast to discrete random variables, <code>continuous random variables</code> take on a uncountably infinite number of values such that unlike in the case of discrete random variables, where we could calculate the probability of a specific value <span class="math inline">\((P(X = x))\)</span>, we now have to calculate the probability of a value falling in an interval, i.e., <span class="math inline">\(P(a \leq x \leq b)\)</span>, with <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> being the lower and upper limits of the interval. Why do we need to do this, you might wonder. Think about it this way: Since the total number of values possible is infinite and probability is calculated with the total number of possible outcomes as the denominator, you pick any value of <span class="math inline">\(x\)</span> and calculate <span class="math inline">\(P(X=x) = \dfrac{x}{\infty}\)</span>, you will end up with <span class="math inline">\(0\)</span>.</p>
+<p>Examples of continuous random variables abound … household incomes, county unemployment rates, scores on a standardized test, individuals’ heights and weights, flight times between New York City and Los Angeles, temperature, humidity, population size of each city, town, village, and township in the USA, <a href="https://goo.gl/fgIMhX">undulation rates of gliding snakes</a>, and much more. The probability distributions for continuous random variables then assume a different form, and there are several such distributions one could use. However, we will start with the simplest one of these: <code>The Normal distribution</code>.</p>
+<div id="the-normal-distribution" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> The Normal Distribution<a href="distributions.html#the-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Normal distribution is the bell-shaped distribution that we have all read about or seen in one way or another. Formally, though, we say that a continuous random variable <span class="math inline">\(X\)</span> follows a normal distribution if its probability density function is defined as:</p>
+<p><span class="math display">\[f(X) =\dfrac{1}{\sigma{\sqrt{2\pi}}}e^{-(X-\mu)^{2}/2\sigma^{2}}\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the mean of <span class="math inline">\(X\)</span>, <span class="math inline">\(\sigma\)</span> is the standard deviation of <span class="math inline">\(X\)</span>, <span class="math inline">\(\pi=3.14159\)</span>, and <span class="math inline">\(e=2.71828\)</span>
+Two parameters describe a Normal distribution – the mean and the standard deviation. As such, different means and/or standard deviations generate different Normal distributions. The examples below show you three different Normal distributions, each with its own unique combination of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:norm1"></span>
+<img src="stats_files/figure-html/norm1-1.svg" alt="Three Normal Distributions: Different Means, Equal Standard Deviations" width="100%" />
+<p class="caption">
+FIGURE 6.10: Three Normal Distributions: Different Means, Equal Standard Deviations
+</p>
+</div>
+<p>Similarly, we could have a completely different set of Normal distributions:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:norm2"></span>
+<img src="stats_files/figure-html/norm2-1.svg" alt="Three Normal Distributions: Different Means, Different Standard Deviations" width="100%" />
+<p class="caption">
+FIGURE 6.11: Three Normal Distributions: Different Means, Different Standard Deviations
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:norm3"></span>
+<img src="stats_files/figure-html/norm3-1.svg" alt="Three Normal Distributions with Differing Means and Standard Deviations" width="100%" />
+<p class="caption">
+FIGURE 6.12: Three Normal Distributions with Differing Means and Standard Deviations
+</p>
+</div>
+<p>In summary, then, there are an infinite number of Normal distributions, each with their own mean and standard deviation. Since it would be impossible for us to know which Normal distribution we are drawing a sample from, we rely on the <code>Standard Normal Distribution</code>, also known as the <code>z-score Distribution</code>.</p>
+</div>
+<div id="the-standard-normal-distribution" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> The Standard Normal Distribution<a href="distributions.html#the-standard-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Standard Normal Distribution is essentially a distribution generated by converting the raw values into their corresponding z-scores. Recall that <span class="math inline">\(z = \dfrac{x - \mu}{\sigma}\)</span>. The beauty of this distribution is that no matter what the raw metric is, income, age, height, population size, percapita gross domestic product, and so on, once we create z-scores, they are guaranteed to have <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>. A positive/negative z-score indicates that the observation lies above/below the mean. The absolute value of the z-score indicates how many standard deviation units above/below the mean an observation falls. In brief, z-scores allow us to identify the <code>relative location</code> of an observation in a data-set by telling us how many standard deviation units above or below the mean a particular value <span class="math inline">\(x_{i}\)</span> falls. The beauty of the z-score is that it allows us to compare scores drawn from distributions with dissimilar variability (see below, a redux of the Caribou (ME) versus Boston (MA) example):</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:zscagain">TABLE 6.8: </span>Comparing Snowfall in Disparate Locations
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Place
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+<th style="text-align:right;">
+Std.Dev.
+</th>
+<th style="text-align:right;">
+December.2016
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Caribou (ME)
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+125
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Boston (MA)
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+39
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you know your geography or have had the good/bad luck to be in Caribou (ME) during the dead of winter, you know that Caribou gets a lot more snowfall than does Boston, just by virtue of Caribou’s latitude and longitude. So how could we really compare what seems to be an apple (Boston, MA) and an orange (Caribou, ME). We cannot unless we convert snowfall into a z-score, using the <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> for each of the two places. The result is in the last column, yielding z-scores of +0.50 and +3.00 for Caribou and Boston, respectively. What these z-scores tell us is that for Caribou, compared to its usual average and variability, the snowfall it received in December 2016 was only slightly worse than what it gets usually in any given year. On the other hand, Boston had very heavy snowfall relative to its average and the variability around this average.</p>
+<p>One of the additional strengths of the Standard Normal Distribution is the fact that we can safely assume:</p>
+<ul>
+<li>about 68% of the data values fall within <span class="math inline">\(\pm\)</span> 1 standard deviation</li>
+<li>about 95% of the data values fall within <span class="math inline">\(\pm\)</span> 2 standard deviation</li>
+<li>about 99% of the data values fall within <span class="math inline">\(\pm\)</span> 3 standard deviation</li>
+<li>z-scores greater/smaller than <span class="math inline">\(\pm{3}\)</span> are indicative of <code>outliers</code></li>
+</ul>
+<p>Graphically, we could depict the areas demarcated by the 1, 2 and 3 standard deviations as follows:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1sd"></span>
+<img src="stats_files/figure-html/1sd-1.svg" alt="Area of the Standard Normal Distribution within 1 Standard Deviation" width="100%" />
+<p class="caption">
+FIGURE 6.13: Area of the Standard Normal Distribution within 1 Standard Deviation
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:2sd"></span>
+<img src="stats_files/figure-html/2sd-1.svg" alt="Area of the Standard Normal Distribution within 2 Standard Deviations" width="100%" />
+<p class="caption">
+FIGURE 6.14: Area of the Standard Normal Distribution within 2 Standard Deviations
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:3sd"></span>
+<img src="stats_files/figure-html/3sd-1.svg" alt="Area of the Standard Normal Distribution within 3 Standard Deviations" width="100%" />
+<p class="caption">
+FIGURE 6.15: Area of the Standard Normal Distribution within 3 Standard Deviations
+</p>
+</div>
+<p>Given the symmetry of the distribution, if 68% of the data fall within <span class="math inline">\(\pm 1\)</span> standard deviation units of the mean, then it must be that 34% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(-1\)</span> and 34% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(+1\)</span>. Likewise, 47.5% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(-2\)</span> and <span class="math inline">\(+2\)</span> standard deviation units, respectively, and 49.5% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(-3\)</span> and <span class="math inline">\(+3\)</span> standard deviation units, respectively. Indeed, given any interval of z-scores we can easily find the area between these two z-scores via the <code>Standard Normal Distribution table</code>.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:ztables">TABLE 6.9: </span>The Standard Normal Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+0
+</th>
+<th style="text-align:right;">
+0.01
+</th>
+<th style="text-align:right;">
+0.02
+</th>
+<th style="text-align:right;">
+0.03
+</th>
+<th style="text-align:right;">
+0.04
+</th>
+<th style="text-align:right;">
+0.05
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+-3.4
+</td>
+<td style="text-align:right;">
+0.00034
+</td>
+<td style="text-align:right;">
+0.00032
+</td>
+<td style="text-align:right;">
+0.00031
+</td>
+<td style="text-align:right;">
+0.00030
+</td>
+<td style="text-align:right;">
+0.00029
+</td>
+<td style="text-align:right;">
+0.00028
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-3.3
+</td>
+<td style="text-align:right;">
+0.00048
+</td>
+<td style="text-align:right;">
+0.00047
+</td>
+<td style="text-align:right;">
+0.00045
+</td>
+<td style="text-align:right;">
+0.00043
+</td>
+<td style="text-align:right;">
+0.00042
+</td>
+<td style="text-align:right;">
+0.00040
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-3.2
+</td>
+<td style="text-align:right;">
+0.00069
+</td>
+<td style="text-align:right;">
+0.00066
+</td>
+<td style="text-align:right;">
+0.00064
+</td>
+<td style="text-align:right;">
+0.00062
+</td>
+<td style="text-align:right;">
+0.00060
+</td>
+<td style="text-align:right;">
+0.00058
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-3.1
+</td>
+<td style="text-align:right;">
+0.00097
+</td>
+<td style="text-align:right;">
+0.00094
+</td>
+<td style="text-align:right;">
+0.00090
+</td>
+<td style="text-align:right;">
+0.00087
+</td>
+<td style="text-align:right;">
+0.00084
+</td>
+<td style="text-align:right;">
+0.00082
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-3.0
+</td>
+<td style="text-align:right;">
+0.00135
+</td>
+<td style="text-align:right;">
+0.00131
+</td>
+<td style="text-align:right;">
+0.00126
+</td>
+<td style="text-align:right;">
+0.00122
+</td>
+<td style="text-align:right;">
+0.00118
+</td>
+<td style="text-align:right;">
+0.00114
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.9
+</td>
+<td style="text-align:right;">
+0.00187
+</td>
+<td style="text-align:right;">
+0.00181
+</td>
+<td style="text-align:right;">
+0.00175
+</td>
+<td style="text-align:right;">
+0.00169
+</td>
+<td style="text-align:right;">
+0.00164
+</td>
+<td style="text-align:right;">
+0.00159
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.8
+</td>
+<td style="text-align:right;">
+0.00256
+</td>
+<td style="text-align:right;">
+0.00248
+</td>
+<td style="text-align:right;">
+0.00240
+</td>
+<td style="text-align:right;">
+0.00233
+</td>
+<td style="text-align:right;">
+0.00226
+</td>
+<td style="text-align:right;">
+0.00219
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.7
+</td>
+<td style="text-align:right;">
+0.00347
+</td>
+<td style="text-align:right;">
+0.00336
+</td>
+<td style="text-align:right;">
+0.00326
+</td>
+<td style="text-align:right;">
+0.00317
+</td>
+<td style="text-align:right;">
+0.00307
+</td>
+<td style="text-align:right;">
+0.00298
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.6
+</td>
+<td style="text-align:right;">
+0.00466
+</td>
+<td style="text-align:right;">
+0.00453
+</td>
+<td style="text-align:right;">
+0.00440
+</td>
+<td style="text-align:right;">
+0.00427
+</td>
+<td style="text-align:right;">
+0.00415
+</td>
+<td style="text-align:right;">
+0.00402
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.5
+</td>
+<td style="text-align:right;">
+0.00621
+</td>
+<td style="text-align:right;">
+0.00604
+</td>
+<td style="text-align:right;">
+0.00587
+</td>
+<td style="text-align:right;">
+0.00570
+</td>
+<td style="text-align:right;">
+0.00554
+</td>
+<td style="text-align:right;">
+0.00539
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.4
+</td>
+<td style="text-align:right;">
+0.00820
+</td>
+<td style="text-align:right;">
+0.00798
+</td>
+<td style="text-align:right;">
+0.00776
+</td>
+<td style="text-align:right;">
+0.00755
+</td>
+<td style="text-align:right;">
+0.00734
+</td>
+<td style="text-align:right;">
+0.00714
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.3
+</td>
+<td style="text-align:right;">
+0.01072
+</td>
+<td style="text-align:right;">
+0.01044
+</td>
+<td style="text-align:right;">
+0.01017
+</td>
+<td style="text-align:right;">
+0.00990
+</td>
+<td style="text-align:right;">
+0.00964
+</td>
+<td style="text-align:right;">
+0.00939
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.2
+</td>
+<td style="text-align:right;">
+0.01390
+</td>
+<td style="text-align:right;">
+0.01355
+</td>
+<td style="text-align:right;">
+0.01321
+</td>
+<td style="text-align:right;">
+0.01287
+</td>
+<td style="text-align:right;">
+0.01255
+</td>
+<td style="text-align:right;">
+0.01222
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.1
+</td>
+<td style="text-align:right;">
+0.01786
+</td>
+<td style="text-align:right;">
+0.01743
+</td>
+<td style="text-align:right;">
+0.01700
+</td>
+<td style="text-align:right;">
+0.01659
+</td>
+<td style="text-align:right;">
+0.01618
+</td>
+<td style="text-align:right;">
+0.01578
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-2.0
+</td>
+<td style="text-align:right;">
+0.02275
+</td>
+<td style="text-align:right;">
+0.02222
+</td>
+<td style="text-align:right;">
+0.02169
+</td>
+<td style="text-align:right;">
+0.02118
+</td>
+<td style="text-align:right;">
+0.02068
+</td>
+<td style="text-align:right;">
+0.02018
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.9
+</td>
+<td style="text-align:right;">
+0.02872
+</td>
+<td style="text-align:right;">
+0.02807
+</td>
+<td style="text-align:right;">
+0.02743
+</td>
+<td style="text-align:right;">
+0.02680
+</td>
+<td style="text-align:right;">
+0.02619
+</td>
+<td style="text-align:right;">
+0.02559
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.8
+</td>
+<td style="text-align:right;">
+0.03593
+</td>
+<td style="text-align:right;">
+0.03515
+</td>
+<td style="text-align:right;">
+0.03438
+</td>
+<td style="text-align:right;">
+0.03362
+</td>
+<td style="text-align:right;">
+0.03288
+</td>
+<td style="text-align:right;">
+0.03216
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.7
+</td>
+<td style="text-align:right;">
+0.04457
+</td>
+<td style="text-align:right;">
+0.04363
+</td>
+<td style="text-align:right;">
+0.04272
+</td>
+<td style="text-align:right;">
+0.04182
+</td>
+<td style="text-align:right;">
+0.04093
+</td>
+<td style="text-align:right;">
+0.04006
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.6
+</td>
+<td style="text-align:right;">
+0.05480
+</td>
+<td style="text-align:right;">
+0.05370
+</td>
+<td style="text-align:right;">
+0.05262
+</td>
+<td style="text-align:right;">
+0.05155
+</td>
+<td style="text-align:right;">
+0.05050
+</td>
+<td style="text-align:right;">
+0.04947
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.5
+</td>
+<td style="text-align:right;">
+0.06681
+</td>
+<td style="text-align:right;">
+0.06552
+</td>
+<td style="text-align:right;">
+0.06426
+</td>
+<td style="text-align:right;">
+0.06301
+</td>
+<td style="text-align:right;">
+0.06178
+</td>
+<td style="text-align:right;">
+0.06057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.4
+</td>
+<td style="text-align:right;">
+0.08076
+</td>
+<td style="text-align:right;">
+0.07927
+</td>
+<td style="text-align:right;">
+0.07780
+</td>
+<td style="text-align:right;">
+0.07636
+</td>
+<td style="text-align:right;">
+0.07493
+</td>
+<td style="text-align:right;">
+0.07353
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.3
+</td>
+<td style="text-align:right;">
+0.09680
+</td>
+<td style="text-align:right;">
+0.09510
+</td>
+<td style="text-align:right;">
+0.09342
+</td>
+<td style="text-align:right;">
+0.09176
+</td>
+<td style="text-align:right;">
+0.09012
+</td>
+<td style="text-align:right;">
+0.08851
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.2
+</td>
+<td style="text-align:right;">
+0.11507
+</td>
+<td style="text-align:right;">
+0.11314
+</td>
+<td style="text-align:right;">
+0.11123
+</td>
+<td style="text-align:right;">
+0.10935
+</td>
+<td style="text-align:right;">
+0.10749
+</td>
+<td style="text-align:right;">
+0.10565
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.1
+</td>
+<td style="text-align:right;">
+0.13567
+</td>
+<td style="text-align:right;">
+0.13350
+</td>
+<td style="text-align:right;">
+0.13136
+</td>
+<td style="text-align:right;">
+0.12924
+</td>
+<td style="text-align:right;">
+0.12714
+</td>
+<td style="text-align:right;">
+0.12507
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-1.0
+</td>
+<td style="text-align:right;">
+0.15866
+</td>
+<td style="text-align:right;">
+0.15625
+</td>
+<td style="text-align:right;">
+0.15386
+</td>
+<td style="text-align:right;">
+0.15151
+</td>
+<td style="text-align:right;">
+0.14917
+</td>
+<td style="text-align:right;">
+0.14686
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.9
+</td>
+<td style="text-align:right;">
+0.18406
+</td>
+<td style="text-align:right;">
+0.18141
+</td>
+<td style="text-align:right;">
+0.17879
+</td>
+<td style="text-align:right;">
+0.17619
+</td>
+<td style="text-align:right;">
+0.17361
+</td>
+<td style="text-align:right;">
+0.17106
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.8
+</td>
+<td style="text-align:right;">
+0.21186
+</td>
+<td style="text-align:right;">
+0.20897
+</td>
+<td style="text-align:right;">
+0.20611
+</td>
+<td style="text-align:right;">
+0.20327
+</td>
+<td style="text-align:right;">
+0.20045
+</td>
+<td style="text-align:right;">
+0.19766
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.7
+</td>
+<td style="text-align:right;">
+0.24196
+</td>
+<td style="text-align:right;">
+0.23885
+</td>
+<td style="text-align:right;">
+0.23576
+</td>
+<td style="text-align:right;">
+0.23270
+</td>
+<td style="text-align:right;">
+0.22965
+</td>
+<td style="text-align:right;">
+0.22663
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.6
+</td>
+<td style="text-align:right;">
+0.27425
+</td>
+<td style="text-align:right;">
+0.27093
+</td>
+<td style="text-align:right;">
+0.26763
+</td>
+<td style="text-align:right;">
+0.26435
+</td>
+<td style="text-align:right;">
+0.26109
+</td>
+<td style="text-align:right;">
+0.25785
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.5
+</td>
+<td style="text-align:right;">
+0.30854
+</td>
+<td style="text-align:right;">
+0.30503
+</td>
+<td style="text-align:right;">
+0.30153
+</td>
+<td style="text-align:right;">
+0.29806
+</td>
+<td style="text-align:right;">
+0.29460
+</td>
+<td style="text-align:right;">
+0.29116
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.4
+</td>
+<td style="text-align:right;">
+0.34458
+</td>
+<td style="text-align:right;">
+0.34090
+</td>
+<td style="text-align:right;">
+0.33724
+</td>
+<td style="text-align:right;">
+0.33360
+</td>
+<td style="text-align:right;">
+0.32997
+</td>
+<td style="text-align:right;">
+0.32636
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.3
+</td>
+<td style="text-align:right;">
+0.38209
+</td>
+<td style="text-align:right;">
+0.37828
+</td>
+<td style="text-align:right;">
+0.37448
+</td>
+<td style="text-align:right;">
+0.37070
+</td>
+<td style="text-align:right;">
+0.36693
+</td>
+<td style="text-align:right;">
+0.36317
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.2
+</td>
+<td style="text-align:right;">
+0.42074
+</td>
+<td style="text-align:right;">
+0.41683
+</td>
+<td style="text-align:right;">
+0.41294
+</td>
+<td style="text-align:right;">
+0.40905
+</td>
+<td style="text-align:right;">
+0.40517
+</td>
+<td style="text-align:right;">
+0.40129
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+-0.1
+</td>
+<td style="text-align:right;">
+0.46017
+</td>
+<td style="text-align:right;">
+0.45620
+</td>
+<td style="text-align:right;">
+0.45224
+</td>
+<td style="text-align:right;">
+0.44828
+</td>
+<td style="text-align:right;">
+0.44433
+</td>
+<td style="text-align:right;">
+0.44038
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+0.0
+</td>
+<td style="text-align:right;">
+0.50000
+</td>
+<td style="text-align:right;">
+0.49601
+</td>
+<td style="text-align:right;">
+0.49202
+</td>
+<td style="text-align:right;">
+0.48803
+</td>
+<td style="text-align:right;">
+0.48405
+</td>
+<td style="text-align:right;">
+0.48006
+</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="http://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/standardnormaltable.pdf">standard normal table</a> shows you the <code>area below a specific z-score</code>. For example, the area below <span class="math inline">\(z = -3.40\)</span> is 0.0003369. We would denote this as <span class="math inline">\(P(z \leq -3.40) = 0.0003369\)</span>. The meaning of “area” should now be taken as the proportion of z-scores that fall at or below a specific z-score. Indeed, we might as well speak in terms of probability: The probability of finding a z-score less than or equal to -3.40 is 0.0003369. Now look at the table and figure out how much of the area falls at or below <span class="math inline">\(z = -1.00\)</span>. This turns out to be 0.1586552, highlighted for you in panel (a) of the figure.</p>
+<p>Given the symmetry of the curve, this means that the area at or above <span class="math inline">\(z = +1.00\)</span> must also be 0.1586552. If we add these two areas we see that the combined area below and above <span class="math inline">\(z = -1.00; z = +1.00\)</span> works out to <span class="math inline">\(0.1586552 + 0.1586552 = 0.3173\)</span>. Since the area under the curve must sum to 1, this means the area between <span class="math inline">\(z = -1.00; z = +1.00\)</span> must be <span class="math inline">\(1 - 0.3173 = 0.6827\)</span>. That is, 68.27% of z-scores lie in the interval given by <span class="math inline">\(z = \pm 1\)</span>; see the shaded portion in panel (b) below. Similarly, we could calculate areas between <span class="math inline">\(z = \pm 2.00\)</span> (see panel (c) below), <span class="math inline">\(z = \pm 3.00\)</span> (see panel (d) below), and any other pair of z-scores.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:area1"></span>
+<img src="stats_files/figure-html/area1-1.svg" alt="Areas Under the Standard Normal Curve" width="100%" />
+<p class="caption">
+FIGURE 6.16: Areas Under the Standard Normal Curve
+</p>
+</div>
+<p>Take, for example, the area between z-scores of -0.52 and +1.26. To calculate <span class="math inline">\(P(-0.52 \leq z \leq +1.26)\)</span> we start by calculating the area at or below <span class="math inline">\(z = -0.52\)</span>. <span class="math inline">\(P(z \leq -0.52)\)</span> turns out to be 0.30153. We then calculate the area at or above <span class="math inline">\(z = +1.26\)</span>. <span class="math inline">\(P(z \geq +1.26)\)</span> turns out to be 0.10383. So the total area at or beyond these two z-scores is <span class="math inline">\(0.30153 + 0.10383 = 0.40536\)</span>. This isn’t the area we need; we need <span class="math inline">\(P(-0.52 \leq z \leq +1.26)\)</span> and this can now be calculated as <span class="math inline">\(1 - P(z \leq -0.52) - P(z \geq +1.26) = 1 - 0.30153 - 0.10383 = 1 - 0.40536 = 0.59464\)</span>. The figure below shows this area:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:area2"></span>
+<img src="stats_files/figure-html/area2-1.svg" alt="Areas Under the Standard Normal Curve" width="100%" />
+<p class="caption">
+FIGURE 6.17: Areas Under the Standard Normal Curve
+</p>
+</div>
+<p>Online tables are available as well; see one excellent applet by <a href="http://davidmlane.com/hyperstat/z_table.html">David M. Lane</a> here as well as the popular one at <a href="https://sites.csn.edu/mgreenwich/stat/normal.htm">surfstat</a>. If using the David M. Lane calculator, be sure to enter values of the desired area Above/Below/Between/Outside. The same table will also allow you to enter an area and find the z-score(s) associated with that area if you select <code>Value from an area</code>. If using surfstat, select the appropriate graph of the distribution (the area in red shows you what area will be calculated), and then either enter the <span class="math inline">\(z-score\)</span> to find the area/probability or the area/probability (as a proportion) to get the <span class="math inline">\(z-score\)</span>.</p>
+<div id="working-with-the-standard-normal-distribution" class="section level4 unnumbered hasAnchor">
+<h4>Working with the Standard Normal Distribution<a href="distributions.html#working-with-the-standard-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Assume that for all traditional public schools in your state, the mean dropout rate in 2017 was <span class="math inline">\(\mu = 5\)</span>, and the standard deviation was <span class="math inline">\(\sigma = 1.25\)</span>. Given these parameters, if a school had a dropout rate of 7%, what percent of schools in the state did as badly or worse? The answer could be obtained as follows:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\left.\begin{aligned}
+z = \dfrac{x - \mu}{\sigma} \\
+z = \dfrac{7 - 5}{1.25} = 1.6 \\
+\text{What is } P(z \geq 1.6)? \\
+P(z \geq 1.6) = 0.05480
+\end{aligned}\right.
+\end{eqnarray*}\]</span></p>
+<p>and thus some 5.48% of schools in the state had dropout rates of 7% or worse (i.e., higher dropout rates).</p>
+<p>What if the school had a dropout rate of 9%?</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\left.\begin{aligned}
+z = \dfrac{x - \mu}{\sigma} \\
+z = \dfrac{9 - 5}{1.25} = 3.2 \\
+\text{What is } P(z \geq 3.2)? \\
+P(z \geq 3.2) = 0.00069
+\end{aligned}\right.
+\end{eqnarray*}\]</span></p>
+<p>i.e., 0.069% of schools in the states had dropout rates of 8% or worse.</p>
+<p>We can also ask a different question: What dropout rates demarcate the top 10% and the bottom 10% of schools, respectively? We first find the z-scores that demarcate the top 10% and the bottom 10%, respectively. These turn out to be <span class="math inline">\(z = +1.28\)</span> and <span class="math inline">\(z = -1.28\)</span>, respectively.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+z = \dfrac{x - \mu}{\sigma} \\
+x = \left(z \times \sigma \right) + \mu \\
+x = \mu + \left(z \times \sigma \right) \\
+x_{top} = 5 + \left(1.28 \times 1.25 \right) = 5 + 1.6 = 6.6 \\
+x_{bottom} = 5 + \left(-1.28 \times 1.25 \right) = 5 - 1.6 = 3.4
+\end{eqnarray*}\]</span></p>
+<p>i.e., dropout rates of 6.6% and 3.4% separate the top 10% and bottom 10% of schools from all schools in the state. The important point about this particular example is the manner in which we rearranged the formula for a z-score to recover the actual dropout rates associated with the top/bottom 10% of schools.</p>
+<p>The z-score is a versatile entity, often used when looking to combine or compare phenomenon measured on different scales. A classic and important example comes from the health ranking dashboards compiled by various organizations. Take the <a href="http://www.healthpolicyohio.org/2017-health-value-dashboard/">Health Value Dashboard</a>, <a href="http://www.countyhealthrankings.org">County Health Rankings</a>, <a href="http://www.americashealthrankings.org">America’s Health Rankings</a> and the <a href="http://www.commonwealthfund.org/publications/health-system-scorecards">Commonwealth Fund</a>, for example. Most of these dashboards are combining information from such disparate measures as the high school graduation rate, percent of adults with access to health care, percent of kids living in safe neighborhoods, child poverty, air pollution levels, access to bike and other alternative transportation options, and so on. How can you really combine disparate elements? Via the z-score, of course, by converting each measure into a z-score and then adding these z-scores to come up with an overall rank for a state or Washington DC. This is not the only benefit of z-scores; they are often used in regression analyses to ease interpretation of the findings, a benefit we will see in action once we start working with regression models.</p>
+</div>
+</div>
+</div>
+<div id="chapter-6-practice-problems" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Chapter 6 Practice Problems<a href="distributions.html#chapter-6-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Problem 1</strong></p>
+<p>Calculate the following areas:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(z \leq 1.96)\)</span></li>
+<li><span class="math inline">\(P(z \leq -1.96)\)</span></li>
+<li><span class="math inline">\(P(z \geq -0.87)\)</span></li>
+<li><span class="math inline">\(P(-1.5 \leq z \leq 1.5)\)</span></li>
+<li><span class="math inline">\(P(-1.5 \leq z \leq -1.0)\)</span></li>
+<li><span class="math inline">\(P(z \geq 2.58)\)</span></li>
+<li><span class="math inline">\(P(z \leq -2.58)\)</span></li>
+<li><span class="math inline">\(P(-1.96 \leq z \leq 1.96)\)</span></li>
+</ol>
+<p><strong>Problem 2</strong></p>
+<p>Find the <span class="math inline">\(z-scores\)</span> that leave the respective area above/below/between/beyond</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(z \geq ?) = 0.02\)</span></li>
+<li><span class="math inline">\(P(z \leq ?) = 0.35\)</span></li>
+<li><span class="math inline">\(P(z_{low} \leq ? \leq z_{high} ) = 0.95\)</span> in the middle of the distribution</li>
+<li><span class="math inline">\(P(z_{low} \leq ? \leq z_{high} ) = 0.99\)</span> in the middle of the distribution</li>
+<li><span class="math inline">\(P(z_{low} \leq ? \leq z_{high} ) = 0.90\)</span> in the middle of the distribution</li>
+<li><span class="math inline">\(P(z_{low} \leq ? \leq z_{high} ) = 0.50\)</span> in the middle of the distribution</li>
+</ol>
+<p><strong>Problem 3</strong></p>
+<p>Babies born in singleton births in the United States have birth weights (in kilograms) that are distributed normally with <span class="math inline">\(\mu = 3.296; \sigma = 0.560\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of a baby weighing more than 5 kilograms at birth?</li>
+<li>What is the probability of the baby weighing between 3 and 4 kilograms at birth?</li>
+<li>What fraction of babies will have birth weights more than 1.5 standard deviations from the mean in either direction?</li>
+<li>What fraction of the babies will have birth weights more than 1.5 kilograms from the mean in either direction?</li>
+</ol>
+<p><strong>Problem 4</strong></p>
+<p>A survey of European mitochondrial DNA variation has found that the most common haplotype (genotype), known as “H”, occurs in 40% of people. If we sampled 400 Europeans, what is the probability that</p>
+<ol style="list-style-type: lower-alpha">
+<li>At least 180 are haplotype H?</li>
+<li>At least 130 are haplotype H?</li>
+<li>Between 115 and 170 (inclusive) are haplotype H?</li>
+</ol>
+<p><strong>Problem 5</strong></p>
+<p>NASA excludes anyone under 62 inches in height and anyone over 75 inches in height from being an astronaut pilot. In metric units these cutoffs are 157.5 cm and 190.5 cm, respectively. Assume that heights are normally distributed with means and standard deviations of 177.6 cm and 9.7 cm for 20-29 year-old men, and 163.2 cm and 10.1 cm for 20-29 year-old women. What proportion of men and women in these age groups would be excluded from being NASA astronaut pilots?</p>
+<p><strong>Problem 6</strong></p>
+<p>The most famous geyser in the world, Old Faithful in Yellowstone National Park, has a mean time between eruptions of 85 minutes. The interval of time between eruptions is normally distributed with a standard deviation of 21.25.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that a randomly selected time interval between eruptions is longer than 95 minutes?</li>
+<li>What is the probability that a randomly selected time interval between eruptions is shorter than 95 minutes?</li>
+<li>What is the probability that a randomly selected time interval between eruptions falls in the interval given by 75 and 95 minutes?</li>
+</ol>
+<p><strong>Problem 7</strong></p>
+<p>The label on a one gallon jug of milk states that the volume of milk is 128 fluid ounces (fl.oz.) Federal law mandates that the jug must contain no less than the stated volume. The actual amount of milk in the jugs is normally distributed with mean <span class="math inline">\(\mu = 129\)</span> fl. Oz. and standard deviation <span class="math inline">\(\sigma = 0.8\)</span> fl. Oz.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the z-score corresponding to a jug containing 128 fl. Oz. of milk.</li>
+<li>What is the probability that a randomly selected jug will contain less than 128 fl. Oz. of milk?</li>
+</ol>
+<p><strong>Problem 8</strong></p>
+<p>In 2003, the U.S. Bureau of Labor Statistics reported mean annual household expenditure on food and drinks to be $5,700, with a standard deviation of $1,500. Assume these expenditures are normally distributed.</p>
+<ol style="list-style-type: lower-alpha">
+<li>How much do the 10% of families with the lowest annual household expenditures on food and drinks spend annually on food and drinks?</li>
+<li>What percentage of families spend more then $7,000 annually on food and drinks?</li>
+<li>How much do the families with the top 5% of annual expenditures on food and drinks spend annually?</li>
+</ol>
+<p><strong>Problem 9</strong></p>
+<p>The mean time that a manager at the U.S. Bureau of Economic Analysis spends on annual performance reviews is 45 minutes, with a standard deviation of 9. Assume annual performance reviews are normally distributed.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What percentage of annual performance reviews take more than 60 minutes?</li>
+<li>What percentage of annual performance reviews take between 30 and 60 minutes?</li>
+<li>What review times demarcate the top 5% and bottom 5% of annual performance reviews, respectively?</li>
+</ol>
+<p><strong>Problem 10</strong></p>
+<p>Ohio University allows its faculty and staff to hold university-provided credit cards that can be used for authorized work-related charges. In a given fiscal year the average amount charged by a university employee is $1000, with a standard deviation of $200.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What percent of employees charge more than $1000?</li>
+<li>What percent of employees charge more than $2000?</li>
+<li>What charge amount puts an employee in the <span class="math inline">\(99^{th}\)</span> percentile?</li>
+<li>What charge amount puts an employee in the <span class="math inline">\(9^{th}\)</span> percentile?</li>
+</ol>
+<p><strong>Problem 11</strong></p>
+<p>The mean number of teletype machines that break down in an hour is 0.625. What is the probability of 2 machines breaking down in an hour? What is the probability of of more than 2 machines breaking down in an hour?</p>
+<p><strong>Problem 12</strong></p>
+<p>Acme Call Centers’ customer service representatives receive customer service calls at 48 per hour.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of receiving 10 calls in a 15 minute interval?</li>
+<li>What is the probability of receiving at least 10 calls in a 15 minute interval?</li>
+<li>Suppose no calls are currently on hold. If the agent takes 15 minutes to complete the current call, how many calls do you expect to be waiting by that time? What is the probability of no calls waiting by that time?</li>
+<li>If no calls are currently being processed, what is the probability of the agent taking three minutes for a coffee break without being interrupted by a call?</li>
+</ol>
+<p><strong>Problem 13</strong></p>
+<p>The <a href="https://www-fars.nhtsa.dot.gov/Trends/TrendsGeneral.aspx">National Highway Traffic Safety Administration’s (NHTSA)</a> traffic fatality data for the 1994-2014 are available <a href="https://aniruhil.github.io/avsr/teaching/dataviz/fatalities_1994_2014.xlsx">in this Excel file</a>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate and report the average annual number of fatalities.</li>
+<li>Based on this annual average, and assuming fatalities are evenly distributed across the 12 months in a year, how many fatalities should we expect per month?</li>
+<li>What is the probability of seeing less than 3500 fatalities in a month?</li>
+<li>What is the probability of seeing at least 3500 fatalities in a month?</li>
+</ol>
+<p><strong>Problem 14</strong></p>
+<p>The <a href="http://www.fifa.com/fifa-tournaments/statistics-and-records/worldcup/">2014 FIFA World Cup in Brazil</a> saw 32 teams participate, a total of 64 matches played, and 171 goals scored.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate and report the number of goals scored per match.</li>
+<li>What is the probability of exactly 3 goals being scored in a match?</li>
+<li>What is the probability of 5 or more goals being scored in a match?</li>
+<li>What is the probability of no goal being scored in a match?</li>
+<li>Are goals clumped or dispersed?</li>
+</ol>
+<p><strong>Problem 17</strong></p>
+<p>Fire Engine Ladder Company 81 in Los Angeles responds to 20 calls per Saturday night in the month of July. Given the drought, they have been exceptionally busy in the preceding months and the crew is tired.
+(a) What is the probability that the company will receive no calls on the upcoming Saturday night and catch some well-deserved rest?
+(b) What is the probability of having to respond to fewer than 5 calls?<br />
+(c) Are calls clumped or dispersed?</p>
+<p><strong>Problem 18</strong></p>
+<p>The <a href="http://www.aoml.noaa.gov/hrd/tcfaq/E11.html">National Oceanic and Atmospheric Administration (NOAA)</a> provides the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/TropicalCyclones.xlsx">following data</a> on tropical cyclones per year and type in the Atlantic Basin. Major Hurricanes are those rated 3, 4, or 5 on the Saffir-Simpson Hurricane Scale.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Given these data, how many major hurricanes should you expect in the next calendar year?</li>
+<li>What is the probability of seeing no major hurricanes next year?</li>
+<li>What is the probability of seeing more than three major hurricanes next year?</li>
+<li>Are major hurricanes clumped or dispersed?</li>
+</ol>
+<p><strong>Problem 19</strong></p>
+<p>A bookstore in a Texas county was indicted by a grand jury on several counts of selling racist books. The jury was composed of 22 Baptists and 8 other individuals. Some 40% of the county is Baptist. Given their representation in the population, what is the probability of 22 Baptists serving on the grand jury?</p>
+<p><strong>Problem 20</strong></p>
+<p>The Gallup Poll reports that “employees whose manager involves them in goal setting are four times more likely to be engaged than other employees. Yet this basic expectation only occurs for 30% of employees.” If you selected 20 random employees of state governmental agencies,</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of fewer than 3 saying their manager involves them in goal setting?</li>
+<li>What is the probability of exactly 3 saying saying their manager involves them in goal setting?</li>
+<li>What would be the probability of exactly 6 saying saying their manager involves them in goal setting if you drew a random sample of 40 employees?</li>
+</ol>
+<p><strong>Problem 21</strong></p>
+<p>The MPA program at a major university finds that one in five students withdraws before completing the mandatory introduction to statistics course. Assume that in the next Fall term 20 students are enrolled.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of two students withdrawing?</li>
+<li>What is the probability of more than two students withdrawing?</li>
+<li>What is the probability of no student withdrawing?</li>
+<li>What is the expected number of withdrawals?</li>
+</ol>
+<p><strong>Problem 22</strong></p>
+<p>Military radar and missile detection systems are supposed to identify an attack and issue a warning. What matters though is their reliability. Assume the most state-of-the-art system has a reliability of 90%, meaning that it correctly detects an attack with a probability of 0.9.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that a single detection system will detect an attack?</li>
+<li>If two detection systems are installed in the same area and operate independently, what is the probability that at least one will detect an attack?</li>
+<li>What if three are installed?</li>
+<li>Would you recommend that multiple systems be installed? Explain why.</li>
+</ol>
+<p><strong>Problem 23</strong></p>
+<p>On any given day in July of any year there is a 40% chance of a thunderstorm between 10:00 AM and 4:00 PM in the Grand Canyon. A hiker is considering a seven-day hike.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of her not running into any day with thunderstorms?</li>
+<li>What is the probability of her running into at most two days with thunderstorms?</li>
+</ol>
+<p><strong>Problem 24</strong></p>
+<p>True/False multiple choice tests involving 10 questions, half of which are false, are poor tests because of the guess factor. An unprepared student can easily flip a coin and decide whether to mark True per False per question. If a student pursues this strategy,</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that he/she will earn a passing grade (defined as seven or more right answers)?</li>
+<li>What is the probability that he/she will earn an A (defined as nine or more right answers)?</li>
+</ol>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-1');
+</script>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="prob.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sampling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"css": "toc.css"
+},
+"theme": "sandstone"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

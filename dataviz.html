@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Visualizing Data | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <meta name="description" content="This is a free textbook written for students in my research methods classes." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Visualizing Data | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Visualizing Data | Data Analysis for Leadership &amp; Public Affairs:" />
+  
+  <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+<meta name="author" content="Anirudh V. S. Ruhil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="meansd.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/d3-4.10.2/d3.min.js"></script>
+<link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"],
+      bcancel: ["Extension","cancel"],
+      xcancel: ["Extension","cancel"],
+      cancelto: ["Extension","cancel"]
+    });
+  });
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-2');
+</script>
+
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="yihui_style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Public Affairs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#the-chapters-that-follow"><i class="fa fa-check"></i><b>1.2</b> The chapters that follow</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#keys-to-learning-data-analysis"><i class="fa fa-check"></i><b>1.3</b> Keys to Learning Data Analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Core Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#statistics-versus-statistic"><i class="fa fa-check"></i><b>2.1</b> Statistics versus Statistic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#parameters-versus-estimates"><i class="fa fa-check"></i><b>2.1.1</b> Parameters versus Estimates</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#sampling-error-and-bias"><i class="fa fa-check"></i><b>2.1.2</b> Sampling Error and Bias</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#key-elements-of-random-sampling"><i class="fa fa-check"></i><b>2.1.3</b> Key Elements of Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#useful-research-designs"><i class="fa fa-check"></i><b>2.2</b> Useful Research Designs</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#experimental"><i class="fa fa-check"></i><b>2.2.1</b> Experimental</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#natural-experiments"><i class="fa fa-check"></i><b>2.2.2</b> Natural Experiments</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#quasi-experiments"><i class="fa fa-check"></i><b>2.2.3</b> Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#elements-of-a-data-set"><i class="fa fa-check"></i><b>2.3</b> Elements of a Data-set</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#variable-types"><i class="fa fa-check"></i><b>2.4</b> Variable Types</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#cross-sectional-time-series-and-panel-data"><i class="fa fa-check"></i><b>2.5</b> Cross-sectional, Time-Series, and Panel Data</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="intro.html"><a href="intro.html#cross-sectional-data"><i class="fa fa-check"></i><b>2.5.1</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="intro.html"><a href="intro.html#time-series-data"><i class="fa fa-check"></i><b>2.5.2</b> Time-Series Data</a></li>
+<li class="chapter" data-level="2.5.3" data-path="intro.html"><a href="intro.html#panel-data"><i class="fa fa-check"></i><b>2.5.3</b> Panel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#levels-of-measurement"><i class="fa fa-check"></i><b>2.6</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#nominal"><i class="fa fa-check"></i><b>2.6.1</b> Nominal</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#ordinal"><i class="fa fa-check"></i><b>2.6.2</b> Ordinal</a></li>
+<li class="chapter" data-level="2.6.3" data-path="intro.html"><a href="intro.html#intervalratio"><i class="fa fa-check"></i><b>2.6.3</b> Interval/Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#the-tricky-business-of-cause-and-effect"><i class="fa fa-check"></i><b>2.7</b> The Tricky Business of Cause-and-Effect</a></li>
+<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#chapter-2-practice-problems"><i class="fa fa-check"></i><b>2.8</b> Chapter 2 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dataviz.html"><a href="dataviz.html"><i class="fa fa-check"></i><b>3</b> Visualizing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dataviz.html"><a href="dataviz.html#visualizing-nominalordinal-data"><i class="fa fa-check"></i><b>3.1</b> Visualizing Nominal/Ordinal Data</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dataviz.html"><a href="dataviz.html#bar-charts-and-frequency-tables"><i class="fa fa-check"></i><b>3.1.1</b> Bar-charts and Frequency Tables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dataviz.html"><a href="dataviz.html#contingency-tables-and-bar-charts"><i class="fa fa-check"></i><b>3.1.2</b> Contingency Tables and Bar-charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dataviz.html"><a href="dataviz.html#visualizing-intervalratio-data"><i class="fa fa-check"></i><b>3.2</b> Visualizing Interval/Ratio Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dataviz.html"><a href="dataviz.html#the-histogram"><i class="fa fa-check"></i><b>3.2.1</b> The Histogram</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dataviz.html"><a href="dataviz.html#grouped-frequency-tables"><i class="fa fa-check"></i><b>3.2.2</b> Grouped Frequency Tables</a></li>
+<li class="chapter" data-level="3.2.3" data-path="dataviz.html"><a href="dataviz.html#scatterplots"><i class="fa fa-check"></i><b>3.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="dataviz.html"><a href="dataviz.html#line-graphs"><i class="fa fa-check"></i><b>3.2.4</b> Line Graphs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="dataviz.html"><a href="dataviz.html#polar-charts"><i class="fa fa-check"></i><b>3.2.5</b> Polar Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="dataviz.html"><a href="dataviz.html#some-essential-rules-for-good-visualizations"><i class="fa fa-check"></i><b>3.3</b> Some Essential Rules for Good Visualizations</a></li>
+<li class="chapter" data-level="3.4" data-path="dataviz.html"><a href="dataviz.html#chapter-3-practice-problems"><i class="fa fa-check"></i><b>3.4</b> Chapter 3 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meansd.html"><a href="meansd.html"><i class="fa fa-check"></i><b>4</b> Central Tendency and Dispersion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="meansd.html"><a href="meansd.html#central-tendency"><i class="fa fa-check"></i><b>4.1</b> Central Tendency</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="meansd.html"><a href="meansd.html#mean"><i class="fa fa-check"></i><b>4.1.1</b> Mean</a></li>
+<li class="chapter" data-level="4.1.2" data-path="meansd.html"><a href="meansd.html#median"><i class="fa fa-check"></i><b>4.1.2</b> Median</a></li>
+<li class="chapter" data-level="4.1.3" data-path="meansd.html"><a href="meansd.html#mode"><i class="fa fa-check"></i><b>4.1.3</b> Mode</a></li>
+<li class="chapter" data-level="4.1.4" data-path="meansd.html"><a href="meansd.html#some-features-of-measures-of-central-tendency"><i class="fa fa-check"></i><b>4.1.4</b> Some Features of Measures of Central Tendency</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="meansd.html"><a href="meansd.html#dispersion-aka-variability"><i class="fa fa-check"></i><b>4.2</b> Dispersion (aka Variability)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="meansd.html"><a href="meansd.html#range"><i class="fa fa-check"></i><b>4.2.1</b> Range</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meansd.html"><a href="meansd.html#quartiles-and-interquartile-range"><i class="fa fa-check"></i><b>4.2.2</b> Quartiles and Interquartile Range</a></li>
+<li class="chapter" data-level="4.2.3" data-path="meansd.html"><a href="meansd.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.3</b> Variance and Standard Deviation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="meansd.html"><a href="meansd.html#why-n-1"><i class="fa fa-check"></i><b>4.2.4</b> Why <span class="math inline">\(n-1\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meansd.html"><a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation"><i class="fa fa-check"></i><b>4.3</b> Properties of the Mean and Variance/Standard Deviation</a></li>
+<li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
+<li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
+<li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
+<li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
+<li class="chapter" data-level="4.11" data-path="meansd.html"><a href="meansd.html#beware-the-flawed-rule"><i class="fa fa-check"></i><b>4.11</b> Beware the flawed rule</a></li>
+<li class="chapter" data-level="4.12" data-path="meansd.html"><a href="meansd.html#chapter-4-practice-problems"><i class="fa fa-check"></i><b>4.12</b> Chapter 4 Practice Problems</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-1-2"><i class="fa fa-check"></i>Problem 1</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-2-2"><i class="fa fa-check"></i>Problem 2</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-3-2"><i class="fa fa-check"></i>Problem 3</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-4-2"><i class="fa fa-check"></i>Problem 4</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-5-2"><i class="fa fa-check"></i>Problem 5</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-6-2"><i class="fa fa-check"></i>Problem 6</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-7-2"><i class="fa fa-check"></i>Problem 7</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-8-2"><i class="fa fa-check"></i>Problem 8</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>5</b> Probability</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="prob.html"><a href="prob.html#basic-concepts-and-terminology-of-probability-theory"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts and Terminology of Probability Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="prob.html"><a href="prob.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
+<li class="chapter" data-level="5.3" data-path="prob.html"><a href="prob.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="prob.html"><a href="prob.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
+<li class="chapter" data-level="5.3.2" data-path="prob.html"><a href="prob.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
+<li class="chapter" data-level="5.3.3" data-path="prob.html"><a href="prob.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
+<li class="chapter" data-level="5.3.4" data-path="prob.html"><a href="prob.html#example-4-fortune-500-companies"><i class="fa fa-check"></i><b>5.3.4</b> Example 4: Fortune 500 Companies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="prob.html"><a href="prob.html#the-complement-of-an-event"><i class="fa fa-check"></i><b>5.4</b> The Complement of an Event</a></li>
+<li class="chapter" data-level="5.5" data-path="prob.html"><a href="prob.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>5.5</b> Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.6" data-path="prob.html"><a href="prob.html#the-addition-rule-for-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.6</b> The Addition Rule for Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.7" data-path="prob.html"><a href="prob.html#addition-rule-for-non-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.7</b> Addition Rule for Non-Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.8" data-path="prob.html"><a href="prob.html#independent-events-and-the-multiplication-rule"><i class="fa fa-check"></i><b>5.8</b> Independent Events and the Multiplication Rule</a></li>
+<li class="chapter" data-level="5.9" data-path="prob.html"><a href="prob.html#decision-trees"><i class="fa fa-check"></i><b>5.9</b> Decision Trees</a></li>
+<li class="chapter" data-level="5.10" data-path="prob.html"><a href="prob.html#conditional-probability"><i class="fa fa-check"></i><b>5.10</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="prob.html"><a href="prob.html#the-gender-bias-example"><i class="fa fa-check"></i><b>5.10.1</b> The Gender-bias Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="prob.html"><a href="prob.html#dependent-events"><i class="fa fa-check"></i><b>5.11</b> Dependent Events</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="prob.html"><a href="prob.html#the-monty-hall-problem"><i class="fa fa-check"></i><b>5.11.1</b> The Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="prob.html"><a href="prob.html#bayes-theorem"><i class="fa fa-check"></i><b>5.12</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="5.12.1" data-path="prob.html"><a href="prob.html#another-example"><i class="fa fa-check"></i><b>5.12.1</b> Another Example</a></li>
+<li class="chapter" data-level="5.12.2" data-path="prob.html"><a href="prob.html#extending-bayes-rule"><i class="fa fa-check"></i><b>5.12.2</b> Extending Bayes Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="prob.html"><a href="prob.html#key-things-to-remember"><i class="fa fa-check"></i><b>5.13</b> Key Things to Remember</a></li>
+<li class="chapter" data-level="5.14" data-path="prob.html"><a href="prob.html#chapter-5-practice-problems"><i class="fa fa-check"></i><b>5.14</b> Chapter 5 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="distributions.html"><a href="distributions.html#random-variables"><i class="fa fa-check"></i><b>6.1</b> Random Variables</a></li>
+<li class="chapter" data-level="6.2" data-path="distributions.html"><a href="distributions.html#probability-distributions"><i class="fa fa-check"></i><b>6.2</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="distributions.html"><a href="distributions.html#discrete-probability-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Discrete Probability Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="distributions.html"><a href="distributions.html#continuous-probability-distributions"><i class="fa fa-check"></i><b>6.3</b> Continuous Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="distributions.html"><a href="distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>6.3.1</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="distributions.html"><a href="distributions.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>6.3.2</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="distributions.html"><a href="distributions.html#chapter-6-practice-problems"><i class="fa fa-check"></i><b>6.4</b> Chapter 6 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>7</b> The Theory of Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sampling.html"><a href="sampling.html#the-standard-error"><i class="fa fa-check"></i><b>7.1</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.2" data-path="sampling.html"><a href="sampling.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>7.2</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.3" data-path="sampling.html"><a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>7.3</b> Applying the Standard Error and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="sampling.html"><a href="sampling.html#example-1-2"><i class="fa fa-check"></i><b>7.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sampling.html"><a href="sampling.html#example-2-2"><i class="fa fa-check"></i><b>7.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sampling.html"><a href="sampling.html#the-sampling-distribution-of-binary-proportions"><i class="fa fa-check"></i><b>7.4</b> The Sampling Distribution of Binary Proportions</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="sampling.html"><a href="sampling.html#example-1-3"><i class="fa fa-check"></i><b>7.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.4.2" data-path="sampling.html"><a href="sampling.html#example-2-3"><i class="fa fa-check"></i><b>7.4.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="sampling.html"><a href="sampling.html#point-estimates"><i class="fa fa-check"></i><b>7.5</b> Point Estimates</a></li>
+<li class="chapter" data-level="7.6" data-path="sampling.html"><a href="sampling.html#interval-estimates"><i class="fa fa-check"></i><b>7.6</b> Interval Estimates</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="sampling.html"><a href="sampling.html#example-1-4"><i class="fa fa-check"></i><b>7.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.2" data-path="sampling.html"><a href="sampling.html#example-2-4"><i class="fa fa-check"></i><b>7.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.6.3" data-path="sampling.html"><a href="sampling.html#interval-estimates-for-binary-proportions"><i class="fa fa-check"></i><b>7.6.3</b> Interval Estimates for Binary Proportions</a></li>
+<li class="chapter" data-level="7.6.4" data-path="sampling.html"><a href="sampling.html#example-1-5"><i class="fa fa-check"></i><b>7.6.4</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.5" data-path="sampling.html"><a href="sampling.html#example-2-5"><i class="fa fa-check"></i><b>7.6.5</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="sampling.html"><a href="sampling.html#students-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Student’s t distribution</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="sampling.html"><a href="sampling.html#example-1-6"><i class="fa fa-check"></i><b>7.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.7.2" data-path="sampling.html"><a href="sampling.html#example-2-6"><i class="fa fa-check"></i><b>7.7.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.7.3" data-path="sampling.html"><a href="sampling.html#example-3"><i class="fa fa-check"></i><b>7.7.3</b> Example 3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="sampling.html"><a href="sampling.html#key-concepts-to-remember"><i class="fa fa-check"></i><b>7.8</b> Key Concepts to Remember</a></li>
+<li class="chapter" data-level="7.9" data-path="sampling.html"><a href="sampling.html#chapter-7-practice-problems"><i class="fa fa-check"></i><b>7.9</b> Chapter 7 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> The Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#articulating-the-hypotheses-to-be-tested"><i class="fa fa-check"></i><b>8.1</b> Articulating the Hypotheses to be tested</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.2</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#the-process-of-hypothesis-testing-an-example"><i class="fa fa-check"></i><b>8.3</b> The Process of Hypothesis Testing: An Example</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-7"><i class="fa fa-check"></i><b>8.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-7"><i class="fa fa-check"></i><b>8.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis.html"><a href="hypothesis.html#confidence-intervals-for-hypothesis-tests"><i class="fa fa-check"></i><b>8.4</b> Confidence Intervals for Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis.html"><a href="hypothesis.html#the-one-sample-t-test"><i class="fa fa-check"></i><b>8.5</b> The One-Sample t-test</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis.html"><a href="hypothesis.html#assumptions"><i class="fa fa-check"></i><b>8.5.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis.html"><a href="hypothesis.html#the-two-group-or-two-sample-t-test"><i class="fa fa-check"></i><b>8.6</b> The Two-group (or Two-sample) t-test</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-1"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-8"><i class="fa fa-check"></i><b>8.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-8"><i class="fa fa-check"></i><b>8.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="8.6.3" data-path="hypothesis.html"><a href="hypothesis.html#caution"><i class="fa fa-check"></i><b>8.6.3</b> Caution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis.html"><a href="hypothesis.html#paired-t-tests"><i class="fa fa-check"></i><b>8.7</b> Paired t-tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-2"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#the-testing-protocol"><i class="fa fa-check"></i>The Testing Protocol</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-9"><i class="fa fa-check"></i><b>8.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-9"><i class="fa fa-check"></i><b>8.7.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Leadership &amp; Public Affairs:</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dataviz" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Visualizing Data<a href="dataviz.html#dataviz" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>One of the first tasks of data analysis should be to look at our data. Certainly, you should open up the dataset and eyeball it to make sure everything looks okay, that the file isn’t mysteriously corrupted, etc., but that is not what I mean when I say “look”. Nor am I talking about <code>data visualization</code> in the sense of the masterpieces of stalwarts such as <a href="https://twitter.com/albertocairo">Alberto Cairo</a>, <a href="https://twitter.com/MonaChalabi">Mona Chalabi</a>, <a href="https://twitter.com/visualisingdata">Andy Kirk</a>, <a href="https://twitter.com/eagereyes">Robert Kossara</a>, <a href="https://twitter.com/giorgialupi">Giorgia Lupi</a>, <a href="https://twitter.com/infobeautiful">David McCandless</a>, <a href="https://twitter.com/storywithdata">Cole Nussbaumer Knaflic</a>, <a href="http://getdango.com/emoji-and-deep-learning.html">Randy Olson</a>, <a href="https://twitter.com/lisacrost">Lisa Charlotte Rost</a>, <a href="https://twitter.com/jschwabish">John Schwabish</a>, <a href="https://twitter.com/flowingdata">Nathan Yau</a>, <a href="http://stephanieevergreen.com">Stephanie Evergreen</a>, <a href="http://www.bewitched.com">Martin Wattenberg</a>, <a href="http://hint.fm/about/">Fernanda Viégas</a>, and many others. We are not going to create visuals that rival these artists’ stunning works. Rather, our goal will be simpler, to use appropriate tables and graphics when analyzing and describing our data, both so that we understand what the data are telling us and can communicate the resulting story to our audience. To accomplish these tasks we will obey simple rules that help us make wise decisions.</p>
+<div id="visualizing-nominalordinal-data" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Visualizing Nominal/Ordinal Data<a href="dataviz.html#visualizing-nominalordinal-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="rmdcomment">
+<p>
+Nominal -&gt; no hierarchy to the levels, values of the categorical variable (A = B = C = …)
+</p>
+<p>
+Ordinal -&gt; some hierarchy to the levels, values of the categorical variable (A &gt; B &gt; C &gt; …)
+</p>
+</div>
+<div id="bar-charts-and-frequency-tables" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Bar-charts and Frequency Tables<a href="dataviz.html#bar-charts-and-frequency-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If a variable is measured in nominal or ordinal terms either (i) a <code>bar-chart</code> or (ii) a <code>frequency table</code> are very effective displays of how the variable is distributed: What value seems to be most common? Are high values as likely as low values? You can see both these visuals below, drawn from data about the relative abundance of different species. First, the frequency table.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tigers"></span>
+<img src="stats_files/figure-html/tigers-1.svg" alt="Factors associated with human-killing tigers in Chitwan National Park, Nepal" width="100%" />
+<p class="caption">
+FIGURE 3.1: Factors associated with human-killing tigers in Chitwan National Park, Nepal
+</p>
+</div>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tigers2">TABLE 3.1: </span>Factors associated with human-killing tigers in Chitwan National Park, Nepal
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Activity
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+<th style="text-align:right;">
+Proportion
+</th>
+<th style="text-align:right;">
+Percentage
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Disturbing tiger kill
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fishing
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Forest products
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fuelwood/timber
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Grass/fodder
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Herding
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sleeping in house
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Toilet
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Walking
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+88
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how the frequency table is constructed. You have each human activity listed, followed by the <code>frequency</code> (the number of times someone was killed by a tiger while engaging in each activity), then this column with this frequency converted into a <code>proportion</code>, and finally the proportion converted into a <code>percentage</code>. None of this should be a mystery to you:</p>
+<p><span class="math display">\[proportion = \dfrac{frequency}{Total}\]</span>
+<span class="math display">\[percentage = \left(\dfrac{frequency}{Total}\right) \times 100 = proportion \times 100\]</span></p>
+<p>The last row in the table shows you the total frequency (we have a total of 88 humans killed), the total proportion (which must sum to <span class="math inline">\(1\)</span>), and the total percentage (which should sum to <span class="math inline">\(100\)</span>). I love frequency tables such as these because they show all the data and the story; most kills occurred while the individuals were cutting grass for cattle fodder, followed by while they were out gathering other forest products, and least of all while they were going to the toilet<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. We could improve upon this table and bar-chart by organizing it in such a way that the most dangerous activity is listed/plotted first. This would have the added benefit of quickly drawing the reader’s/viewer’s eyes to the most dangerous activity.</p>
+<p>What if the variable was an ordinal level variable, say something like an individual’s frequency of praying?</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:nes">TABLE 3.2: </span>Frequency of Prayer
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Response Category
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Never
+</td>
+<td style="text-align:right;">
+196
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Once a week or less
+</td>
+<td style="text-align:right;">
+226
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>A few times a week
+</td>
+<td style="text-align:right;">
+264
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: decimal">
+<li>Once a day
+</td>
+<td style="text-align:right;">
+346
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: decimal">
+<li>Several times a day
+</td>
+<td style="text-align:right;">
+456
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+1488
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nes2"></span>
+<img src="stats_files/figure-html/nes2-1.svg" alt="Frequency of Prayer" width="100%" />
+<p class="caption">
+FIGURE 3.2: Frequency of Prayer
+</p>
+</div>
+<p>We would be facing the same options, a bar-chart or a frequency table. However, we would have to be cautious here in making sure both the table and the bar-chart categories are logically assigned. That is, notice the <code>Response Category</code>; we start with the option “Never” and each category that follows corresponds to a category that reflects praying more often than the preceding category. This order would have to be maintained so that we would be unable to arrange the table or bar-chart in ascending/descending order of the “Frequency” column. If we made that mistake we would be destroying the natural order that exists in the ordinal variable we have before us.</p>
+<p>You might be wondering, what about <code>pie charts</code>? Why not use those with nominal/ordinal data? There are two camps, those who hate them and those who think they may be useful. If you are interested, read <a href="https://goo.gl/OwIPMd">What do you mean I’m not supposed to use Pie Charts?!</a> but I for one do not use them since I find them less useful than bar-charts.</p>
+</div>
+<div id="contingency-tables-and-bar-charts" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Contingency Tables and Bar-charts<a href="dataviz.html#contingency-tables-and-bar-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Frequency tables and bar-charts are also useful when you have two nominal/ordinal variables to work with and are interested in exploring difference between the two or more groups reflected in one variable versus whatever is being measured by the second variable. Let us use a specific example, one where we ask if religiosity differs between Liberals, Moderates, and Conservatives. First the table.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:nes3">TABLE 3.3: </span>Political Ideology and Religiosity
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Liberal
+</th>
+<th style="text-align:right;">
+Moderate
+</th>
+<th style="text-align:right;">
+Conservative
+</th>
+<th style="text-align:right;">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Never
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Once a week or less
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+63
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+168
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>A few times a week
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+198
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: decimal">
+<li>Once a day
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:right;">
+107
+</td>
+<td style="text-align:right;">
+272
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: decimal">
+<li>Several times a day
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+176
+</td>
+<td style="text-align:right;">
+344
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+313
+</td>
+<td style="text-align:right;">
+366
+</td>
+<td style="text-align:right;">
+447
+</td>
+<td style="text-align:right;">
+1126
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>If you look at Table 3.3, you see the frequencies reported in what we call a <code>contingency table</code> or a <code>crosstabulation</code> – where the distributions of two nominal/ordinal variables are jointly displayed. Reading such a table should be simple. In brief, You see how many Liberals said they prayed “Never”, “Once a week or less”, “A few times a week”, “Once a day”, or “Several times a day”. What pattern is evident from this table? Of the 447 conservatives we see most of them saying they pray several times a day, followed by once a day, and the fewest saying they never pray. The pattern is similar for liberals and moderates, although the differences between the numbers responding “Never” and “Several times a day” is small for liberals than it is for conservatives.</p>
+<p>The story could be helped a great deal if we calculated percentages for these frequencies. We have two choices when calculating these percentages, we could calculate these as <code>row percentages</code> where we ask “what percent of those who said Never were Liberal, Moderate, and Conservative, respectively?” We could then repeat this for the other categories of religiosity. The result is shown in Table 3.4. This table shows quite clearly that 51.16% of those who say they pray several times a day tend to be Conservative. Likewise, most (43.06%) of those who say they never pray tend to be Liberal.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-13">TABLE 3.4: </span>Political Ideology and Religiosity: Row Percentages
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Liberal
+</th>
+<th style="text-align:right;">
+Moderate
+</th>
+<th style="text-align:right;">
+Conservative
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Never
+</td>
+<td style="text-align:right;">
+43.06
+</td>
+<td style="text-align:right;">
+31.94
+</td>
+<td style="text-align:right;">
+25.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Once a week or less
+</td>
+<td style="text-align:right;">
+31.55
+</td>
+<td style="text-align:right;">
+37.50
+</td>
+<td style="text-align:right;">
+30.95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>A few times a week
+</td>
+<td style="text-align:right;">
+26.77
+</td>
+<td style="text-align:right;">
+34.85
+</td>
+<td style="text-align:right;">
+38.38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: decimal">
+<li>Once a day
+</td>
+<td style="text-align:right;">
+27.94
+</td>
+<td style="text-align:right;">
+32.72
+</td>
+<td style="text-align:right;">
+39.34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: decimal">
+<li>Several times a day
+</td>
+<td style="text-align:right;">
+20.06
+</td>
+<td style="text-align:right;">
+28.78
+</td>
+<td style="text-align:right;">
+51.16
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>If we calculated <code>column percentages</code> we would be able to answer such questions as: “What percent of Liberals said they never pray, pray once a week or less, a few times a week, once a day, several times a day?” The same could then be asked of Moderates and Conservatives, respectively. If we used the column percentages shown in Table 3.5 it would be obvious that Moderates and Conservatives tend to be more religious than Liberals. The essential takeaway here is that how you calculate the percentages (row versus column) depends upon what story you want to highlight, the question you want to ask and answer.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-14">TABLE 3.5: </span>Political Ideology and Religiosity: Column Percentages
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Liberal
+</th>
+<th style="text-align:right;">
+Moderate
+</th>
+<th style="text-align:right;">
+Conservative
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Never
+</td>
+<td style="text-align:right;">
+19.81
+</td>
+<td style="text-align:right;">
+12.57
+</td>
+<td style="text-align:right;">
+8.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Once a week or less
+</td>
+<td style="text-align:right;">
+16.93
+</td>
+<td style="text-align:right;">
+17.21
+</td>
+<td style="text-align:right;">
+11.63
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>A few times a week
+</td>
+<td style="text-align:right;">
+16.93
+</td>
+<td style="text-align:right;">
+18.85
+</td>
+<td style="text-align:right;">
+17.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: decimal">
+<li>Once a day
+</td>
+<td style="text-align:right;">
+24.28
+</td>
+<td style="text-align:right;">
+24.32
+</td>
+<td style="text-align:right;">
+23.94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: decimal">
+<li>Several times a day
+</td>
+<td style="text-align:right;">
+22.04
+</td>
+<td style="text-align:right;">
+27.05
+</td>
+<td style="text-align:right;">
+39.37
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>Graphing these tables is easily done as well, and very effective; see Figure 3.3.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nes4"></span>
+<img src="stats_files/figure-html/nes4-1.svg" alt="Political Ideology and Religiosity" width="100%" />
+<p class="caption">
+FIGURE 3.3: Political Ideology and Religiosity
+</p>
+</div>
+<div class="rmdcomment">
+<p>
+Categorical variables (one or two) -&gt; bar-chart
+</p>
+<p>
+If you have cross-tabulations, choose between stacked versus dodged bar-charts
+</p>
+</div>
+</div>
+</div>
+<div id="visualizing-intervalratio-data" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Visualizing Interval/Ratio Data<a href="dataviz.html#visualizing-intervalratio-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have several visuals we could draw with numeric data that are either interval or ratio levels of measurement. Let us see these first before we look at the one frequency table that could be used with interval/ratio data.</p>
+<div id="the-histogram" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> The Histogram<a href="dataviz.html#the-histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <code>histogram</code> is used with a single numeric variable and looks like a bar-chart except there are no gaps between consecutive bars unless there are missing data. The example that follows use a popular dataset known as <code>hsb2</code>, which contains information about 200 randomly selected students from a national survey of high school seniors called the <a href="https://nces.ed.gov/surveys/hsb/">High School and Beyond</a> survey. The variables in this dataset include:</p>
+<ol style="list-style-type: decimal">
+<li>id = student id</li>
+<li>female = (0/1)</li>
+<li>race = ethnicity (1=hispanic 2=asian 3=african-amer 4=white)</li>
+<li>ses = (1=low 2=middle 3=high)</li>
+<li>schtyp = type of school (1=public 2=private)</li>
+<li>prog = type of program (1=general 2=academic 3=vocational)</li>
+<li>read = standardized reading score</li>
+<li>write = standardized writing score</li>
+<li>math = standardized math score</li>
+<li>science = standardized science score</li>
+<li>socst = standardized social studies score</li>
+</ol>
+<p>I’ll use <code>read</code> (Reading scores on a standardized test) to plot a histogram. Notice a few things about the histogram in Figure 3.4. The height of the bars, representing how often a particular score occurs, varies a great deal. A few students have done poorly while a few have done very well, but the rest are distributed over the middle range of test scores.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histo1"></span>
+<img src="stats_files/figure-html/histo1-1.svg" alt="Histogram of Reading Scores" width="100%" />
+<p class="caption">
+FIGURE 3.4: Histogram of Reading Scores
+</p>
+</div>
+<p>We could farther break this histogram apart by asking if male and female students (<code>female</code>), private versus public students (<code>schtyp</code>), or students of different races/ethnicities (<code>race</code>) perform differently on the reading test.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histo2"></span>
+<img src="stats_files/figure-html/histo2-1.svg" alt="Histogram of Reading Scores by Various Groups" width="100%" /><img src="stats_files/figure-html/histo2-2.svg" alt="Histogram of Reading Scores by Various Groups" width="100%" /><img src="stats_files/figure-html/histo2-3.svg" alt="Histogram of Reading Scores by Various Groups" width="100%" />
+<p class="caption">
+FIGURE 3.5: Histogram of Reading Scores by Various Groups
+</p>
+</div>
+<p>These plots are hard to read for a number of reasons. First, with just <span class="math inline">\(n = 200\)</span> students in all we have more students in some groups than in others and as a result the histograms look very thin for the groups with fewer data points, making it difficult to tease out any patterns. Second, within any group there are too many different test scores so we don’t see a clear pattern at all. To fix these problems we construct groups of scores, turning what is a numeric variable into an ordinal variable. Let us build this by first creating a <code>grouped frequency table</code> and then plotting this table as a histogram.</p>
+<div class="rmdcomment">
+<p>
+Histogram’s bins must be chosen with some care
+</p>
+</div>
+</div>
+<div id="grouped-frequency-tables" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Grouped Frequency Tables<a href="dataviz.html#grouped-frequency-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Because numeric variables take on too many values it is often easier to see their distribution by grouping the numeric values. For example, we could start by seeing what are the lowest and highest reading scores. These turn out to be 28 and 76, respectively. We can build the groups as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Calculate difference between maximum and minimum values, which turns out to be <span class="math inline">\(76 - 28 = 48\)</span></li>
+<li>Decide how many groups we want. Good practice suggests no fewer than 4/5 and no more than 6/7. Say we go with 5 groups.</li>
+<li>Divide the gap between the maximum and minimum values by the desired number of groups: <span class="math inline">\(= \dfrac{48}{5} = 9.6\)</span> and round up to the nearest whole number <span class="math inline">\(= 10\)</span>. This tells us how wide each group should be.</li>
+<li>The groups could thus be <span class="math inline">\(28-38, 38-48, 48-58, 58-68, 68-78\)</span>.</li>
+</ol>
+<p>Notice that these groups span, start to finish, all the values of reading scores. But we’ll have to decide which group to include 38, 48, 58, and 68 in. Should 38 go in 28-38 or in 38-48? The choice doesn’t matter so long as we are consistent. Let us choose a rule that says include 38 in 38-48, 48 in 48-58, 58 in 58-68, and 68 in 68-78. Using this rule we now find each reading score and drop it into its group. Then we calculate how many scores fall in each group, creating our Frequency column.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-18">TABLE 3.6: </span>Grouped Frequency Table of Reading Scores
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Grouped Scores
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+28-38
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+38-48
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+48-58
+</td>
+<td style="text-align:right;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+58-68
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+68-78
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+200
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now it is easy to see that the largest number of students (68) appear to fall in the 38-48 group of reading scores while the smallest frequency (14) occurs in the 28-38 group. Let us add to this table a percentage column.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-19">TABLE 3.7: </span>Grouped Frequency Table of Reading Scores with Percentages
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Grouped Scores
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+<th style="text-align:right;">
+Percentage
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+28-38
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+38-48
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+48-58
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+31
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+58-68
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+68-78
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+</tbody>
+</table>
+<p>The percentages make it even easier to see how the distribution breaks down; 34 percent of the students have scores in the 38-48 range while only 10 percent scored in the highest bracket (68-78). We can also break this down by the three groups we used earlier.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histo3"></span>
+<img src="stats_files/figure-html/histo3-1.svg" alt="Histogram of Grouped Reading Scores by Specific Groups" width="100%" /><img src="stats_files/figure-html/histo3-2.svg" alt="Histogram of Grouped Reading Scores by Specific Groups" width="100%" /><img src="stats_files/figure-html/histo3-3.svg" alt="Histogram of Grouped Reading Scores by Specific Groups" width="100%" />
+<p class="caption">
+FIGURE 3.6: Histogram of Grouped Reading Scores by Specific Groups
+</p>
+</div>
+<p>Histograms were once quite popular but there is a better visual for looking at our numeric variables, one called the <code>box-plot</code> that we’ll see in the next chapter. I am not a huge fan of histograms because grouping decisions influence the story being told. My advice would be to use grouped frequency tables instead of histograms to present a summary overview of your numeric data.</p>
+<div class="rmdcomment">
+<p>
+Histograms of grouped frequencies of numerical variables can be useful for summary depictions of the distribution
+</p>
+</div>
+</div>
+<div id="scatterplots" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Scatterplots<a href="dataviz.html#scatterplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>With two numeric variables, a <code>scatterplot</code> comes in very handy if we want to explore how one variable might be related to another. For example, we may want to ask whether students who score high on the reading test also tend to score high on the mathematics test. This could be visually explored via a scatter-plot, as shown below. The goal should be to look for a pattern: Does one variable increase as the other increases or does one variable decrease as the other increases? Or does there seem to be no relationship at all?</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:splot1"></span>
+<img src="stats_files/figure-html/splot1-1.svg" alt="Scatterplot of Reading Scores and Mathematics Scores" width="100%" />
+<p class="caption">
+FIGURE 3.7: Scatterplot of Reading Scores and Mathematics Scores
+</p>
+</div>
+<p>Quite clearly, students who do well in Reading also tend to do well in Mathematics. You can see this by virtue of the upward, left-to-right tilt of the cloud of points.</p>
+<p>What about Science scores and Mathematics scores? Is there any relationship between doing well in Science and doing well in Mathematics?</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:splot2"></span>
+<img src="stats_files/figure-html/splot2-1.svg" alt="Scatterplot of Science Scores and Mathematics Scores" width="100%" />
+<p class="caption">
+FIGURE 3.8: Scatterplot of Science Scores and Mathematics Scores
+</p>
+</div>
+<p>Of course, just like everything else we could break this down by any nominal/ordinal variable. The visual below shows you the breakouts by the student’s sex.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:splot3"></span>
+<img src="stats_files/figure-html/splot3-1.svg" alt="Scatterplot of Science Scores and Mathematics Scores, by Sex" width="100%" /><img src="stats_files/figure-html/splot3-2.svg" alt="Scatterplot of Science Scores and Mathematics Scores, by Sex" width="100%" /><img src="stats_files/figure-html/splot3-3.svg" alt="Scatterplot of Science Scores and Mathematics Scores, by Sex" width="100%" />
+<p class="caption">
+FIGURE 3.9: Scatterplot of Science Scores and Mathematics Scores, by Sex
+</p>
+</div>
+<div class="rmdcomment">
+<p>
+Work best with two numerical variables since they show the pattern of association between the two variables
+</p>
+</div>
+</div>
+<div id="line-graphs" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Line Graphs<a href="dataviz.html#line-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we have time-series data, such as the Presidential Approval data we saw earlier, then a <code>line graph</code> works well because it shows you how the outcome/phenomenon varies over time. Let us take another example, median household incomes. Say I am curious about trends in median household incomes in Ohio, Pennsylvania, and West Virginia.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xts"></span>
+<img src="stats_files/figure-html/xts-1.svg" alt="Trends in Real Median Household Incomes in OH, PA, and WV" width="100%" />
+<p class="caption">
+FIGURE 3.10: Trends in Real Median Household Incomes in OH, PA, and WV
+</p>
+</div>
+<p>These plots don’t work well just for financial or election data, they are ideally suited for any phenomenon that is measured over time. For example, the size of the immigrant population over the years, and even the number of lynx pelts reported in Canada per year from 1752 to 1819.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:immig"></span>
+<img src="stats_files/figure-html/immig-1.svg" alt="Number of Legal Permanent Residents in the USA" width="100%" />
+<p class="caption">
+FIGURE 3.11: Number of Legal Permanent Residents in the USA
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lynx"></span>
+<img src="stats_files/figure-html/lynx-1.svg" alt="Number of lynx pelts reported in Canada per year from 1752 to 1819" width="100%" />
+<p class="caption">
+FIGURE 3.12: Number of lynx pelts reported in Canada per year from 1752 to 1819
+</p>
+</div>
+<div class="rmdcomment">
+<p>
+Line graphs are the default choice for showing trends – patterns over time
+</p>
+</div>
+</div>
+<div id="polar-charts" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Polar Charts<a href="dataviz.html#polar-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>These charts are helpful for visualizing data that might have otherwise been explored via a bar-chart. For example, say you want to look at the miles per gallon given by a number of different automobiles. We could use a bar-chart, as shown below:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:polar1"></span>
+<img src="stats_files/figure-html/polar1-1.svg" alt="Miles per Gallon" width="90%" />
+<p class="caption">
+FIGURE 3.13: Miles per Gallon
+</p>
+</div>
+<p>Quite obviously, the Toyota Corolla has the best fuel economy, followed by the Fiat 128, while the Cadillac Fleetwood is tied with the Lincoln Continental for the worst fuel economy. A polar chart would present the same information as seen in the bar-chart, albeit in a more aesthetically pleasing manner.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:polar2"></span>
+<img src="stats_files/figure-html/polar2-1.svg" alt="Polar Chart of Miles per Gallon" width="90%" />
+<p class="caption">
+FIGURE 3.14: Polar Chart of Miles per Gallon
+</p>
+</div>
+</div>
+</div>
+<div id="some-essential-rules-for-good-visualizations" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Some Essential Rules for Good Visualizations<a href="dataviz.html#some-essential-rules-for-good-visualizations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are several rules, some favored by this expert or that, but regardless of the source of the rule, its merit is not in doubt. So here are the ones I try to follow (although I do break these at times, some times by design and other times unintentionally). It all starts of course with <a href="https://www.edwardtufte.com/">Edward Tufte’s maxims</a>: show the data, tell the truth, help the viewer think about the information rather than the design, encourage the eye to compare the data, make large data sets coherent.</p>
+<p>A more specific listing of the rules I try to keep in mind follows:</p>
+<ol style="list-style-type: decimal">
+<li>Do not include anything in your visualization that is not very informative. Give titles and subtitles where needed and make these stand on their own. At the same time, do not clutter your charts and tables with too much information otherwise the reader gets lost.</li>
+<li>Use colors wisely. Is this visual to be printed on a color printer? Is it part of a presentation in a poorly lit room? Choose bright colors that stand out from each each other and yet are visible on a printed page or on the projection screen in the room. Remember, a fair share of men seeing the visual could be color-blind so use color palettes designed for color-blind individuals. If this is news to you, read <a href="https://goo.gl/B6Ygru">How a dog sees a rainbow, and 12 other images that explain how we see color</a>. Pay attention to what is being plotted: Use <code>sequential</code> colors for ordered data values (that go from low to high or vice-versa); <code>qualitative</code> colors nominal data, and; <code>diverging</code> colors if the goal is to put equal emphasis on mid-range critical values and extremes at both ends of the data range but emphasize the middle with light colors and the low/high extremes with dark colors that have contrasting hues.</li>
+<li>The visualization is not your personal Mona Lisa; it must be effective for the target audience and help you tell the story. Do not get carried away in creating it.</li>
+<li>Use a table if a table would be more effective than a graph but remember, while tables are useful for audiences that will want to see more (not less of the actual data you have) graphs are favored by those who want a quick take-away.</li>
+<li>Always have your <code>y-axis</code> (or <code>x-axis</code> if relevant) starting at zero. If you don’t do this you can misrepresent the data. If you are forced to truncate the axis, point this out to the reader so that they can interpret dips and swells in line charts or differences between heights of frequency bars with care.</li>
+<li>Combine multiple graphs/tables into a single figure if you can so long as it does not lead to information overload. Go back and look at the scatterplots and line charts and try to visualize what these might look like if the y-axis had been forced to start at <span class="math inline">\(0\)</span>; they would certainly look different. For illustration purposes I have let the plotting software pick the starting coordinates.</li>
+<li>For non-technical audiences you should round up all percentages/proportions to no more than one decimal place and ideally to no decimal place unless doing so distorts the picture. For technical audiences, stay with two or four decimal places.</li>
+<li>Above all, start with pencil and paper and consider all alternate visualizations possible by drawing a rough sketch of what the finished product should look like.</li>
+<li>Consider using a choropleth map if geographic variation is one of the key narratives.</li>
+<li>Be prepared to alter your visual if it does not work; we are all hesitant to delete a page or a graphic and start from scratch but this locks you into something that isn’t working to begin with and you will be stuck in a rut.</li>
+<li>Avoid jargon like the plague. We often think we sound intelligent when we use jargon but this distracts from the oral/written presentation. Think of your audience and write and present in a manner that will resonate with them.</li>
+<li>Show as much data as you can; it vastly improves the effectiveness of the visual narration.</li>
+</ol>
+<hr />
+</div>
+<div id="chapter-3-practice-problems" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Chapter 3 Practice Problems<a href="dataviz.html#chapter-3-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="problem-1-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 1<a href="dataviz.html#problem-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Download the monthly Great Lakes water level dataset <a href="https://aniruhil.github.io/avsr/teaching/dataviz/greatlakes.sav">SPSS format from here</a> and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/greatlakes.xlsx">Excel format from here</a>. Construct an appropriate chart to display the data for Lake Superior. Be sure to label the x- and y-axis, and to title the chart. Note that water level is in meters.</p>
+</div>
+<div id="problem-2-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 2<a href="dataviz.html#problem-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Download the number of births per 10,000 of 23 year old women, U.S., 1917-1975 <a href="https://aniruhil.github.io/avsr/teaching/dataviz/usbirths.sav">SPSS format from here</a> and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/usbirths.xlsx">Excel format from here</a>. Construct an appropriate chart to display the trend in the data. Be sure to label the x- and y-axis, and to title the chart.</p>
+</div>
+<div id="problem-3-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 3<a href="dataviz.html#problem-3-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Download the winning speed (in kilometers per hour) for several men’s track and field distances world meets over the 1900 - 2012 period <a href="https://aniruhil.github.io/avsr/teaching/dataviz/olympics.sav">SPSS format from here</a> and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/olympics.xlsx">Excel format from here</a>. Construct an appropriate chart to display the speeds for the 100 meter dash. Be sure to label the x- and y-axis, and to title the chart. Note that the data are monthly and replicate the speed from the preceding month if the fastest speed was not eclipsed.</p>
+</div>
+<div id="problem-4-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 4<a href="dataviz.html#problem-4-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Use this <a href="https://aniruhil.github.io/avsr/teaching/dataviz/af.xls">data-set</a> used in Practice Problem 4 in the preceding Chapter, noting <a href="https://aniruhil.github.io/avsr/teaching/dataviz/Agresti%20%26%20Finlay%20Data%20Variables.pdf">these details of each variable</a>. Construct a frequency table for <code>belief in life after death</code>, showing both the frequencies and the relative frequencies (as percentages). Based on the table, what do most people seem to believe? Report the percentage for your answer. Construct an appropriate chart for these data, making sure to label all axis and providing a title.</p>
+</div>
+<div id="problem-5-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 5<a href="dataviz.html#problem-5-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Construct an appropriate chart that shows the relationship between high school GPA and college GPA. Label both axis and title the chart. What does this plot show? Are the two positively/negatively related? How strong would you guess is the relationship?</p>
+</div>
+<div id="problem-6-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 6<a href="dataviz.html#problem-6-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Construct a contingency table of vegetarianism against belief in life after death. What percent of vegetarians believe in life after death? What percent of those who believe in life after death are vegetarians? Use an appropriate chart to show the relationship between vegetarianism and belief in life after death. Label everything.</p>
+</div>
+<div id="problem-7-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 7<a href="dataviz.html#problem-7-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Construct a grouped frequency table with <code>five groups</code> of the variable <code>age</code>. Report both the frequencies and the relative frequencies (as percentages). Plot the relative frequencies using an appropriate chart. Label everything as usual. What is the modal age group?</p>
+<hr />
+<p><strong>The next set of questions revolve around the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/BostonMarathon.csv">2016 Boston Marathon race results available here</a>.</strong> The dataset contains the following variables:</p>
+<ul>
+<li>Bib = the runner’s bib number</li>
+<li>Name = the runner’s name</li>
+<li>Age = the runner’s age (in years)</li>
+<li>M/F = the runner’s gender (M = Male; F = Female)</li>
+<li>City = the runner’s home city</li>
+<li>State = the runner’s home state</li>
+<li>Country = the runner’s home country</li>
+<li>finishtime = the runner’s time (in seconds) to the finish line</li>
+</ul>
+</div>
+<div id="problem-8-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 8<a href="dataviz.html#problem-8-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>What countries had the largest and second-largest number of runners in the race?</p>
+</div>
+<div id="problem-9" class="section level4 unnumbered hasAnchor">
+<h4>Problem 9<a href="dataviz.html#problem-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>What was the distribution of the runners’ gender? Use a suitable chart to reflect the distribution.</p>
+</div>
+<div id="problem-10" class="section level4 unnumbered hasAnchor">
+<h4>Problem 10<a href="dataviz.html#problem-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Construct a grouped frequency table of the runners’ age, using the following groupings – 18-25; 25-32; 32-39; 39-46; 46-53; 53-60; 60-67; 67-74; 74-81; 81-88. Also construct a grouped histogram. What is the modal age group?</p>
+</div>
+<div id="problem-11" class="section level4 unnumbered hasAnchor">
+<h4>Problem 11<a href="dataviz.html#problem-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Draw a scatter-plot of runners’ age and finish times. Does this show any relationship? If it does, what sort of a relationship?</p>
+</div>
+<div id="problem-12" class="section level4 unnumbered hasAnchor">
+<h4>Problem 12<a href="dataviz.html#problem-12" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Using a reasonable grouping structure, construct country-specific histograms of finish times for runners from each the following countries – AUS, BRA, CAN, CHN, FRA, GBR, GER, ITA, JPN, MEX, and USA. Are finish times skewed for each country? Is the direction of the skew similar? What country seems to have the least skew? What country seems to have the most skew?</p>
+<hr />
+<p>Use <a href="https://aniruhil.github.io/avsr/teaching/dataviz/HR_comma_sep.csv">this data-set</a>, also used in <code>Practice Problem 5</code> in the preceding Chapter, to answer the following questions.</p>
+</div>
+<div id="problem-13" class="section level4 unnumbered hasAnchor">
+<h4>Problem 13<a href="dataviz.html#problem-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Were employees who had a workplace accident more likely to leave than employees who did not have an accident? Briefly explain your conclusion with appropriate charts/tables.</p>
+</div>
+<div id="problem-14" class="section level4 unnumbered hasAnchor">
+<h4>Problem 14<a href="dataviz.html#problem-14" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Are low salary employees more likely to leave than medium/high salary employees? Why do you conclude as you do? Briefly explain your reasoning with appropriate charts/tables.</p>
+</div>
+<div id="problem-15" class="section level4 unnumbered hasAnchor">
+<h4>Problem 15<a href="dataviz.html#problem-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Construct an appropriate chart that shows the distribution of the number of years employees spent in the company. What patterns do you see in this chart?</p>
+<hr />
+<p>Download the 2020 County Health Rankings data <a href="https://aniruhil.github.io/avsr/teaching/dataviz/CountyHealthRankings2017.sav">SPSS format from here</a>, <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2020_0.csv">CSV format from here</a> and the <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2020%20Analytic%20Documentation_0.pdf">accompanying analytic codebook</a></p>
+</div>
+<div id="problem-16" class="section level4 unnumbered hasAnchor">
+<h4>Problem 16<a href="dataviz.html#problem-16" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>You should see the following measures (<code>measurename</code>)</p>
+<ol style="list-style-type: lower-roman">
+<li>Adult obesity</li>
+<li>Children in poverty</li>
+<li>High school graduation</li>
+<li>Preventable hospital stays</li>
+<li>Unemployment rate</li>
+</ol>
+<p>Looking at pairs of variables in turn, briefly (20 words or less) state whether you would expect a positive/negative/no relationship between the variables in each pair and why you deduce as you do?</p>
+</div>
+<div id="problem-17" class="section level4 unnumbered hasAnchor">
+<h4>Problem 17<a href="dataviz.html#problem-17" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Construct scatterplots of all pairs of the five variables.</p>
+</div>
+<div id="problem-18" class="section level4 unnumbered hasAnchor">
+<h4>Problem 18<a href="dataviz.html#problem-18" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>How do the scatterplots you constructed in the preceding problem stack up against the expectations you listed in <code>Problem 16</code>? Which plots surprised you and how? Be brief.</p>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-1');
+</script>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>Indoor plumbing is lacking in many still developing countries, particularly in the rural areas. In some of these countries, particularly India, <a href="http://www.npr.org/sections/parallels/2014/06/09/319529037/indias-rape-uproar-ignites-demand-to-end-open-defecation">tigers aren’t the most dangerous animals</a><a href="dataviz.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="meansd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"css": "toc.css"
+},
+"theme": "sandstone"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

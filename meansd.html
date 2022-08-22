@@ -1,0 +1,2533 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Central Tendency and Dispersion | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <meta name="description" content="This is a free textbook written for students in my research methods classes." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Central Tendency and Dispersion | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Central Tendency and Dispersion | Data Analysis for Leadership &amp; Public Affairs:" />
+  
+  <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+<meta name="author" content="Anirudh V. S. Ruhil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="dataviz.html"/>
+<link rel="next" href="prob.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/d3-4.10.2/d3.min.js"></script>
+<link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"],
+      bcancel: ["Extension","cancel"],
+      xcancel: ["Extension","cancel"],
+      cancelto: ["Extension","cancel"]
+    });
+  });
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-2');
+</script>
+
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="yihui_style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Public Affairs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#the-chapters-that-follow"><i class="fa fa-check"></i><b>1.2</b> The chapters that follow</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#keys-to-learning-data-analysis"><i class="fa fa-check"></i><b>1.3</b> Keys to Learning Data Analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Core Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#statistics-versus-statistic"><i class="fa fa-check"></i><b>2.1</b> Statistics versus Statistic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#parameters-versus-estimates"><i class="fa fa-check"></i><b>2.1.1</b> Parameters versus Estimates</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#sampling-error-and-bias"><i class="fa fa-check"></i><b>2.1.2</b> Sampling Error and Bias</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#key-elements-of-random-sampling"><i class="fa fa-check"></i><b>2.1.3</b> Key Elements of Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#useful-research-designs"><i class="fa fa-check"></i><b>2.2</b> Useful Research Designs</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#experimental"><i class="fa fa-check"></i><b>2.2.1</b> Experimental</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#natural-experiments"><i class="fa fa-check"></i><b>2.2.2</b> Natural Experiments</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#quasi-experiments"><i class="fa fa-check"></i><b>2.2.3</b> Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#elements-of-a-data-set"><i class="fa fa-check"></i><b>2.3</b> Elements of a Data-set</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#variable-types"><i class="fa fa-check"></i><b>2.4</b> Variable Types</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#cross-sectional-time-series-and-panel-data"><i class="fa fa-check"></i><b>2.5</b> Cross-sectional, Time-Series, and Panel Data</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="intro.html"><a href="intro.html#cross-sectional-data"><i class="fa fa-check"></i><b>2.5.1</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="intro.html"><a href="intro.html#time-series-data"><i class="fa fa-check"></i><b>2.5.2</b> Time-Series Data</a></li>
+<li class="chapter" data-level="2.5.3" data-path="intro.html"><a href="intro.html#panel-data"><i class="fa fa-check"></i><b>2.5.3</b> Panel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#levels-of-measurement"><i class="fa fa-check"></i><b>2.6</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#nominal"><i class="fa fa-check"></i><b>2.6.1</b> Nominal</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#ordinal"><i class="fa fa-check"></i><b>2.6.2</b> Ordinal</a></li>
+<li class="chapter" data-level="2.6.3" data-path="intro.html"><a href="intro.html#intervalratio"><i class="fa fa-check"></i><b>2.6.3</b> Interval/Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#the-tricky-business-of-cause-and-effect"><i class="fa fa-check"></i><b>2.7</b> The Tricky Business of Cause-and-Effect</a></li>
+<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#chapter-2-practice-problems"><i class="fa fa-check"></i><b>2.8</b> Chapter 2 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dataviz.html"><a href="dataviz.html"><i class="fa fa-check"></i><b>3</b> Visualizing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dataviz.html"><a href="dataviz.html#visualizing-nominalordinal-data"><i class="fa fa-check"></i><b>3.1</b> Visualizing Nominal/Ordinal Data</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dataviz.html"><a href="dataviz.html#bar-charts-and-frequency-tables"><i class="fa fa-check"></i><b>3.1.1</b> Bar-charts and Frequency Tables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dataviz.html"><a href="dataviz.html#contingency-tables-and-bar-charts"><i class="fa fa-check"></i><b>3.1.2</b> Contingency Tables and Bar-charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dataviz.html"><a href="dataviz.html#visualizing-intervalratio-data"><i class="fa fa-check"></i><b>3.2</b> Visualizing Interval/Ratio Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dataviz.html"><a href="dataviz.html#the-histogram"><i class="fa fa-check"></i><b>3.2.1</b> The Histogram</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dataviz.html"><a href="dataviz.html#grouped-frequency-tables"><i class="fa fa-check"></i><b>3.2.2</b> Grouped Frequency Tables</a></li>
+<li class="chapter" data-level="3.2.3" data-path="dataviz.html"><a href="dataviz.html#scatterplots"><i class="fa fa-check"></i><b>3.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="dataviz.html"><a href="dataviz.html#line-graphs"><i class="fa fa-check"></i><b>3.2.4</b> Line Graphs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="dataviz.html"><a href="dataviz.html#polar-charts"><i class="fa fa-check"></i><b>3.2.5</b> Polar Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="dataviz.html"><a href="dataviz.html#some-essential-rules-for-good-visualizations"><i class="fa fa-check"></i><b>3.3</b> Some Essential Rules for Good Visualizations</a></li>
+<li class="chapter" data-level="3.4" data-path="dataviz.html"><a href="dataviz.html#chapter-3-practice-problems"><i class="fa fa-check"></i><b>3.4</b> Chapter 3 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meansd.html"><a href="meansd.html"><i class="fa fa-check"></i><b>4</b> Central Tendency and Dispersion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="meansd.html"><a href="meansd.html#central-tendency"><i class="fa fa-check"></i><b>4.1</b> Central Tendency</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="meansd.html"><a href="meansd.html#mean"><i class="fa fa-check"></i><b>4.1.1</b> Mean</a></li>
+<li class="chapter" data-level="4.1.2" data-path="meansd.html"><a href="meansd.html#median"><i class="fa fa-check"></i><b>4.1.2</b> Median</a></li>
+<li class="chapter" data-level="4.1.3" data-path="meansd.html"><a href="meansd.html#mode"><i class="fa fa-check"></i><b>4.1.3</b> Mode</a></li>
+<li class="chapter" data-level="4.1.4" data-path="meansd.html"><a href="meansd.html#some-features-of-measures-of-central-tendency"><i class="fa fa-check"></i><b>4.1.4</b> Some Features of Measures of Central Tendency</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="meansd.html"><a href="meansd.html#dispersion-aka-variability"><i class="fa fa-check"></i><b>4.2</b> Dispersion (aka Variability)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="meansd.html"><a href="meansd.html#range"><i class="fa fa-check"></i><b>4.2.1</b> Range</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meansd.html"><a href="meansd.html#quartiles-and-interquartile-range"><i class="fa fa-check"></i><b>4.2.2</b> Quartiles and Interquartile Range</a></li>
+<li class="chapter" data-level="4.2.3" data-path="meansd.html"><a href="meansd.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.3</b> Variance and Standard Deviation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="meansd.html"><a href="meansd.html#why-n-1"><i class="fa fa-check"></i><b>4.2.4</b> Why <span class="math inline">\(n-1\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meansd.html"><a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation"><i class="fa fa-check"></i><b>4.3</b> Properties of the Mean and Variance/Standard Deviation</a></li>
+<li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
+<li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
+<li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
+<li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
+<li class="chapter" data-level="4.11" data-path="meansd.html"><a href="meansd.html#beware-the-flawed-rule"><i class="fa fa-check"></i><b>4.11</b> Beware the flawed rule</a></li>
+<li class="chapter" data-level="4.12" data-path="meansd.html"><a href="meansd.html#chapter-4-practice-problems"><i class="fa fa-check"></i><b>4.12</b> Chapter 4 Practice Problems</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-1-2"><i class="fa fa-check"></i>Problem 1</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-2-2"><i class="fa fa-check"></i>Problem 2</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-3-2"><i class="fa fa-check"></i>Problem 3</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-4-2"><i class="fa fa-check"></i>Problem 4</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-5-2"><i class="fa fa-check"></i>Problem 5</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-6-2"><i class="fa fa-check"></i>Problem 6</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-7-2"><i class="fa fa-check"></i>Problem 7</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-8-2"><i class="fa fa-check"></i>Problem 8</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>5</b> Probability</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="prob.html"><a href="prob.html#basic-concepts-and-terminology-of-probability-theory"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts and Terminology of Probability Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="prob.html"><a href="prob.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
+<li class="chapter" data-level="5.3" data-path="prob.html"><a href="prob.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="prob.html"><a href="prob.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
+<li class="chapter" data-level="5.3.2" data-path="prob.html"><a href="prob.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
+<li class="chapter" data-level="5.3.3" data-path="prob.html"><a href="prob.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
+<li class="chapter" data-level="5.3.4" data-path="prob.html"><a href="prob.html#example-4-fortune-500-companies"><i class="fa fa-check"></i><b>5.3.4</b> Example 4: Fortune 500 Companies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="prob.html"><a href="prob.html#the-complement-of-an-event"><i class="fa fa-check"></i><b>5.4</b> The Complement of an Event</a></li>
+<li class="chapter" data-level="5.5" data-path="prob.html"><a href="prob.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>5.5</b> Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.6" data-path="prob.html"><a href="prob.html#the-addition-rule-for-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.6</b> The Addition Rule for Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.7" data-path="prob.html"><a href="prob.html#addition-rule-for-non-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.7</b> Addition Rule for Non-Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.8" data-path="prob.html"><a href="prob.html#independent-events-and-the-multiplication-rule"><i class="fa fa-check"></i><b>5.8</b> Independent Events and the Multiplication Rule</a></li>
+<li class="chapter" data-level="5.9" data-path="prob.html"><a href="prob.html#decision-trees"><i class="fa fa-check"></i><b>5.9</b> Decision Trees</a></li>
+<li class="chapter" data-level="5.10" data-path="prob.html"><a href="prob.html#conditional-probability"><i class="fa fa-check"></i><b>5.10</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="prob.html"><a href="prob.html#the-gender-bias-example"><i class="fa fa-check"></i><b>5.10.1</b> The Gender-bias Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="prob.html"><a href="prob.html#dependent-events"><i class="fa fa-check"></i><b>5.11</b> Dependent Events</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="prob.html"><a href="prob.html#the-monty-hall-problem"><i class="fa fa-check"></i><b>5.11.1</b> The Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="prob.html"><a href="prob.html#bayes-theorem"><i class="fa fa-check"></i><b>5.12</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="5.12.1" data-path="prob.html"><a href="prob.html#another-example"><i class="fa fa-check"></i><b>5.12.1</b> Another Example</a></li>
+<li class="chapter" data-level="5.12.2" data-path="prob.html"><a href="prob.html#extending-bayes-rule"><i class="fa fa-check"></i><b>5.12.2</b> Extending Bayes Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="prob.html"><a href="prob.html#key-things-to-remember"><i class="fa fa-check"></i><b>5.13</b> Key Things to Remember</a></li>
+<li class="chapter" data-level="5.14" data-path="prob.html"><a href="prob.html#chapter-5-practice-problems"><i class="fa fa-check"></i><b>5.14</b> Chapter 5 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="distributions.html"><a href="distributions.html#random-variables"><i class="fa fa-check"></i><b>6.1</b> Random Variables</a></li>
+<li class="chapter" data-level="6.2" data-path="distributions.html"><a href="distributions.html#probability-distributions"><i class="fa fa-check"></i><b>6.2</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="distributions.html"><a href="distributions.html#discrete-probability-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Discrete Probability Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="distributions.html"><a href="distributions.html#continuous-probability-distributions"><i class="fa fa-check"></i><b>6.3</b> Continuous Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="distributions.html"><a href="distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>6.3.1</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="distributions.html"><a href="distributions.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>6.3.2</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="distributions.html"><a href="distributions.html#chapter-6-practice-problems"><i class="fa fa-check"></i><b>6.4</b> Chapter 6 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>7</b> The Theory of Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sampling.html"><a href="sampling.html#the-standard-error"><i class="fa fa-check"></i><b>7.1</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.2" data-path="sampling.html"><a href="sampling.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>7.2</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.3" data-path="sampling.html"><a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>7.3</b> Applying the Standard Error and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="sampling.html"><a href="sampling.html#example-1-2"><i class="fa fa-check"></i><b>7.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sampling.html"><a href="sampling.html#example-2-2"><i class="fa fa-check"></i><b>7.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sampling.html"><a href="sampling.html#the-sampling-distribution-of-binary-proportions"><i class="fa fa-check"></i><b>7.4</b> The Sampling Distribution of Binary Proportions</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="sampling.html"><a href="sampling.html#example-1-3"><i class="fa fa-check"></i><b>7.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.4.2" data-path="sampling.html"><a href="sampling.html#example-2-3"><i class="fa fa-check"></i><b>7.4.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="sampling.html"><a href="sampling.html#point-estimates"><i class="fa fa-check"></i><b>7.5</b> Point Estimates</a></li>
+<li class="chapter" data-level="7.6" data-path="sampling.html"><a href="sampling.html#interval-estimates"><i class="fa fa-check"></i><b>7.6</b> Interval Estimates</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="sampling.html"><a href="sampling.html#example-1-4"><i class="fa fa-check"></i><b>7.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.2" data-path="sampling.html"><a href="sampling.html#example-2-4"><i class="fa fa-check"></i><b>7.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.6.3" data-path="sampling.html"><a href="sampling.html#interval-estimates-for-binary-proportions"><i class="fa fa-check"></i><b>7.6.3</b> Interval Estimates for Binary Proportions</a></li>
+<li class="chapter" data-level="7.6.4" data-path="sampling.html"><a href="sampling.html#example-1-5"><i class="fa fa-check"></i><b>7.6.4</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.5" data-path="sampling.html"><a href="sampling.html#example-2-5"><i class="fa fa-check"></i><b>7.6.5</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="sampling.html"><a href="sampling.html#students-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Student’s t distribution</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="sampling.html"><a href="sampling.html#example-1-6"><i class="fa fa-check"></i><b>7.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.7.2" data-path="sampling.html"><a href="sampling.html#example-2-6"><i class="fa fa-check"></i><b>7.7.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.7.3" data-path="sampling.html"><a href="sampling.html#example-3"><i class="fa fa-check"></i><b>7.7.3</b> Example 3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="sampling.html"><a href="sampling.html#key-concepts-to-remember"><i class="fa fa-check"></i><b>7.8</b> Key Concepts to Remember</a></li>
+<li class="chapter" data-level="7.9" data-path="sampling.html"><a href="sampling.html#chapter-7-practice-problems"><i class="fa fa-check"></i><b>7.9</b> Chapter 7 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> The Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#articulating-the-hypotheses-to-be-tested"><i class="fa fa-check"></i><b>8.1</b> Articulating the Hypotheses to be tested</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.2</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#the-process-of-hypothesis-testing-an-example"><i class="fa fa-check"></i><b>8.3</b> The Process of Hypothesis Testing: An Example</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-7"><i class="fa fa-check"></i><b>8.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-7"><i class="fa fa-check"></i><b>8.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis.html"><a href="hypothesis.html#confidence-intervals-for-hypothesis-tests"><i class="fa fa-check"></i><b>8.4</b> Confidence Intervals for Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis.html"><a href="hypothesis.html#the-one-sample-t-test"><i class="fa fa-check"></i><b>8.5</b> The One-Sample t-test</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis.html"><a href="hypothesis.html#assumptions"><i class="fa fa-check"></i><b>8.5.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis.html"><a href="hypothesis.html#the-two-group-or-two-sample-t-test"><i class="fa fa-check"></i><b>8.6</b> The Two-group (or Two-sample) t-test</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-1"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-8"><i class="fa fa-check"></i><b>8.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-8"><i class="fa fa-check"></i><b>8.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="8.6.3" data-path="hypothesis.html"><a href="hypothesis.html#caution"><i class="fa fa-check"></i><b>8.6.3</b> Caution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis.html"><a href="hypothesis.html#paired-t-tests"><i class="fa fa-check"></i><b>8.7</b> Paired t-tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-2"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#the-testing-protocol"><i class="fa fa-check"></i>The Testing Protocol</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-9"><i class="fa fa-check"></i><b>8.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-9"><i class="fa fa-check"></i><b>8.7.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Leadership &amp; Public Affairs:</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="meansd" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Central Tendency and Dispersion<a href="meansd.html#meansd" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>While graphical displays of our data are useful descriptors of how a variable is distributed, <code>numerical summaries</code> of our data are far more concise and descriptive. But what would be good descriptors? A simple rule tends to work well in most situations. In particular, think about this: I tell you that the typical homeless person has been on the streets for 14 months. I know this because I have access to all homeless persons and have documented how long they have been on the streets. I then give you a random sample of homeless persons, blindfold you, and ask you to pick one homeless person from your sample. When you do so I ask you to guess how long this individual has been on the streets. What would be your best guess? Well, ideally it should be 14 months because that is the average duration in the population. Of course, you could say 14 months and that might be exactly how long this person has been on the street. I don’t tell you whether your guess was correct or not. Instead, I ask you to tell me how many months <span class="math inline">\(\pm\)</span> from the 14 months that is true of the population might you be if your guess was wrong? You would be unable to answer this without a blind guess unless you knew how much the duration of homelessness varies in the population. This is where knowing something about what is most likely, most typical, the average, and how much variation there is around this typical, average, most likely feature is essential to statistics. In this chapter we will focus on mastering two concepts – how to calculate the “average”, and how to calculate “variability” around this average. The former is <code>central tendency</code> and the latter is <code>dispersion</code>.</p>
+<div id="central-tendency" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Central Tendency<a href="meansd.html#central-tendency" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Central tendency is a statistical measure that defines the center of a distribution and is most typical, most representative, of the scores that comprise the distribution of the variable of interest. There are three measures of central tendency – the mean, the median, and the mode. Each of these has strengths and weaknesses and is ideally suited to a specific situation with respect to a given variable. Let us see what these measures are and when they are most useful. Before we do so, however, a brief tutorial on some symbols and mathematical operators you will start seeing. Chief among these is the summation operator <span class="math inline">\(\sum\)</span>.</p>
+<p>This Greek symbol calls us to add everything that follows. For example, if I did <span class="math inline">\(\sum(x_i)\)</span> where <span class="math inline">\(i = 1, 2, 3, 4\)</span> then we are being asked to sum each value of <span class="math inline">\(x\)</span>. The subscript <span class="math inline">\(i\)</span> distinguishes between <span class="math inline">\(x_i = 1, x_i = 2, x_i = 3, \text{ and } x_i = 4\)</span> so we know which x-value we are using in the calculation. In a nutshell, then, <span class="math inline">\(\sum(x_i) = \sum(x_1 + x_2 + x_3 + x_4) = \sum(1 + 2 + 3 + 4) = 10\)</span>. You will also see the same thing expressed alternatively thus:</p>
+<p><span class="math display">\[\sum^{n}_{i=1}{x_i}, i=1,2,3,\ldots,n\]</span></p>
+<p>which basically means the same thing as above: Add each observation <span class="math inline">\(i\)</span> of the total <span class="math inline">\(n\)</span> observations of <span class="math inline">\(x\)</span>. In other words,</p>
+<p><span class="math display">\[\sum^{n}_{i=1}{x_i} = x_1 + x_2 + x_3 + \ldots + x_n\]</span></p>
+<p>Note also that</p>
+<p><span class="math display">\[\sum^n_{i=1}(x_i - 1) = \sum((x_1 - 1) + (x_2 - 1) + (x_3 - 1) + (x_4 - 1)) = \sum(0 + 1 + 2 + 3) = 6\]</span></p>
+<p><span class="math display">\[\sum^n_{i=1}(x_i^2) = \sum((x_1^2 + x_2^2 + x_3^2 + x_4^2)) = \sum((1 + 4 + 9 + 16)) = 30\]</span></p>
+<p><span class="math display">\[(\sum^n_{i=1}x_i)^2 = (\sum(x_1 + x_2 + x_3 + x_4))^2 = (\sum(1 + 2 + 3 + 4))^2 = (10)^2 = 100\]</span></p>
+<p><span class="math display">\[\sum^n_{i=1}(x_i + y_i) = \sum^n_{i=1}x_i + \sum^n_{i=1}y_i\]</span></p>
+<p><span class="math display">\[\sum^n_{i=1}kx_i = k\sum^n_{i=1}x_i\]</span></p>
+<p><span class="math display">\[\sum^n_{i=1}k = kn\]</span></p>
+<p>We will start seeing the summation sign with increasing frequency as we progress through the course. You may be wondering: Do I need to know how to do this? The short answer is no, you don’t, because it is not completely necessary to get a basic grasp of the concepts we must wrestle with. However, if you are curious, math-oriented, or just want a deeper understanding because you think you may want to take a few more statistics courses, then yes, try to understand how formulas work. If you crack this nut you will be surprised at the whole new world that opens up before you.</p>
+<div id="mean" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Mean<a href="meansd.html#mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>arithmetic</code> mean (also known as the arithmetic average) is computed by adding up the scores in the distribution and dividing this sum by the sample size. In plain words, and using the summation operator, the arithmetic mean of <span class="math inline">\(x_i\)</span> is calculated as</p>
+<p><span class="math display">\[\dfrac{\sum^n_{i=1}x_i}{n} = \dfrac{x_1 + x_2 + x_3 + \ldots + x_n}{n}\]</span></p>
+<p>While the underlying calculations are the same, we do draw a distinction between the <code>population mean</code> and the <code>sample mean</code>, using different symbols when calculating each. The formulas are given below in <a href="meansd.html#eq:popmean">(4.1)</a> and <a href="meansd.html#eq:sampmean">(4.2)</a>, respectively:</p>
+<p><span class="math display" id="eq:popmean">\[\begin{equation}
+\tag{4.1}
+\text{Population Mean } = \mu = \dfrac{\sum^N_{i=1}x_i}{N}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:sampmean">\[\begin{equation}
+\tag{4.2}
+\text{Sample Mean } = \bar{x} = \dfrac{\sum^n_{i=1}x_i}{n}
+\end{equation}\]</span></p>
+<p>Notice the important difference – the population mean is symbolized by <span class="math inline">\(\mu\)</span> (pronounced mu or myoo), and the total number of observations (aka the population size) is symbolized by uppercase <code>N</code>. In contrast, the sample mean is symbolized by <span class="math inline">\(\bar{x}\)</span> (pronounced <span class="math inline">\(x-bar\)</span>) and the total number of observations (aka the sample size) is symbolized by lowercase <code>n</code>.</p>
+<p>Here is a trivial example, that shows you the starting bi-weekly salary of 12, randomly selected graduates of a university’s public affairs school.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table41">TABLE 4.1: </span>Starting biweekly salaries
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Bi-weekly Salary
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2710
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+2755
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+2850
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+2880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+2880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+2890
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+2920
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+2940
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+2950
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+3050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:right;">
+3130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:right;">
+3325
+</td>
+</tr>
+</tbody>
+</table>
+<p>Since this is a sample, the sample mean could be calculated as:</p>
+<p><span class="math display">\[\bar{x} = \dfrac{\sum^n_{i=1}x_i}{n}\]</span>
+<span class="math display">\[= \dfrac{x_{1} + x_{2} + \cdots + x_{12}}{n}\]</span>
+<span class="math display">\[= \dfrac{2,850 + 2,950 + \cdots + 2,920}{12}\]</span>
+<span class="math display">\[= \dfrac{35,280}{12}\]</span>
+<span class="math display">\[\therefore \bar{x} = 2,940\]</span></p>
+<p>The interpretation of this sample mean is rather simple. Think of it as follows: If I ask you to make a random pick of a graduate from this school and ask you what his/her bi-weekly salary is likely to be, your best guess should be $2,940. Why? Because your sample told you that this is the average salary, the typical salary. Of course, this does not mean everybody will have this salary or that the next student you randomly pick has this salary. The table and common sense should tell you that salaries vary, the person you select may be making more or less than your sample mean. However, guessing any other salary would be a wild guess. Instead, knowing the sample mean gives you the basis to make a more informed guess that is more likely to be correct than any other number you pick out of thin air. Even if you are wrong, you will not be very far from the truth. This accuracy is driven by statistical theory that we will cover shortly. Before we do that though, we need to understand two other measures of central tendency.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab42">TABLE 4.2: </span>Properties of the Arithmetic Mean
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Observation
+</th>
+<th style="text-align:right;">
+x
+</th>
+<th style="text-align:right;">
+(x - 2)
+</th>
+<th style="text-align:right;">
+(2 * x)
+</th>
+<th style="text-align:right;">
+(x / 2)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+2.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+2.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+13.0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="median" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Median<a href="meansd.html#median" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The median is the middle-value that occurs when the data are arranged in an ascending or descending order, and is commonly denoted by the symbol <span class="math inline">\(Md\)</span>. Since central tendency is all about finding the “center” of the values of a variable <span class="math inline">\(x\)</span>, the median tends to be intuitive for most folks and calculating it is equally simple.</p>
+<ol style="list-style-type: decimal">
+<li>Arrange the values of <span class="math inline">\(x\)</span> either in ascending order or in descending order.</li>
+<li>If the number of data points in the population or sample is an <code>odd</code> number, the median observation can be identified as <span class="math inline">\(Md = \dfrac{N + 1}{2}\)</span> for a population and <span class="math inline">\(Md = \dfrac{n + 1}{2}\)</span> for a sample. See Table 4.3 for an example.</li>
+<li>If the number of data points in the population or sample is an<code>even</code> number, the median observation can be identified as the average of the middle two values of <span class="math inline">\(x\)</span>. See Table 4.4 for an example.</li>
+</ol>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab43">TABLE 4.3: </span>Median Salary when n or N is an odd number
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Bi-weekly Salary
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2710
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+2755
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+2850
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+2880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+2890
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+2920
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+2940
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+2950
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+3050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+3130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:right;">
+3325
+</td>
+</tr>
+</tbody>
+</table>
+<p>The median observation (sometimes also called the <code>median position</code>) is the <span class="math inline">\(6^{th}\)</span> observation and the median salary is thus $2,920.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab44">TABLE 4.4: </span>Median Salary when n or N is an even number
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Bi-weekly Salary
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2710
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+2755
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+2850
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+2880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+2880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+2890
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:right;">
+2920
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+2940
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:right;">
+2950
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:right;">
+3050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:right;">
+3130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:right;">
+3325
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now the median observation lies between the <span class="math inline">\(6^{th}\)</span> and <span class="math inline">\(7^{th}\)</span> observations and the hence median salary is <span class="math inline">\(Md = \dfrac{2,890 + 2,920}{2} = \dfrac{5,810}{2} = \$2,905\)</span>. With even-numbered samples/populations you could end up with a median value that is actually not seen in the data-set since we average the middle values. Don’t be surprised if this happens.</p>
+</div>
+<div id="mode" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Mode<a href="meansd.html#mode" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The mode or <code>modal value</code> refers to the value of the variable <span class="math inline">\(x\)</span> that occurs most frequently in the data-set. The mode makes little sense for numerical variables (interval or ratio) and instead works best with categorical variables (nominal or ordinal). The table below shows you an example where 50 randomly sampled residents of Manhattan (New York City, NY) were asked about how they commute to work on a typical working day of the week.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab44b">TABLE 4.5: </span>Modal Transportation Choice
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Transportation.Choice
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Walking
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bus/Train
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Taxi
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bicycle
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Drove alone/Car-pooled
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+</tbody>
+</table>
+<p>Most of the respondents <span class="math inline">\((19)\)</span> out of <span class="math inline">\((50)\)</span> said they walk to work and hence the modal transportation choice is walking to work. Just as in the case of the arithmetic mean, the implication should be clear: If you picked a randomly chosen resident of Manhattan and I ask you how do you think they commute to work your best guess ought to be that they walk. You could be wrong, but based on the sample of 50 residents you have seen, walking would be the most educated guess you could make.</p>
+</div>
+<div id="some-features-of-measures-of-central-tendency" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Some Features of Measures of Central Tendency<a href="meansd.html#some-features-of-measures-of-central-tendency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we have categorical data then now we know that the mode would be the ideal measure to describe the average value. However, what if we have numerical data? Should we choose the mean or the median? We choose between the mean and median depending upon whether we have extremely unusual observations or not.</p>
+<p>For example, imagine I give a 10-point pop-quiz in a seminar class of five students and the scores are <span class="math inline">\(x = 1, 3, 5, 7, 9\)</span> leading to an average score of <span class="math inline">\(5\)</span>. We see that <span class="math inline">\(5\)</span> is also the median. Intuitively, <span class="math inline">\(5\)</span> makes perfect sense as the average score given the data. However, what if the scores were <span class="math inline">\(x = 1, 1, 1, 2, 10\)</span>, resulting in a mean of 3. The median score is clearly <span class="math inline">\(1\)</span>. In this latter situation, the mean has been <code>inflated</code> by that one student who got a perfect score but most people did very poorly. Intuitively then, saying the average score was a 3 would be misleading given that four out of five students scored below the average! So what would be a good measure of the average score here? The answer is, the median. If you did this and said the average student scored <span class="math inline">\(1\)</span> you would be describing the scores more accurately than if you opted for the mean of <span class="math inline">\(3\)</span>.</p>
+<p>This reflects an important principle we should follow when describing the data in terms of means and medians. With unusually large or small scores – compared to the rest of the data – the median better represents the average than does the mean. Note that</p>
+<ul>
+<li>the mean will be inflated (i.e., pulled upwards) if the unusual data point occurs on the high side of the variable’s values, and<br />
+</li>
+<li>the mean will be deflated (i.e., pulled downwards) if the unusual data point occurs on the low side of the variable’s values.</li>
+</ul>
+<p>The median is also useful when you have open-ended data or incomplete data. For instance, say you give kindergarten kids some task to complete and are timing them. Some of them do not finish the task so you cannot record a time value for these kids. Maybe the times (in minutes) look as follows: <span class="math inline">\(x = 7, 8, 6, 9, 1, 3, 12, 18, NA, NA\)</span>. If you had to calculate the average, what could you do? You may be tempted to discard the data for all kids who did not finish the task and calculate the mean time based on all other kids’ data this would lead to a mean time of <span class="math inline">\(8\)</span> minutes. But this would lead to a flawed conclusion. After all, it would be important to recognize the truth that some kids couldn’t finish the task. How then could you calculate the average? You could arrange the data in increasing order of time taken to complete the task, putting all the kids who did not finish at the very high end of the times, and then calculate the median time! If you did this you would have: <span class="math inline">\(x = 1, 3, 6, 7, 8, 9, 12, 18, NA, NA\)</span> and the median time would be <span class="math inline">\(8.5\)</span> minutes, a more accurate portrayal of average time on task.</p>
+<p>The mean has two things going for it though; it uses all data points (assuming no incomplete or missing data) and is used in most statistical calculations. This is why we often fall back on the mean as the best measure of the average value of a variable.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+</div>
+</div>
+<div id="dispersion-aka-variability" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Dispersion (aka Variability)<a href="meansd.html#dispersion-aka-variability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Knowing something about the average is useful but by itself the average is of limited value. Rather, what you want to also know is how much do the data values vary? Why does this matter? Think about this in the context of your exam scores. Let us say that when I give you your exams back I also tell everyone that the mean exam score was <span class="math inline">\(90\)</span> (out of a <span class="math inline">\(100\)</span>) on Exam I. Your score was a <span class="math inline">\(96\)</span> and you are relieved because you did better than the average student in the class. But you shouldn’t rejoice just yet. Instead you should ask: How much did the exam scores vary for the class? I tell you average variability was <span class="math inline">\(2\)</span> points, which means most scores fell in the <span class="math inline">\(88 \text{ and } 92\)</span> range. Well then, you did much better than most people, maybe you were the top performer. However, if I tell you the average variability was <span class="math inline">\(6\)</span> then you know most scores fell between <span class="math inline">\(84 \text{ and } 96\)</span> and now you don’t feel so good any more.</p>
+<p>Knowing variability tells you something useful about the variable you are studying. If the variable shows little variability then any conclusions you make will have good accuracy when you extrapolate from your sample to the population (unless you made a mess of gathering your sample data to start with). However, if you see a lot of variability in your data then your conclusions are likely to have a lot of uncertainty when applied to the population from which you drew your sample. I would thus go as far as to say that variability is the linchpin for all data analysis, and the reason you will see a specific measure of variability figuring prominently in most statistical calculations. Let us see what that measure is by working our way to it, starting with a crude measure of variability.</p>
+<div id="range" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Range<a href="meansd.html#range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One of the crudest measures of variability is the <code>range</code>, computed as <span class="math inline">\(Range = x_{max} - x_{min}\)</span> where <span class="math inline">\(x_{max}\)</span> is the maximum value of variable <span class="math inline">\(x\)</span> and <span class="math inline">\(x_{min}\)</span> is the minimum value of variable <span class="math inline">\(x\)</span>. Intuitively, if the smallest and largest values are very close together, there cannot be much variability in <span class="math inline">\(x\)</span> but if there is a huge gap between the lowest and highest values then there must be quite a bit of variability. Let us take two examples to demonstrate each scenario, respectively.</p>
+<ul>
+<li><span class="math inline">\(x = 1, 2, 3, 4, 10\)</span> and so range is <span class="math inline">\(10-1 = 9 \ldots\)</span> high variability</li>
+<li><span class="math inline">\(y = 1, 2, 3, 4, 5\)</span> and so range is <span class="math inline">\(5-1 = 4 \ldots\)</span> low variability</li>
+</ul>
+<p>Simple enough, and yet fallible. See the following two variables, <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<ul>
+<li><span class="math inline">\(x = 1, 3, 5, 7, 10\)</span> and so range is <span class="math inline">\(10-1 = 9\)</span></li>
+<li><span class="math inline">\(y = 1, 1, 1, 1, 10\)</span> and so range is <span class="math inline">\(10-1 = 9\)</span></li>
+</ul>
+<p>The range is identical for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> but quite obviously the scores hardly vary in <span class="math inline">\(y\)</span>! This is an example of the <code>limitation of the range</code> – it can mislead because it only relies on two data points, even though your sample size may be 10 or 100 or even 10,000. In fact, the range is being driven by the smallest and largest values and that would be as much an issue here as in the case of the mean. Consequently, the range is of very limited use in practice.</p>
+</div>
+<div id="quartiles-and-interquartile-range" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Quartiles and Interquartile Range<a href="meansd.html#quartiles-and-interquartile-range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If focusing only on the ends of the data (i.e., <span class="math inline">\(x_{min} \text{ and } x_{max}\)</span>) is not a good way to measure variability, then one alternative may be to ignore the low and high values and focus just on the middle of the distribution, say the middle <span class="math inline">\(50\)</span> percent of the distribution. This approach, called the <code>interquartile range (IQR)</code> is a standard way of measuring variability and used quite often. To calculate the IQR, though, we need first to identify the values that would give us the middle <span class="math inline">\(50\)</span> percent of our data.</p>
+<div id="calculating-the-quartiles" class="section level4 hasAnchor" number="4.2.2.1">
+<h4><span class="header-section-number">4.2.2.1</span> Calculating the Quartiles<a href="meansd.html#calculating-the-quartiles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Just as the median halved the data, the <code>quartiles</code> quarter the data into four sections of <span class="math inline">\(25\)</span> percent. We refer to these technically as</p>
+<ul>
+<li>the <code>first quartile</code> (<span class="math inline">\(Q_1\)</span>): <span class="math inline">\(25\)</span> percent of the data fall below <span class="math inline">\(Q_1\)</span>,</li>
+<li>the <code>second quartile</code> (<span class="math inline">\(Q_2\)</span>): also the median, <span class="math inline">\(50\)</span> percent of the data fall below <span class="math inline">\(Q_2\)</span>, and</li>
+<li>the <code>third quartile</code> (<span class="math inline">\(Q_3\)</span>): <span class="math inline">\(75\)</span> percent of the data fall below <span class="math inline">\(Q_3\)</span></li>
+</ul>
+<p>Note that <span class="math inline">\(Q_1\)</span> is also called the <span class="math inline">\(25^{th}\)</span> percentile, <span class="math inline">\(Q_2\)</span> is called the <span class="math inline">\(50^{th}\)</span> percentile, and <span class="math inline">\(Q_3\)</span> is called the <span class="math inline">\(75^{th}\)</span> percentile. Note too that we will be using software to perform the calculations, quartiles can be calculated by hand as shown below:</p>
+<p><span class="math display" id="eq:quartiles">\[\begin{equation}
+\tag{4.3}
+i = \left(\dfrac{p}{100}\right) \times n
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(i\)</span> is the observation number and <span class="math inline">\(p\)</span> is the percentile we want. If, for example, I want the <span class="math inline">\(25^{th}\)</span> percentile, then this is given by <span class="math inline">\(i = \left(\dfrac{25}{100}\right) \times n\)</span>. Similarly, the <span class="math inline">\(50^{th}\)</span> percentile (our median) is calculated as <span class="math inline">\(i = \left(\dfrac{50}{100}\right) \times n\)</span> and the <span class="math inline">\(75^{th}\)</span> percentile as <span class="math inline">\(i = \left(\dfrac{75}{100}\right) \times n\)</span>.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<p>Let us calculate <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_3\)</span> for our salary data when we had <span class="math inline">\(n=11\)</span>, an odd numbered sample size. In this case, <span class="math inline">\(Q_1 = i = \left(\frac{p}{100}\right) \times n = \left(\frac{25}{100}\right) \times 11 \approx 3\)</span> or the <span class="math inline">\(3^{rd}\)</span> salary. Likewise, <span class="math inline">\(Q_3 = i = \left(\frac{p}{100}\right) \times n = \left(\frac{75}{100}\right) \times 11 \approx 9\)</span> or the <span class="math inline">\(9^{th}\)</span> salary. The actual salary values of these two observations turn out to be <span class="math inline">\(Q_1 =\)</span> $2,850 and <span class="math inline">\(Q_3\)</span> = $3,050; <span class="math inline">\(25\)</span> percent of our sample had salaries less than $2,850 and <span class="math inline">\(75\)</span> percent of our sample had salaries below $3,050.</p>
+<p>What if we have an even-numbered data-set? Recall that the median was between the <span class="math inline">\(6^{th}\)</span> and the <span class="math inline">\(7^{th}\)</span> values, which effectively gave us six salaries below the median and six salaries above the median. Consequently, the first quartile would be <span class="math inline">\(Q_1 = \dfrac{3^{rd} \text{ salary } + 4^{th}\text{ salary }}{2} = \dfrac{2850 + 2880}{2} = 2865\)</span>. Similarly, the third quartile would be <span class="math inline">\(Q_3 = \dfrac{9^{th} \text{ salary } + 10^{th}\text{ salary }}{2} = \dfrac{2950 + 3050}{2} = 3000\)</span>. If we had to depict the fences marking the quartiles and the Median, it would look as follows:</p>
+<p><span class="math display">\[2710, 2755, 2850, \vert|Q1\vert|, 2880, 2880, 2890, \vert|Median\vert|, 2920, 2940, 2950, \vert|Q3\vert|, 3050, 3130, 3325\]</span></p>
+<p>Again, do not be thrown off by the fact that the quartiles seem to be illusory (i.e., values that are not seen in the sample). Also note that different statistical software will calculate the quartiles marginally differently depending upon how the software has been programmed.</p>
+</div>
+<div id="calculating-the-interquartile-range" class="section level4 hasAnchor" number="4.2.2.2">
+<h4><span class="header-section-number">4.2.2.2</span> Calculating the Interquartile Range<a href="meansd.html#calculating-the-interquartile-range" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The interquartile range (IQR) is given by <span class="math inline">\(Q_3 - Q_1 \cdots\)</span> the spread in the middle <span class="math inline">\(50\)</span> percent of our data values. In the salary example we just worked with, <span class="math inline">\(IQR = Q_3 - Q_1 = 3050 - 2850 = 200\)</span>. So the spread in the middle <span class="math inline">\(50\)</span> percent of our data values is $200. For the salary data with <span class="math inline">\(n = 12\)</span>, the <span class="math inline">\(IQR = Q_3 - Q_1 = 3000 - 2865 = 135\)</span>.</p>
+<p>The IQR is used in visualizing our data with a more powerful graphic than what we have seen in Chapter 3. We will cover this graphic in Chapter 5, once we have covered some more necessary ground. Before we move on, note that whereas the range was weak in its reliance upon just two data points, the IQR is only marginally better because it relies upon just the middle <span class="math inline">\(50\)</span> percent of our data to give us a sense of variability. After all, the IQR is discarding half of our data! This is a waste and will lead to an incomplete sense of variability in our data. At this point, unless you have dozed off, you should be expecting me to say that a better measure of variability would be one that takes <code>all data</code> into account. You bet. That is precisely what we will do next.</p>
+</div>
+</div>
+<div id="variance-and-standard-deviation" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Variance and Standard Deviation<a href="meansd.html#variance-and-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As I had mentioned at the very outset of this chapter, variability is not calculated in a vacuum but with reference to the average value of the variable. Say we are using the mean as the average. How could we calculate average variability, average distance of a data value, around the mean? One way to do this might be to calculate how far each data value is from the mean. Then take these distances, add them up, and divide the resulting total by the number of data points we have (whether <span class="math inline">\(N \text{ or } n\)</span>). Let us try this simple approach with the following sample <span class="math inline">\(x = 1, 3, 4, 6, 22, 24\)</span>. Note that the mean is <span class="math inline">\(10\)</span>.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab45">TABLE 4.6: </span>Distance from the Mean: Part I
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+x
+</th>
+<th style="text-align:right;">
+Mean of x
+</th>
+<th style="text-align:right;">
+(x - Mean of x)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<p>Ah! The total of the distances is <span class="math inline">\(0\)</span>, which makes it impossible to calculate the average distance from the mean. Can we work around it? Sure, we could if we squared each distance so that all negative values were transformed into positive values. The result is shown below.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab46">TABLE 4.7: </span>Distance from the Mean: Part II
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+x
+</th>
+<th style="text-align:right;">
+Mean of x
+</th>
+<th style="text-align:right;">
+(x - Mean of x)
+</th>
+<th style="text-align:right;">
+(x - Mean of x) Squared
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-9
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-7
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-6
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+-4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+196
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+522
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now the average distance would be <span class="math inline">\(\dfrac{522}{6} = 87\)</span>, but interpreting this would be difficult since this is average distance in <code>squared units</code>. This isn’t an intractable problem though since just as we squared the distances, we could also take the <code>square root</code> to get average distance in meaningful units of the original metric. That is, we could calculate <span class="math inline">\(\sqrt{\dfrac{522}{6}} = \sqrt{87} = 9.32379\)</span>! That is, average variability is 9.32379. Congratulations! You have just calculated the <code>variance</code> and the <code>standard deviation</code>. Formally, for a variable <span class="math inline">\(x\)</span>,</p>
+<p><span class="math display" id="eq:popvar">\[\begin{equation}
+\tag{4.4}
+\text{Population Variance } = \sigma^2 = \dfrac{\sum(x_i - \mu)^2}{N}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:popsd">\[\begin{equation}
+\tag{4.5}
+\text{Population Standard Deviation } = \sigma = \sqrt{\dfrac{\sum(x_i - \mu)^2}{N}}
+\end{equation}\]</span></p>
+<p>While the above formulas work for population data, we have to make a slight modification to these formulas when we are working with sample data. In brief, the formulas become:</p>
+<p><span class="math display" id="eq:sampvar">\[\begin{equation}
+\tag{4.6}
+\text{Sample Variance } = s^2 = \dfrac{\sum(x_i - \bar{x})^2}{n-1}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:sampsd">\[\begin{equation}
+\tag{4.7}
+\text{Sample Standard Deviation } = s = \sqrt{\dfrac{\sum(x_i - \bar{x})^2}{n-1}}
+\end{equation}\]</span></p>
+<p>The key part of the modified formula is not the symbols <span class="math inline">\(s^2 \text{ and } s\)</span> replacing <span class="math inline">\(\sigma^2 \text{ and } \sigma\)</span>; it is the fact that we divide by a smaller number <span class="math inline">\(\cdots (n-1) \text{ instead of } (N)\)</span>. Why this change?</p>
+</div>
+<div id="why-n-1" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Why <span class="math inline">\(n-1\)</span>?<a href="meansd.html#why-n-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider these data: <span class="math inline">\(x = 1, 5, 4, 10\)</span>. What is the mean? <span class="math inline">\(\bar{x} = 5\)</span>. What is the sample size? <span class="math inline">\(n = 4\)</span>. Fair enough. Now let me give you the following data: <span class="math inline">\(x = 1, 5, 4, ?\)</span> along with the information that although the fourth data point is not provided to you, <span class="math inline">\(\bar{x} = 5\)</span>. Can you tell me what the missing data value must be? Yes you can. How?</p>
+<p><span class="math display">\[\bar{x} = \dfrac{\sum^n_{i=1}}{n} = \dfrac{1 + 5 + 4 + ?}{4} = 5\]</span>
+<span class="math display">\[1 + 5 + 4 + ? = 5 \times 4 \]</span>
+<span class="math display">\[10 + ? = 20\]</span>
+<span class="math display">\[? = 20 - 10 = 10\]</span></p>
+<p>So the missing number must be <span class="math inline">\(10\)</span>. You could have figured out whatever was the missing number in a similar fashion even if I had provided you with <span class="math inline">\(x = 1, ?, 4, 10\)</span> or <span class="math inline">\(x = ?, 5, 4, 10\)</span> or <span class="math inline">\(x = 1, 5, ?, 10\)</span>. Why? Because the mean is calculated by summing all values of <span class="math inline">\(x\)</span> and then dividing by the sample size. When we do this, we know that one number in our data-set will always be locked down to a specific value, it cannot just be any random value. Since we calculate the variance by using the mean, we are forcibly limiting our estimate of variability. Consequently, we make a specific adjustment, that of dividing the squared distances by a smaller number in order to make a correction and obtain a slightly larger estimate of variability.</p>
+<p>Another way of thinking about this is as follows. I give you three values in a sample: <span class="math inline">\(x = 4, 6, 8\)</span>. I also tell you to calculate the variance in two situations: (a) You are told that the population mean is <span class="math inline">\(\mu = 3\)</span> and (b) You are not given this information and so must calculate the sample mean in order to calculate variance <code>without adjusting the denominator</code>. The calculations are shown below.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+x
+</th>
+<th style="text-align:right;">
+(x - Popn Mean)
+</th>
+<th style="text-align:right;">
+(x - Popn Mean) Squared
+</th>
+<th style="text-align:right;">
+(x - Sample Mean)
+</th>
+<th style="text-align:right;">
+(x - Sample Mean) Squared
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+-2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+</tbody>
+</table>
+<p>If I calculate the variance when I am given <span class="math inline">\(\mu=3\)</span> I get <span class="math inline">\(\dfrac{35}{3} = 11.66667\)</span> but when I calculate variance by using the sample mean <span class="math inline">\(\bar{x} = 6\)</span> without adjusting the denominator I get an estimated variance of <span class="math inline">\(\dfrac{8}{3} = 2.666667\)</span>, quite a bit smaller than what I got earlier. However, if I make the adjustment we are asked to make: <span class="math inline">\(\dfrac{8}{3-1} = \dfrac{8}{2}=4\)</span> I get a much bigger estimate of variance. Thus, it matters whether we know the population mean or we do not. If we know the population mean then our estimated variance is closer to the “true variance” but if we don’t know the population mean and must use the sample for calculating both the mean and the variance, then we need to adjust the formula to come closer to the “true variance”. Note that the adjustment of course doesn’t get us completely to <span class="math inline">\(11.66\)</span>, we are still a big distance away but nevertheless <span class="math inline">\(4\)</span> is closer than <span class="math inline">\(2.66\)</span>.</p>
+<p>If none of the two explanations help, think of the adjustment as necessary because no sample will ever fully capture all the variability in the population. Hence we need to make an adjustment to avoid ending up with an estimate of the variance that is guaranteed to be smaller than the true variance in the population.</p>
+<div id="variance-and-standard-deviation-for-the-salary-data" class="section level4 unnumbered hasAnchor">
+<h4>Variance and Standard Deviation for the Salary Data<a href="meansd.html#variance-and-standard-deviation-for-the-salary-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Before we move on, here is the calculated variance and standard deviation for our salary data.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab4999">TABLE 4.8: </span>Variance and Standard Deviation for the Salary Data
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Salary
+</th>
+<th style="text-align:right;">
+(Salary - Mean)
+</th>
+<th style="text-align:right;">
+(Salary - Mean) Squared
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2710
+</td>
+<td style="text-align:right;">
+-230
+</td>
+<td style="text-align:right;">
+52900
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2755
+</td>
+<td style="text-align:right;">
+-185
+</td>
+<td style="text-align:right;">
+34225
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2850
+</td>
+<td style="text-align:right;">
+-90
+</td>
+<td style="text-align:right;">
+8100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2880
+</td>
+<td style="text-align:right;">
+-60
+</td>
+<td style="text-align:right;">
+3600
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2880
+</td>
+<td style="text-align:right;">
+-60
+</td>
+<td style="text-align:right;">
+3600
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2890
+</td>
+<td style="text-align:right;">
+-50
+</td>
+<td style="text-align:right;">
+2500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2920
+</td>
+<td style="text-align:right;">
+-20
+</td>
+<td style="text-align:right;">
+400
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2940
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2950
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3050
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+12100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3130
+</td>
+<td style="text-align:right;">
+190
+</td>
+<td style="text-align:right;">
+36100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3325
+</td>
+<td style="text-align:right;">
+385
+</td>
+<td style="text-align:right;">
+148225
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+301850
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\text{Sample mean: }\bar{x}=2940 \ldots\]</span>
+<span class="math display">\[\Sigma(x_{i} - \bar{x}) = 0\]</span>
+<span class="math display">\[\Sigma(x_{i} - \bar{x})^{2} = 301850\]</span>
+<span class="math display">\[\text{Sample Variance: }s^{2} = \dfrac{301850}{(12 - 1)} = \$27440.91 \ldots\]</span>
+<span class="math display">\[\text{Sample Standard Deviation: }s = \sqrt{27440.91} = \$165.63 \ldots\]</span></p>
+</div>
+</div>
+</div>
+<div id="properties-of-the-mean-and-variancestandard-deviation" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Properties of the Mean and Variance/Standard Deviation<a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The mean has some useful properties that come in handy when we have to manipulate data. For instance, say we have the following scores <span class="math inline">\(x = 2, 4, 6, 8, 10\)</span>. Let us calculate the mean and standard deviation of these scores. These turn out to be <span class="math inline">\(\bar{x} = 6\)</span> and <span class="math inline">\(s_{x} = 3.162278\)</span>. Now let us divide each of these numbers by <span class="math inline">\(2\)</span> to create a new variable, <span class="math inline">\(x^{*} = \frac{x}{2}\)</span>. Turns out <span class="math inline">\(x^{*} = 1, 2, 3, 4, 5\)</span>. If you calculate the mean and standard deviation for <span class="math inline">\(x^{*}\)</span> you will find these to be <span class="math inline">\(\bar{x^{*}} = 3\)</span> and <span class="math inline">\(s_{x^{*}} = 1.581139\)</span>, respectively. Compare these to <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(s_{x}\)</span> and note the difference. What happened here? Well, if you divide each <span class="math inline">\(x_i\)</span> by a constant <span class="math inline">\(k\)</span>, this is the same as dividing the original mean by <span class="math inline">\(k\)</span> and the original standard deviation by <span class="math inline">\(k\)</span>. Likewise, if you multiply <span class="math inline">\(x_i\)</span> by <span class="math inline">\(k\)</span> you will see the new mean and standard deviation equal <span class="math inline">\(\bar{x} \times k\)</span> and <span class="math inline">\(s \times k\)</span>, respectively.</p>
+<p>What if you add a constant to each <span class="math inline">\(x_i\)</span>? Say we add 2 to each of the original <span class="math inline">\(x\)</span> values to create a new variable <span class="math inline">\(x^{**} = x + 2\)</span>. This will yield <span class="math inline">\(x^{**} = 4, 6, 8, 10, 12\)</span> and the mean and standard deviation will be <span class="math inline">\(8\)</span> and <span class="math inline">\(3.162278\)</span>, respectively. Note that the mean has increased by <span class="math inline">\(2\)</span>, the same value added to each <span class="math inline">\(x_i\)</span> but the standard deviation is unchanged and is still <span class="math inline">\(3.162278\)</span>.</p>
+<p>What if you subtracted a constant <span class="math inline">\(k\)</span> from each <span class="math inline">\(x_i\)</span>? Say we subtract 1 from each of the original <span class="math inline">\(x_i\)</span> to create <span class="math inline">\(x^{***} = x - 1\)</span>. This will yield <span class="math inline">\(x^{***} = 1, 3, 5, 7, 9\)</span>, and the new mean will be <span class="math inline">\(5\)</span> but the standard deviation will still be <span class="math inline">\(3.162278\)</span>.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-31">TABLE 4.9: </span>Properties of the Mean and the Standard Deviation
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+x
+</th>
+<th style="text-align:right;">
+x / 2
+</th>
+<th style="text-align:right;">
+2x
+</th>
+<th style="text-align:right;">
+x + 2
+</th>
+<th style="text-align:right;">
+x - 1
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+12.00
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+5.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+16.00
+</td>
+<td style="text-align:right;">
+10.00
+</td>
+<td style="text-align:right;">
+7.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+10.00
+</td>
+<td style="text-align:right;">
+5.00
+</td>
+<td style="text-align:right;">
+20.00
+</td>
+<td style="text-align:right;">
+12.00
+</td>
+<td style="text-align:right;">
+9.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mean
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+12.00
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Standard Deviation
+</td>
+<td style="text-align:right;">
+3.16
+</td>
+<td style="text-align:right;">
+1.58
+</td>
+<td style="text-align:right;">
+6.32
+</td>
+<td style="text-align:right;">
+3.16
+</td>
+<td style="text-align:right;">
+3.16
+</td>
+</tr>
+</tbody>
+</table>
+<p>In brief, then,</p>
+<ol style="list-style-type: decimal">
+<li>Changing the value of any observation changes the mean</li>
+<li>Adding or subtracting a <code>constant</code> <span class="math inline">\(k\)</span> from all observations is equivalent to adding or subtracting the constant <span class="math inline">\(k\)</span> from the original mean and leaves the standard deviation and variance unchanged</li>
+<li>Multiplying or dividing a constant <span class="math inline">\(k\)</span> from all observations is equivalent to multiplying or dividing the original mean by the constant <span class="math inline">\(k\)</span> and the original variance and standard deviation will also be multiplied or divided by <span class="math inline">\(k\)</span></li>
+</ol>
+</div>
+<div id="the-empirical-rule" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> The Empirical Rule<a href="meansd.html#the-empirical-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There is a rule, <code>the empirical rule</code> that says for a bell-shaped distribution,</p>
+<ul>
+<li>approximately 68% of the data lie within one standard deviation of the mean, that is, in the interval with endpoints <span class="math inline">\(\bar{x} \pm s\)</span> for samples and <span class="math inline">\(\mu \pm \sigma\)</span> for populations;</li>
+<li>approximately 95% of the data lie within two standard deviations of the mean, that is, in the interval with endpoints <span class="math inline">\(\bar{x} \pm 2s\)</span> for samples and <span class="math inline">\(\mu \pm 2\sigma\)</span> for populations; and</li>
+<li>approximately 99.7% of the data lie within three standard deviations of the mean, that is, in the interval with endpoints <span class="math inline">\(\bar{x} \pm 3s\)</span> for samples and <span class="math inline">\(\mu \pm 3\sigma\)</span> for populations.</li>
+</ul>
+<p>The empirical rule does not apply to data that are asymmetric and in fact even with bell-shaped distributions the percentages 68%, 95% and 99.7% are only approximate.</p>
+<p>There is also a more general theorem, called <code>Chebyshev's Theorem</code> that says at least <span class="math inline">\((1 - \dfrac{1}{z^{2}})\)</span> of the data values must lie within <span class="math inline">\(z\)</span> standard deviations of the mean, where <span class="math inline">\(z\)</span> is any value greater than 1. In particular, approximately 75% of the data points will fall within <span class="math inline">\(\bar{x} \pm 2s\)</span>, approximately 89% of the data points will fall within <span class="math inline">\(\bar{x} \pm 3s\)</span>, and approximately 94% of the data points will fall within <span class="math inline">\(\bar{x} \pm 4s\)</span> (and of course similar spans around the population mean <span class="math inline">\(\mu\)</span> and population standard deviation <span class="math inline">\(\sigma\)</span>.</p>
+<p>Why are these rules important? They are useful because we know the approximate range within which a specific amount of the data values must fall if the population from which the sample is being drawn is bell-shaped (in which case the empirical rule comes into force) or if we don’t know the shape of the population (in which case Chebyshev’s Theorem comes into force).</p>
+</div>
+<div id="z-scores" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Z-scores<a href="meansd.html#z-scores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Combining means and standard deviations helps us in many ways, one of these being the ability to compare what seem to be apples and oranges. For instance, let us say that in December 2016, total snowfall in Boston (MA) was 39 inches, and in Caribou (ME) it was 129 inches. The typical mean and standard deviation for each city are given in the table below. Question is: Which city had more unusual snowfall?<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:zsc">TABLE 4.10: </span>Comparing Snowfall in Disparate Locations
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Place
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+<th style="text-align:right;">
+Std.Dev.
+</th>
+<th style="text-align:right;">
+December.2016
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Caribou (ME)
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+125
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Boston (MA)
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+39
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can answer the question posed to us if we <code>standardize</code> the snowfall in each city relative to its average and the typical deviation from its average. That is, we calculate what is called a <code>z-score</code> where <span class="math inline">\(z=\dfrac{x-\mu}{\sigma}\)</span>. The resulting z-score allows us to identify the relative location of an observation in a data set by telling us <code>how many standard deviation units above or below the Mean</code> a particular value <span class="math inline">\(x_{i}\)</span> falls. The farther away it is, whether above or below, the more unusual the snowfall would have been.</p>
+<p>As it turns out, <span class="math inline">\(z_{Boston} = \dfrac{39 - 24}{5} = \dfrac{15}{5} = +3.0\)</span> and <span class="math inline">\(z_{Caribou} = \dfrac{125 - 110}{30} = \dfrac{15}{30} = +0.5\)</span>.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:zsc2">TABLE 4.11: </span>Z-scores for Comparing Snowfall in Disparate Locations
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Place
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+<th style="text-align:right;">
+Std.Dev.
+</th>
+<th style="text-align:right;">
+December.2016
+</th>
+<th style="text-align:left;">
+z.score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Caribou (ME)
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+125
+</td>
+<td style="text-align:left;">
++0.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Boston (MA)
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:left;">
++3.0
+</td>
+</tr>
+</tbody>
+</table>
+<p>That is, Boston had the more unusual snowfall relative to Caribou. Note that if you only focused on the relative means you would have thought both places got 15 inches more than they usually get so they were both hit equally hard. But that approach ignores the fact that their averages and variabilities differ. Once you account for the typical pattern in each city you realize Boston had the worse month of December.</p>
+</div>
+<div id="the-coefficient-of-variation" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> The Coefficient of Variation<a href="meansd.html#the-coefficient-of-variation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Combining the mean and standard deviation also comes in handy when we are trying to figure out which of two variables has more variability, but the variables are not measured on the same metric. In order to compare variability across differently measured variables we rely on the <code>coefficient of variation</code>, a measure of how large the standard deviation is relative to the mean.</p>
+<p><span class="math display" id="eq:cv">\[\begin{equation}
+\tag{4.8}
+\text{Coefficient of Variation } = CV = \left(\dfrac{\text{Standard Deviation }}{\text{Mean }}\right) \times 100
+\end{equation}\]</span></p>
+<p>For example, say the average amount of spending a family does in a typical weekend is $200, and this spending has a standard deviation of $100. On average, the typical family has <span class="math inline">\(3\)</span> members but family size tends to vary as well, with a standard deviation of <span class="math inline">\(2\)</span>. Is there more variability in family size or in family spending? The coefficient of variation will help us out here.</p>
+<p><span class="math inline">\(CV_{spending} = \left( \dfrac{100}{200}\right) \times 100\)</span> = 50%
+<span class="math inline">\(CV_{size} = \left( \dfrac{2}{3}\right) \times 100\)</span> = 66.67%</p>
+<p>Evidently family size tends to vary far more than does family spending in a typical weekend.</p>
+</div>
+<div id="symmetric-skewed-and-bi-modal-distributions" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Symmetric, Skewed and Bi-modal Distributions<a href="meansd.html#symmetric-skewed-and-bi-modal-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All data follow a <code>shape</code> and you will often see references to the <code>shape of a distribution</code>, how <code>peaked</code> and <code>spreadout</code> the values of a variable are. A distribution is said to be symmetric if you could carve it in the middle and fold each half perfectly onto the other half. The bell-shaped distribution (see below) is one such distribution but not the only one that is symmetric.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
+<img src="stats_files/figure-html/unnamed-chunk-32-1.svg" alt="A Bell-Shaped Distribution" width="100%" />
+<p class="caption">
+FIGURE 4.1: A Bell-Shaped Distribution
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
+<img src="stats_files/figure-html/unnamed-chunk-33-1.svg" alt="A Uniform Distribution" width="100%" />
+<p class="caption">
+FIGURE 4.2: A Uniform Distribution
+</p>
+</div>
+<p>In contrast, we may have <code>skewed</code> distributions that have tails that extend more to the right (<code>positively-skewed</code>) or to the left (<code>negatively-skewed</code>), as shown below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<img src="stats_files/figure-html/unnamed-chunk-34-1.svg" alt="Skewed Distributions" width="100%" />
+<p class="caption">
+FIGURE 4.3: Skewed Distributions
+</p>
+</div>
+<p>A skew means you have unusual data points on the right (positively-skewed) or on the left (negatively-skewed). These patterns are evident from histograms as well, though the direction of the skew isn’t always clear.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
+<img src="stats_files/figure-html/unnamed-chunk-35-1.svg" alt="Skewed Histograms" width="100%" />
+<p class="caption">
+FIGURE 4.4: Skewed Histograms
+</p>
+</div>
+<p>The peak in each of the preceding graphs reflects the <code>modal value</code> of the variable – the value of <span class="math inline">\(x\)</span> that occurs most frequently. Most distributions may have a single modal value but at times there may be two or more modes. A <code>bimodal distribution</code> is shown below:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
+<img src="stats_files/figure-html/unnamed-chunk-36-1.svg" alt="A Bimodal Distribution" width="100%" />
+<p class="caption">
+FIGURE 4.5: A Bimodal Distribution
+</p>
+</div>
+<p>We could, and do calculate <code>skewness</code> as</p>
+<p><span class="math display" id="eq:skewness">\[\begin{equation}
+\tag{4.9}
+skewness = \dfrac{1}{n}\sum\left( \dfrac{x_i - \bar{x}}{s} \right)^3
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\bar{x}\)</span> is the mean, <span class="math inline">\(s\)</span> is the standard deviation, and <span class="math inline">\(n\)</span> is the sample size. In normal and other symmetric distributions skewness <span class="math inline">\(=0\)</span>. Negative values of skewness indicate negatively-skewed data while positive values of skewness indicate positively-skewed data. Remember: By skewed left, we mean that the left tail is long relative to the right tail. Similarly, skewed right means that the right tail is long relative to the left tail. Be careful though; with multimodal data the sign of the skewness can be affected. For the preceding plots of skewed distributions, skewness is calculated to be -0.8043625 and 0.7655996, respectively.</p>
+<p>Often you will see estimates of skewness being accompanied by a measure of <code>kurtosis</code> (the Greek word for bulging) defined as</p>
+<p><span class="math display" id="eq:kurtosis">\[\begin{equation}
+\tag{4.10}
+\dfrac{n(n+1)(n-1)}{(n-2)(n-3)} \dfrac{\sum \left(x_i - \bar{x}\right)^4}{\left(\sum(x_i - \bar{x})^2 \right)^2}
+\end{equation}\]</span></p>
+<p>The normal distribution has kurtosis <span class="math inline">\(=0\)</span> and is said to be <code>mesokurtic</code>. A negative kurtosis would be indicative of a thin-tailed distribution, also called a <code>platykurtic</code> distribution while a positive kurtosis would be indicative of a fat-tailed distribution, also called a <code>leptokurtic</code> distribution. Again, for the same data for which we calculated skewness, measures of kurtosis would be 0.5144074 and 0.6626601, respectively.</p>
+</div>
+<div id="the-five-number-summary-and-the-box-plot" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> The Five-number Summary and the Box-plot<a href="meansd.html#the-five-number-summary-and-the-box-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The five-number summary is composed of the following values:</p>
+<p><span class="math display">\[\text{Minimum value }, Q_1, Md, Q_3, \text{ Maximum value}\]</span></p>
+<p>Looking at just these five values tells us a lot about the <code>shape</code> of our data. In fact, this five-number summary is used in a very powerful graphic called the <code>box-plot</code>.</p>
+<p>The box-plot relies on the five-number summary and also identifies extremely unusual values. An example is given below. Here we are looking at the distribution of reading scores of male/female students as reflected in the <code>hsb2</code> data we saw earlier.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
+<img src="stats_files/figure-html/unnamed-chunk-38-1.svg" alt="Box-plot of Reading Scores by Sex" width="100%" />
+<p class="caption">
+FIGURE 4.6: Box-plot of Reading Scores by Sex
+</p>
+</div>
+<p>The darker line in the middle of the box is the median, while the edges of the box are the first quartile <span class="math inline">\((Q_1)\)</span> and the third quartile <span class="math inline">\((Q_3)\)</span>, respectively. The lines (called the <code>whiskers</code>) extend leftwards to the minimum value and rightwards to the maximum value. What do these plots tell us? That reading scores are higher for Male students as compared to Female students. Notice that the line in the middle of the box is shifted to the right for Male students. The portion of the box to the right of the medians is larger than the portion of the box to the left. If we look at the five-number summary we will be able to more easily figure out the skew so let us do that.</p>
+<p>For Males: <span class="math inline">\(Min = 31.0; Q_1 = 44.5, Md = 52.0, Q_3 = 63.0, Max = 76.0\)</span>
+For Females: <span class="math inline">\(Min = 28.0; Q_1 = 44.0, Md = 50.0, Q_3 = 57.0, Max = 76.0\)</span></p>
+<p>Quite clearly, median reading scores are higher for Male students. Now on to understanding how to decipher the skew.</p>
+<p>Look at the distance between <span class="math inline">\(Min\)</span> and <span class="math inline">\(Md\)</span> for each sex. For Male students, the distance is <span class="math inline">\(21\)</span> and for Female students it is <span class="math inline">\(22\)</span>. If you then look at the distance between the <span class="math inline">\(Md\)</span> and <span class="math inline">\(Max\)</span> for each group, you see that for Males it is <span class="math inline">\(24\)</span> and for Females it is <span class="math inline">\(26\)</span>. For both groups, the distance between <span class="math inline">\(Md\)</span> and <span class="math inline">\(Max\)</span> is greater than the distance between <span class="math inline">\(Min\)</span> and <span class="math inline">\(Md\)</span>, indicating the the distribution is more <code>stretched</code> to the right; hence both Male and Female students’ reading scores are positively-skewed.</p>
+<p>These box-plots show no <code>outliers</code> (unusual data values) but the next set do (see below). Here we have broken out science scores by the student’s socioeconomic status. Notice the two isolated dots for the High SES group.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
+<img src="stats_files/figure-html/unnamed-chunk-39-1.svg" alt="Box-plots of Science Scores by Socioeconomic Status" width="100%" />
+<p class="caption">
+FIGURE 4.7: Box-plots of Science Scores by Socioeconomic Status
+</p>
+</div>
+<p>In technical terms we define an <code>outlier</code> as any data point that is more than <span class="math inline">\(1.5 \times IQR\)</span> below <span class="math inline">\(Q_1\)</span> or more than <span class="math inline">\(1.5 \times IQR\)</span> above <span class="math inline">\(Q_3\)</span>. For the High SES group we have the following values of the five number summary:</p>
+<p><span class="math display">\[Min = 26.00,   Q_1 = 50.00,   Md = 58.00,   Q_3 = 62.50,   Max = 69.00\]</span></p>
+<p>Given these values we know <span class="math inline">\(IQR = Q_3 - Q_1 = 62.50 - 50.00 = 12.50\)</span> and thus <span class="math inline">\(1.5 \times IQR = 1.5 \times 12.50 = 18.75\)</span>. So anything that is more than 18.75 points below/above <span class="math inline">\(Q_1\)</span>/<span class="math inline">\(Q_3\)</span> will be an outlier. The boundary values then are <span class="math inline">\(50.00 - 18.75 = 31.25\)</span> so any science score smaller than <span class="math inline">\(31.25\)</span> will be an outlier. As it turns out we do have two scores below this – <span class="math inline">\(26, \text{ and } 31\)</span>; hence the two outliers shown. There are no other outliers for the High SES group, and certainly none for the Low and Middle SES groups. Outliers may be present on both sides of a distribution as well as shown in the graph below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
+<img src="stats_files/figure-html/unnamed-chunk-40-1.svg" alt="Ohio School District Performance by District Type" width="100%" />
+<p class="caption">
+FIGURE 4.8: Ohio School District Performance by District Type
+</p>
+</div>
+</div>
+<div id="the-power-of-summary-statistics-married-to-graphical-explorations" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> The Power of Summary Statistics Married to Graphical Explorations<a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One of the golden lessons I want you to take away from Chapters 3 and 4 is the maxim that relying only on summary statistics (mean, median, standard deviation, etc.) without graphically exploring the data can lead to terrible mistakes. A classic example comes to us from a stylized example presented by Francis Anscombe in 1973. Anscombe wanted to make the point that if you don’t visualize your data and look for (and deal with) outliers as well, instead rely simply on summary statistics, you could be easily misled. Here is the example in all its glory. The data-set has 11 observations for four pairs of variables, <span class="math inline">\(x_i, y_i\)</span>, shown below. The last row in the table is each variable’s mean.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-41">TABLE 4.12: </span>Anscombe’s Quartet
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+x1
+</th>
+<th style="text-align:right;">
+x2
+</th>
+<th style="text-align:right;">
+x3
+</th>
+<th style="text-align:right;">
+x4
+</th>
+<th style="text-align:right;">
+y1
+</th>
+<th style="text-align:right;">
+y2
+</th>
+<th style="text-align:right;">
+y3
+</th>
+<th style="text-align:right;">
+y4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8.04
+</td>
+<td style="text-align:right;">
+9.14
+</td>
+<td style="text-align:right;">
+7.46
+</td>
+<td style="text-align:right;">
+6.58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6.95
+</td>
+<td style="text-align:right;">
+8.14
+</td>
+<td style="text-align:right;">
+6.77
+</td>
+<td style="text-align:right;">
+5.76
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+7.58
+</td>
+<td style="text-align:right;">
+8.74
+</td>
+<td style="text-align:right;">
+12.74
+</td>
+<td style="text-align:right;">
+7.71
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8.81
+</td>
+<td style="text-align:right;">
+8.77
+</td>
+<td style="text-align:right;">
+7.11
+</td>
+<td style="text-align:right;">
+8.84
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8.33
+</td>
+<td style="text-align:right;">
+9.26
+</td>
+<td style="text-align:right;">
+7.81
+</td>
+<td style="text-align:right;">
+8.47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9.96
+</td>
+<td style="text-align:right;">
+8.10
+</td>
+<td style="text-align:right;">
+8.84
+</td>
+<td style="text-align:right;">
+7.04
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+7.24
+</td>
+<td style="text-align:right;">
+6.13
+</td>
+<td style="text-align:right;">
+6.08
+</td>
+<td style="text-align:right;">
+5.25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+4.26
+</td>
+<td style="text-align:right;">
+3.10
+</td>
+<td style="text-align:right;">
+5.39
+</td>
+<td style="text-align:right;">
+12.50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+10.84
+</td>
+<td style="text-align:right;">
+9.13
+</td>
+<td style="text-align:right;">
+8.15
+</td>
+<td style="text-align:right;">
+5.56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+4.82
+</td>
+<td style="text-align:right;">
+7.26
+</td>
+<td style="text-align:right;">
+6.42
+</td>
+<td style="text-align:right;">
+7.91
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+5.68
+</td>
+<td style="text-align:right;">
+4.74
+</td>
+<td style="text-align:right;">
+5.73
+</td>
+<td style="text-align:right;">
+6.89
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note the similarity in the means for the <span class="math inline">\(x\)</span> and the <span class="math inline">\(y\)</span> variables, respectively. If you calculate the correlation between each pair, you will find this to be <span class="math inline">\(0.8164205\)</span> for each pair of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So looking just at these numerical summaries it seems the pairs are similar if not downright identical. But if we plot each pair of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> variables, do the distributions still look similar?</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
+<img src="stats_files/figure-html/unnamed-chunk-42-1.svg" alt="Anscombe's Quartet" width="100%" />
+<p class="caption">
+FIGURE 4.9: Anscombe’s Quartet
+</p>
+</div>
+<p>This is precisely why you should always start by graphing your data, all of it, even if you only intend to analyze specific variables, before doing any sort of numerical calculations of means, correlations, variances, etc., leave alone proceeding to do any statistical test. If you fail to follow this mantra, be prepared to be embarrassed.</p>
+</div>
+<div id="outliers-outliers-what-do-i-do-with-them" class="section level2 hasAnchor" number="4.10">
+<h2><span class="header-section-number">4.10</span> Outliers, Outliers, What do I do with them?<a href="meansd.html#outliers-outliers-what-do-i-do-with-them" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you encounter outliers, the overriding question has to be the next step: Do you delete them or do you keep them? Deleting data points is never a good idea unless you have good reason to do so. The only good reason might be one of measurement error, in that the data were entered incorrectly or you have good reason to believe whoever recorded the measurement did so with error. If you see a skewed distribution with outliers, and there is no good reason to believe this is because of measurement error, then try a transformation.</p>
+<ol style="list-style-type: decimal">
+<li>Try <span class="math inline">\(x^* = x^3\)</span> to reduce extreme negative skewness</li>
+<li>Try <span class="math inline">\(x^* = x^2\)</span> to reduce negative skewness</li>
+<li>Try <span class="math inline">\(x^* = x^{\frac{1}{2}}\)</span> to reduce positive skewness</li>
+<li>Try <span class="math inline">\(x^* = -\dfrac{1}{\sqrt{x}}\)</span> to reduce extreme positive skewness</li>
+<li>Try <span class="math inline">\(x^* = -\dfrac{1}{x}\)</span> to reduce even more extreme positive skewness</li>
+<li>If <span class="math inline">\(x\)</span> can assume a value of <span class="math inline">\(0\)</span>, add a small constant <span class="math inline">\(c\)</span>, such that <span class="math inline">\(x^* = x + c\)</span>. Folks often use <span class="math inline">\(c = 0.01\)</span> or even <span class="math inline">\(c = 1\)</span>. Then try options (1) through (5) depending upon the direction and strength of the skewness</li>
+</ol>
+<p>You will also see the <code>natural logarithm</code> used to transform data. It only works if <span class="math inline">\(x\)</span> is strictly <span class="math inline">\(\geq 1\)</span> so if <span class="math inline">\(x \text{ is } \geq 0\)</span>, be sure to add a constant to <span class="math inline">\(x\)</span> before trying the natural logarithm. The reason many shy away from it is because it is difficult to interpret the results. An easy fix to this problem is to use the <code>antilogarithm</code>, i.e., <span class="math inline">\(e^{x^*}\)</span>. This same rule, of flipping the final result back into the original metric also works for the other transformation discussed here. Specifically,</p>
+<ol style="list-style-type: decimal">
+<li>If you used <span class="math inline">\(x^* = x^3\)</span> to reduce extreme negative skewness, convert the final answer via <span class="math inline">\((x^*)^\frac{1}{3}\)</span><br />
+</li>
+<li>If you used <span class="math inline">\(x^* = x^2\)</span> to reduce negative skewness, convert the final answer via <span class="math inline">\((x^*)^\frac{1}{2}\)</span></li>
+<li>If you used <span class="math inline">\(x^* = x^{\frac{1}{2}}\)</span> to reduce positive skewness, convert the final answer via <span class="math inline">\((x^*)^2\)</span></li>
+<li>If you used <span class="math inline">\(x^* = -\dfrac{1}{\sqrt{x}}\)</span> to reduce extreme positive skewness, convert the final answer via <span class="math inline">\(\dfrac{1}{(x^*)^2}\)</span></li>
+<li>If you used <span class="math inline">\(x^* = -\dfrac{1}{x}\)</span> to reduce even more extreme positive skewness, convert the final answer via <span class="math inline">\(\dfrac{1}{-x^*}\)</span></li>
+</ol>
+</div>
+<div id="beware-the-flawed-rule" class="section level2 hasAnchor" number="4.11">
+<h2><span class="header-section-number">4.11</span> Beware the flawed rule<a href="meansd.html#beware-the-flawed-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="http://ww2.amstat.org/publications/jse/v13n2/vonhippel.html#Moore2003">Many textbooks</a> tend to indicate that the mean is always pulled away from the median (some also extend this to the mode) in skewed distributions with a left-skewed distribution with <span class="math inline">\(mean &lt; median\)</span> and a right-skewed distribution with <span class="math inline">\(mean &gt; median\)</span>. This is not always true for discrete variables, and the rule can fail with continuous variables that are distributed with one long tail but the other tail is heavy. Bimodal and multimodal distributions of continuous variables are equally susceptible. In brief: Do not rely on this rule of thumb.</p>
+<hr />
+</div>
+<div id="chapter-4-practice-problems" class="section level2 hasAnchor" number="4.12">
+<h2><span class="header-section-number">4.12</span> Chapter 4 Practice Problems<a href="meansd.html#chapter-4-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="problem-1-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 1<a href="meansd.html#problem-1-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Working with the Boston Marathon (2016) data used in the previous chapter, calculate the following:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Mean finish time</li>
+<li>Median finish time</li>
+<li>Variance of finish times</li>
+<li>Standard Deviation of finish times</li>
+<li>Range of finish times</li>
+<li>The first and the third quartiles of finish times</li>
+<li>The interquartile range of finish times</li>
+<li>The skewness of finish times</li>
+</ol>
+</div>
+<div id="problem-2-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 2<a href="meansd.html#problem-2-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Construct gender-specific box-plots of runners’ times. Are the distributions skewed or symmetric for each gender? If skewed, in what direction? Are there outliers in each gender’s distribution? On which side(s) of the distribution?</p>
+</div>
+<div id="problem-3-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 3<a href="meansd.html#problem-3-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What is the five-number summary of finish times?</p>
+</div>
+<div id="problem-4-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 4<a href="meansd.html#problem-4-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Calculate the statistics listed in Problem 1 for each gender. Do the estimates of skewness you calculated here support your conclusions about skewness from your work in Problem 2?</p>
+</div>
+<div id="problem-5-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 5<a href="meansd.html#problem-5-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What is the coefficient of variation for male and female runners’ finish times, respectively? What do these estimates tell you about finish times for male and female runners, respectively?</p>
+</div>
+<div id="problem-6-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 6<a href="meansd.html#problem-6-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ignoring gender differences, if you see skewed distributions in finish times with outliers, try to transform the data to reduce the skewness. What transformations work? Explain why you chose the transformation(s) you did and show (via a box-plot and estimates of skewness) that the transformation(s) worked.</p>
+</div>
+<div id="problem-7-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 7<a href="meansd.html#problem-7-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Using the data-set employed in Problem 5 of Chapter 2, calculate and report the average number of hours worked by low/medium/high salary employees. Explain why you chose the measure of average that you did. Also display the distribution of hours worked for each salary group via an appropriate graphic. What patterns do you see in this graphic?</p>
+</div>
+<div id="problem-8-2" class="section level3 unnumbered hasAnchor">
+<h3>Problem 8<a href="meansd.html#problem-8-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Load the EPA data used for Practice Problem 3 in Chapter 2 and answer the following questions.
+(a) Calculate the average annual fuel cost in 2017. Note that the variable is <code>fuelCost08</code> and is based on 15,000 miles, 55% city driving, and the price of fuel used by the vehicle.
+(b) Of all the vehicles in the data-set, for the year 2017, what is the most common drive axle type? Note that the variable is <code>drive</code>.
+(c) Of all the vehicles in the data-set, for the year 2017, what is the most common vehicle size class? Note that the variable is <code>VClass</code>.
+(d) For the year 2017, construct a grouped frequency table &amp; histogram of <code>youSaveSpend</code>. Note that this variable measures the vehicle-related savings/spending over 5 years compared to an average car (in US$). Savings are positive; a greater amount spent yields a negative number.</p>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-1');
+</script>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>It would be remiss of us not to recognize the existence of a very passionate and vigorous Null Hypothesis Significance Testing (NHST) controversy. While the details of the controversy are too advanced for our present purposes, here are some articles you should read: <a href="http://www.newyorker.com/magazine/2010/12/13/the-truth-wears-off">The Truth Wears Off: Is there something wrong with the scientific method?</a> and <a href="http://www.americanscientist.org/issues/id.15964,y.0,no.,content.true,page.1,css.print/issue.aspx">Do We Really Need the S-word?</a><a href="meansd.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>You will also see these formulas listed as <span class="math inline">\(\dfrac{\left(n + 1\right)}{4}\)</span> for the position of <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(\dfrac{3\left(n + 1\right)}{4}\)</span> for the position of <span class="math inline">\(Q_3\)</span>.<a href="meansd.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Unusual compared to what seems to be typical for the city, that is.<a href="meansd.html#fnref7" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dataviz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prob.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"css": "toc.css"
+},
+"theme": "sandstone"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

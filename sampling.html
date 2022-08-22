@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 The Theory of Sampling Distributions | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <meta name="description" content="This is a free textbook written for students in my research methods classes." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 The Theory of Sampling Distributions | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 The Theory of Sampling Distributions | Data Analysis for Leadership &amp; Public Affairs:" />
+  
+  <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+<meta name="author" content="Anirudh V. S. Ruhil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="distributions.html"/>
+<link rel="next" href="hypothesis.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/d3-4.10.2/d3.min.js"></script>
+<link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"],
+      bcancel: ["Extension","cancel"],
+      xcancel: ["Extension","cancel"],
+      cancelto: ["Extension","cancel"]
+    });
+  });
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-2');
+</script>
+
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="yihui_style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Public Affairs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#the-chapters-that-follow"><i class="fa fa-check"></i><b>1.2</b> The chapters that follow</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#keys-to-learning-data-analysis"><i class="fa fa-check"></i><b>1.3</b> Keys to Learning Data Analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Core Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#statistics-versus-statistic"><i class="fa fa-check"></i><b>2.1</b> Statistics versus Statistic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#parameters-versus-estimates"><i class="fa fa-check"></i><b>2.1.1</b> Parameters versus Estimates</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#sampling-error-and-bias"><i class="fa fa-check"></i><b>2.1.2</b> Sampling Error and Bias</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#key-elements-of-random-sampling"><i class="fa fa-check"></i><b>2.1.3</b> Key Elements of Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#useful-research-designs"><i class="fa fa-check"></i><b>2.2</b> Useful Research Designs</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#experimental"><i class="fa fa-check"></i><b>2.2.1</b> Experimental</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#natural-experiments"><i class="fa fa-check"></i><b>2.2.2</b> Natural Experiments</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#quasi-experiments"><i class="fa fa-check"></i><b>2.2.3</b> Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#elements-of-a-data-set"><i class="fa fa-check"></i><b>2.3</b> Elements of a Data-set</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#variable-types"><i class="fa fa-check"></i><b>2.4</b> Variable Types</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#cross-sectional-time-series-and-panel-data"><i class="fa fa-check"></i><b>2.5</b> Cross-sectional, Time-Series, and Panel Data</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="intro.html"><a href="intro.html#cross-sectional-data"><i class="fa fa-check"></i><b>2.5.1</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="intro.html"><a href="intro.html#time-series-data"><i class="fa fa-check"></i><b>2.5.2</b> Time-Series Data</a></li>
+<li class="chapter" data-level="2.5.3" data-path="intro.html"><a href="intro.html#panel-data"><i class="fa fa-check"></i><b>2.5.3</b> Panel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#levels-of-measurement"><i class="fa fa-check"></i><b>2.6</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#nominal"><i class="fa fa-check"></i><b>2.6.1</b> Nominal</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#ordinal"><i class="fa fa-check"></i><b>2.6.2</b> Ordinal</a></li>
+<li class="chapter" data-level="2.6.3" data-path="intro.html"><a href="intro.html#intervalratio"><i class="fa fa-check"></i><b>2.6.3</b> Interval/Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#the-tricky-business-of-cause-and-effect"><i class="fa fa-check"></i><b>2.7</b> The Tricky Business of Cause-and-Effect</a></li>
+<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#chapter-2-practice-problems"><i class="fa fa-check"></i><b>2.8</b> Chapter 2 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dataviz.html"><a href="dataviz.html"><i class="fa fa-check"></i><b>3</b> Visualizing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dataviz.html"><a href="dataviz.html#visualizing-nominalordinal-data"><i class="fa fa-check"></i><b>3.1</b> Visualizing Nominal/Ordinal Data</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dataviz.html"><a href="dataviz.html#bar-charts-and-frequency-tables"><i class="fa fa-check"></i><b>3.1.1</b> Bar-charts and Frequency Tables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dataviz.html"><a href="dataviz.html#contingency-tables-and-bar-charts"><i class="fa fa-check"></i><b>3.1.2</b> Contingency Tables and Bar-charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dataviz.html"><a href="dataviz.html#visualizing-intervalratio-data"><i class="fa fa-check"></i><b>3.2</b> Visualizing Interval/Ratio Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dataviz.html"><a href="dataviz.html#the-histogram"><i class="fa fa-check"></i><b>3.2.1</b> The Histogram</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dataviz.html"><a href="dataviz.html#grouped-frequency-tables"><i class="fa fa-check"></i><b>3.2.2</b> Grouped Frequency Tables</a></li>
+<li class="chapter" data-level="3.2.3" data-path="dataviz.html"><a href="dataviz.html#scatterplots"><i class="fa fa-check"></i><b>3.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="dataviz.html"><a href="dataviz.html#line-graphs"><i class="fa fa-check"></i><b>3.2.4</b> Line Graphs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="dataviz.html"><a href="dataviz.html#polar-charts"><i class="fa fa-check"></i><b>3.2.5</b> Polar Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="dataviz.html"><a href="dataviz.html#some-essential-rules-for-good-visualizations"><i class="fa fa-check"></i><b>3.3</b> Some Essential Rules for Good Visualizations</a></li>
+<li class="chapter" data-level="3.4" data-path="dataviz.html"><a href="dataviz.html#chapter-3-practice-problems"><i class="fa fa-check"></i><b>3.4</b> Chapter 3 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meansd.html"><a href="meansd.html"><i class="fa fa-check"></i><b>4</b> Central Tendency and Dispersion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="meansd.html"><a href="meansd.html#central-tendency"><i class="fa fa-check"></i><b>4.1</b> Central Tendency</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="meansd.html"><a href="meansd.html#mean"><i class="fa fa-check"></i><b>4.1.1</b> Mean</a></li>
+<li class="chapter" data-level="4.1.2" data-path="meansd.html"><a href="meansd.html#median"><i class="fa fa-check"></i><b>4.1.2</b> Median</a></li>
+<li class="chapter" data-level="4.1.3" data-path="meansd.html"><a href="meansd.html#mode"><i class="fa fa-check"></i><b>4.1.3</b> Mode</a></li>
+<li class="chapter" data-level="4.1.4" data-path="meansd.html"><a href="meansd.html#some-features-of-measures-of-central-tendency"><i class="fa fa-check"></i><b>4.1.4</b> Some Features of Measures of Central Tendency</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="meansd.html"><a href="meansd.html#dispersion-aka-variability"><i class="fa fa-check"></i><b>4.2</b> Dispersion (aka Variability)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="meansd.html"><a href="meansd.html#range"><i class="fa fa-check"></i><b>4.2.1</b> Range</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meansd.html"><a href="meansd.html#quartiles-and-interquartile-range"><i class="fa fa-check"></i><b>4.2.2</b> Quartiles and Interquartile Range</a></li>
+<li class="chapter" data-level="4.2.3" data-path="meansd.html"><a href="meansd.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.3</b> Variance and Standard Deviation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="meansd.html"><a href="meansd.html#why-n-1"><i class="fa fa-check"></i><b>4.2.4</b> Why <span class="math inline">\(n-1\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meansd.html"><a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation"><i class="fa fa-check"></i><b>4.3</b> Properties of the Mean and Variance/Standard Deviation</a></li>
+<li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
+<li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
+<li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
+<li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
+<li class="chapter" data-level="4.11" data-path="meansd.html"><a href="meansd.html#beware-the-flawed-rule"><i class="fa fa-check"></i><b>4.11</b> Beware the flawed rule</a></li>
+<li class="chapter" data-level="4.12" data-path="meansd.html"><a href="meansd.html#chapter-4-practice-problems"><i class="fa fa-check"></i><b>4.12</b> Chapter 4 Practice Problems</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-1-2"><i class="fa fa-check"></i>Problem 1</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-2-2"><i class="fa fa-check"></i>Problem 2</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-3-2"><i class="fa fa-check"></i>Problem 3</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-4-2"><i class="fa fa-check"></i>Problem 4</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-5-2"><i class="fa fa-check"></i>Problem 5</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-6-2"><i class="fa fa-check"></i>Problem 6</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-7-2"><i class="fa fa-check"></i>Problem 7</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-8-2"><i class="fa fa-check"></i>Problem 8</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>5</b> Probability</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="prob.html"><a href="prob.html#basic-concepts-and-terminology-of-probability-theory"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts and Terminology of Probability Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="prob.html"><a href="prob.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
+<li class="chapter" data-level="5.3" data-path="prob.html"><a href="prob.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="prob.html"><a href="prob.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
+<li class="chapter" data-level="5.3.2" data-path="prob.html"><a href="prob.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
+<li class="chapter" data-level="5.3.3" data-path="prob.html"><a href="prob.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
+<li class="chapter" data-level="5.3.4" data-path="prob.html"><a href="prob.html#example-4-fortune-500-companies"><i class="fa fa-check"></i><b>5.3.4</b> Example 4: Fortune 500 Companies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="prob.html"><a href="prob.html#the-complement-of-an-event"><i class="fa fa-check"></i><b>5.4</b> The Complement of an Event</a></li>
+<li class="chapter" data-level="5.5" data-path="prob.html"><a href="prob.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>5.5</b> Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.6" data-path="prob.html"><a href="prob.html#the-addition-rule-for-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.6</b> The Addition Rule for Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.7" data-path="prob.html"><a href="prob.html#addition-rule-for-non-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.7</b> Addition Rule for Non-Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.8" data-path="prob.html"><a href="prob.html#independent-events-and-the-multiplication-rule"><i class="fa fa-check"></i><b>5.8</b> Independent Events and the Multiplication Rule</a></li>
+<li class="chapter" data-level="5.9" data-path="prob.html"><a href="prob.html#decision-trees"><i class="fa fa-check"></i><b>5.9</b> Decision Trees</a></li>
+<li class="chapter" data-level="5.10" data-path="prob.html"><a href="prob.html#conditional-probability"><i class="fa fa-check"></i><b>5.10</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="prob.html"><a href="prob.html#the-gender-bias-example"><i class="fa fa-check"></i><b>5.10.1</b> The Gender-bias Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="prob.html"><a href="prob.html#dependent-events"><i class="fa fa-check"></i><b>5.11</b> Dependent Events</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="prob.html"><a href="prob.html#the-monty-hall-problem"><i class="fa fa-check"></i><b>5.11.1</b> The Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="prob.html"><a href="prob.html#bayes-theorem"><i class="fa fa-check"></i><b>5.12</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="5.12.1" data-path="prob.html"><a href="prob.html#another-example"><i class="fa fa-check"></i><b>5.12.1</b> Another Example</a></li>
+<li class="chapter" data-level="5.12.2" data-path="prob.html"><a href="prob.html#extending-bayes-rule"><i class="fa fa-check"></i><b>5.12.2</b> Extending Bayes Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="prob.html"><a href="prob.html#key-things-to-remember"><i class="fa fa-check"></i><b>5.13</b> Key Things to Remember</a></li>
+<li class="chapter" data-level="5.14" data-path="prob.html"><a href="prob.html#chapter-5-practice-problems"><i class="fa fa-check"></i><b>5.14</b> Chapter 5 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="distributions.html"><a href="distributions.html#random-variables"><i class="fa fa-check"></i><b>6.1</b> Random Variables</a></li>
+<li class="chapter" data-level="6.2" data-path="distributions.html"><a href="distributions.html#probability-distributions"><i class="fa fa-check"></i><b>6.2</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="distributions.html"><a href="distributions.html#discrete-probability-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Discrete Probability Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="distributions.html"><a href="distributions.html#continuous-probability-distributions"><i class="fa fa-check"></i><b>6.3</b> Continuous Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="distributions.html"><a href="distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>6.3.1</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="distributions.html"><a href="distributions.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>6.3.2</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="distributions.html"><a href="distributions.html#chapter-6-practice-problems"><i class="fa fa-check"></i><b>6.4</b> Chapter 6 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>7</b> The Theory of Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sampling.html"><a href="sampling.html#the-standard-error"><i class="fa fa-check"></i><b>7.1</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.2" data-path="sampling.html"><a href="sampling.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>7.2</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.3" data-path="sampling.html"><a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>7.3</b> Applying the Standard Error and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="sampling.html"><a href="sampling.html#example-1-2"><i class="fa fa-check"></i><b>7.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sampling.html"><a href="sampling.html#example-2-2"><i class="fa fa-check"></i><b>7.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sampling.html"><a href="sampling.html#the-sampling-distribution-of-binary-proportions"><i class="fa fa-check"></i><b>7.4</b> The Sampling Distribution of Binary Proportions</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="sampling.html"><a href="sampling.html#example-1-3"><i class="fa fa-check"></i><b>7.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.4.2" data-path="sampling.html"><a href="sampling.html#example-2-3"><i class="fa fa-check"></i><b>7.4.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="sampling.html"><a href="sampling.html#point-estimates"><i class="fa fa-check"></i><b>7.5</b> Point Estimates</a></li>
+<li class="chapter" data-level="7.6" data-path="sampling.html"><a href="sampling.html#interval-estimates"><i class="fa fa-check"></i><b>7.6</b> Interval Estimates</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="sampling.html"><a href="sampling.html#example-1-4"><i class="fa fa-check"></i><b>7.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.2" data-path="sampling.html"><a href="sampling.html#example-2-4"><i class="fa fa-check"></i><b>7.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.6.3" data-path="sampling.html"><a href="sampling.html#interval-estimates-for-binary-proportions"><i class="fa fa-check"></i><b>7.6.3</b> Interval Estimates for Binary Proportions</a></li>
+<li class="chapter" data-level="7.6.4" data-path="sampling.html"><a href="sampling.html#example-1-5"><i class="fa fa-check"></i><b>7.6.4</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.5" data-path="sampling.html"><a href="sampling.html#example-2-5"><i class="fa fa-check"></i><b>7.6.5</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="sampling.html"><a href="sampling.html#students-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Student’s t distribution</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="sampling.html"><a href="sampling.html#example-1-6"><i class="fa fa-check"></i><b>7.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.7.2" data-path="sampling.html"><a href="sampling.html#example-2-6"><i class="fa fa-check"></i><b>7.7.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.7.3" data-path="sampling.html"><a href="sampling.html#example-3"><i class="fa fa-check"></i><b>7.7.3</b> Example 3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="sampling.html"><a href="sampling.html#key-concepts-to-remember"><i class="fa fa-check"></i><b>7.8</b> Key Concepts to Remember</a></li>
+<li class="chapter" data-level="7.9" data-path="sampling.html"><a href="sampling.html#chapter-7-practice-problems"><i class="fa fa-check"></i><b>7.9</b> Chapter 7 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> The Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#articulating-the-hypotheses-to-be-tested"><i class="fa fa-check"></i><b>8.1</b> Articulating the Hypotheses to be tested</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.2</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#the-process-of-hypothesis-testing-an-example"><i class="fa fa-check"></i><b>8.3</b> The Process of Hypothesis Testing: An Example</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-7"><i class="fa fa-check"></i><b>8.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-7"><i class="fa fa-check"></i><b>8.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis.html"><a href="hypothesis.html#confidence-intervals-for-hypothesis-tests"><i class="fa fa-check"></i><b>8.4</b> Confidence Intervals for Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis.html"><a href="hypothesis.html#the-one-sample-t-test"><i class="fa fa-check"></i><b>8.5</b> The One-Sample t-test</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis.html"><a href="hypothesis.html#assumptions"><i class="fa fa-check"></i><b>8.5.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis.html"><a href="hypothesis.html#the-two-group-or-two-sample-t-test"><i class="fa fa-check"></i><b>8.6</b> The Two-group (or Two-sample) t-test</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-1"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-8"><i class="fa fa-check"></i><b>8.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-8"><i class="fa fa-check"></i><b>8.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="8.6.3" data-path="hypothesis.html"><a href="hypothesis.html#caution"><i class="fa fa-check"></i><b>8.6.3</b> Caution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis.html"><a href="hypothesis.html#paired-t-tests"><i class="fa fa-check"></i><b>8.7</b> Paired t-tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-2"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#the-testing-protocol"><i class="fa fa-check"></i>The Testing Protocol</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-9"><i class="fa fa-check"></i><b>8.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-9"><i class="fa fa-check"></i><b>8.7.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Leadership &amp; Public Affairs:</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sampling" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> The Theory of Sampling Distributions<a href="sampling.html#sampling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Every time that we draw a sample, we hope that it does indeed reflect the population from which it was drawn. But how much faith can we place in this hope? As it turns out, quite a fair amount of faith so long as we haven’t violated key tenets of <code>sampling</code>, have a sufficiently large sample to work with, and understand key elements of the theory of sampling distributions. That is our holy grail so let us not dither a second.</p>
+<p>We can start by understanding two key elements of sampling, the science of drawing samples. One could draw samples in many different ways, several more complicated than others but at the heart of it all is our not violating two principles:</p>
+<ol style="list-style-type: decimal">
+<li>Each and every observation in the population has the same chance of being drawn into the sample</li>
+<li>Each observation is drawn into the sample independently of all other observations</li>
+</ol>
+<p>For example, if sampling from applicants to a job-training program at the welfare center, perhaps to see if a specific job-training program works (or not), I shouldn’t select applicants who seem to be younger or more engaged or non-Hispanic Whites, and so on because this would mean anybody who did not meet the selection criterion would have a <span class="math inline">\(0\)</span> probability of being sampled. Similarly, it would be a bad idea to select individuals who are obviously familiar with each other, maybe even related; by selecting one of them the chance of selecting another individual with them is far greater now than it would be if I didn’t know they knew each other, were related, etc. Samples that meet criteria (1) and (2) are referred to as <code>simple random samples</code>.</p>
+<p>We also draw a distinction between <code>finite populations</code> (where we know the population size) and <code>infinite populations</code> (where we do not know the population size).</p>
+<ul>
+<li>Finite Population: Draw a sample of size <span class="math inline">\(n\)</span> from the population such that each possible sample of size <span class="math inline">\(n\)</span> has an identical probability of selection
+<ul>
+<li>We may sample with replacement, or</li>
+<li>sample without replacement (the more common – but not necessarily accurate – approach)</li>
+</ul></li>
+<li>Infinite Population: We sample such that
+<ul>
+<li>Each element is selected independently of all other elements</li>
+<li>Each element has the same probability of being selected</li>
+</ul></li>
+</ul>
+<p>Now, assume we do this, that we draw all possible samples of a fixed sample size from a population. I’ll keep this simple by assuming the population is made up of only four numbers: 2, 4, 6, and 8. The population size, <span class="math inline">\(N\)</span> is <span class="math inline">\(4\)</span> and the population mean is <span class="math inline">\(\mu = \dfrac{20}{4} = 5\)</span>. Now, what if I drew all possible samples of exactly <span class="math inline">\(2\)</span> numbers from this population and then calculated the sample mean <span class="math inline">\(\bar{x}\)</span> in each of these samples of <span class="math inline">\(n = 2\)</span>? The result is shown below:</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:samplingdemo">TABLE 7.1: </span>An Example of Sampling Distributions
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Sample No. 
+</th>
+<th style="text-align:right;">
+x1
+</th>
+<th style="text-align:right;">
+x2
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+</tbody>
+</table>
+<p>Eyeball the sample means in the column title <span class="math inline">\(\bar{x}\)</span> and you will see that the most commonly occurring sample mean is <span class="math inline">\(\bar{x}=5\)</span>, which is equal to the population mean <span class="math inline">\(\mu = 5\)</span>. Is this luck? Not at all. This is what the theory of sampling distributions tell us: On average, the sample mean will equal the population mean so long as the tenets of random sampling have not been violated. Formally, we state this as the Sampling Distribution of <span class="math inline">\(\bar{x}\)</span> is the probability distribution of all possible values of the sample mean <span class="math inline">\(\bar{x}\)</span>. The <code>Expected Value</code> of <span class="math inline">\(\bar{x}\)</span> is <span class="math inline">\(E(\bar{x})=\mu\)</span> and the Standard Deviation of <span class="math inline">\(\bar{x}\)</span> is the <code>Standard Error</code> of <span class="math inline">\(\bar{x}\)</span>, calculated for (a) Finite Populations as <span class="math inline">\(\sigma_{\bar{x}}=\sqrt{\dfrac{N-n}{N-1}}\left(\dfrac{\sigma}{\sqrt{n}}\right)\)</span> and for (b) Infinite Populations as <span class="math inline">\(\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}\)</span></p>
+<p>Now, it should be somewhat intuitive that the larger the sample that we draw, the more likely is the sample mean to mirror the population mean. Is this true? Let us see with respect to the length of the <a href="http://phylo.bio.ku.edu/biostats/geneLenDemo.html">human genome</a>, something we have mapped almost completely, to the extent that we can deem it a known population. One way of seeing this in action is by first looking at the distribution of gene lengths (measured in <a href="http://www.biologyreference.com/Mo-Nu/Nucleotides.html">nucleotides</a>, “the sub-units that are linked to form the nucleic acids ribonucleic acid (RNA) and deoxyribonucleic acid (DNA), which serve as the cell’s storehouse of genetic information”). The population is shown below:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:genes1"></span>
+<img src="stats_files/figure-html/genes1-1.svg" alt="Population Distribution of Human Gene Lengths" width="85%" />
+<p class="caption">
+FIGURE 7.1: Population Distribution of Human Gene Lengths
+</p>
+</div>
+<p>The population mean human gene length is 2,622.027 and the standard deviation is 2,036.967. What would the distribution of sample means be if I drew 100 possible samples of <span class="math inline">\(n=100\)</span> from this population? What if I drew 100 samples with <span class="math inline">\(n=1,000\)</span>, <span class="math inline">\(n=10,000\)</span>, <span class="math inline">\(n=15,000\)</span>? What if I drew all possible samples of <span class="math inline">\(n=100\)</span>, <span class="math inline">\(n=1,000\)</span>, <span class="math inline">\(n=10,000\)</span>, <span class="math inline">\(n=15,000\)</span>, calculated the mean in each sample and plotted the distribution of these means? What would such a distribution look like? Would most sample means cluster around the population mean or would they be wandering off, all over the place? Let us see these distributions mapped out for us. Note that the white vertical line in the plots that follows marks the population mean human gene length <span class="math inline">\((\mu = 2,622.07)\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:genes2"></span>
+<img src="images/genes.png" alt="Sampling Distributions of Human Gene Lengths" width="100%" />
+<p class="caption">
+FIGURE 7.2: Sampling Distributions of Human Gene Lengths
+</p>
+</div>
+<p>Several noteworthy things are going on in these plots. First, individual sample means could end up anywhere in the distribution – some close to <span class="math inline">\(\mu\)</span> and some far away from <span class="math inline">\(\mu\)</span>. Second, the larger the sample size, the more it seems that the resulting sample means tend to cluster around <span class="math inline">\(\mu\)</span>. These two realizations should nudge you to wonder if sample size is the key to minimizing drift between your sample mean <span class="math inline">\(\bar{x}\)</span> and the population mean <span class="math inline">\(\mu\)</span>. Yes, it is the key.</p>
+<div id="the-standard-error" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> The Standard Error<a href="sampling.html#the-standard-error" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If an important element of doing reliable data analysis is to have our sample mean be as close as possible to the population mean, is there a measure of how far our sample mean <code>might be</code> from the population mean? Yes there is, and we call it <code>the standard error</code>, denoted by <span class="math inline">\(\sigma_{\bar{x}}\)</span>, where <span class="math inline">\(\sigma_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}\)</span>. What does the standard error really tell us? Let us break its message down piece by piece.</p>
+<ol style="list-style-type: decimal">
+<li>First, you don’t see the population and so you have to rely on your sample mean to guess what the population mean might be. As such, one could say that the <code>expected value of the sample mean</code> is the population mean, i.e., <span class="math inline">\(E(\bar{x}) = \mu\)</span>.</li>
+<li>Now, if you were so lucky as to end up with a sample mean that is <span class="math inline">\(\neq \mu\)</span>, how far away from <span class="math inline">\(\mu\)</span> do you think you might be? The answer is provided by the standard error, <span class="math inline">\(\sigma_{\bar{x}}\)</span>. It is telling you the average distance of a sample mean from the population mean <code>for all samples of a given sample size drawn from a common population with standard deviation of</code> <span class="math inline">\(\sigma\)</span>.</li>
+</ol>
+<p>So clearly two things dictate how small or large the standard error could be – (i) how much variability there is in the population, i.e., the standard error <span class="math inline">\((\sigma_{\bar{x}})\)</span>, and (ii) how large a sample we are drawing, i.e., <span class="math inline">\((n)\)</span>. It should be very obvious that while we cannot influence variability in the population, <code>sample size is under our control</code>. Since <span class="math inline">\(n\)</span> figures in the denominator in the formula <span class="math inline">\(\sigma_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}\)</span>, the larger is <span class="math inline">\(n\)</span>, the smaller will <span class="math inline">\(\sigma_{\bar{x}}\)</span>.</p>
+<p>To recap, as <span class="math inline">\(n \rightarrow \infty\)</span>, <span class="math inline">\(\sigma_{\bar{x}} \rightarrow 0\)</span> … that is, as the sample size <span class="math inline">\((n)\)</span> increases the standard error <span class="math inline">\((\sigma_{\bar{x}})\)</span> decreases …</p>
+<p><span class="math display">\[\sigma=4000; n=30; \sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{4000}{\sqrt{30}}=730.2967\]</span></p>
+<p><span class="math display">\[\sigma=4000; n=300; \sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{4000}{\sqrt{300}}=230.9401\]</span></p>
+<p><span class="math display">\[\sigma=4000; n=3000; \sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{4000}{\sqrt{3000}}=73.0296\]</span></p>
+<p>and, as <span class="math inline">\(\sigma \rightarrow \infty\)</span>, <span class="math inline">\(\sigma_{\bar{x}} \rightarrow \infty\)</span> … that is, holding the sample size <span class="math inline">\((n)\)</span> constant, samples drawn from populations with larger standard deviations <span class="math inline">\((\sigma)\)</span> will have larger standard errors <span class="math inline">\((\sigma_{\bar{x}})\)</span></p>
+<p><span class="math display">\[\sigma=40; n=30; \sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{40}{\sqrt{30}}=7.3029\]</span></p>
+<p><span class="math display">\[\sigma=400; n=30; \sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{400}{\sqrt{30}}=73.0296\]</span></p>
+<p><span class="math display">\[\sigma=4000; n=30; \sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{4000}{\sqrt{30}}=730.2967\]</span></p>
+</div>
+<div id="the-central-limit-theorem" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> The Central Limit Theorem<a href="sampling.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>But is this claim, of the sample mean <span class="math inline">\(= \mu\)</span> and if it isn’t, drifting, on average, by <span class="math inline">\(\sigma_{\bar{x}}\)</span> true for all population distributions? Yes, it is, by virtue of the <code>Central Limit Theorem</code> which stipulates that “For any population with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, the distribution of sample means for samples of size <span class="math inline">\(n\)</span> will approach the normal distribution with a mean of <span class="math inline">\(\mu\)</span> and standard error of <span class="math inline">\(\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span>”. This holds true so long as (i) the population is normally distributed, or (ii) the sample size is <span class="math inline">\(\geq 30\)</span> (note no reference is being made to the population being normally distributed). This is a very crucial theorem in statistics because it allows us to proceed with statistical analyses even when we cannot see the population (the default situation we almost always find ourselves in) so long as <span class="math inline">\(n \geq 30\)</span>.</p>
+</div>
+<div id="applying-the-standard-error-and-the-central-limit-theorem" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Applying the Standard Error and the Central Limit Theorem<a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-1-2" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Example 1<a href="sampling.html#example-1-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Tuition costs at state universities is <span class="math inline">\(\sim \mu=\$4260; \sigma=\$900\)</span>. Sample of <span class="math inline">\(n=50\)</span> is drawn at random.</p>
+<ol style="list-style-type: decimal">
+<li>What is the sampling distribution of mean tuition costs?</li>
+</ol>
+<p><span class="math display">\[\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{900}{\sqrt{50}}= 127.28\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>What is <span class="math inline">\(P(\bar{x})\)</span> within $250 of <span class="math inline">\(\mu\)</span>?</li>
+</ol>
+<p>Sampling distribution is <span class="math inline">\(\mu = 4260; \sigma_{\bar{x}} = 127.28\)</span>. Within <span class="math inline">\(250\)</span> implies <span class="math inline">\(P(4010 \leq \mu \leq 4510)\)</span></p>
+<p><span class="math display">\[z_{4510}=\dfrac{4510-4260}{127.28}=1.96\]</span></p>
+<p><span class="math display">\[z_{4010} = \dfrac{4010-4260}{127.28} = - 1.96\]</span></p>
+<p><span class="math display">\[P(4010 \leq \mu \leq 4510) = 0.95\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>What is <span class="math inline">\(P(\bar{x})\)</span> within $100 of <span class="math inline">\(\mu\)</span>? We want <span class="math inline">\(P(4160 \leq \mu \leq 4360)\)</span></li>
+</ol>
+<p><span class="math display">\[z_{4360}=\dfrac{4360-4260}{127.28}=0.79\]</span></p>
+<p><span class="math display">\[z_{4160} = \dfrac{4160-4260}{127.28} = - 0.79\]</span></p>
+<p><span class="math display">\[P(4160 \leq \mu \leq 4360) = 0.5704\]</span></p>
+</div>
+<div id="example-2-2" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Example 2<a href="sampling.html#example-2-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Average annual cost of automobile insurance is <span class="math inline">\(\sim \mu=\$687; \sigma=\$230\)</span> and <span class="math inline">\(n= 45\)</span>. Therefore, <span class="math inline">\(\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{230}{\sqrt{45}}= 34.29\)</span>. So the sampling distribution is <span class="math inline">\(\mu = 687; \sigma_{\bar{x}} = 34.29\)</span></p>
+<ol style="list-style-type: decimal">
+<li>What is <span class="math inline">\(P(\bar{x})\)</span> within <span class="math inline">\(\$100\)</span>? We need <span class="math inline">\(P(587 \leq \mu \leq 787)\)</span></li>
+</ol>
+<p><span class="math display">\[z_{787}=\dfrac{787-687}{34.29}=2.92\]</span></p>
+<p><span class="math display">\[z_{587} = \dfrac{587-687}{34.29} = -2.92\]</span>
+<span class="math display">\[P(587 \leq \mu \leq 787) = 0.9964\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>What is <span class="math inline">\(P(\bar{x})\)</span> within <span class="math inline">\(\$25\)</span>? We need <span class="math inline">\(P(662 \leq \mu \leq 712)\)</span></li>
+</ol>
+<p><span class="math display">\[z_{712}=\dfrac{712-687}{34.29}=0.73\]</span></p>
+<p><span class="math display">\[z_{662} = \dfrac{662-687}{34.29} = -0.73\]</span></p>
+<p><span class="math display">\[P(662 \leq \mu \leq 712) = 0.5346\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>If insurance agency wants to be within $25, would you recommend a larger sample? Yes, since <span class="math inline">\(n = 45\)</span> is unlikely to yield the desired result.</li>
+</ol>
+</div>
+</div>
+<div id="the-sampling-distribution-of-binary-proportions" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> The Sampling Distribution of Binary Proportions<a href="sampling.html#the-sampling-distribution-of-binary-proportions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The theory of sampling distributions also extends to binomial random variables. For example, assume that leadership training is sought and completed by some public agency personnel, mid-level perhaps. If we wanted to evaluate what proportion of mid-level public agency personnel have leadership training, we could draw a random sample. Let us assume that in the population, the proportion with such training happens to be <span class="math inline">\(0.20\)</span>. Let us generate a sequence of 1,000,000 randomly drawn samples, first with <span class="math inline">\(n=20\)</span>, then with <span class="math inline">\(n=40\)</span>, and finally with <span class="math inline">\(n=100\)</span>. The plots below show you the average proportion with leadership training. In each case, but most so in panels (b) and (c), we see what looks like a normal proportion. The takeway should be that in larger samples the proportion with leadership training is more likely to mirror the true proportion in the population, which turns out to be 0.20 (i.e., 20% of mid-level personnel have completed leadership training).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:propdist"></span>
+<img src="images/propdist.png" alt="Sampling Distributions of Proportions" width="75%" />
+<p class="caption">
+FIGURE 7.3: Sampling Distributions of Proportions
+</p>
+</div>
+<p>In general, then, the theory of sampling distributions applies as well to proportions as it does to means of continuous variables. Before we move on, however, let us see how the standard error is calculated for proportion and a few other key points.</p>
+<p>The sample proportion is denoted by <span class="math inline">\(\bar{p}=\dfrac{x}{n}\)</span> and we expect, on average, that the expected value of the sample proportion is the population proportion, i.e., <span class="math inline">\(E(\bar{p})=p\)</span>.</p>
+<p>The standard error (aka the standard deviation of <span class="math inline">\(\bar{p}\)</span>) is calculated as <span class="math inline">\(\sigma_{\bar{p}}={\sqrt{\dfrac{p(1-p)}{n}}}\)</span>, and we can safely assume that the sampling distribution of <span class="math inline">\(\bar{p}\)</span> is approximately normally distributed if <span class="math inline">\(np \geq 5\)</span> AND <span class="math inline">\(n(1-p) \geq 5\)</span> (both conditions must be met).<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
+<p><strong>Note:</strong> When the population proportion <span class="math inline">\(p\)</span> is unknown, the standard error is calculated as <span class="math inline">\(s_{\bar{p}}={\sqrt{\dfrac{\bar{p}(1-\bar{p})}{n}}}\)</span></p>
+<div id="example-1-3" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Example 1<a href="sampling.html#example-1-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Governor’s office reports 56% of US households have internet access. If <span class="math inline">\(p=0.56\)</span> and <span class="math inline">\(n=300\)</span>, what is:</p>
+<ol style="list-style-type: decimal">
+<li><p>The sampling distribution of <span class="math inline">\(\bar{p}\)</span>? Given <span class="math inline">\(n=300; p=0.56\)</span>, <span class="math inline">\(\sigma_{\bar{p}}={\sqrt{\dfrac{0.56(1-0.56)}{300}}}=0.0287\)</span></p></li>
+<li><p>What is <span class="math inline">\(Probability (\bar{p})\)</span> within <span class="math inline">\(\pm 0.03\)</span>? We are looking for the interval <span class="math inline">\((0.53,0.59)\)</span> and so we calculate:</p></li>
+</ol>
+<p><span class="math display">\[z_{0.59}=\dfrac{0.59-0.56}{0.0287}=1.0452\]</span>
+<span class="math display">\[z_{0.53}=\dfrac{0.53-0.56}{0.0287}=-1.0452\]</span></p>
+<p>and hence <span class="math inline">\(P(0.53 \leq \bar{p} \leq 0.59)=0.7031\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Calculate (1) and (2) for <span class="math inline">\(n=600\)</span> and <span class="math inline">\(n=1000\)</span>, respectively.</li>
+</ol>
+</div>
+<div id="example-2-3" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Example 2<a href="sampling.html#example-2-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Federal Highway Administration says 76 percent of drivers read warning signs placed by the roadside. Let <span class="math inline">\(p=0.76\)</span> and <span class="math inline">\(n=400\)</span>. What is:</p>
+<ol style="list-style-type: decimal">
+<li><p>The sampling distribution of <span class="math inline">\(\bar{p}\)</span>? Given <span class="math inline">\(n=400; p=0.76\)</span>, <span class="math inline">\(\sigma_{\bar{p}} = {\sqrt{\dfrac{0.76(1-0.76)}{400}}} = 0.0214\)</span></p></li>
+<li><p><span class="math inline">\(\text{Probability}(\bar{p})\)</span> within <span class="math inline">\(\pm 0.03\)</span>? We need <span class="math inline">\((0.73,0.79)\)</span> so we calculate <span class="math inline">\(z_{0.73}=\dfrac{0.73-0.76}{0.0214} = -1.40\)</span> and <span class="math inline">\(z_{0.79}=\dfrac{0.79-0.76}{0.0214} = 1.40\)</span>, and hence <span class="math inline">\(P(0.73 \leq \bar{p} \leq 0.79) = 0.8385\)</span></p></li>
+<li><p>Repeat (1) and (2) for a sample of <span class="math inline">\(n=1600\)</span></p></li>
+</ol>
+</div>
+</div>
+<div id="point-estimates" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Point Estimates<a href="sampling.html#point-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Statistics calculated for a population are referred to as population parameters (for e.g., <span class="math inline">\(\mu\)</span>; <span class="math inline">\(\sigma^{2}\)</span>; <span class="math inline">\(\sigma\)</span>). On the other hand, statistics calculated for a sample are referred to as sample statistics (for e.g., <span class="math inline">\({\bar{x}}\)</span>; <span class="math inline">\(s^{2}\)</span>; <span class="math inline">\(s\)</span>). Since populations are beyond our reach we rely on samples to calculate <code>point estimates</code>. A point estimator is a sample statistic that predicts (or estimates) the value of the corresponding population parameter as for, example, in the sample mean <span class="math inline">\(\bar{x}\)</span> predicting/estimating the population mean <span class="math inline">\(\mu\)</span>, the sample proportion <span class="math inline">\(\bar{p}\)</span> predicting/estimating the population proportion <span class="math inline">\(p\)</span>, and so on. Not all point estimators are created equal, however. In fact, desirable point estimators have the following properties:</p>
+<ol style="list-style-type: decimal">
+<li>The sampling distribution of the point estimator is <code>unbiased</code> – it is centered around the population parameter. An unbiased estimator would be, for example, one that gives us <span class="math inline">\(E(\bar{x}) = \mu\)</span>. If <span class="math inline">\(E(\bar{x}) - \mu \neq 0\)</span>, we would have bias. Think of this as a case where the weighing scale in my house is not well calibrated and always shows the weight to be 10 pounds more than it actually happens to be. A different scale might always show a lower weight by 7.5 pounds than the true weight. Both these weighing scales are biased, one upwards the other downwards.</li>
+<li>The point estimator is <code>efficient</code> – it has the smallest possible variance. Why does efficiency matter? It matters because if the point estimator has large variance we know our standard error will be large (recall: the numerator would be large), and hence the point estimator could have greater drift from the true population parameter. Thus, when choosing a point estimator from the set of point estimators we could work with, we prefer the one that has minimum variance.</li>
+<li>The point estimator is <code>consistent</code> – it tends towards the population parameter as the sample size increases. This is the result that with increasingly larger samples the point estimate will come increasingly closer to the population parameter.</li>
+</ol>
+<p>The easiest way to understand bias and efficiency is via the following graphic <a href="https://sebastianraschka.com">authored by Sebastian Raschka</a>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sampling"></span>
+<img src="images/sampling.png" alt="Bias and Efficiency of point estimates" width="50%" />
+<p class="caption">
+FIGURE 7.4: Bias and Efficiency of point estimates
+</p>
+</div>
+<p>The ideal point estimator has no bias and the smallest variance of all point estimators available to us, as shown by the red dots (each dot referencing a point estimate) in the top-left panel titled <code>Low Bias (Accurate), Low variance (Precise)</code>. But a point estimate is by itself quite risky because it presents you with one possible value of the corresponding population parameter. For example, your sample might show median household income as <span class="math inline">\(\bar{x} = 45,000\)</span> and so you claim this is what the median household income must be for the population. However, if I asked you to bet a substantial amount of money on this estimate being accurate, you would (or should) not take the bet because there is a reasonable chance of you being wrong. Instead, if I asked you to give me a range of household income within which the population mean is likely to fall, now you have a span of values you could offer up with more confidence. This span of values is what we call <code>interval estimates</code>.</p>
+</div>
+<div id="interval-estimates" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Interval Estimates<a href="sampling.html#interval-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Although point estimates (for e.g., <span class="math inline">\(\bar{x}\)</span>) tell us the expected value of a parameter based on a sample statistic, we know samples are not all the same even though they were drawn randomly, and have the same sample size. So we try to ask: How much confidence can we place in the point estimate? The <code>margin of error</code> helps us answer this question. Formally, the interval estimate of <span class="math inline">\(\mu = \bar{x} \pm \text{ Margin of error}\)</span> and the interval estimate of <span class="math inline">\(p = \bar{p} \pm \text{ Margin of error}\)</span> where the margin of error <span class="math inline">\(= \left(z \times \sigma \right)\)</span>. In a base sense, what the margin of error is telling you is how far off, above or below the population mean or proportion, you should expect your sample mean or proportion to be. Hence the reference made in surveys to “The margin of error for this survey is <span class="math inline">\(\pm 2.5\)</span> percent”, and so on.</p>
+<p>In any normal distribution of sample means with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, the following statement is true: Over all samples of size <span class="math inline">\(n\)</span>, the probability is <span class="math inline">\(0.95\)</span> for the event in question. That is, the distance between the sample mean and the population mean will fall in an interval covered by the margin of error: <span class="math inline">\(-1.96\sigma \leq \bar{x}-\mu \leq +1.96\sigma\)</span>.</p>
+<p>Rearranging the former identity yields: <span class="math inline">\(\bar{x}-1.96\sigma \leq \mu \leq \bar{x} +1.96\sigma\)</span>. This expression says that in all possible samples of identical size <span class="math inline">\(n\)</span>, there is a 95% probability that <span class="math inline">\(\mu\)</span> falls within a span of values given by <span class="math inline">\(\bar{x} \pm 1.96\sigma\)</span>. The range of values within <span class="math inline">\(\bar{x} \pm 1.96 \sigma\)</span> yield the 95 percent <code>confidence interval (CI)</code> of <span class="math inline">\(\mu\)</span>, and the two boundaries are the <code>95 percent confidence interval limits</code>. Be careful! We aren’t saying <span class="math inline">\(\mu\)</span> falls within a known interval, although this is how most people treat confidence intervals. Rather, what we are saying is that in repeated random sampling if we drew all possible samples of a specific sample size <span class="math inline">\(n\)</span>, calculated the 95 percent confidence interval in each sample, then plotted these confidence intervals, 95 percent of these 95 percent confidence intervals will include <span class="math inline">\(\mu\)</span>. By extension, this also means that some 5 percent of these 95 percent confidence intervals <strong>will not include <span class="math inline">\(\mu\)</span></strong>. Watch the graph that follows; it shows you this principle in action.</p>
+<p>In particular, the graph shows 100 confidence intervals as horizontal lines, with a vertical line demarcating the value of the population mean <span class="math inline">\((\mu = 20)\)</span>. Red horizontal lines are 95% confidence intervals that have completely missed the population mean.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:confint1"></span>
+<img src="images/confint.png" alt="95 Percent Confidence Intervals in 100 Random Samples" width="60%" />
+<p class="caption">
+FIGURE 7.5: 95 Percent Confidence Intervals in 100 Random Samples
+</p>
+</div>
+<p>The second plot does the same thing anew by drawing 100 random samples and mapping the confidence intervals. This time around eight of these intervals miss the population mean.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:confint2"></span>
+<img src="images/confint2.png" alt="95 Percent Confidence Intervals in 100 Random Samples" width="60%" />
+<p class="caption">
+FIGURE 7.6: 95 Percent Confidence Intervals in 100 Random Samples
+</p>
+</div>
+<p>Before we move on to some examples, note the z-score values used in calculating the margin of error:</p>
+<ul>
+<li>z = 1.645 for a 90% confidence level</li>
+<li>z = 1.960 for a 95% confidence level</li>
+<li>z = 2.576 for a 99% confidence level</li>
+</ul>
+<div id="example-1-4" class="section level3 hasAnchor" number="7.6.1">
+<h3><span class="header-section-number">7.6.1</span> Example 1<a href="sampling.html#example-1-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(\bar{x}=32; \sigma=6\)</span>. Let also <span class="math inline">\(n=50\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>What is the standard error? <span class="math inline">\(\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{6}{\sqrt{50}}=0.8485\)</span></p></li>
+<li><p>Find <span class="math inline">\(90\%\)</span>CI <span class="math inline">\(= 32 \pm 1.645(0.8485)=32 \pm 1.3957=(30.6043; 33.3957)\)</span></p></li>
+<li><p>Find <span class="math inline">\(95\%\)</span>CI <span class="math inline">\(= 32 \pm 1.960(0.8485)=32 \pm 1.6630=(30.3370; 33.6630)\)</span></p></li>
+<li><p>Find <span class="math inline">\(99\%\)</span>CI <span class="math inline">\(= 32 \pm 2.576(0.8485)=32 \pm 2.1857=(29.8143; 34.1857)\)</span></p></li>
+</ol>
+</div>
+<div id="example-2-4" class="section level3 hasAnchor" number="7.6.2">
+<h3><span class="header-section-number">7.6.2</span> Example 2<a href="sampling.html#example-2-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let household mean television viewing time be <span class="math inline">\(\sim \bar{x}=8.5; \sigma=3.5\)</span> and <span class="math inline">\(n=300\)</span>. Therefore <span class="math inline">\(\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}=\dfrac{3.5}{\sqrt{300}}=0.2020\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Find the <span class="math inline">\(95\)</span>% CI <span class="math inline">\(= 8.5 \pm 1.960(0.2020)=8.5 \pm 0.3959 = (8.1041; 8.8959)\)</span></p></li>
+<li><p>What is the <span class="math inline">\(99\)</span>% CI? <span class="math inline">\(= 8.5 \pm 2.576(0.2020) = 8.5 \pm 0.520352 = (7.979648; 9.020352)\)</span></p></li>
+</ol>
+</div>
+<div id="interval-estimates-for-binary-proportions" class="section level3 hasAnchor" number="7.6.3">
+<h3><span class="header-section-number">7.6.3</span> Interval Estimates for Binary Proportions<a href="sampling.html#interval-estimates-for-binary-proportions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A similar logic applies to confidence intervals for binary proportions as well, with some differences in how the intervals are calculated. For one, since we don’t know the population proportion <span class="math inline">\(p\)</span> we calculate the standard error <span class="math inline">\(s_{\bar{p}}\)</span> as <span class="math inline">\(s_{\bar{p}} = {\sqrt{\dfrac{\bar{p}(1-\bar{p})}{n}}}\)</span>. With the standard error in hand we could calculate a variety of confidence intervals but the three most often seen will be (i) the Agresti-Coull confidence intervals, (ii) the Wald confidence interval, and (iii) Wilson’s confidence intervals.</p>
+<div id="agresti-coull-confidence-intervals" class="section level4 unnumbered hasAnchor">
+<h4>Agresti-Coull Confidence Intervals<a href="sampling.html#agresti-coull-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Agresti-Coull confidence interval requires us to first calculate <span class="math inline">\(p^{&#39;} = \dfrac{x + 2}{n + 4}\)</span> and then calculate</p>
+<p><span class="math display">\[p^{&#39;} - z_{\alpha/2}\sqrt{ \dfrac{p^{&#39;} \left(1-p^{&#39;} \right) } {n+4} } \leq p \leq p^{&#39;} + z _{\alpha/2}\sqrt{ \dfrac{p^{&#39;} \left(1-p^{&#39;} \right) } {n+4} }\]</span></p>
+</div>
+<div id="wald-confidence-intervals" class="section level4 unnumbered hasAnchor">
+<h4>Wald Confidence Intervals<a href="sampling.html#wald-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Wald confidence intervals are calculated with the usual standard error and as:</p>
+<p><span class="math display">\[\bar{p} - z_{\alpha/2}\sqrt{ \dfrac{\bar{p} \left(1-\bar{p} \right) } {n} } \leq p \leq \bar{p} + z_{\alpha/2}\sqrt{ \dfrac{\bar{p} \left(1-\bar{p} \right) } {n} }\]</span></p>
+<p>These intervals are normal theory approximations and can be used as the default approach. However, they will yield very conservative intervals (i.e., confidence intervals that will be wider than they really should be) when (i) <span class="math inline">\(n\)</span> is small or (ii) <span class="math inline">\(p\)</span> is close to <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>. In those cases you can rely upon the Agresti-Coull approach or, better yet, the Wilson approach (see below).</p>
+</div>
+<div id="wilsons-confidence-interval" class="section level4 unnumbered hasAnchor">
+<h4>Wilson’s Confidence Interval<a href="sampling.html#wilsons-confidence-interval" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Wilson’s interval is calculated as follows:</p>
+<p><span class="math display">\[\dfrac{n}{n + z^2_{\alpha/2}}\left[ \left(\bar{p} + \dfrac{z^2_{\alpha/2}}{2n} \right) \pm z_{\alpha/2} \sqrt{\dfrac{\bar{p}(1-\bar{p})}{n} + \dfrac{z^2_{\alpha/2}}{4n^2}} \right ]\]</span></p>
+<p>which converts to</p>
+<p><span class="math display">\[\dfrac{n}{n + z^2_{\alpha/2}}\left[ \left(\bar{p} + \dfrac{z^2_{\alpha/2}}{2n} \right) - z_{\alpha/2} \sqrt{\dfrac{\bar{p}(1-\bar{p})}{n} + \dfrac{z^2_{\alpha/2}}{4n^2}} \right ] \leq p \leq \dfrac{n}{n + z^2_{\alpha/2}}\left[ \left(\bar{p} + \dfrac{z^2_{\alpha/2}}{2n} \right) + z_{\alpha/2} \sqrt{\dfrac{\bar{p}(1-\bar{p})}{n} + \dfrac{z^2_{\alpha/2}}{4n^2}} \right ]\]</span></p>
+<p>These are not the only intervals one could use and statistics software packages do not always use the same default approach. Hence it is always a good idea to check what method is being used by your software.</p>
+<p>Before we move on to a few examples, note what happens at differing values of <span class="math inline">\(\bar{p}\)</span> for a given sample size.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:binomprop">TABLE 7.2: </span>The Binomial Proportion Revisited
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Proportion
+</th>
+<th style="text-align:right;">
+1 - Proportion
+</th>
+<th style="text-align:right;">
+(Proportion) * (1 - Proportion)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.95
+</td>
+<td style="text-align:right;">
+0.0475
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+<td style="text-align:right;">
+0.0900
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.85
+</td>
+<td style="text-align:right;">
+0.1275
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.20
+</td>
+<td style="text-align:right;">
+0.80
+</td>
+<td style="text-align:right;">
+0.1600
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0.75
+</td>
+<td style="text-align:right;">
+0.1875
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.30
+</td>
+<td style="text-align:right;">
+0.70
+</td>
+<td style="text-align:right;">
+0.2100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.35
+</td>
+<td style="text-align:right;">
+0.65
+</td>
+<td style="text-align:right;">
+0.2275
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.40
+</td>
+<td style="text-align:right;">
+0.60
+</td>
+<td style="text-align:right;">
+0.2400
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.45
+</td>
+<td style="text-align:right;">
+0.55
+</td>
+<td style="text-align:right;">
+0.2475
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.2500
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.55
+</td>
+<td style="text-align:right;">
+0.45
+</td>
+<td style="text-align:right;">
+0.2475
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.60
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+<td style="text-align:right;">
+0.2400
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.65
+</td>
+<td style="text-align:right;">
+0.35
+</td>
+<td style="text-align:right;">
+0.2275
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.70
+</td>
+<td style="text-align:right;">
+0.30
+</td>
+<td style="text-align:right;">
+0.2100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.75
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0.1875
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.80
+</td>
+<td style="text-align:right;">
+0.20
+</td>
+<td style="text-align:right;">
+0.1600
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.85
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.1275
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.90
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.0900
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.95
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.0475
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note what happens when <span class="math inline">\(\bar{p}=0\)</span> and <span class="math inline">\(\bar{p}=1\)</span>: Your numerator in the formula <span class="math inline">\(s_{\bar{p}} = \sqrt{\dfrac{\bar{p}(1-\bar{p})}{n}}\)</span> is driven to <span class="math inline">\(0\)</span> and hence so is the standard error. So this problem occurs at the extremes of <span class="math inline">\(\bar{p}\)</span>. Where the numerator <span class="math inline">\(\bar{p}(1 - \bar{p})\)</span> is the widest is when <span class="math inline">\(\bar{p}=0.50\)</span>; as <span class="math inline">\(\bar{p}\)</span> moves away towards <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, <span class="math inline">\(\bar{p}(1 - \bar{p})\)</span> steadily decreases. At the extremes, the Wilson will do well but not so the Wald or Agresti-Coull</p>
+<p>If you calculated the garden variety of confidence intervals for a case where <span class="math inline">\(\bar{p} = 0.04166667\)</span> you would see the following:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-67"></span>
+<img src="stats_files/figure-html/unnamed-chunk-67-1.svg" alt="95 percent Confidence Intervals when Sample Proportion = 0.0417" width="70%" />
+<p class="caption">
+FIGURE 7.7: 95 percent Confidence Intervals when Sample Proportion = 0.0417
+</p>
+</div>
+<p>Note the variance in how wide the intervals are and that some of them cross <span class="math inline">\(0\)</span>, which doesn’t make sense because you cannot have a negative sample proportion. On the other hand, if you calculated the garden variety of confidence intervals for a case where <span class="math inline">\(\bar{p} = 0.5\)</span> you would see muted differences between the different methods used to calculate confidence intervals (see below).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-68"></span>
+<img src="stats_files/figure-html/unnamed-chunk-68-1.svg" alt="95 percent Confidence Intervals when Sample Proportion = 0.5000" width="70%" />
+<p class="caption">
+FIGURE 7.8: 95 percent Confidence Intervals when Sample Proportion = 0.5000
+</p>
+</div>
+</div>
+</div>
+<div id="example-1-5" class="section level3 hasAnchor" number="7.6.4">
+<h3><span class="header-section-number">7.6.4</span> Example 1<a href="sampling.html#example-1-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In a survey of a small town in Vermont, voters were asked if they would support closing the local schools and sending the local kids to schools in the neighboring town to more efficiently utilize local tax dollars. A random sample of 153 voters yields 43.1% favoring school closures. What is the 95% confidence interval for the population proportion? Use the Wald approach.</p>
+<p>We have <span class="math inline">\(\bar{p}=0.431\)</span> and <span class="math inline">\(n = 153\)</span>. This yields a standard error of <span class="math inline">\(s_{\bar{p}} = \sqrt{\dfrac{0.431(1-0.431)}{153}} = 0.04003585\)</span>.</p>
+<p>Given <span class="math inline">\(z = \pm 1.96\)</span> the confidence interval is: <span class="math inline">\(0.431 \pm 1.96(0.04003585) = 0.3525297 \text{ and } 0.5094703\)</span>. This can be loosely interpreted as: We are about 95% confident that the population proportion of the town’s voters that support school closures lies in the interval given by 0.3525 and 0.5094.</p>
+</div>
+<div id="example-2-5" class="section level3 hasAnchor" number="7.6.5">
+<h3><span class="header-section-number">7.6.5</span> Example 2<a href="sampling.html#example-2-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Paper currency in the US often comes into contact with cocaine either directly or indirectly during drug deals or usage, or in counting machines where it wears off from one bill to the next. A forensic survey collected fifty $1 bills and traced cocaine on forty-six bills.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the best estimate of the proportion of US$1 bills that have detectable levels of cocaine?</li>
+</ol>
+<p>The best estimate would be our sample proportion of <span class="math inline">\(\bar{p} = \dfrac{46}{50} = 0.92\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the 99% confidence interval for this estimate?</li>
+</ol>
+<p>Since our sample proportion is close to <span class="math inline">\(1\)</span> we should use either the Wilson method or the Agresti-Coull approach. Here, the Wilson interval will be given by: 0.7657 and 0.9758. We can be about 99% certain that the proportion of US$1 bills with detectable levels of cocaine lies in the interval 0.7657 and 0.9758. The calculations are shown below:</p>
+<p><span class="math display">\[\dfrac{n}{n + z^2_{\alpha/2}}\left[ \left(\bar{p} + \dfrac{z^2_{\alpha/2}}{2n} \right) - z_{\alpha/2} \sqrt{\dfrac{\bar{p}(1-\bar{p})}{n} + \dfrac{z^2_{\alpha/2}}{4n^2}} \right ]\]</span>
+<span class="math display">\[= \dfrac{50}{50 + 2.58^2}\left[ \left(0.92 + \dfrac{2.58^2}{100} \right) - 2.58 \sqrt{\dfrac{0.92(1-0.92)}{50} + \dfrac{2.58^2}{10000}} \right ]\]</span></p>
+<p>and</p>
+<p><span class="math display">\[= \dfrac{50}{50 + 2.58^2}\left[ \left(0.92 + \dfrac{2.58^2}{100} \right) + 2.58 \sqrt{\dfrac{0.92(1-0.92)}{50} + \dfrac{2.58^2}{10000}} \right ]\]</span></p>
+<p>These are algebraically complex calculations and hence better done via a software package.</p>
+<p><strong>Note:</strong> There used to be a preference for the <code>exact confidence interval</code> (available in most software packages), and these are an interesting measure but the theory and algebra involved in calculating these intervals go beyond the scope of the class but you should be aware of them. You can <a href="http://statpages.info/confint.html">use this online calculator for exact confidence intervals</a>. These intervals will not be symmetric about the mean (i.e., extending the same distance above as they do below the mean). This is because a proportion cannot drop below <span class="math inline">\(0\)</span> or go beyond <span class="math inline">\(1\)</span>. However, the intervals that use the normal approximation (like the Wald and the Agresti-Coull methods) do not recognize these constraints and hence fail when dealing with extreme sample proportions. However, of late consensus has veered in favor of the Wilson interval for <code>small n</code> and the Agresti-Coull for <code>large n</code>; see <a href="https://projecteuclid.org/download/pdf_1/euclid.ss/1009213286">this article if you are interested in learning more about this guidance</a>.</p>
+</div>
+</div>
+<div id="students-t-distribution" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Student’s t distribution<a href="sampling.html#students-t-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the preceding work with standard errors, margins of error, and confidence intervals we made a bold assumption – that we knew <span class="math inline">\(\sigma\)</span>, variability in the population. However, if we don’t know <span class="math inline">\(\mu\)</span> and hence are trying to come up with the most precise estimate of <span class="math inline">\(\mu\)</span> via our sample <span class="math inline">\(\bar{x}\)</span>, how can we really know <span class="math inline">\(\sigma\)</span>? We cannot, and this is where <code>Student's t distribution</code> comes into play. This distribution was the brainchild of William Sealy Gosset, an employee of the Guinness Brewery. He worked with Karl Pearson on figuring out the challenges of using the standard normal distribution with small samples and unknown population variances. The distribution looks like the standard normal distribution but is <code>fatter in the tails</code> since in small samples more extreme results are possible. An applet is available <a href="http://www.stat.tamu.edu/~jhardin/applets/signed/T.html">here</a> but let us see how this distribution works and why it matters.</p>
+<p>Assume <span class="math inline">\(X \sim N(13,2)\)</span>. If <span class="math inline">\(x = 12, n=16\)</span>, what is <span class="math inline">\(z_{x=12}\)</span>? It turns out that <span class="math inline">\(z_{x=12}=2\)</span>. Now, what if we don’t know <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> and draw three samples, each with <span class="math inline">\(n=16\)</span> but <span class="math inline">\(s\)</span> differs in each sample?</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:t74">TABLE 7.3: </span>The t distribution: An Example
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Sample No. 
+</th>
+<th style="text-align:right;">
+Std. Dev.
+</th>
+<th style="text-align:right;">
+Std. Error
+</th>
+<th style="text-align:right;">
+z-score
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+-1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+-2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+-4
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice what happens here: Each sample yields a different value of <span class="math inline">\(z\)</span> for the same <span class="math inline">\(x=12\)</span> simply because each sample is generating differing <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(s\)</span>. This leads to our making far more mistakes than we should if we continue to rely on the <span class="math inline">\(z\)</span> distribution. However, if you switch to the <span class="math inline">\(t\)</span> distribution we gain back some precision. The <span class="math inline">\(t = \dfrac{x - \bar{x}}{s_{\bar{x}}}\)</span> where <span class="math inline">\(s_{\bar{x}} = \dfrac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(t\)</span> is distributed with <span class="math inline">\(n-1\)</span> degrees of freedom.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-70"></span>
+<img src="stats_files/figure-html/unnamed-chunk-70-1.svg" alt="Student's t versus the Standard Normal z Distribution" width="60%" />
+<p class="caption">
+FIGURE 7.9: Student’s t versus the Standard Normal z Distribution
+</p>
+</div>
+<p>The red distribution is for the standard normal (<span class="math inline">\(z\)</span>), and the blue distributions are for varying degrees of freedom, first for <span class="math inline">\(df=1\)</span> (panel (a)), then for <span class="math inline">\(df=2\)</span> (panel (b)), then for <span class="math inline">\(df=3\)</span> (panel (c)), and the black distribution is for <span class="math inline">\(df=29\)</span> (panel (d)). Notice that the distribution for <span class="math inline">\(df=29\)</span> is very close to the <span class="math inline">\(z\)</span> distribution. These plots illustrate the work of the <span class="math inline">\(t\)</span> distribution; for small samples, which then have smaller degrees of freedom, the <span class="math inline">\(t\)</span> deviates from the <span class="math inline">\(z\)</span> but as the <span class="math inline">\(df\)</span> increases, the <span class="math inline">\(t\)</span> starts mirroring the <span class="math inline">\(z\)</span> distribution. So is there a rule when you should use the <span class="math inline">\(t\)</span> <code>instead of</code> the <span class="math inline">\(z\)</span>? Yes there is:</p>
+<ul>
+<li>Use the <span class="math inline">\(t\)</span> distribution whenever <span class="math inline">\(\sigma\)</span> is unknown and hence the sample standard deviation <span class="math inline">\((s)\)</span> must be used, regardless of the sample size</li>
+<li>Use the <span class="math inline">\(t\)</span> distribution whenever <span class="math inline">\(n &lt; 30\)</span> even if <span class="math inline">\(\sigma\)</span> is known</li>
+</ul>
+<p>Note that disciplines vary in how they settle the question of when to use the <span class="math inline">\(z\)</span> versus the <span class="math inline">\(t\)</span>. For example, some will use the <span class="math inline">\(t\)</span> whenever the sample size is less than 200 even if <span class="math inline">\(\sigma\)</span> is known while others will use <span class="math inline">\(z\)</span> whenever <span class="math inline">\(\sigma\)</span> is known regardless of the sample size. More prudent analysts will look for outliers and/or heavily skewed data, and if they see either of these issues, they may not rely on the <span class="math inline">\(z\)</span> unless the sample size is at least 50 or more (others would hold a higher standard, that of 100 or 200 data points). For our purposes, however, we will stick with the rule-of-thumb listed above for now.</p>
+<div id="example-1-6" class="section level3 hasAnchor" number="7.7.1">
+<h3><span class="header-section-number">7.7.1</span> Example 1<a href="sampling.html#example-1-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Find the following <span class="math inline">\(t\)</span> score(s):</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(t\)</span> leaves <span class="math inline">\(0.025\)</span> in the Upper Tail with <span class="math inline">\(df=12\)</span>. Answer: <span class="math inline">\(t=2.179\)</span></p></li>
+<li><p><span class="math inline">\(t\)</span> leaves <span class="math inline">\(0.05\)</span> in the Lower Tail with <span class="math inline">\(df=50\)</span>. Answer: <span class="math inline">\(t=-1.676\)</span></p></li>
+<li><p><span class="math inline">\(t\)</span> leaves <span class="math inline">\(0.01\)</span> in the Upper Tail with <span class="math inline">\(df=30\)</span>. Answer: <span class="math inline">\(t=2.457\)</span></p></li>
+<li><p><span class="math inline">\(90\%\)</span> of the area falls between these <span class="math inline">\(t\)</span> values with <span class="math inline">\(df = 25\)</span>. Answer: <span class="math inline">\(t= \pm 1.708\)</span></p></li>
+<li><p><span class="math inline">\(95\%\)</span> of the area falls between these <span class="math inline">\(t\)</span> values with <span class="math inline">\(df = 45\)</span>. Answer: <span class="math inline">\(t= \pm 2.014\)</span></p></li>
+</ol>
+</div>
+<div id="example-2-6" class="section level3 hasAnchor" number="7.7.2">
+<h3><span class="header-section-number">7.7.2</span> Example 2<a href="sampling.html#example-2-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Simple random sample with <span class="math inline">\(n=54\)</span> yielded <span class="math inline">\(\bar{x} = 22.5\)</span> and <span class="math inline">\(s=4.4\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calculate the standard error. <span class="math inline">\(s_{\bar{x}}=\dfrac{s}{\sqrt{n}}=\dfrac{4.4}{\sqrt{54}}=\dfrac{4.4}{7.34}=0.59\)</span></p></li>
+<li><p>What is the <span class="math inline">\(90\%\)</span> confidence interval? Answer: <span class="math inline">\(\bar{x}\pm t(s_{\bar{x}})=22.5 \pm 1.674(0.59)=22.5 \pm 0.98=21.52; 23.48\)</span></p></li>
+<li><p>What is the <span class="math inline">\(95\%\)</span> confidence interval? Answer: <span class="math inline">\(\bar{x}\pm t(s_{\bar{x}})=22.5 \pm 2.006(0.59)=22.5 \pm 1.18=21.32; 23.68\)</span></p></li>
+<li><p>What is the <span class="math inline">\(99\%\)</span> confidence interval? Answer: <span class="math inline">\(\bar{x}\pm t(s_{\bar{x}})=22.5 \pm 2.672(0.59)=22.5 \pm 1.57=20.93; 24.07\)</span></p></li>
+<li><p>What happens to the margin of error and the width of the interval as we increase how “confident” we want to be? Answer: The margin of error increases and the confidence interval widens</p></li>
+</ol>
+</div>
+<div id="example-3" class="section level3 hasAnchor" number="7.7.3">
+<h3><span class="header-section-number">7.7.3</span> Example 3<a href="sampling.html#example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pilots flying UN Peacekeeping missions fly, on average, 49 hours per month. This is based on a random sample with <span class="math inline">\(n=100\)</span> with <span class="math inline">\(s=8.5\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Find the margin of error for the 95% confidence interval. <span class="math inline">\(s_{\bar{x}}=\dfrac{s}{\sqrt{n}}=\dfrac{8.5}{\sqrt{100}}=\dfrac{8.5}{10}=0.85\)</span> and thus <span class="math inline">\(t(s_{\bar{x}})=1.984(0.85)=1.68\)</span></p></li>
+<li><p>What is the <span class="math inline">\(95\%\)</span> confidence interval? <span class="math inline">\(\bar{x}\pm t(s_{\bar{x}})=49 \pm 1.984(0.85)=49 \pm 1.68=47.32; 50.58\)</span></p></li>
+<li><p>How might we loosely interpret this interval? We might say that we can about 95% certain/confident that the population mean hours flown by pilots serving UN Peacekeeping missions falls in the interval given by <span class="math inline">\(47.32\)</span> hours and <span class="math inline">\(50.58\)</span> hours.</p></li>
+</ol>
+</div>
+</div>
+<div id="key-concepts-to-remember" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Key Concepts to Remember<a href="sampling.html#key-concepts-to-remember" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>If given <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(n \geq 30\)</span>, use the <span class="math inline">\(z\)</span></li>
+<li>If given <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(n &lt; 30\)</span>, use the <span class="math inline">\(t\)</span></li>
+<li>If <span class="math inline">\(\sigma\)</span> is not provided and hence you have to use <span class="math inline">\(s\)</span>, use the <span class="math inline">\(t\)</span> <em>regardless of the sample size</em></li>
+<li>Expected value of the sample mean is the population mean: <span class="math inline">\(E(\bar{x}) = \mu\)</span></li>
+<li>Standard Error is <span class="math inline">\(\sigma_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}\)</span> when <span class="math inline">\(\sigma\)</span> is given and <span class="math inline">\(s_{\bar{x}} = \dfrac{s}{\sqrt{n}}\)</span> when <span class="math inline">\(\sigma\)</span> is unknown</li>
+<li>Confidence Interval is given by <span class="math inline">\(\bar{x} \pm z_{\alpha/2} \times \sigma_{\bar{x}}\)</span> when using the <span class="math inline">\(z\)</span> and <span class="math inline">\(\bar{x} \pm t_{\alpha/2} \times s_{\bar{x}}\)</span> when using the <span class="math inline">\(t\)</span></li>
+</ul>
+</div>
+<div id="chapter-7-practice-problems" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Chapter 7 Practice Problems<a href="sampling.html#chapter-7-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Problem 1</strong></p>
+<p>Babies born in singleton births in the United States have birth weights (in kilograms) that are distributed normally with <span class="math inline">\(\mu = 3.296; \sigma = 0.560\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If you took a random sample of a 100 babies, what is the probability that their mean weight <span class="math inline">\(\bar{x}\)</span> would be greater than 3.5 kilograms?</li>
+<li>If you took a random sample of a 25 babies, what is the probability that their mean weight <span class="math inline">\(\bar{x}\)</span> would be greater than 3.5 kilograms?</li>
+</ol>
+<p><strong>Problem 2</strong></p>
+<p>The most famous geyser in the world, Old Faithful in Yellowstone National Park, has a mean time between eruptions of 85 minutes. The interval of time between eruptions is normally distributed with a standard deviation of 21.25.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Suppose a simple random sample of 100 time intervals between eruptions was gathered. What is the probability that in this sample the mean eruption interval is longer than 95 minutes?</li>
+<li>Suppose a simple random sample of 16 time intervals between eruptions was gathered. What is the probability that in this sample the mean eruption interval is shorter than 95 minutes?</li>
+</ol>
+<p><strong>Problem 3</strong></p>
+<p>The label on a one gallon jug of milk states that the volume of milk is 128 fluid ounces (fl.oz.) Federal law mandates that the jug must contain no less than the stated volume. The actual amount of milk in the jugs is normally distributed with mean <span class="math inline">\(\mu = 129\)</span> fl. Oz. and standard deviation <span class="math inline">\(\sigma = 0.8\)</span> fl. Oz.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Each shift, eight jugs of milk are randomly selected for thorough testing. The products are tested for filling volume, temperature, contamination, fat content, packaging defects, label placement, etc. Find the z-score corresponding to a sample mean volume (for these eight jugs) of 128 fl. Oz.<br />
+</li>
+<li>What is the probability that the sample mean of the volume for eight jugs is less than 128 fl. Oz.? (Give your answer accurate to 4 decimal places.)<br />
+</li>
+<li>What is the probability that the sample mean of the volume for eight jugs is greater than 128 fl. Oz.? (Give your answer accurate to 4 decimal places.)</li>
+</ol>
+<p><strong>Problem 4</strong></p>
+<p>In 2001 the average price of gasoline in the US was $1.46 per gallon, with a standard deviation of $0.15.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that the mean price per gallon is within $0.03 of the population mean if you are working with a sample of 30 randomly selected gas stations?</li>
+<li>What is the probability that the mean price per gallon is within $0.03 of the population mean if you are working with a sample of 50 randomly selected gas stations?</li>
+<li>What is the probability that the mean price per gallon is within $0.03 of the population mean if you are working with a sample of 100 randomly selected gas stations?</li>
+<li>Would you recommend a sample size of 30, 50, or 100 to have at least a 0.95 probability that the sample mean is within $0.03 of the population mean?</li>
+</ol>
+<p><strong>Problem 5</strong></p>
+<p>In a random sample of 120 students enrolled in graduate business degree programs, the average undergraduate grade point average (GPA) was found to 3.75. The population standard deviation is supposed to be 0.28.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected value of the average GPA of the population of students enrolled in graduate business degree programs?</li>
+<li>What is the 95% confidence interval for this mean GPA?</li>
+<li>What is the 99% confidence interval for this mean GPA?</li>
+<li>What happens to the confidence interval as you move from (b) to (c)? Why? Briefly explain.</li>
+</ol>
+<p><strong>Problem 6</strong></p>
+<p><a href="https://aniruhil.github.io/avsr/teaching/dataviz/AssignmentData1.csv">These data</a> are records for a random sample of delayed flight arrivals on a single day at Chicago’s (IL) O’Hare Airport. Delays are reported in minutes.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the (i) mean, and the (ii) standard deviation of delays.</li>
+<li>Calculate the standard error.</li>
+<li>What is the expected value of the average delay for the population of all flights arriving at this airport?</li>
+<li>What is the 95% confidence interval of average delay?</li>
+<li>What is the 99% confidence interval of average delay?</li>
+<li>If your sample size doubled, what would happen to the standard error?</li>
+<li>If your sample size quadrupled, what would happen to the standard error?</li>
+</ol>
+<p><strong>Problem 7</strong></p>
+<p>If school absenteeism rate rises above 10% for a district, the state reduces its aid to the school district. Harpo Independent School District, a large urban district, draws a sample of five schools and find absenteeism rates to be 5.4%, 8.6%, 4.1%, 8.9%, and 7.8%, respectively.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is your best estimate of the absenteeism rate in the school district?</li>
+<li>What is the probability that the district’s absenteeism rate is more than 10%?</li>
+<li>Find the 95% confidence interval for the district’s absenteeism rate.</li>
+<li>How could you improve the precision of this confidence interval?</li>
+</ol>
+<p><strong>Problem 8</strong></p>
+<p>In 1955 John Wayne played Genghis Khan in <em>The Conqueror</em>, a movie shot (unfortunately) downwind of a site where 11 aboveground nuclear bomb tests were carried out. Of the cast and crew of 220 who worked on the movie, by the early 1980s some 91 had been diagnosed with cancer.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is your best estimate of the population proportion of individuals exposed to these sites and diagnosed with cancer a little over two decades later?</li>
+<li>What is the 95% confidence interval for this proportion?</li>
+</ol>
+<p><strong>Problem 9</strong></p>
+<p>A common perception is that individuals with chronic illnesses may be able to delay their deaths until after a special upcoming event, like a major holiday, a wedding, etc. Out of 12,028 deaths from cancer in a given year, 6052 occurred in the week before a special upcoming event.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the best estimate of the population proportion of deaths that occur in the week before a special upcoming event? What about in the week after a special event?</li>
+<li>What are the respective 95% confidence intervals?</li>
+</ol>
+<p><strong>Problem 10</strong></p>
+<p>In a certain community with contaminated potable water supply, when pollsters asked a random sample of 232 residents if they would be willing to still use the water, 32 said “yes”.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the 95% confidence interval for the population proportion likely to say “yes”.</li>
+<li>Find the 99% confidence interval for the population proportion likely to say “yes”.</li>
+<li>Based on both confidence intervals, should the city make plans for alternative water delivery to residents because a majority of the population will not continue using the contaminated water? Explain.</li>
+</ol>
+<p><strong>Problem 11</strong></p>
+<p>In 1987, researchers studying the spread of AIDS collected data from a volunteer sample of 4955 adult males in Baltimore, Chicago, Los Angeles, and Pittsburgh. Of these men, 38% tested positive for AIDS.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the 95% confidence interval for the population proportion of adult males that might test positive for AIDS?</li>
+<li>Since these data were gathered in a volunteer sample, they are clearly non-random. How might this impact your confidence interval? Explain.</li>
+</ol>
+<p><strong>Problem 12</strong></p>
+<p>Use the data provided <a href="https://aniruhil.github.io/avsr/teaching/dataviz/Motor_Vehicle_Occupant_Death_Rate__by_Age_and_Gender__2012___2014__All_States.csv">here</a> on motor vehicle occupant death rate, by age and gender, 2012 &amp; 2014 to answer the questions that follow. Rate of deaths are calculated by age and gender (per 100,000 population) for motor vehicle occupants killed in crashes.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the best estimate of the population proportion of the death rate for all ages in your state in (i) 2012 versus (ii) 2014?<br />
+</li>
+<li>What is the 95% confidence interval for each estimate calculated above?</li>
+</ol>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-1');
+</script>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="9">
+<li id="fn9"><p>Technically, for a <code>finite population</code>, <span class="math inline">\(\sigma_{\bar{p}}={\sqrt{\dfrac{N-n}{N-1}}}{\sqrt{\dfrac{p(1-p)}{n}}}\)</span> and for an <code>infinite population</code> <span class="math inline">\(\sigma_{\bar{p}}={\sqrt{\dfrac{p(1-p)}{n}}}\)</span><a href="sampling.html#fnref9" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hypothesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"css": "toc.css"
+},
+"theme": "sandstone"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

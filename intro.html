@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <meta name="description" content="This is a free textbook written for students in my research methods classes." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:" />
+  
+  <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+<meta name="author" content="Anirudh V. S. Ruhil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="dataviz.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/d3-4.10.2/d3.min.js"></script>
+<link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"],
+      bcancel: ["Extension","cancel"],
+      xcancel: ["Extension","cancel"],
+      cancelto: ["Extension","cancel"]
+    });
+  });
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-2');
+</script>
+
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="yihui_style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Public Affairs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#the-chapters-that-follow"><i class="fa fa-check"></i><b>1.2</b> The chapters that follow</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#keys-to-learning-data-analysis"><i class="fa fa-check"></i><b>1.3</b> Keys to Learning Data Analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Core Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#statistics-versus-statistic"><i class="fa fa-check"></i><b>2.1</b> Statistics versus Statistic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#parameters-versus-estimates"><i class="fa fa-check"></i><b>2.1.1</b> Parameters versus Estimates</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#sampling-error-and-bias"><i class="fa fa-check"></i><b>2.1.2</b> Sampling Error and Bias</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#key-elements-of-random-sampling"><i class="fa fa-check"></i><b>2.1.3</b> Key Elements of Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#useful-research-designs"><i class="fa fa-check"></i><b>2.2</b> Useful Research Designs</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#experimental"><i class="fa fa-check"></i><b>2.2.1</b> Experimental</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#natural-experiments"><i class="fa fa-check"></i><b>2.2.2</b> Natural Experiments</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#quasi-experiments"><i class="fa fa-check"></i><b>2.2.3</b> Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#elements-of-a-data-set"><i class="fa fa-check"></i><b>2.3</b> Elements of a Data-set</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#variable-types"><i class="fa fa-check"></i><b>2.4</b> Variable Types</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#cross-sectional-time-series-and-panel-data"><i class="fa fa-check"></i><b>2.5</b> Cross-sectional, Time-Series, and Panel Data</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="intro.html"><a href="intro.html#cross-sectional-data"><i class="fa fa-check"></i><b>2.5.1</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="intro.html"><a href="intro.html#time-series-data"><i class="fa fa-check"></i><b>2.5.2</b> Time-Series Data</a></li>
+<li class="chapter" data-level="2.5.3" data-path="intro.html"><a href="intro.html#panel-data"><i class="fa fa-check"></i><b>2.5.3</b> Panel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#levels-of-measurement"><i class="fa fa-check"></i><b>2.6</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#nominal"><i class="fa fa-check"></i><b>2.6.1</b> Nominal</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#ordinal"><i class="fa fa-check"></i><b>2.6.2</b> Ordinal</a></li>
+<li class="chapter" data-level="2.6.3" data-path="intro.html"><a href="intro.html#intervalratio"><i class="fa fa-check"></i><b>2.6.3</b> Interval/Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#the-tricky-business-of-cause-and-effect"><i class="fa fa-check"></i><b>2.7</b> The Tricky Business of Cause-and-Effect</a></li>
+<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#chapter-2-practice-problems"><i class="fa fa-check"></i><b>2.8</b> Chapter 2 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dataviz.html"><a href="dataviz.html"><i class="fa fa-check"></i><b>3</b> Visualizing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dataviz.html"><a href="dataviz.html#visualizing-nominalordinal-data"><i class="fa fa-check"></i><b>3.1</b> Visualizing Nominal/Ordinal Data</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dataviz.html"><a href="dataviz.html#bar-charts-and-frequency-tables"><i class="fa fa-check"></i><b>3.1.1</b> Bar-charts and Frequency Tables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dataviz.html"><a href="dataviz.html#contingency-tables-and-bar-charts"><i class="fa fa-check"></i><b>3.1.2</b> Contingency Tables and Bar-charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dataviz.html"><a href="dataviz.html#visualizing-intervalratio-data"><i class="fa fa-check"></i><b>3.2</b> Visualizing Interval/Ratio Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dataviz.html"><a href="dataviz.html#the-histogram"><i class="fa fa-check"></i><b>3.2.1</b> The Histogram</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dataviz.html"><a href="dataviz.html#grouped-frequency-tables"><i class="fa fa-check"></i><b>3.2.2</b> Grouped Frequency Tables</a></li>
+<li class="chapter" data-level="3.2.3" data-path="dataviz.html"><a href="dataviz.html#scatterplots"><i class="fa fa-check"></i><b>3.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="dataviz.html"><a href="dataviz.html#line-graphs"><i class="fa fa-check"></i><b>3.2.4</b> Line Graphs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="dataviz.html"><a href="dataviz.html#polar-charts"><i class="fa fa-check"></i><b>3.2.5</b> Polar Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="dataviz.html"><a href="dataviz.html#some-essential-rules-for-good-visualizations"><i class="fa fa-check"></i><b>3.3</b> Some Essential Rules for Good Visualizations</a></li>
+<li class="chapter" data-level="3.4" data-path="dataviz.html"><a href="dataviz.html#chapter-3-practice-problems"><i class="fa fa-check"></i><b>3.4</b> Chapter 3 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meansd.html"><a href="meansd.html"><i class="fa fa-check"></i><b>4</b> Central Tendency and Dispersion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="meansd.html"><a href="meansd.html#central-tendency"><i class="fa fa-check"></i><b>4.1</b> Central Tendency</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="meansd.html"><a href="meansd.html#mean"><i class="fa fa-check"></i><b>4.1.1</b> Mean</a></li>
+<li class="chapter" data-level="4.1.2" data-path="meansd.html"><a href="meansd.html#median"><i class="fa fa-check"></i><b>4.1.2</b> Median</a></li>
+<li class="chapter" data-level="4.1.3" data-path="meansd.html"><a href="meansd.html#mode"><i class="fa fa-check"></i><b>4.1.3</b> Mode</a></li>
+<li class="chapter" data-level="4.1.4" data-path="meansd.html"><a href="meansd.html#some-features-of-measures-of-central-tendency"><i class="fa fa-check"></i><b>4.1.4</b> Some Features of Measures of Central Tendency</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="meansd.html"><a href="meansd.html#dispersion-aka-variability"><i class="fa fa-check"></i><b>4.2</b> Dispersion (aka Variability)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="meansd.html"><a href="meansd.html#range"><i class="fa fa-check"></i><b>4.2.1</b> Range</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meansd.html"><a href="meansd.html#quartiles-and-interquartile-range"><i class="fa fa-check"></i><b>4.2.2</b> Quartiles and Interquartile Range</a></li>
+<li class="chapter" data-level="4.2.3" data-path="meansd.html"><a href="meansd.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.3</b> Variance and Standard Deviation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="meansd.html"><a href="meansd.html#why-n-1"><i class="fa fa-check"></i><b>4.2.4</b> Why <span class="math inline">\(n-1\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meansd.html"><a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation"><i class="fa fa-check"></i><b>4.3</b> Properties of the Mean and Variance/Standard Deviation</a></li>
+<li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
+<li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
+<li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
+<li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
+<li class="chapter" data-level="4.11" data-path="meansd.html"><a href="meansd.html#beware-the-flawed-rule"><i class="fa fa-check"></i><b>4.11</b> Beware the flawed rule</a></li>
+<li class="chapter" data-level="4.12" data-path="meansd.html"><a href="meansd.html#chapter-4-practice-problems"><i class="fa fa-check"></i><b>4.12</b> Chapter 4 Practice Problems</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-1-2"><i class="fa fa-check"></i>Problem 1</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-2-2"><i class="fa fa-check"></i>Problem 2</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-3-2"><i class="fa fa-check"></i>Problem 3</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-4-2"><i class="fa fa-check"></i>Problem 4</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-5-2"><i class="fa fa-check"></i>Problem 5</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-6-2"><i class="fa fa-check"></i>Problem 6</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-7-2"><i class="fa fa-check"></i>Problem 7</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-8-2"><i class="fa fa-check"></i>Problem 8</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>5</b> Probability</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="prob.html"><a href="prob.html#basic-concepts-and-terminology-of-probability-theory"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts and Terminology of Probability Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="prob.html"><a href="prob.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
+<li class="chapter" data-level="5.3" data-path="prob.html"><a href="prob.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="prob.html"><a href="prob.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
+<li class="chapter" data-level="5.3.2" data-path="prob.html"><a href="prob.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
+<li class="chapter" data-level="5.3.3" data-path="prob.html"><a href="prob.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
+<li class="chapter" data-level="5.3.4" data-path="prob.html"><a href="prob.html#example-4-fortune-500-companies"><i class="fa fa-check"></i><b>5.3.4</b> Example 4: Fortune 500 Companies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="prob.html"><a href="prob.html#the-complement-of-an-event"><i class="fa fa-check"></i><b>5.4</b> The Complement of an Event</a></li>
+<li class="chapter" data-level="5.5" data-path="prob.html"><a href="prob.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>5.5</b> Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.6" data-path="prob.html"><a href="prob.html#the-addition-rule-for-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.6</b> The Addition Rule for Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.7" data-path="prob.html"><a href="prob.html#addition-rule-for-non-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.7</b> Addition Rule for Non-Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.8" data-path="prob.html"><a href="prob.html#independent-events-and-the-multiplication-rule"><i class="fa fa-check"></i><b>5.8</b> Independent Events and the Multiplication Rule</a></li>
+<li class="chapter" data-level="5.9" data-path="prob.html"><a href="prob.html#decision-trees"><i class="fa fa-check"></i><b>5.9</b> Decision Trees</a></li>
+<li class="chapter" data-level="5.10" data-path="prob.html"><a href="prob.html#conditional-probability"><i class="fa fa-check"></i><b>5.10</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="prob.html"><a href="prob.html#the-gender-bias-example"><i class="fa fa-check"></i><b>5.10.1</b> The Gender-bias Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="prob.html"><a href="prob.html#dependent-events"><i class="fa fa-check"></i><b>5.11</b> Dependent Events</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="prob.html"><a href="prob.html#the-monty-hall-problem"><i class="fa fa-check"></i><b>5.11.1</b> The Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="prob.html"><a href="prob.html#bayes-theorem"><i class="fa fa-check"></i><b>5.12</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="5.12.1" data-path="prob.html"><a href="prob.html#another-example"><i class="fa fa-check"></i><b>5.12.1</b> Another Example</a></li>
+<li class="chapter" data-level="5.12.2" data-path="prob.html"><a href="prob.html#extending-bayes-rule"><i class="fa fa-check"></i><b>5.12.2</b> Extending Bayes Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="prob.html"><a href="prob.html#key-things-to-remember"><i class="fa fa-check"></i><b>5.13</b> Key Things to Remember</a></li>
+<li class="chapter" data-level="5.14" data-path="prob.html"><a href="prob.html#chapter-5-practice-problems"><i class="fa fa-check"></i><b>5.14</b> Chapter 5 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="distributions.html"><a href="distributions.html#random-variables"><i class="fa fa-check"></i><b>6.1</b> Random Variables</a></li>
+<li class="chapter" data-level="6.2" data-path="distributions.html"><a href="distributions.html#probability-distributions"><i class="fa fa-check"></i><b>6.2</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="distributions.html"><a href="distributions.html#discrete-probability-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Discrete Probability Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="distributions.html"><a href="distributions.html#continuous-probability-distributions"><i class="fa fa-check"></i><b>6.3</b> Continuous Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="distributions.html"><a href="distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>6.3.1</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="distributions.html"><a href="distributions.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>6.3.2</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="distributions.html"><a href="distributions.html#chapter-6-practice-problems"><i class="fa fa-check"></i><b>6.4</b> Chapter 6 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>7</b> The Theory of Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sampling.html"><a href="sampling.html#the-standard-error"><i class="fa fa-check"></i><b>7.1</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.2" data-path="sampling.html"><a href="sampling.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>7.2</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.3" data-path="sampling.html"><a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>7.3</b> Applying the Standard Error and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="sampling.html"><a href="sampling.html#example-1-2"><i class="fa fa-check"></i><b>7.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sampling.html"><a href="sampling.html#example-2-2"><i class="fa fa-check"></i><b>7.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sampling.html"><a href="sampling.html#the-sampling-distribution-of-binary-proportions"><i class="fa fa-check"></i><b>7.4</b> The Sampling Distribution of Binary Proportions</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="sampling.html"><a href="sampling.html#example-1-3"><i class="fa fa-check"></i><b>7.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.4.2" data-path="sampling.html"><a href="sampling.html#example-2-3"><i class="fa fa-check"></i><b>7.4.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="sampling.html"><a href="sampling.html#point-estimates"><i class="fa fa-check"></i><b>7.5</b> Point Estimates</a></li>
+<li class="chapter" data-level="7.6" data-path="sampling.html"><a href="sampling.html#interval-estimates"><i class="fa fa-check"></i><b>7.6</b> Interval Estimates</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="sampling.html"><a href="sampling.html#example-1-4"><i class="fa fa-check"></i><b>7.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.2" data-path="sampling.html"><a href="sampling.html#example-2-4"><i class="fa fa-check"></i><b>7.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.6.3" data-path="sampling.html"><a href="sampling.html#interval-estimates-for-binary-proportions"><i class="fa fa-check"></i><b>7.6.3</b> Interval Estimates for Binary Proportions</a></li>
+<li class="chapter" data-level="7.6.4" data-path="sampling.html"><a href="sampling.html#example-1-5"><i class="fa fa-check"></i><b>7.6.4</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.5" data-path="sampling.html"><a href="sampling.html#example-2-5"><i class="fa fa-check"></i><b>7.6.5</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="sampling.html"><a href="sampling.html#students-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Student’s t distribution</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="sampling.html"><a href="sampling.html#example-1-6"><i class="fa fa-check"></i><b>7.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.7.2" data-path="sampling.html"><a href="sampling.html#example-2-6"><i class="fa fa-check"></i><b>7.7.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.7.3" data-path="sampling.html"><a href="sampling.html#example-3"><i class="fa fa-check"></i><b>7.7.3</b> Example 3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="sampling.html"><a href="sampling.html#key-concepts-to-remember"><i class="fa fa-check"></i><b>7.8</b> Key Concepts to Remember</a></li>
+<li class="chapter" data-level="7.9" data-path="sampling.html"><a href="sampling.html#chapter-7-practice-problems"><i class="fa fa-check"></i><b>7.9</b> Chapter 7 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> The Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#articulating-the-hypotheses-to-be-tested"><i class="fa fa-check"></i><b>8.1</b> Articulating the Hypotheses to be tested</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.2</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#the-process-of-hypothesis-testing-an-example"><i class="fa fa-check"></i><b>8.3</b> The Process of Hypothesis Testing: An Example</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-7"><i class="fa fa-check"></i><b>8.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-7"><i class="fa fa-check"></i><b>8.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis.html"><a href="hypothesis.html#confidence-intervals-for-hypothesis-tests"><i class="fa fa-check"></i><b>8.4</b> Confidence Intervals for Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis.html"><a href="hypothesis.html#the-one-sample-t-test"><i class="fa fa-check"></i><b>8.5</b> The One-Sample t-test</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis.html"><a href="hypothesis.html#assumptions"><i class="fa fa-check"></i><b>8.5.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis.html"><a href="hypothesis.html#the-two-group-or-two-sample-t-test"><i class="fa fa-check"></i><b>8.6</b> The Two-group (or Two-sample) t-test</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-1"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-8"><i class="fa fa-check"></i><b>8.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-8"><i class="fa fa-check"></i><b>8.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="8.6.3" data-path="hypothesis.html"><a href="hypothesis.html#caution"><i class="fa fa-check"></i><b>8.6.3</b> Caution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis.html"><a href="hypothesis.html#paired-t-tests"><i class="fa fa-check"></i><b>8.7</b> Paired t-tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-2"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#the-testing-protocol"><i class="fa fa-check"></i>The Testing Protocol</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-9"><i class="fa fa-check"></i><b>8.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-9"><i class="fa fa-check"></i><b>8.7.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Leadership &amp; Public Affairs:</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction to Core Concepts<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="statistics-versus-statistic" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Statistics versus Statistic<a href="intro.html#statistics-versus-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Statistics</em> is a broad and lively field of study that involves methods to (a) accurately <strong>describe</strong> patterns observed in data, and (b) to draw <strong>inferences</strong> about the <strong>population</strong> the data were gathered from. Thus, for example, the pollsters who track public opinion polls at <a href="http://www.gallup.com">Gallup</a> ask at regular intervals: “Do you approve or disapprove of the way [insert incumbent President’s name here] is handling his job as president?” Obviously it would be unfeasible to ask every adult in the United States of America this question. Instead, based on statistical theory and meticulous calculations that you will come to learn, Gallup works as follows:</p>
+<blockquote>
+<p>Gallup interviews [approximately 500] U.S. adults aged 18 and older living in all 50 states and the District of Columbia using a dual-frame design, which includes both landline and cellphone numbers. Gallup samples landline and cellphone numbers using random-digit-dial methods. Gallup chooses landline respondents at random within each household based on which member had the next birthday. Each sample of national adults includes a minimum quota of 60% cellphone respondents and 40% landline respondents, with additional minimum quotas by time zone within region. Gallup conducts interviews in Spanish for respondents who are primarily Spanish-speaking. <a href="http://www.gallup.com/185462/gallup-daily-work.aspx?utm_source=METHODOLOGY&amp;utm_medium=topic&amp;utm_campaign=tiles">Source</a></p>
+</blockquote>
+<p>What Gallup is working with is a <em>subset</em> of all U.S. adults aged 18 and older and living in the 50 states plus Washington DC. As they gather the data, they may be doing so to study the trend in presidential approval (see graph below).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:approval"></span>
+<img src="stats_files/figure-html/approval-1.svg" alt="Presidential Approval over Time" width="100%" />
+<p class="caption">
+FIGURE 2.1: Presidential Approval over Time
+</p>
+</div>
+<p>Why does Gallup do these surveys of a few hundred or a thousand individuals? Not because they are idly curious about what a <code>sample of 500 U.S. adults</code> think. Gallup wants to be able to say this is what the <code>U.S. adult population</code> thinks about the incumbent president’s job performance! In other words, Gallup is using a <code>sample</code> to say something useful about the <code>population</code>.</p>
+<div class="rmdcomment">
+<p>
+Sample: the subset of cases drawn for analysis from the population
+</p>
+<p>
+Population: the universe (or set) of all elements of interest in a particular study
+</p>
+</div>
+<p>Drawing conclusions about the population from analyzing the sample is the process of making an <strong>inference</strong>, and the processes and rules involved in doing so are called <strong>inferential statistics</strong>.</p>
+<p>It will rarely be the case that you will have access to the entire population. The rare instances when that might happen could include cases where you have access to all patients receiving care in the hospital group you work for, all individuals insured with your insurance agency, all individuals receiving services from your agency, all drivers registered with the department of motor vehicles, all homeowners in a specific location, and so on. Even in these instances, however, you can only access the population if the law and agency protocols permit you to do so and have legitimate, authorized reasons for accessing the population data.</p>
+<p>Some population data are in the public domain and easily accessed: For example, data about all public school districts in Ohio, data on all voters registered to vote in a particular location, data for the nation’s cities, counties, states, territories, congressional districts, census tracts, and so on. These data are publicly available because there are no legal restrictions on releasing these data. Most of us, however, end up relying on samples.<br />
+If <strong>statistics</strong> is a field of study, a <strong>statistic</strong> is the result of applying a computational algorithm to a set of data. For example, when the U.S. Census Bureau calculates Median household income, they are generating a statistic. Likewise, when the Gallup polls and tells us what percent of likely voters will vote for Candidate A, they too are generating a statistic. If you are working with a pilot group of your agency’s service recipients and the pilot is testing whether a particular policy or service program is having the intended effect (for example, improving the service recipients’ financial literacy), and you conclude that 10% of those who receive this training will improve their financial literacy, you have generated a “statistic”.</p>
+<div id="parameters-versus-estimates" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Parameters versus Estimates<a href="intro.html#parameters-versus-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Statistics revolves around drawing as accurate as possible estimates of some <em>unknown attribute of the population</em> from the sample at hand. These unknown population attributes/features are called <code>parameters</code> while their sample counterparts are called <code>estimates</code>. Thus, for example, if I had access to the household income of every household in Franklin County, Ohio, I could calculate average household income, and this would be a parameter. However, if I could only get my hands on incomes of say 100 households in Franklin County, Ohio, randomly selected for analysis, and then I calculate average household income for these 100 households, I would have an estimate. In general, we hope (and ensure as best as we can via statistical theory) that our sample estimates equal the population parameters they represent.</p>
+<p>This equality may not always hold and so every time we generate an estimate we also generate a measure of the <code>uncertainty around the estimate</code>, a measure that tells us how much our estimates may have drifted from their corresponding parameters. We will make these measures of uncertainty more precise as we go along but for now you can cast your mind to a phrase you may have encountered – the “margin of error”. For example, on October 20, 2017 a <a href="http://news.gallup.com/poll/220718/congress-approval-lowest-july-2016.aspx?g_source=Politics&amp;g_medium=newsfeed&amp;g_campaign=tiles">Gallup poll found</a> that Americans’ approval of the way Congress was doing its job had hit 13% (i.e., only 13% thought Congress was doing a decent job while 87% thought otherwise). At the very bottom of this story Gallup noted that “[f]or results based on the total sample of national adults, the margin of sampling error is <span class="math inline">\(\pm 4\)</span> percentage points at the 95% confidence level”. We will learn all about this quantity called the <code>margin of error</code> but for now understand the essence of what that <span class="math inline">\(\pm 4\)</span> is telling us: If we could have asked every adult American whether they approved of Congress, the percent likely to say “yes” could have ranged between <span class="math inline">\(13 - 4 = 9\%\)</span> to <span class="math inline">\(13 + 4 = 17\%\)</span>. So this margin of error is telling us something about the uncertainty around the estimate of 13%. If no such uncertainty estimate were provided to us, we would have no way of knowing how much faith to place in anything the sample is telling us.</p>
+<div class="rmdcomment">
+<p>
+Estimates are quantities of interest calculated from the sample whereas parameters are their population counterpart, for example, the proportion of women in the sample versus the proportion of women in the population.
+</p>
+</div>
+</div>
+<div id="sampling-error-and-bias" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Sampling Error and Bias<a href="intro.html#sampling-error-and-bias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Samples can mislead of course, and by sheer chance at that. When this happens our (sample) estimates will <span class="math inline">\(\neq\)</span> their corresponding (population) parameters, leading to <code>sampling error</code>. Sampling error is difficult to eradicate completely but can be minimized up to a point. What we should worry about far more than sampling error is <code>bias</code>. Bias can arise in many ways, with some of the more common sources of bias being <code>measurement bias</code> (you have a systematic error in how you are measuring something but don’t realize it); <code>sampling bias</code> (survey non-response and/or the way you are drawing your sample is generating bias); <code>model misspecification</code> (you do not fully understand the phenomenon you are studying and thus end up with a flawed statistical model that will yield biased estimates because of variables you forgot to include, mis-characterized relationships between variables, and so on).</p>
+<p><code>Measurement error</code> is a particularly interesting feature of working with samples. For example, say I am working with a “healthy living” group that is working to help folks live healthier lives by eating better and exercising more. I am tasked with studying the program and then releasing a final report on how well (or poorly) the program worked. I could measure participants’ attendance at organized events, their online studying of food and exercise modules we are providing to them via the web and smart phones/tablets, and of course we have their height, weight, and maybe some other data recorded when they enrolled in the program. Unfortunately, however, we can only record their eating and exercise patterns based on what they tell us! People don’t keep very accurate logs of food intake and exercise, so often when they are completing surveys they are doing their best to recall these behaviors over the last week. In recalling the recent past, there will be some mistakes, that is to be expected. Some may overestimate how much they ate and/or exercised while others will underestimate how much they ate and/or exercised. If these overestimates and underestimates were purely random, then they would cancel each other out and we would have no measurement error. However, we do know that <a href="https://www.cdc.gov/nchs/tutorials/Dietary/Basic/StatisticalConsiderations/Info2.htm">self-reported dietary intake measures are not random</a> and hence could generate bias.</p>
+</div>
+<div id="key-elements-of-random-sampling" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Key Elements of Random Sampling<a href="intro.html#key-elements-of-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At minimum two things must hold for a random sample …</p>
+<ol style="list-style-type: decimal">
+<li>Every unit of analysis (i.e., the entity that is to be analyzed) in the population must have the <code>same chance</code> of being selected into the sample, and</li>
+<li>Every unit of analysis in the population must be sampled <code>independently</code> of all other units of analysis</li>
+</ol>
+<p>If you violate (1) you end up with <em>biased estimates</em> and if you violate (2) you will have <em>imprecise estimates</em>. Examples of these violations are aplenty. For instance, imagine I carry out a landline survey of health behaviors and outcomes. How many of you have a landline? Not many I would suspect. So what is the consequence of my using a landline survey? All cellphone-only households have a zero chance of being selected into my sample. If the cellphone-only population were no different from the population that has kept a landline there would be no problem. But we know that isn’t the case. If you are curious, see <a href="http://www.aapor.org/Education-Resources/Reports/Cell-Phone-Task-Force-Report.aspx">New Considerations for Survey Researchers When Planning and Conducting RDD Telephone Surveys in the U.S. With Respondents Reached via Cell Phone Numbers</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910572/">Growing Cell-Phone Population and Noncoverage Bias in Traditional Random Digit Dial Telephone Health Surveys</a>. I could also violate (2) if I am conducting a survey of Freshman’s opinions about healthy food options in a university’s dining halls and end up talking only to people seated together, even if I pick a few tables to talk to. Why is this a problem? Because it is likely that these students are friends/roommates who maybe also share a common major, etc., and most likely come from similar socioeconomic and demographic backgrounds, have shared tastes and preferences, and so on.</p>
+<div class="rmdcomment">
+<p>
+Biased estimates will result if every unit in the population does not have the same chance of being drawn into the sample.
+</p>
+<p>
+Imprecise estimates will result if the units are not sampled independently of each other.
+</p>
+</div>
+</div>
+</div>
+<div id="useful-research-designs" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Useful Research Designs<a href="intro.html#useful-research-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All research starts with a <code>research design</code>, a well-crafted and clearly articulated framework that outlines what data will be gathered in order to address the research questions motivating the research. There are <a href="http://libguides.usc.edu/writingguide/researchdesigns">several research designs</a> that could be used, each with their own strengths and weaknesses but the key quantitative designs you are likely to encounter are listed below.</p>
+<div id="experimental" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Experimental<a href="intro.html#experimental" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Experiments are the gold standard of quantitative research designs because, much like an experiment in a physics of chemistry lab, they allow the researcher to control for a host of factors and then introduce a stimulus to test the impact of this stimulus on the outcome of interest. For example, political psychologists who study the impacts of campaign advertising on voters’ choices often expose a randomly chosen group of subjects either to a positive campaign advertisements or to a negative campaign advertisements about two candidates running for the same elected office. The study’s purpose might be to figure out whether negative advertising reinforces stereotypes, whether it makes people less likely to vote at all (even for their own party’s candidate), and so on. Because the two groups are similar in every possible way and were randomly assigned to either of the campaign advertisement types, any impacts we see of the tone of the campaign advertisement can be reliably attributed to the advertisement itself and not to someone’s sex or educational attainment or party preferences, etc.</p>
+<p>Take another example. Say I am interested in figuring out whether private schools are really better at educating students than traditional public schools. Ideally, I would have a large random sample of genetically identical twins and the freedom to assign one twin in each pair to a public school and the other to a private school. I could then follow their learning for a year and see which group – private or public – has better academic performance on average. Why would this be a powerful research design? Because they are twins, their home environments are the same (same parental income, interest in child’s education, social circle, access to computers, internet, extra-curricular activities, and the like). An informed reader would at this point object to this example and point out that <a href="https://www.scientificamerican.com/article/identical-twins-genes-are-not-identical/">identical twins’ genes are not identical</a> so couldn’t that be responsible for differential learning? Yes, it might but that is why we restricted our sample to genetically identical twins!</p>
+<p>Experiments draw their power from their ability to rule out all other likely influences on the outcome and in doing so yield a clean estimate of the treatment’s (say, attending a private versus a public school, being given Drug A versus Drug B, etc.) impact on an outcome (academic learning, reducing joint inflammation, and so on). However, they are difficult to carry out in most social and behavioral science settings in the real world because they cost a lot, logistics get in the way (you probably won’t get enough parents to agree to separate the twins) and because of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3777303/">legal/ethical requirements</a> that circumscribe all research with human subjects. Central to these requirements is the notion of <code>informed consent</code>.</p>
+<p>Informed consent is the process by which researchers working with human participants describe their research project and obtain the subjects’ consent to participate in the research based on the subjects’ understanding of the project’s methods and goals. The subject must have understood his/her rights, the purpose of the study, the procedures to be undergone, and the potential risks and benefits of participation. It is strictly voluntary and consent must be secured for all human subjects research including diagnostic, therapeutic, interventional, social and behavioral studies, and for research conducted domestically or abroad. Vulnerable populations (i.e. prisoners, children, pregnant women, etc.) receive extra protections, and the legal rights of subjects are neither waived nor are the researchers, the study’s sponsor, the researchers’ employer, etc. exempt from any liability for negligence. There is a fascinatingly unfortunate history that has led to this sacrosanct principle of informed consent, even though some would argue it holds back what we could learn; for the curious among you, see <a href="https://www.wired.com/2011/07/ff_swr/">Seven Creepy Experiments That Could Teach Us So Much (If They Weren’t So Wrong)</a>. Indeed, informed consent is such a crucial aspect of our work that your first assignment will require you to complete the <code>Group 2: Social and Behavioral Investigators and Key Personnel</code> training via <a href="www.citiprogram.org">Collaborative Institutional Training Initiative (CITI Program)</a>.</p>
+</div>
+<div id="natural-experiments" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Natural Experiments<a href="intro.html#natural-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The fundamental reason that experimental research sets the bar for all other research designs is because of the researchers’ ability to completely randomize what treatment a subject encounters. This ensures that there is very likely no other explanation for differences in outcomes other than the differences in the treatments themselves. <code>Natural experiments</code> come close to mimicking this complete randomization attribute of experimental designs although the randomization is not being carried out by the researchers. Here is a classic example that comes to us from <a href="http://www.thaddunning.com/wp-content/uploads/2010/09/Dunning_IEPS_Natural-Experiments_v4.pdf">Thad Dunning</a>:</p>
+<blockquote>
+<p>An interesting social-scientific example comes from a study of how land titles influence the socio-economic development of poor communities. In 1981, urban squatters organized by the Catholic Church in Argentina occupied open land in the province of Buenos Aires, dividing the land into parcels that were allocated to individual families. A 1984 law, adopted after the return to democracy in 1983, expropriated this land with the intention of transferring titles to the squatters. However, some of the original landowners challenged the expropriation in court, leading to long delays in the transfer of titles to some of the squatters. By contrast, for other squatters, titles were granted immediately.</p>
+</blockquote>
+<blockquote>
+<p>The legal action therefore created a (treatment) group of squatters to whom titles were granted promptly and a (control) group to whom titles were not granted. The authors of the study find subsequent differences across the two groups in standard social development indicators: average housing investment, household structure, and educational attainment of children. On the other hand, the authors do not find a difference in access to credit markets, which contradicts a well-known theory that the poor will use titled property to collateralize debt. They also find a positive effect of property rights on self-perceptions of individual efficacy. For instance, squatters who were granted land titles—for reasons over which they apparently had no control— disproportionately agreed with statements that people get ahead in life due to hard work.</p>
+</blockquote>
+<blockquote>
+<p>Is this a valid natural experiment? The key claim is that land titles were assigned to the squatters as-if at random, and the authors present various kinds of evidence to support this assertion. In 1981, for example, the eventual expropriation of land by the state and the transfer of titles to squatters could not have been predicted. Moreover, there was little basis for successful prediction by squatters or the Catholic Church organizers of which particular parcels would eventually have their titles transferred in 1984. Titled and untitled parcels sat side-by-side in the occupied area, and the parcels had similar characteristics, such as distance from polluted creeks. The authors also show that the squatters’ characteristics, such as age and sex, were statistically unrelated to whether they received titles—as should be the case if titles were assigned at random. Finally, the government offered equivalent compensation—based on the size of the lot—to the original owners in both groups, suggesting that the value of the parcels does not explain which owners challenged expropriation and which did not. On the basis of extensive interviews and other qualitative fieldwork, the authors argue convincingly that idiosyncratic factors explain some owners’ decisions to challenge expropriation, and that these factors were unrelated to the characteristics of squatters or their parcels.</p>
+</blockquote>
+<blockquote>
+<p>The authors thus present compelling evidence for the equivalence of treated and untreated units. Along with qualitative evidence on the process by which the squatting took place, this evidence helps bolster the assertion that assignment is as-if random. Of course, assignment was not randomized, so the possibility of unobserved confounders cannot be entirely ruled out. Yet the argument for as-good-as-random assignment appears compelling.</p>
+</blockquote>
+<p>Two more examples follow, both from <a href="http://economicspsychologypolicy.blogspot.com/2015/06/list-of-19-natural-experiments.html">the following blog that also lists several other examples</a></p>
+<blockquote>
+<p><strong>The Dutch Famine Study</strong>
+The Dutch “hunger winter” took place towards the end of World War 2 in the German-occupied Netherlands from late 1944 until the liberation of the area by the Allies in May 1945. During this time official food rations dropped to as low as 500 calories per day and around 20,000 people died of starvation. This experience of a modern advanced country experiencing a short, sharp famine is quite unusual, and in this case the West of the country was strongly affected but not the North or South. This has allowed many researchers to examine the effects of the famine on population health by comparing the outcomes of people from different regions. Of particular interest are the outcomes of the children who were in utero at the time of the famine, as they may have suffered developmental impairments with potentially lifelong repercussions.</p>
+</blockquote>
+<blockquote>
+<p><strong>The Impact of the Mariel Boatlift on the Miami Labor Market</strong>
+While a majority of economists agree that the average American citizen would be better off if more low-skilled and high-skilled immigrants were allowed to enter the US each year, there is considerably more opposition to immigration among the general public in Britain, America and continental Europe. One frequently raised concern, aside from issues of social cohesion, is that the arrival of immigrants might negatively disrupt the economy and make it more difficult for local workers to secure good jobs. David Card examined this issue by looking at the labor market effects of the “Mariel boatlift” (wiki), the name given to the arrival of 125,000 Cubans into Florida during April - September 1980 (this is the impetus for Tony Montana’s move to America at the start of Scarface). This sudden arrival of relatively unskilled young men increased the size of the Miami labor force by 7%. By comparing Miami with other cities which were not affected by the Mariel boatlift, Card showed that the arrival of the Mariel workers did not notably affect the wages and employment rates of the existing unskilled workers living in Miami.</p>
+</blockquote>
+<p>In a nutshell, it is as if some naturally occurring phenomenon or event led to an “as-if” randomization of units into different groups, and the resulting groupings can then be studied for differences in the outcomes of interest. Some interesting and recent examples of research utilizing natural experiments include work around <a href="http://journals.sagepub.com/doi/abs/10.1177/000312240907400308">Hurricane Katrina</a> and <a href="http://www.tandfonline.com/doi/abs/10.1080/19361610.2016.1179476?journalCode=wasr20">the 9/11 terror attacks</a>.</p>
+</div>
+<div id="quasi-experiments" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Quasi-Experiments<a href="intro.html#quasi-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>More often than not researchers can neither carry out an experiment nor access a natural experiment. For instance, consider schooling in America. Some parents choose to send their children to a private school, others send their children to a parochial school, some may place their children in a charter school, but most will send their children to a public school in their district. Suppose I am interested in figuring out whether a child’s academic performance tends to be better in one school type than in another. I have not randomized children across school types, and most likely parental and other attributes (wealth, opinions, school alternatives available, child’s current performance, the public school’s performance, and so on) have led parents to select a school for their child. This sort of a deterministic sorting that constructs the different groups of school type is what we call <code>non-random assignment</code>. If I really want to pursue my study, I would have to control for as many of these differences, as many of these attributes as possible if I want to have a reasonable chance of learning how school type influences learning. I might draw as large a random sample as I can and then use appropriate statistical techniques to see how learning differs by school type; I have a <code>quasi-experimental</code> research design.</p>
+<p>Take another example. Say a city decides to replace some traffic lights at major intersections with traffic circles (aka roundabouts) because they believe traffic circles will reduce accidents that otherwise occur at these intersections. Researchers could judge whether traffic circles have had any impact by gathering and analyzing data from the pre-traffic circle period to the post-traffic circle period. If traffic circles have had an impact, on average we should see fewer accidents in the post-traffic circle period.</p>
+<p>Note that in both these examples the researcher has had no influence; she/he could neither determine where or when the traffic circle is constructed nor ensure that the drivers using these roads are the same. After all, it is quite likely that some drivers who otherwise took these routes are now avoiding these intersections because they see them as more dangerous or are uncomfortable navigating traffic circles. Consequently, anybody analyzing these data would have to control for as many factors as possible – traffic density, traffic composition (for e.g., are commercial trucks still using these intersections or not), average speed approaching the intersection, and so on. Unless one could do so, it would be impossible to say with any degree of certainty that any reduction in traffic is due to the traffic circle.</p>
+<div class="rmdcomment">
+<p>
+Experiments are the gold standard for research because you can randomize units into groups, for example, a random subset of kids to a private school and the remainder to a public school, and then seeing who has a better academic performance at the end of a year or two or 10.
+</p>
+<p>
+In quasi-experiments you cannot randomize and hence have to do a lot more work to get around the limitations imposed by the possibility that the kids who go to a private school are fundamentally different from those who go to a public school (perhaps these kids are poorer, racial/ethnic minorities, and so on).
+</p>
+</div>
+</div>
+</div>
+<div id="elements-of-a-data-set" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Elements of a Data-set<a href="intro.html#elements-of-a-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While data are the facts and figures collected, analyzed and summarized, a <em>data-set</em> comprises all data collected in the course of a particular study. Take, for instance, one of the many data-sets compiled by the <a href="https://www.arc.gov/reports/custom_report.asp?REPORT_ID=62">Appalachian Regional Commission</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. A snippet of this data-set is shown in Table <a href="intro.html#tab:arc">2.1</a>.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:arc">TABLE 2.1: </span>A Typical Dataset
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+County
+</th>
+<th style="text-align:left;">
+State
+</th>
+<th style="text-align:right;">
+Unemployment %
+</th>
+<th style="text-align:right;">
+Percapita Income
+</th>
+<th style="text-align:right;">
+Poverty %
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Blount County
+</td>
+<td style="text-align:left;">
+Alabama
+</td>
+<td style="text-align:right;">
+6.5
+</td>
+<td style="text-align:right;">
+23440
+</td>
+<td style="text-align:right;">
+17.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Calhoun County
+</td>
+<td style="text-align:left;">
+Alabama
+</td>
+<td style="text-align:right;">
+8.4
+</td>
+<td style="text-align:right;">
+23420
+</td>
+<td style="text-align:right;">
+21.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chambers County
+</td>
+<td style="text-align:left;">
+Alabama
+</td>
+<td style="text-align:right;">
+8.2
+</td>
+<td style="text-align:right;">
+21494
+</td>
+<td style="text-align:right;">
+23.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cherokee County
+</td>
+<td style="text-align:left;">
+Alabama
+</td>
+<td style="text-align:right;">
+6.8
+</td>
+<td style="text-align:right;">
+22310
+</td>
+<td style="text-align:right;">
+21.0
+</td>
+</tr>
+</tbody>
+</table>
+<p>In the language of data analysis you might hear folks talk about <em>observations</em> and <em>variables</em>. By observations they mean the <code>units</code> that make up each specific row of the data-set. Here we have one county per row so the counties are the observations, the units. If we were surveying adults then each adult would be a unit. A <code>variable</code> is an attribute that differs across the observations. Here we have four variables – the state a county is in, unemployment rate, percapita income, and poverty rate. If some attribute does not differ across the observations, then it is really not a variable, is it? Since it does not vary it provides no useful information for studying any outcomes. For example, if in a sample gathered to study adult women’s reproductive health decisions we included a column called sex but the entry for each woman in the sample read “Female”, this would be wasted space. You know all the units are women so you cannot ask if some behavior or choice varies by the individual’s sex; sex is a <code>constant</code> in this study, not a variable.</p>
+</div>
+<div id="variable-types" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Variable Types<a href="intro.html#variable-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you are staring at a data-set you are likely to see different types of variables. Let us see this variety in the context of a specific example, that displayed in Table 2.2 below.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:prof">TABLE 2.2: </span>Proficiency Data for Ohio’s School Districts
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+dirn
+</th>
+<th style="text-align:left;">
+district
+</th>
+<th style="text-align:left;">
+grade
+</th>
+<th style="text-align:left;">
+subject
+</th>
+<th style="text-align:right;">
+Advanced Plus
+</th>
+<th style="text-align:right;">
+Advanced
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+45187
+</td>
+<td style="text-align:left;">
+Ada Exempted Village
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Reading
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+30.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45187
+</td>
+<td style="text-align:left;">
+Ada Exempted Village
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Mathematics
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+37.3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+61903
+</td>
+<td style="text-align:left;">
+Adams County Ohio Valley Local
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Reading
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+18.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+61903
+</td>
+<td style="text-align:left;">
+Adams County Ohio Valley Local
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Mathematics
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+24.8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+49494
+</td>
+<td style="text-align:left;">
+Adena Local
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Reading
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+15.3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+49494
+</td>
+<td style="text-align:left;">
+Adena Local
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Mathematics
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+25.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+43489
+</td>
+<td style="text-align:left;">
+Akron City
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Reading
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+11.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+43489
+</td>
+<td style="text-align:left;">
+Akron City
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Mathematics
+</td>
+<td style="text-align:right;">
+0.1
+</td>
+<td style="text-align:right;">
+14.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45906
+</td>
+<td style="text-align:left;">
+Alexander Local
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Reading
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+18.9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45906
+</td>
+<td style="text-align:left;">
+Alexander Local
+</td>
+<td style="text-align:left;">
+3rd Grade
+</td>
+<td style="text-align:left;">
+Mathematics
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+14.3
+</td>
+</tr>
+</tbody>
+</table>
+<p>You see a variable called <code>dirn</code> – a unique identifier for each school district. This is a <code>numeric</code> variable but the actual numbers don’t mean anything other than identifying a particular district. Your social security number is another such numeric variable. In contrast, the columns labeled “Advanced Plus” and “Advanced” contain true numeric values that represent the percent of students deemed Advanced Plus and the percent of students deemed Advanced, respectively. These numbers mean something. In that sense we can refer to these two proficiency levels as a quantitative variable. Other examples might be median household income, number of highway fatalities on Interstate 95, number of arrests, your height, weight, age, and so on.</p>
+<p>The variable <code>district</code> is a <code>string</code> (also called a <code>character</code>) variable in that contains only text, the name of each school district. The other two variables contain a combination of numbers and text, for example, “3rd Grade”, (<code>grade</code>) and just text, for example, “Reading” (<code>subject</code> ). These two variables and <code>dirn</code> are usually referred to as <code>factors</code> or <code>categorical</code> variables that identify categories. If we wanted to recognize broad data types we might as well realize that we can either slot a variable as a true <strong>numeric/quantitative variable</strong> or then as a <strong>qualitative/categorical variable</strong>.</p>
+<p>Note too that Table <a href="intro.html#tab:prof">2.2</a> shows some cells with the string “NA”, an indicator for missing values; for some reason we do not have information on the percent of students Advanced Plus in a particular subject for some districts but this information is available for other districts (for instance, Akron City, 3rd Grade, Mathematics). It is not uncommon to have missing data and when you do, the data-set will either show missing values with “NA”, “.”, “-9999” or some such entry<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<p>Data analysts often speak in terms of <code>dependent</code> and <code>independent</code> variables, or then in terms of <code>response</code> and <code>explanatory</code> variables. When they speak in these terms what they are referring to is the fact that the dependent/response variable is the outcome of interest, and that they believe this outcome can be explained/predicted by the explanatory/independent variable. For example, I want to study literacy in early childhood so I gather a random sample of children who attend a nearby child development center, measure their literacy, then provide different amounts of materials designed to improve literacy to the sampled children, and at the end of three months I measure their literacy again. In this study, literacy level is the “dependent” variable while the amount of literacy material received is the “independent” variable; how literate a child is can be explained/predicted by how much literacy development material was provided to a child.</p>
+<div class="rmdcomment">
+<p>
+Dependent or response variables are the outcomes of interest in a study.
+</p>
+<p>
+Independent or explanatory variables are the variables we believe influence the outcome.
+</p>
+</div>
+</div>
+<div id="cross-sectional-time-series-and-panel-data" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Cross-sectional, Time-Series, and Panel Data<a href="intro.html#cross-sectional-time-series-and-panel-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>These are three, very general types of data structures but by no means the only ones data analysts run into. However, these are the structures we are most likely to see and so a few words about each (with an example) are called for.</p>
+<div id="cross-sectional-data" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Cross-sectional Data<a href="intro.html#cross-sectional-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cross-sectional data refer to a structure where we have measurements taken at a single point in time. For example, the U.S. Census Bureau conducts a decennial census, the <a href="http://www.census.gov/programs-surveys/decennial-census/about.html">Census of Population and Housing</a> every 10 years. The result is a snapshot of socioeconomic, demographic and other conditions at a single point in time. Other examples might be a one-time public opinion survey, a financial audit of all state agencies conducted in 2017, a study of all first-time enrollees in two/four year degree granting institutions in Fall 2016, and so on. The data shown in Table <a href="intro.html#tab:arc">2.1</a> and Table <a href="intro.html#tab:prof">2.2</a> are examples of cross-sectional data.</p>
+</div>
+<div id="time-series-data" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Time-Series Data<a href="intro.html#time-series-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Time-series data are measurements taken for a single unit over multiple time points. The Presidential Approval data we saw earlier (Figure <a href="intro.html#fig:approval">2.1</a>) is a classic example of a time series; we are taking the pulse of a single unit (the nation) over multiple time periods. Other common examples would be the interest rate in the U.S., the value of the S&amp;P 500 measured daily for a given year, tracking your organization’s clients’ aggregate satisfaction by month/quarter/year.</p>
+</div>
+<div id="panel-data" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Panel Data<a href="intro.html#panel-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you take multiple measurements over time for the same cross-sections you have what we call panel data. For example, I survey the same individuals or organizations every year. Or the Census Bureau’s <a href="https://www.census.gov/programs-surveys/acs/">American Community Survey</a> measures a wealth of information for census states, counties, places, etc. annually, releasing the <a href="https://www.census.gov/acs/www/data/data-tables-and-tools/american-factfinder/">ACS 1-year data</a> and the <a href="https://www.census.gov/acs/www/data/data-tables-and-tools/american-factfinder/">ACS 5-year data</a>, respectively. There used to be a 3-year ACS data series as well but this was stopped because of budget cuts effective 2015. <a href="http://apdu.org/2015/02/03/the-acs-3-year-demographic-estimates-are-history/">Read more about it here</a>.</p>
+<p>Table 2.3 is an example of panel data gathered for 10 firms followed from 1935 to 1954.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:grunfeld">TABLE 2.3: </span>An Example of Panel Data
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+firm
+</th>
+<th style="text-align:right;">
+year
+</th>
+<th style="text-align:right;">
+inv
+</th>
+<th style="text-align:right;">
+value
+</th>
+<th style="text-align:right;">
+capital
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1935
+</td>
+<td style="text-align:right;">
+317.6
+</td>
+<td style="text-align:right;">
+3078.5
+</td>
+<td style="text-align:right;">
+2.8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1936
+</td>
+<td style="text-align:right;">
+391.8
+</td>
+<td style="text-align:right;">
+4661.7
+</td>
+<td style="text-align:right;">
+52.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1937
+</td>
+<td style="text-align:right;">
+410.6
+</td>
+<td style="text-align:right;">
+5387.1
+</td>
+<td style="text-align:right;">
+156.9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1938
+</td>
+<td style="text-align:right;">
+257.7
+</td>
+<td style="text-align:right;">
+2792.2
+</td>
+<td style="text-align:right;">
+209.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1939
+</td>
+<td style="text-align:right;">
+330.8
+</td>
+<td style="text-align:right;">
+4313.2
+</td>
+<td style="text-align:right;">
+203.4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1940
+</td>
+<td style="text-align:right;">
+461.2
+</td>
+<td style="text-align:right;">
+4643.9
+</td>
+<td style="text-align:right;">
+207.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1941
+</td>
+<td style="text-align:right;">
+512.0
+</td>
+<td style="text-align:right;">
+4551.2
+</td>
+<td style="text-align:right;">
+255.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1942
+</td>
+<td style="text-align:right;">
+448.0
+</td>
+<td style="text-align:right;">
+3244.1
+</td>
+<td style="text-align:right;">
+303.7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1943
+</td>
+<td style="text-align:right;">
+499.6
+</td>
+<td style="text-align:right;">
+4053.7
+</td>
+<td style="text-align:right;">
+264.1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1944
+</td>
+<td style="text-align:right;">
+547.5
+</td>
+<td style="text-align:right;">
+4379.3
+</td>
+<td style="text-align:right;">
+201.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1945
+</td>
+<td style="text-align:right;">
+561.2
+</td>
+<td style="text-align:right;">
+4840.9
+</td>
+<td style="text-align:right;">
+265.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1946
+</td>
+<td style="text-align:right;">
+688.1
+</td>
+<td style="text-align:right;">
+4900.9
+</td>
+<td style="text-align:right;">
+402.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1947
+</td>
+<td style="text-align:right;">
+568.9
+</td>
+<td style="text-align:right;">
+3526.5
+</td>
+<td style="text-align:right;">
+761.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1948
+</td>
+<td style="text-align:right;">
+529.2
+</td>
+<td style="text-align:right;">
+3254.7
+</td>
+<td style="text-align:right;">
+922.4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1949
+</td>
+<td style="text-align:right;">
+555.1
+</td>
+<td style="text-align:right;">
+3700.2
+</td>
+<td style="text-align:right;">
+1020.1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1950
+</td>
+<td style="text-align:right;">
+642.9
+</td>
+<td style="text-align:right;">
+3755.6
+</td>
+<td style="text-align:right;">
+1099.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1951
+</td>
+<td style="text-align:right;">
+755.9
+</td>
+<td style="text-align:right;">
+4833.0
+</td>
+<td style="text-align:right;">
+1207.7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1952
+</td>
+<td style="text-align:right;">
+891.2
+</td>
+<td style="text-align:right;">
+4924.9
+</td>
+<td style="text-align:right;">
+1430.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1953
+</td>
+<td style="text-align:right;">
+1304.4
+</td>
+<td style="text-align:right;">
+6241.7
+</td>
+<td style="text-align:right;">
+1777.3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1954
+</td>
+<td style="text-align:right;">
+1486.7
+</td>
+<td style="text-align:right;">
+5593.6
+</td>
+<td style="text-align:right;">
+2226.3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1935
+</td>
+<td style="text-align:right;">
+209.9
+</td>
+<td style="text-align:right;">
+1362.4
+</td>
+<td style="text-align:right;">
+53.8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1936
+</td>
+<td style="text-align:right;">
+355.3
+</td>
+<td style="text-align:right;">
+1807.1
+</td>
+<td style="text-align:right;">
+50.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1937
+</td>
+<td style="text-align:right;">
+469.9
+</td>
+<td style="text-align:right;">
+2676.3
+</td>
+<td style="text-align:right;">
+118.1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1938
+</td>
+<td style="text-align:right;">
+262.3
+</td>
+<td style="text-align:right;">
+1801.9
+</td>
+<td style="text-align:right;">
+260.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1939
+</td>
+<td style="text-align:right;">
+230.4
+</td>
+<td style="text-align:right;">
+1957.3
+</td>
+<td style="text-align:right;">
+312.7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1940
+</td>
+<td style="text-align:right;">
+361.6
+</td>
+<td style="text-align:right;">
+2202.9
+</td>
+<td style="text-align:right;">
+254.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1941
+</td>
+<td style="text-align:right;">
+472.8
+</td>
+<td style="text-align:right;">
+2380.5
+</td>
+<td style="text-align:right;">
+261.4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1942
+</td>
+<td style="text-align:right;">
+445.6
+</td>
+<td style="text-align:right;">
+2168.6
+</td>
+<td style="text-align:right;">
+298.7
+</td>
+</tr>
+</tbody>
+</table>
+<p>Often people ask if one type of data is best and the answer is yes. Think about it this way. If I want to understand public opinion on some issue, I could just run a survey once. All this would tell me is what people think at <em>that point in time</em>. This tells me nothing about what I would have discovered about public opinion if I had run the survey the year before or waited for a year and then run the survey. If I aggregate these data and run the same survey every year, I would learn how the <em>average person’s opinion varies over time</em>. However, aggregation would lead to my ignoring subtle differences in the opinion of specific types of individuals (for example, minority groups, men versus women, those with less education versus the more educated, and so on). If, on the other hand, I survey <em>the same individuals every year</em> I can not only study how public opinion changes over time but also how different groups felt about an issue at a specific point in time, if and how people change their opinions, and so on. This is the ultimate strength of panel data – the ability both to study something at a given point in time and to study change over time. Many people think about cross-sectional data as a static photograph while panel data allow you to draw a moving picture.</p>
+<p>What data you can gather will be determined by your needs, the amount of money available for data collection, and time. Otherwise everybody would be gathering panel data and then tossing away portions of the data they don’t need. However, my experience has taught me to always gather more data than I need because it easier to set aside data you do not need than having to go back and gather data bypassed because you didn’t anticipate needing it. As with knowledge, so with data: More is always better than less!</p>
+</div>
+</div>
+<div id="levels-of-measurement" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Levels of Measurement<a href="intro.html#levels-of-measurement" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When we set out to measure some aspect, some attribute or quality of an observation, we run into four commonly encountered mutually exclusive levels of measurement.</p>
+<div id="nominal" class="section level3 hasAnchor" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> Nominal<a href="intro.html#nominal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>With the nominal level of measurement the best we can do is say this is school district x, that is district y, this student is male, that student is female, this person is White, that person is an Asian, and so on. This is the simplest level of measurement that distinguishes between observations in terms of some attribute but these differences have no hierarchy (i.e., we are unable to say Male is better than Female, Mathematics is above Reading, etc). We have three nominal variables in Table <a href="intro.html#tab:prof">2.2</a> – <code>dirn</code>, <code>district</code> and <code>subject.</code> Other examples of nominal variables include an individual’s sex, the color of your eyes, whether you are left-handed or right-handed, etc.</p>
+</div>
+<div id="ordinal" class="section level3 hasAnchor" number="2.6.2">
+<h3><span class="header-section-number">2.6.2</span> Ordinal<a href="intro.html#ordinal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>With the ordinal level of measurement we are able to assign some hierarchy to the data as, for example, in the meaning that 5th Grade is above 4th Grade which is, in turn, above 3rd Grade (i.e., <span class="math inline">\(5^{th} \text{ Grade} &gt; 4^{th} \text{ Grade} &gt; 3^{rd} \text{ Grade}\)</span>). In Table <a href="intro.html#tab:prof">2.2</a> <code>grade</code> is an ordinal variable. Other examples would be a college student’s standing (Freshman/Sophomore/Junior/Senior), your opinion about gluten-free bread (Dislike/Like a Little/Like a Lot), income categories (Poor/Middle/Rich), and so on.</p>
+</div>
+<div id="intervalratio" class="section level3 hasAnchor" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> Interval/Ratio<a href="intro.html#intervalratio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The interval/ratio level of measurement applies to numeric variables where the numerical values mean something. For instance, the percent of students at a specific proficiency level is a numeric variable. If I see Advanced proficiency values <span class="math inline">\(10.2\)</span> for District A and <span class="math inline">\(20.4\)</span> for District B then District B has twice as many students at Advanced proficiency levels than District A; this is a ratio. There is also a <span class="math inline">\(10.2\)</span> percent gap in Advanced proficiency between District A and B; this is a statement of numerical difference. Both statements are true and possible, depending upon what we want to say. Notice too that it is possible for a District to have no student at Advanced proficiency; this would be the smallest value possible, a value of <span class="math inline">\(0\)</span>.</p>
+<p>However, what if we were measuring something like the maximum temperature in your hometown today versus what it was yesterday. You would be measuring this in degrees Fahrenheit, and maybe it was <span class="math inline">\(80^{0}F\)</span> today and it was <span class="math inline">\(60^{0}F\)</span> yesterday. You couldn’t say today is <span class="math inline">\(1.33\)</span> times hotter than yesterday. All you could say is that it is <span class="math inline">\(20\)</span> degrees warmer today than it was yesterday, period. Why can’t we speak in terms of ratios with temperature in Fahrenheit but we could with proficiency levels? We can’t because the Fahrenheit temperature scale is a numeric scale but an arbitrary one where <span class="math inline">\(0^{0}F\)</span> does not mean there is no temperature. However, if Advanced proficiency is <span class="math inline">\(0\)</span> it means nobody is at this level. So we arrive at a distinction – <code>ratio levels of measurement</code> for numeric variables that have a <em>true zero</em> where zero means a complete absence of whatever is being measured versus an <code>interval level of measurement</code> for numeric variables that do not have a <em>true zero</em>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Other examples of ratio levels of measurement would be your income, distance of your college town from your hometown, years of formal schooling, number of highway fatalities, number of black swans you have seen, number of children in a family, and so on. Some examples of interval levels of measurement would be a student’s score on a standardized test like the GRE or SAT or ACT, a feeling thermometer that asks you to rate your feeling towards your Senator with a <span class="math inline">\(0\)</span> indicating you are very cold towards this individual and <span class="math inline">\(100\)</span> indicating you feel very warmly towards this individual.</p>
+<div class="rmdcomment">
+<p>
+Nominal variables are qualitative/categorical variables that measure some non-quantifiable attribute that has no order to it, for example an individual’s sex or race/ethnicity.
+</p>
+<p>
+Ordinal variables are qualitative/categorical variables that measure some non-quantifiable attribute that has an order to it, for example a student’s status (freshman/sophomore/junior/senior).
+</p>
+<p>
+Interval variables are quantitative variables that measure some numeric attribute but there is no natural zero point that reflects complete absence of the attribute being measured. For example, 0 degrees Fahrenheit does not mean no temperature.
+</p>
+<p>
+Ratio variables are quantitative variables that measure some numeric attribute and have a natural zero point. For example, an income of 0 means the individual has no income.
+</p>
+</div>
+<p>Both ratio and interval levels of measurement may yield <code>discrete</code> or <code>continuous</code> variables. Discrete variables would be numerical variables with values that are finite and hence countable. For example, I can count the number of children in a family, the number of cars owned by a family, the number of traffic fatalities occurring in a particular week, and so on. Continuous variables are numerical variables with values that are infinite and hence uncountable. For example, <a href="https://www.simetric.co.uk/si_time.htm">time can be measured in a number of ways</a>, each measuring the same concept (your age, for instance) in a finer and finer way. Technically, we can define these two types of numerical variables most simply as “discrete” if there is no intermediate value possible between two successive values versus “continuous” if any number of values is possible between two successive values. Applying this logic to the number of children we recognize that a family cannot have 1.5 children, it is either 1 or 2, nothing in between. However, the youngest and the next youngest student in a classroom may have values of 18 years and one month and 19 years and two months but we do know there exist many people with ages between these two students.</p>
+<p>Before we close our discussion of measurement levels, note that there is a hierarchy to levels of measurement: <span class="math inline">\(ratio &gt; interval &gt; ordinal &gt; nominal\)</span>. Ideally you would measure everything at the ratio level but this is not always possible. The best we can do with measuring sex, for example, is record an individual’s sex, that is it; there is no way to come up with granular numerical values of sex. The reason why the ratio level trumps the other three is because you can convert ratio levels into any of the other three by suitable alterations as, for example, by asking survey respondents to report their age (in years) and then collapsing age into categories of 18-24, 25-34, 35-44, 45-54, 55-64, and 65 or older (you just created an ordinal variable). But, if you had asked for age categories to begin with you would never be able to extract each individual’s actual age. Note also that in some fields they refer to numerical variables as “continuous” while others will refer to them as “measurement” variables, and categorical variables might be called “factors”.</p>
+</div>
+</div>
+<div id="the-tricky-business-of-cause-and-effect" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> The Tricky Business of Cause-and-Effect<a href="intro.html#the-tricky-business-of-cause-and-effect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Among the many things I want to caution you against is thinking in terms of cause-and-effect. People often see correlations and think <span class="math inline">\(x\)</span> must cause <span class="math inline">\(y\)</span>, or they see a simple table that show the driver’s race (black versus white) in the rows and whether the driver was subject to a traffic stop (stopped/not stopped)in the columns and think race causes a traffic stop. Indeed, you do this in your own life, many times a day, thinking something happened because of <span class="math inline">\(x\)</span> or that if you do such-and-such some outcome will occur. At a base level, causality is around us and we have become programmed to understand our world in terms of causality and make predictions based on causality. The problem is, cause-and-effect is a difficult thing to demonstrate in general and <a href="http://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199604456.001.0001/oxfordhb-9780199604456-e-049">especially so in the social and behavioral sciences</a>.</p>
+<p>Although we cannot here cover the granular details and epidemiological debates that surround the study of causality, we can agree upon three commonly used rules to demonstrate cause-and-effect.</p>
+<ol style="list-style-type: decimal">
+<li>The presumed cause must precede – in time – the claimed effect. This is a question of the temporal order of the cause (<span class="math inline">\(x)\)</span> and the effect (<span class="math inline">\(y\)</span>). Take the example of depression and drinking; those who are depressed are often found to have high levels of alcohol consumption but does that necessarily mean depression causes alcoholism? Couldn’t it be that alcoholism causes depression since alcohol is a depressant? We need to prove that depressed people drank a little or not at all before depression set in and then drank a lot during the episodes of depression in order to satisfy this rule.<br />
+</li>
+<li>We also need to rule out all possible rival explanations for the effect. By this we mean there must be no other logical explanation for the effect we see. Unless we do so we don’t really know if the presumed cause is the sole driver of the effect. Ruling out all possible rival explanations is difficult because the real world is made up of interconnected complex processes and phenomenons, and because our knowledge of how these processes and phenomenons interact tends to be less than perfect.</li>
+<li>The cause and the effect must co-vary. That is, we must be able to demonstrate a relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> as, for example, that <code>if depressed then alcoholic</code> and <code>if not depressed then not alcoholic</code>.</li>
+</ol>
+<p>When all three rules are satisfied, more often than not we would have done a reasonable job of demonstrating cause-and-effect. You might wonder why I am emphasizing the tricky nature of demonstrating causality; I do not want you to make the mistake that millions commit daily, of thinking correlation equals causation, of failing to look for plausible rival explanations, of failing to check to see if there is indeed a measurable relationship between the cause and the effect.</p>
+<div class="rmdcomment">
+<p>
+Cause must precede effect
+</p>
+<p>
+All possible rival explanations must be ruled out
+</p>
+<p>
+Cause and effect must covary
+</p>
+</div>
+<hr />
+</div>
+<div id="chapter-2-practice-problems" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Chapter 2 Practice Problems<a href="intro.html#chapter-2-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="problem-1" class="section level4 unnumbered hasAnchor">
+<h4>Problem 1<a href="intro.html#problem-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In a browser, open up the <a href="https://about.citiprogram.org/en/homepage/">Collaborative Institutional Training Initiative (CITI Program)</a> website. Create an account by clicking on the <code>Register</code> button. Enter all information asked for: your institution = Ohio University, first-name and last-name, your OU email address and then a second email address, a username and a password, <em>skip the continuing education (CE) credits portion unless you are looking to pickup some credits but if you do this you may have to pay</em>. Make sure you select <code>Human subjects training</code> in <strong>Step 7</strong> and then <code>Group 2: Social and Behavioral Investigators and Key Personnel</code>. Make sure you <code>Finalize registration</code> on the next screen. The very next screen will show the <strong>Group 2: Social and Behavioral Investigators and Key Personnel</strong> course and current status. You are now ready to take this course. Once you complete the course and are deemed to have passed you will need to save your certificate as a that you will submit as a part of your first assignment. Hold on to this in case you need it in the near future.</p>
+</div>
+<div id="problem-2" class="section level4 unnumbered hasAnchor">
+<h4>Problem 2<a href="intro.html#problem-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Identify whether the following variables are numeric or categorical, and the level of measurement.</p>
+<ol style="list-style-type: decimal">
+<li>The color of an individual’s eyes</li>
+<li>An adult individual’s age</li>
+<li>Number of children in a household</li>
+<li>An undergraduate student’s standing in the college (Freshman/Sophomore/Junior/Senior)</li>
+<li>School type (public/private/parochial/charter)</li>
+<li>A student’s SAT or ACT score</li>
+<li>Household income</li>
+<li>Your monthly cellphone bill</li>
+<li>An attitudinal scale where individuals are asked to rate how they feel about the Supreme Court of the United States (0 = Very Cold, 50 = Neutral, 100 = Very Warm)</li>
+<li>An attitudinal scale where individuals are asked to rate how they feel about the United States Congress (-100 = Very Cold, 0 = Neutral, 100 = Very Warm)</li>
+<li>Number of highway fatalities on a specific one mile stretch of US 33E between Athens and Nelsonville, Ohio</li>
+<li>Whether an individual voted or not in the last general election</li>
+<li>An individual’s race/ethnicity</li>
+<li>Your nationality</li>
+</ol>
+</div>
+<div id="problem-3" class="section level4 unnumbered hasAnchor">
+<h4>Problem 3<a href="intro.html#problem-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Open up <a href="https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip">EPA’s Fuel Economy data</a>. These data are the result of vehicle testing done at the Environmental Protection Agency’s National Vehicle and Fuel Emissions Laboratory in Ann Arbor, Michigan, and by vehicle manufacturers with oversight by EPA. You will need to carefully read the accompanying document that explains what and how some attribute is being measured; the document is available <a href="https://www.fueleconomy.gov/feg/ws/index.shtml#fuelType1">here</a>. Identify whether the following variables are numeric or categorical, and their level of measurement.</p>
+<ol style="list-style-type: decimal">
+<li>fuelType1</li>
+<li>charge120</li>
+<li>cylinders</li>
+<li>drive</li>
+<li>year</li>
+<li>ghgScore</li>
+<li>highway08</li>
+<li>model</li>
+<li>trany</li>
+<li>youSaveSpend</li>
+</ol>
+</div>
+<div id="problem-4" class="section level4 unnumbered hasAnchor">
+<h4>Problem 4<a href="intro.html#problem-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>The next set of questions deal with <a href="https://aniruhil.github.io/avsr/teaching/dataviz/af.xls">this data-set</a> that consists of responses of graduate students in the social sciences enrolled in STA 6126 in a recent term at the University of Florida. The variables are:</strong></p>
+<ul>
+<li>GE gender (m, f)</li>
+<li>AG age in years</li>
+<li>HI high school GPA (on a four-point scale)</li>
+<li>CO college GPA (on a four-point scale)</li>
+<li>DH distance (in miles) of the campus from your home town</li>
+<li>DR distance (in miles) of the classroom from your current residence</li>
+<li>TV average number of hours per week that you watch TV</li>
+<li>SP average number of hours per week that you participate in sports or have other physical exercise NE * number of times a week you read a newspaper</li>
+<li>AH number of people you know who have died from AIDS or who are HIV+</li>
+<li>VE whether you are a vegetarian (yes, no)</li>
+<li>PA political affiliation (d = Democrat, r = Republican, i = independent)</li>
+<li>PI political ideology (1 = very liberal, 2 = liberal, 3 = slightly liberal, 4 = moderate, 5 = slightly conservative, 6 = conservative, 7 = very conservative)<br />
+</li>
+<li>RE how often you attend religious services (0 = never, 1 = occasionally, 2 = most weeks, 3 = every week)</li>
+<li>AB opinion about whether abortion should be legal in the first three months of pregnancy (yes, no)</li>
+<li>AA support affirmative action (yes, no)</li>
+<li>LD belief in life after death (yes, no)</li>
+</ul>
+<p>Download these data and read into your software package (SPSS, Excel, etc.). Make sure you label all the variables and their values (if the variable is categorical). For example, the variable <code>HI</code> must be labeled <code>high school GPA (on a four-point scale)</code> and the values of political affiliation labeled Democrat/Independent/Republican rather than d/i/r, and so on.</p>
+<p>For each variable in the data-set, identify whether it is numeric or categorical. Also identify whether it is a ratio or interval level of measurement (if numeric), and nominal or ordinal (if categorical).</p>
+</div>
+<div id="problem-5" class="section level4 unnumbered hasAnchor">
+<h4>Problem 5<a href="intro.html#problem-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Why are our best and most experienced employees leaving prematurely? The data <a href="https://aniruhil.github.io/avsr/teaching/dataviz/HR_comma_sep.csv">available here</a> includes information on several current and former employees of an anonymous organization.</strong> Fields in the data-set include:</p>
+<ul>
+<li>satisfaction_level = Level of satisfaction (0-1)</li>
+<li>last_evaluation = Evaluation of employee performance (0-1)</li>
+<li>number_project = Number of projects completed while at work</li>
+<li>average_monthly_hours = Average monthly hours at workplace</li>
+<li>time_spend_company = Number of years spent in the company</li>
+<li>Work_accident = Whether the employee had a workplace accident</li>
+<li>left = Whether the employee left the workplace or not (1 or 0)<br />
+</li>
+<li>promotion_last_5years = Whether the employee was promoted in the last five years</li>
+<li>sales = Department in which they work for</li>
+<li>salary = Relative level of salary (low med high)</li>
+</ul>
+<p>Identify whether each variable is numeric or categorical, and whether the level of measurement is nominal/ordinal/interval/ratio.</p>
+</div>
+<div id="problem-6" class="section level4 unnumbered hasAnchor">
+<h4>Problem 6<a href="intro.html#problem-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Say you are interested in studying if and how a tutoring program for first-generation college students (i.e., the first in their family to attend college) helps these students complete their program of study. What type of research design would you have to work with – experimental? Quasi-experimental? A natural experiment? Why? Would you prefer to use cross-sectional data, time-series data, or panel data and why? What variables would you want to include in your data-set and why? What would be the unit of analysis?</p>
+</div>
+<div id="problem-7" class="section level4 unnumbered hasAnchor">
+<h4>Problem 7<a href="intro.html#problem-7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>What conditions lead to a biased estimate versus an imprecise estimate? Explain with reference to an original example.</p>
+</div>
+<div id="problem-8" class="section level4 unnumbered hasAnchor">
+<h4>Problem 8<a href="intro.html#problem-8" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>What are the three commonly accepted conditions that must be met to demonstrate causality?</p>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-1');
+</script>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>The Appalachian Regional Commission (ARC) is a regional economic development agency that represents a partnership of federal, state, and local government. Established by an act of Congress in 1965, ARC is composed of the governors of the 13 Appalachian states and a federal co-chair, who is appointed by the president. Local participation is provided through multi-county local development districts.<a href="intro.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>These data show the percent of students with a specific proficiency level, by grade and subject, for Ohio’s public school districts. There are additional proficiency levels not shown in the table: Accelerated, Proficient, Basic, and Limited. These and other data can be found <a href="http://reportcard.education.ohio.gov/Pages/Power-User-Reports.aspx">here</a>.<a href="intro.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>The Celsius temperature scale is also an arbitrary scale. This is why for scientific purposes the Kelvin scale is used. <a href="https://en.wikipedia.org/wiki/Kelvin">Wikipedia</a> describes it thus: “The Kelvin scale is an absolute, thermodynamic temperature scale using as its null point absolute zero, the temperature at which all thermal motion ceases in the classical description of thermodynamics.”<a href="intro.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dataviz.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"css": "toc.css"
+},
+"theme": "sandstone"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
