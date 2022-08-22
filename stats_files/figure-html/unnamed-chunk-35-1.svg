@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='432.00pt' height='288.00pt' viewBox='0 0 432.00 288.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA='>
+    <rect x='0.00' y='0.00' width='432.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpMC4wMHwyMTYuMDB8MC4wMHwyODguMDA='>
+    <rect x='0.00' y='0.00' width='216.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwyMTYuMDB8MC4wMHwyODguMDA=)'>
+<text x='122.40' y='34.70' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: Arial;' textLength='128.81px' lengthAdjust='spacingAndGlyphs'>Negatively-skewed</text>
+</g>
+<defs>
+  <clipPath id='cpNTkuMDR8MTg1Ljc2fDU5LjA0fDIxNC41Ng=='>
+    <rect x='59.04' y='59.04' width='126.72' height='155.52' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTkuMDR8MTg1Ljc2fDU5LjA0fDIxNC41Ng==)'>
+<rect x='63.73' y='207.52' width='14.67' height='1.28' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='78.40' y='204.54' width='14.67' height='4.26' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='93.07' y='194.74' width='14.67' height='14.06' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='107.73' y='169.60' width='14.67' height='39.20' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='122.40' y='135.10' width='14.67' height='73.70' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='137.07' y='81.42' width='14.67' height='127.38' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='151.73' y='64.80' width='14.67' height='144.00' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='166.40' y='186.65' width='14.67' height='22.15' style='stroke-width: 0.75; fill: #6495ED;' />
+</g>
+<defs>
+  <clipPath id='cpMjc1LjA0fDQwMS43Nnw1OS4wNHwyMTQuNTY='>
+    <rect x='275.04' y='59.04' width='126.72' height='155.52' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMjc1LjA0fDQwMS43Nnw1OS4wNHwyMTQuNTY=)'>
+</g>
+<defs>
+  <clipPath id='cpMjE2LjAwfDQzMi4wMHwwLjAwfDI4OC4wMA=='>
+    <rect x='216.00' y='0.00' width='216.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMjE2LjAwfDQzMi4wMHwwLjAwfDI4OC4wMA==)'>
+<text x='338.40' y='34.70' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: Arial;' textLength='124.01px' lengthAdjust='spacingAndGlyphs'>Positively-skewed</text>
+</g>
+<g clip-path='url(#cpMjc1LjA0fDQwMS43Nnw1OS4wNHwyMTQuNTY=)'>
+<rect x='279.73' y='208.36' width='13.04' height='0.44' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='292.77' y='182.26' width='13.04' height='26.54' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='305.81' y='69.59' width='13.04' height='139.21' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='318.84' y='64.80' width='13.04' height='144.00' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='331.88' y='136.15' width='13.04' height='72.65' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='344.92' y='177.04' width='13.04' height='31.76' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='357.96' y='194.01' width='13.04' height='14.79' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='370.99' y='204.45' width='13.04' height='4.35' style='stroke-width: 0.75; fill: #6495ED;' />
+<rect x='384.03' y='207.49' width='13.04' height='1.31' style='stroke-width: 0.75; fill: #6495ED;' />
+</g>
+</svg>
