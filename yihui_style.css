@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Narrow:400,700|PT+Serif:400,400i,700,700i');
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i');
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -18,17 +22,17 @@
 }
 
 p, div {
-  font-family: 'PT Serif', serif;
+  font-family: 'Poppins', serif;
   font-size: 1.6rem;
 }
 
 li, h1, h2, h3 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
 }
 
 code, kbd, pre, samp, .sourceLine, .sourceCode {
-  font-family: 'PT Mono', monospace;
+  font-family: 'Lato', monospace;
   font-size: 1em;
 }
 
