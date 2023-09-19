@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,9 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
@@ -80,6 +82,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -440,10 +446,12 @@ FIGURE 2.1: Presidential Approval over Time
 <p>Why does Gallup do these surveys of a few hundred or a thousand individuals? Not because they are idly curious about what a <code>sample of 500 U.S. adults</code> think. Gallup wants to be able to say this is what the <code>U.S. adult population</code> thinks about the incumbent president’s job performance! In other words, Gallup is using a <code>sample</code> to say something useful about the <code>population</code>.</p>
 <div class="rmdcomment">
 <p>
-Sample: the subset of cases drawn for analysis from the population
+Sample: the subset of cases drawn for analysis from the
+population
 </p>
 <p>
-Population: the universe (or set) of all elements of interest in a particular study
+Population: the universe (or set) of all elements of interest in a
+particular study
 </p>
 </div>
 <p>Drawing conclusions about the population from analyzing the sample is the process of making an <strong>inference</strong>, and the processes and rules involved in doing so are called <strong>inferential statistics</strong>.</p>
@@ -456,7 +464,10 @@ If <strong>statistics</strong> is a field of study, a <strong>statistic</strong>
 <p>This equality may not always hold and so every time we generate an estimate we also generate a measure of the <code>uncertainty around the estimate</code>, a measure that tells us how much our estimates may have drifted from their corresponding parameters. We will make these measures of uncertainty more precise as we go along but for now you can cast your mind to a phrase you may have encountered – the “margin of error”. For example, on October 20, 2017 a <a href="http://news.gallup.com/poll/220718/congress-approval-lowest-july-2016.aspx?g_source=Politics&amp;g_medium=newsfeed&amp;g_campaign=tiles">Gallup poll found</a> that Americans’ approval of the way Congress was doing its job had hit 13% (i.e., only 13% thought Congress was doing a decent job while 87% thought otherwise). At the very bottom of this story Gallup noted that “[f]or results based on the total sample of national adults, the margin of sampling error is <span class="math inline">\(\pm 4\)</span> percentage points at the 95% confidence level”. We will learn all about this quantity called the <code>margin of error</code> but for now understand the essence of what that <span class="math inline">\(\pm 4\)</span> is telling us: If we could have asked every adult American whether they approved of Congress, the percent likely to say “yes” could have ranged between <span class="math inline">\(13 - 4 = 9\%\)</span> to <span class="math inline">\(13 + 4 = 17\%\)</span>. So this margin of error is telling us something about the uncertainty around the estimate of 13%. If no such uncertainty estimate were provided to us, we would have no way of knowing how much faith to place in anything the sample is telling us.</p>
 <div class="rmdcomment">
 <p>
-Estimates are quantities of interest calculated from the sample whereas parameters are their population counterpart, for example, the proportion of women in the sample versus the proportion of women in the population.
+Estimates are quantities of interest calculated from the sample
+whereas parameters are their population counterpart, for example, the
+proportion of women in the sample versus the proportion of women in the
+population.
 </p>
 </div>
 </div>
@@ -475,10 +486,12 @@ Estimates are quantities of interest calculated from the sample whereas paramete
 <p>If you violate (1) you end up with <em>biased estimates</em> and if you violate (2) you will have <em>imprecise estimates</em>. Examples of these violations are aplenty. For instance, imagine I carry out a landline survey of health behaviors and outcomes. How many of you have a landline? Not many I would suspect. So what is the consequence of my using a landline survey? All cellphone-only households have a zero chance of being selected into my sample. If the cellphone-only population were no different from the population that has kept a landline there would be no problem. But we know that isn’t the case. If you are curious, see <a href="http://www.aapor.org/Education-Resources/Reports/Cell-Phone-Task-Force-Report.aspx">New Considerations for Survey Researchers When Planning and Conducting RDD Telephone Surveys in the U.S. With Respondents Reached via Cell Phone Numbers</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910572/">Growing Cell-Phone Population and Noncoverage Bias in Traditional Random Digit Dial Telephone Health Surveys</a>. I could also violate (2) if I am conducting a survey of Freshman’s opinions about healthy food options in a university’s dining halls and end up talking only to people seated together, even if I pick a few tables to talk to. Why is this a problem? Because it is likely that these students are friends/roommates who maybe also share a common major, etc., and most likely come from similar socioeconomic and demographic backgrounds, have shared tastes and preferences, and so on.</p>
 <div class="rmdcomment">
 <p>
-Biased estimates will result if every unit in the population does not have the same chance of being drawn into the sample.
+Biased estimates will result if every unit in the population does not
+have the same chance of being drawn into the sample.
 </p>
 <p>
-Imprecise estimates will result if the units are not sampled independently of each other.
+Imprecise estimates will result if the units are not sampled
+independently of each other.
 </p>
 </div>
 </div>
@@ -491,7 +504,7 @@ Imprecise estimates will result if the units are not sampled independently of ea
 <p>Experiments are the gold standard of quantitative research designs because, much like an experiment in a physics of chemistry lab, they allow the researcher to control for a host of factors and then introduce a stimulus to test the impact of this stimulus on the outcome of interest. For example, political psychologists who study the impacts of campaign advertising on voters’ choices often expose a randomly chosen group of subjects either to a positive campaign advertisements or to a negative campaign advertisements about two candidates running for the same elected office. The study’s purpose might be to figure out whether negative advertising reinforces stereotypes, whether it makes people less likely to vote at all (even for their own party’s candidate), and so on. Because the two groups are similar in every possible way and were randomly assigned to either of the campaign advertisement types, any impacts we see of the tone of the campaign advertisement can be reliably attributed to the advertisement itself and not to someone’s sex or educational attainment or party preferences, etc.</p>
 <p>Take another example. Say I am interested in figuring out whether private schools are really better at educating students than traditional public schools. Ideally, I would have a large random sample of genetically identical twins and the freedom to assign one twin in each pair to a public school and the other to a private school. I could then follow their learning for a year and see which group – private or public – has better academic performance on average. Why would this be a powerful research design? Because they are twins, their home environments are the same (same parental income, interest in child’s education, social circle, access to computers, internet, extra-curricular activities, and the like). An informed reader would at this point object to this example and point out that <a href="https://www.scientificamerican.com/article/identical-twins-genes-are-not-identical/">identical twins’ genes are not identical</a> so couldn’t that be responsible for differential learning? Yes, it might but that is why we restricted our sample to genetically identical twins!</p>
 <p>Experiments draw their power from their ability to rule out all other likely influences on the outcome and in doing so yield a clean estimate of the treatment’s (say, attending a private versus a public school, being given Drug A versus Drug B, etc.) impact on an outcome (academic learning, reducing joint inflammation, and so on). However, they are difficult to carry out in most social and behavioral science settings in the real world because they cost a lot, logistics get in the way (you probably won’t get enough parents to agree to separate the twins) and because of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3777303/">legal/ethical requirements</a> that circumscribe all research with human subjects. Central to these requirements is the notion of <code>informed consent</code>.</p>
-<p>Informed consent is the process by which researchers working with human participants describe their research project and obtain the subjects’ consent to participate in the research based on the subjects’ understanding of the project’s methods and goals. The subject must have understood his/her rights, the purpose of the study, the procedures to be undergone, and the potential risks and benefits of participation. It is strictly voluntary and consent must be secured for all human subjects research including diagnostic, therapeutic, interventional, social and behavioral studies, and for research conducted domestically or abroad. Vulnerable populations (i.e. prisoners, children, pregnant women, etc.) receive extra protections, and the legal rights of subjects are neither waived nor are the researchers, the study’s sponsor, the researchers’ employer, etc. exempt from any liability for negligence. There is a fascinatingly unfortunate history that has led to this sacrosanct principle of informed consent, even though some would argue it holds back what we could learn; for the curious among you, see <a href="https://www.wired.com/2011/07/ff_swr/">Seven Creepy Experiments That Could Teach Us So Much (If They Weren’t So Wrong)</a>. Indeed, informed consent is such a crucial aspect of our work that your first assignment will require you to complete the <code>Group 2: Social and Behavioral Investigators and Key Personnel</code> training via <a href="www.citiprogram.org">Collaborative Institutional Training Initiative (CITI Program)</a>.</p>
+<p>Informed consent is the process by which researchers working with human participants describe their research project and obtain the subjects’ consent to participate in the research based on the subjects’ understanding of the project’s methods and goals. The subject must have understood his/her rights, the purpose of the study, the procedures to be undergone, and the potential risks and benefits of participation. It is strictly voluntary and consent must be secured for all human subjects research including diagnostic, therapeutic, interventional, social and behavioral studies, and for research conducted domestically or abroad. Vulnerable populations (i.e. prisoners, children, pregnant women, etc.) receive extra protections, and the legal rights of subjects are neither waived nor are the researchers, the study’s sponsor, the researchers’ employer, etc. exempt from any liability for negligence. There is a fascinatingly unfortunate history that has led to this sacrosanct principle of informed consent, even though some would argue it holds back what we could learn; for the curious among you, see <a href="https://www.wired.com/2011/07/ff-swr/">Seven Creepy Experiments That Could Teach Us So Much (If They Weren’t So Wrong)</a>. Indeed, informed consent is such a crucial aspect of our work that your first assignment will require you to complete the <code>Group 2: Social and Behavioral Investigators and Key Personnel</code> training via <a href="www.citiprogram.org">Collaborative Institutional Training Initiative (CITI Program)</a>.</p>
 </div>
 <div id="natural-experiments" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Natural Experiments<a href="intro.html#natural-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -526,10 +539,17 @@ While a majority of economists agree that the average American citizen would be 
 <p>Note that in both these examples the researcher has had no influence; she/he could neither determine where or when the traffic circle is constructed nor ensure that the drivers using these roads are the same. After all, it is quite likely that some drivers who otherwise took these routes are now avoiding these intersections because they see them as more dangerous or are uncomfortable navigating traffic circles. Consequently, anybody analyzing these data would have to control for as many factors as possible – traffic density, traffic composition (for e.g., are commercial trucks still using these intersections or not), average speed approaching the intersection, and so on. Unless one could do so, it would be impossible to say with any degree of certainty that any reduction in traffic is due to the traffic circle.</p>
 <div class="rmdcomment">
 <p>
-Experiments are the gold standard for research because you can randomize units into groups, for example, a random subset of kids to a private school and the remainder to a public school, and then seeing who has a better academic performance at the end of a year or two or 10.
+Experiments are the gold standard for research because you can
+randomize units into groups, for example, a random subset of kids to a
+private school and the remainder to a public school, and then seeing who
+has a better academic performance at the end of a year or two or 10.
 </p>
 <p>
-In quasi-experiments you cannot randomize and hence have to do a lot more work to get around the limitations imposed by the possibility that the kids who go to a private school are fundamentally different from those who go to a public school (perhaps these kids are poorer, racial/ethnic minorities, and so on).
+In quasi-experiments you cannot randomize and hence have to do a lot
+more work to get around the limitations imposed by the possibility that
+the kids who go to a private school are fundamentally different from
+those who go to a public school (perhaps these kids are poorer,
+racial/ethnic minorities, and so on).
 </p>
 </div>
 </div>
@@ -871,10 +891,12 @@ NA
 <p>Data analysts often speak in terms of <code>dependent</code> and <code>independent</code> variables, or then in terms of <code>response</code> and <code>explanatory</code> variables. When they speak in these terms what they are referring to is the fact that the dependent/response variable is the outcome of interest, and that they believe this outcome can be explained/predicted by the explanatory/independent variable. For example, I want to study literacy in early childhood so I gather a random sample of children who attend a nearby child development center, measure their literacy, then provide different amounts of materials designed to improve literacy to the sampled children, and at the end of three months I measure their literacy again. In this study, literacy level is the “dependent” variable while the amount of literacy material received is the “independent” variable; how literate a child is can be explained/predicted by how much literacy development material was provided to a child.</p>
 <div class="rmdcomment">
 <p>
-Dependent or response variables are the outcomes of interest in a study.
+Dependent or response variables are the outcomes of interest in a
+study.
 </p>
 <p>
-Independent or explanatory variables are the variables we believe influence the outcome.
+Independent or explanatory variables are the variables we believe
+influence the outcome.
 </p>
 </div>
 </div>
@@ -1416,16 +1438,25 @@ capital
 <p>However, what if we were measuring something like the maximum temperature in your hometown today versus what it was yesterday. You would be measuring this in degrees Fahrenheit, and maybe it was <span class="math inline">\(80^{0}F\)</span> today and it was <span class="math inline">\(60^{0}F\)</span> yesterday. You couldn’t say today is <span class="math inline">\(1.33\)</span> times hotter than yesterday. All you could say is that it is <span class="math inline">\(20\)</span> degrees warmer today than it was yesterday, period. Why can’t we speak in terms of ratios with temperature in Fahrenheit but we could with proficiency levels? We can’t because the Fahrenheit temperature scale is a numeric scale but an arbitrary one where <span class="math inline">\(0^{0}F\)</span> does not mean there is no temperature. However, if Advanced proficiency is <span class="math inline">\(0\)</span> it means nobody is at this level. So we arrive at a distinction – <code>ratio levels of measurement</code> for numeric variables that have a <em>true zero</em> where zero means a complete absence of whatever is being measured versus an <code>interval level of measurement</code> for numeric variables that do not have a <em>true zero</em>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Other examples of ratio levels of measurement would be your income, distance of your college town from your hometown, years of formal schooling, number of highway fatalities, number of black swans you have seen, number of children in a family, and so on. Some examples of interval levels of measurement would be a student’s score on a standardized test like the GRE or SAT or ACT, a feeling thermometer that asks you to rate your feeling towards your Senator with a <span class="math inline">\(0\)</span> indicating you are very cold towards this individual and <span class="math inline">\(100\)</span> indicating you feel very warmly towards this individual.</p>
 <div class="rmdcomment">
 <p>
-Nominal variables are qualitative/categorical variables that measure some non-quantifiable attribute that has no order to it, for example an individual’s sex or race/ethnicity.
+Nominal variables are qualitative/categorical variables that measure
+some non-quantifiable attribute that has no order to it, for example an
+individual’s sex or race/ethnicity.
 </p>
 <p>
-Ordinal variables are qualitative/categorical variables that measure some non-quantifiable attribute that has an order to it, for example a student’s status (freshman/sophomore/junior/senior).
+Ordinal variables are qualitative/categorical variables that measure
+some non-quantifiable attribute that has an order to it, for example a
+student’s status (freshman/sophomore/junior/senior).
 </p>
 <p>
-Interval variables are quantitative variables that measure some numeric attribute but there is no natural zero point that reflects complete absence of the attribute being measured. For example, 0 degrees Fahrenheit does not mean no temperature.
+Interval variables are quantitative variables that measure some
+numeric attribute but there is no natural zero point that reflects
+complete absence of the attribute being measured. For example, 0 degrees
+Fahrenheit does not mean no temperature.
 </p>
 <p>
-Ratio variables are quantitative variables that measure some numeric attribute and have a natural zero point. For example, an income of 0 means the individual has no income.
+Ratio variables are quantitative variables that measure some numeric
+attribute and have a natural zero point. For example, an income of 0
+means the individual has no income.
 </p>
 </div>
 <p>Both ratio and interval levels of measurement may yield <code>discrete</code> or <code>continuous</code> variables. Discrete variables would be numerical variables with values that are finite and hence countable. For example, I can count the number of children in a family, the number of cars owned by a family, the number of traffic fatalities occurring in a particular week, and so on. Continuous variables are numerical variables with values that are infinite and hence uncountable. For example, <a href="https://www.simetric.co.uk/si_time.htm">time can be measured in a number of ways</a>, each measuring the same concept (your age, for instance) in a finer and finer way. Technically, we can define these two types of numerical variables most simply as “discrete” if there is no intermediate value possible between two successive values versus “continuous” if any number of values is possible between two successive values. Applying this logic to the number of children we recognize that a family cannot have 1.5 children, it is either 1 or 2, nothing in between. However, the youngest and the next youngest student in a classroom may have values of 18 years and one month and 19 years and two months but we do know there exist many people with ages between these two students.</p>

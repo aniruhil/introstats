@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Linear Regression | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Linear Regression | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,9 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
@@ -80,6 +82,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -2071,7 +2077,7 @@ p
 13.24
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-0.00
+-0.00
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 0.01
@@ -2735,7 +2741,7 @@ parttime [yes]
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
-education * parttime<br>[yes]
+education × parttime<br>[yes]
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 -41.52
@@ -3203,7 +3209,7 @@ sex [M]
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
-exper * sex [M]
+exper × sex [M]
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 0.08
@@ -3513,7 +3519,7 @@ sex [M]
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
-educ * sex [M]
+educ × sex [M]
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 </td>
@@ -3738,7 +3744,7 @@ age
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
-exper * age
+exper × age
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 -0.00
@@ -4798,7 +4804,7 @@ FIGURE 11.21: Autocorrelation
 <h3><span class="header-section-number">11.4.7</span> Assumptions 9 and 10<a href="linreg.html#assumptions-9-and-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Assumption 9 requires that the model is correctly specified. Modeling always begins with theory, and by drawing a good sample, measuring the right variables correctly, and so on. Assume the <code>TRUE MODEL</code> is <span class="math inline">\(y = a + b\left (\dfrac{1}{x} \right) + e\)</span> but we don’t know this and estimate <span class="math inline">\(y = a + bx + e\)</span>. Doing so will generate biased regression estimates! You can see this in the plot that follows, where for low values of <span class="math inline">\(x\)</span> we end up under-predicting <span class="math inline">\(y\)</span>, then over-predicting <span class="math inline">\(y\)</span> in the middle-range of <span class="math inline">\(x\)</span> values, and again under-predicting <span class="math inline">\(y\)</span> for high <span class="math inline">\(x\)</span> values.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:modspec"></span>
-<img src="images/Modelerror.pdf" alt="Model Misspecification" width="60%" />
+<embed src="images/Modelerror.pdf" title="Model Misspecification" width="60%" type="application/pdf" />
 <p class="caption">
 FIGURE 11.22: Model Misspecification
 </p>
