@@ -9,6 +9,9 @@
       stroke-linejoin: round;
       stroke-miterlimit: 10.00;
     }
+    .svglite text {
+      white-space: pre;
+    }
   ]]></style>
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
@@ -20,56 +23,56 @@
 <g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
 </g>
 <defs>
-  <clipPath id='cpMTI3LjQwfDQwMi4xMXwyOS44OXwyMzcuODE='>
-    <rect x='127.40' y='29.89' width='274.71' height='207.92' />
+  <clipPath id='cpMTI5LjMyfDQwMi4xMXwyOS44OXwyMzMuNDM='>
+    <rect x='129.32' y='29.89' width='272.79' height='203.55' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTI3LjQwfDQwMi4xMXwyOS44OXwyMzcuODE=)'>
-<polyline points='168.27,237.81 168.27,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='225.03,237.81 225.03,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='281.78,237.81 281.78,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='338.54,237.81 338.54,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='395.30,237.81 395.30,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,224.25 402.11,224.25 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,201.65 402.11,201.65 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,179.05 402.11,179.05 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,156.45 402.11,156.45 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,133.85 402.11,133.85 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,111.25 402.11,111.25 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,88.65 402.11,88.65 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,66.05 402.11,66.05 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='127.40,43.45 402.11,43.45 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='139.89,237.81 139.89,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='196.65,237.81 196.65,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='253.41,237.81 253.41,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='310.16,237.81 310.16,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='366.92,237.81 366.92,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<rect x='139.89' y='221.99' width='28.38' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='199.39' width='45.41' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='176.79' width='62.43' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='154.19' width='28.38' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='131.59' width='249.74' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='108.99' width='39.73' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='86.39' width='17.03' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='63.79' width='11.35' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
-<rect x='139.89' y='41.19' width='17.03' height='4.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<g clip-path='url(#cpMTI5LjMyfDQwMi4xMXwyOS44OXwyMzMuNDM=)'>
+<polyline points='169.90,233.43 169.90,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='226.27,233.43 226.27,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='282.63,233.43 282.63,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='338.99,233.43 338.99,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='395.35,233.43 395.35,29.89 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,220.16 402.11,220.16 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,198.03 402.11,198.03 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,175.91 402.11,175.91 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,153.79 402.11,153.79 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,131.66 402.11,131.66 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,109.54 402.11,109.54 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,87.41 402.11,87.41 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,65.29 402.11,65.29 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='129.32,43.16 402.11,43.16 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='141.72,233.43 141.72,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='198.08,233.43 198.08,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='254.45,233.43 254.45,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='310.81,233.43 310.81,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='367.17,233.43 367.17,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<rect x='141.72' y='217.95' width='28.18' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='195.82' width='45.09' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='173.70' width='62.00' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='151.57' width='28.18' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='129.45' width='247.99' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='107.32' width='39.45' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='85.20' width='16.91' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='63.07' width='11.27' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<rect x='141.72' y='40.95' width='16.91' height='4.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
 </g>
 <g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
-<text x='124.54' y='228.34' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='85.38px' lengthAdjust='spacingAndGlyphs'>Disturbing tiger kill</text>
-<text x='124.54' y='205.74' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='32.82px' lengthAdjust='spacingAndGlyphs'>Fishing</text>
-<text x='124.54' y='183.14' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='71.62px' lengthAdjust='spacingAndGlyphs'>Forest products</text>
-<text x='124.54' y='160.54' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='77.34px' lengthAdjust='spacingAndGlyphs'>Fuelwood/timber</text>
-<text x='124.54' y='137.94' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='60.25px' lengthAdjust='spacingAndGlyphs'>Grass/fodder</text>
-<text x='124.54' y='115.34' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='35.58px' lengthAdjust='spacingAndGlyphs'>Herding</text>
-<text x='124.54' y='92.73' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='79.88px' lengthAdjust='spacingAndGlyphs'>Sleeping in house</text>
-<text x='124.54' y='70.13' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='25.81px' lengthAdjust='spacingAndGlyphs'>Toilet</text>
-<text x='124.54' y='47.53' text-anchor='end' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='35.95px' lengthAdjust='spacingAndGlyphs'>Walking</text>
-<text x='139.89' y='248.85' text-anchor='middle' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='5.67px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='196.65' y='248.85' text-anchor='middle' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='253.41' y='248.85' text-anchor='middle' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='310.16' y='248.85' text-anchor='middle' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>30</text>
-<text x='366.92' y='248.85' text-anchor='middle' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>40</text>
-<text x='402.11' y='258.11' text-anchor='end' style='font-size: 9.00px; font-family: Roboto Condensed;' textLength='36.60px' lengthAdjust='spacingAndGlyphs'>Frequency</text>
-<text transform='translate(36.29,29.89) rotate(-90)' text-anchor='end' style='font-size: 9.00px; font-family: Roboto Condensed;' textLength='53.81px' lengthAdjust='spacingAndGlyphs'>Human Activity</text>
+<text x='126.46' y='224.24' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='85.38px' lengthAdjust='spacingAndGlyphs'>Disturbing tiger kill</text>
+<text x='126.46' y='202.12' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='32.82px' lengthAdjust='spacingAndGlyphs'>Fishing</text>
+<text x='126.46' y='180.00' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='71.62px' lengthAdjust='spacingAndGlyphs'>Forest products</text>
+<text x='126.46' y='157.87' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='77.34px' lengthAdjust='spacingAndGlyphs'>Fuelwood/timber</text>
+<text x='126.46' y='135.75' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='60.25px' lengthAdjust='spacingAndGlyphs'>Grass/fodder</text>
+<text x='126.46' y='113.62' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='35.58px' lengthAdjust='spacingAndGlyphs'>Herding</text>
+<text x='126.46' y='91.50' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='79.88px' lengthAdjust='spacingAndGlyphs'>Sleeping in house</text>
+<text x='126.46' y='69.37' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='25.81px' lengthAdjust='spacingAndGlyphs'>Toilet</text>
+<text x='126.46' y='47.25' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='35.95px' lengthAdjust='spacingAndGlyphs'>Walking</text>
+<text x='141.72' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='5.67px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='198.08' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='254.45' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='310.81' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='367.17' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.35px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='402.11' y='256.19' text-anchor='end' style='font-size: 9.00px; font-family: "Roboto Condensed";' textLength='36.60px' lengthAdjust='spacingAndGlyphs'>Frequency</text>
+<text transform='translate(36.29,29.89) rotate(-90)' text-anchor='end' style='font-size: 9.00px; font-family: "Roboto Condensed";' textLength='53.81px' lengthAdjust='spacingAndGlyphs'>Human Activity</text>
 </g>
 </svg>
