@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -91,6 +91,7 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -1218,7 +1219,7 @@ Pennsylvania
 \end{eqnarray*}\]</span></p>
 <p>Toss a coin once: <span class="math inline">\(P(H) = 0.5; P(H^c) = 1- P(H) = 1-0.5 = 0.5\)</span></p>
 <p>Roll two dice: <span class="math inline">\(P(\text{value } \geq 9) = \dfrac{5}{18}\)</span></p>
-<p><span class="math inline">\(P(\text{value } &lt; 9) = 1 - P(\text{value } \geq 9) = 1 - \dfrac{5}{18} = \dfrac{13}{18}\)</span></p>
+<p><span class="math inline">\(P(\text{value } &lt; 9) = 1 -  P(\text{value } \geq 9) = 1 - \dfrac{5}{18} = \dfrac{13}{18}\)</span></p>
 <p>Why is this notion of the complement of an event useful? Because given that the probabilities of the event happening and not happening must sum to unity i.e., <span class="math inline">\((1)\)</span>, given one probability we can always calculate the other.</p>
 </div>
 <div id="mutually-exclusive-events" class="section level2 hasAnchor" number="5.5">
@@ -1629,7 +1630,10 @@ Total
 </tr>
 </tbody>
 </table>
-<p>The question we are tasked with is this: If a woman has a positive test result, what is the probability that she has breast cancer? That is, what is <span class="math inline">\(P(\text{Breast Cancer } | +\text{Mammography)}\)</span>, i.e., <span class="math inline">\(P(B | A)\)</span>? We might struggle if it weren’t for the clean logic that Bayes encapsulated into an elegant mathematical statement. For now, let us break the problem down based on the information given to us. Start by assuming a certain population size of 40-year old women who are tested, i.e., <span class="math inline">\(N = 100,000\)</span>. We know that 1% of these will have breast cancer, which amounts to <span class="math inline">\(1,000\)</span> women. Some 80% of these women will have breast cancer, i.e, <span class="math inline">\(0.80 \times 1000 = 800\)</span>, which means <span class="math inline">\(200\)</span> women who have breast cancer will test negative. We are also told that 9.6% of women without breast cancer will also get a positive test result. This amounts to <span class="math inline">\(0.096 \times 99000 = 9,504\)</span>. This means that <span class="math inline">\(86,696\)</span> women will have a negative test and have no breast cancer. Entering these values into the table we can calculate the probability that a woman with a positive test result actually has breast cancer to be <span class="math inline">\(\dfrac{800}{10304} = 0.0776\)</span> or 7.76%. What about the probability that the woman has a negative test result and yet has breast cancer? This would be <span class="math inline">\(\dfrac{200}{89696} = 0.0022\)</span> or 0.22%. The table below is populated with the estimates.</p>
+<p>The question we are tasked with is this: If a woman has a positive test result, what is the probability that she has breast cancer? That is, what is <span class="math inline">\(P(\text{Breast Cancer } | +\text{Mammography)}\)</span>, i.e., <span class="math inline">\(P(B | A)\)</span>? We might struggle if it weren’t for the clean logic that Bayes encapsulated into an elegant mathematical statement. For now, let us break the problem down based on the information given to us.</p>
+<p>Start by assuming a certain population size of 40-year old women who are tested, i.e., <span class="math inline">\(N = 100,000\)</span>. We know that 1% of this population will have breast cancer, which amounts to <span class="math inline">\(1,000\)</span> women. Some 80% of women who have breast cancer will test positive for breast cancer, i.e, <span class="math inline">\(0.80 \times 1000 = 800\)</span>, which means <span class="math inline">\(200\)</span> women who have breast cancer will test negative.</p>
+<p>We are also told that 9.6% of women without breast cancer will also get a positive test result. This amounts to <span class="math inline">\(0.096 \times 99000 = 9,504\)</span>. This means that <span class="math inline">\(86,696\)</span> women will have a negative test and have no breast cancer.</p>
+<p>Entering these values into the table we can calculate the probability that a woman with a positive test result actually has breast cancer to be <span class="math inline">\(\dfrac{800}{10304} = 0.0776\)</span> or 7.76%. What about the probability that the woman has a negative test result and yet has breast cancer? This would be <span class="math inline">\(\dfrac{200}{89696} = 0.0022\)</span> or 0.22%. The table below is populated with the estimates.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:probt10">TABLE 5.12: </span>Breast Cancer and Bayes Theorem (Part 3)
@@ -1706,7 +1710,7 @@ Total
 </tr>
 </tbody>
 </table>
-<p>Once could arrive at the same conclusion via applying Bayes’ Theorem, as shown below.</p>
+<p>One could arrive at the same conclusion via applying Bayes’ Theorem, as shown below.</p>
 <p><span class="math display">\[\begin{eqnarray*}
 P(B | A) = \dfrac{P(A | B) \times P(B)}{\left[ P(A | B) \times P(B) \right] + \left[ P(A | B^c) \times P(B^c)  \right]} \\
 = \dfrac{0.800 \times 0.01}{\left[ 0.800 \times 0.01 \right] + \left[0.096 \times 0.990 \right]} = \dfrac{0.008}{\left[0.008 + 0.09504 \right]} = \dfrac{0.008}{0.10304} = 0.0776
