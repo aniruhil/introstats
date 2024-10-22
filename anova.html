@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Visualizing Data | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <title>Chapter 9 Analysis of Variance (ANOVA) | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
   <meta name="generator" content="bookdown 0.41.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Visualizing Data | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:title" content="Chapter 9 Analysis of Variance (ANOVA) | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Visualizing Data | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta name="twitter:title" content="Chapter 9 Analysis of Variance (ANOVA) | Data Analysis for Leadership &amp; Public Affairs:" />
   
   <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="meansd.html"/>
+<link rel="prev" href="hypothesis.html"/>
+<link rel="next" href="chisq.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -451,1059 +451,1704 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dataviz" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Visualizing Data<a href="dataviz.html#dataviz" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>One of the first tasks of data analysis should be to look at our data. Certainly, you should open up the dataset and eyeball it to make sure everything looks okay, that the file isn’t mysteriously corrupted, etc., but that is not what I mean when I say “look”. Nor am I talking about <code>data visualization</code> in the sense of the masterpieces of stalwarts such as <a href="https://twitter.com/albertocairo">Alberto Cairo</a>, <a href="https://twitter.com/MonaChalabi">Mona Chalabi</a>, <a href="https://twitter.com/visualisingdata">Andy Kirk</a>, <a href="https://twitter.com/eagereyes">Robert Kossara</a>, <a href="https://twitter.com/giorgialupi">Giorgia Lupi</a>, <a href="https://twitter.com/infobeautiful">David McCandless</a>, <a href="https://twitter.com/storywithdata">Cole Nussbaumer Knaflic</a>, <a href="http://getdango.com/emoji-and-deep-learning.html">Randy Olson</a>, <a href="https://twitter.com/lisacrost">Lisa Charlotte Rost</a>, <a href="https://twitter.com/jschwabish">John Schwabish</a>, <a href="https://twitter.com/flowingdata">Nathan Yau</a>, <a href="http://stephanieevergreen.com">Stephanie Evergreen</a>, <a href="http://www.bewitched.com">Martin Wattenberg</a>, <a href="http://hint.fm/about/">Fernanda Viégas</a>, and many others. We are not going to create visuals that rival these artists’ stunning works. Rather, our goal will be simpler, to use appropriate tables and graphics when analyzing and describing our data, both so that we understand what the data are telling us and can communicate the resulting story to our audience. To accomplish these tasks we will obey simple rules that help us make wise decisions.</p>
-<div id="visualizing-nominalordinal-data" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Visualizing Nominal/Ordinal Data<a href="dataviz.html#visualizing-nominalordinal-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="rmdcomment">
-<p>
-Nominal -&gt; no hierarchy to the levels, values of the categorical
-variable (A = B = C = …)
-</p>
-<p>
-Ordinal -&gt; some hierarchy to the levels, values of the categorical
-variable (A &gt; B &gt; C &gt; …)
-</p>
-</div>
-<div id="bar-charts-and-frequency-tables" class="section level3 hasAnchor" number="3.1.1">
-<h3><span class="header-section-number">3.1.1</span> Bar-charts and Frequency Tables<a href="dataviz.html#bar-charts-and-frequency-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If a variable is measured in nominal or ordinal terms either (i) a <code>bar-chart</code> or (ii) a <code>frequency table</code> are very effective displays of how the variable is distributed: What value seems to be most common? Are high values as likely as low values? You can see both these visuals below, drawn from data about the relative abundance of different species. First, the frequency table.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tigers"></span>
-<img src="stats_files/figure-html/tigers-1.svg" alt="Factors associated with human-killing tigers in Chitwan National Park, Nepal" width="100%" />
-<p class="caption">
-FIGURE 3.1: Factors associated with human-killing tigers in Chitwan National Park, Nepal
-</p>
-</div>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:tigers2">TABLE 3.1: </span>Factors associated with human-killing tigers in Chitwan National Park, Nepal
+<div id="anova" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Analysis of Variance (ANOVA)<a href="anova.html#anova" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The t-tests we covered in the preceding chapter allowed us to compare two groups on a numeric outcome. But what are our options when we have a numeric outcome of interest but more than two groups to compare? It may be tempting to think of carrying out pairwise comparisons, two at a time. If in doing so we find that A and B are not statistically different, and neither are A and C, but B and C are, well, what is wrong with such an approach? For example, look at the customer satisfaction scores provided by a random sample of customers served by a leading cellular phone service provider in three service locations – Atlanta, Dallas, and Seattle. I look at the means and I look at the boxplots, and it looks to me at least as if Atlanta has the highest median scores, followed by Dallas, with Seattle bringing up the rear. So couldn’t we compare Atlanta to Dallas via a t-test, then Atlanta to Seattle, and finally Dallas to Seattle, and see which pairs are statistically different?</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tab01">TABLE 9.1: </span>Customer Satisfaction Scores
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;">
-Activity
+<th style="text-align:center;">
+Observation.No.
 </th>
-<th style="text-align:right;">
-Frequency
+<th style="text-align:center;">
+Atlanta
 </th>
-<th style="text-align:right;">
-Proportion
+<th style="text-align:center;">
+Dallas
 </th>
-<th style="text-align:right;">
-Percentage
+<th style="text-align:center;">
+Seattle
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-Disturbing tiger kill
+<td style="text-align:center;">
+1
 </td>
-<td style="text-align:right;">
-5
+<td style="text-align:center;">
+85
 </td>
-<td style="text-align:right;">
-0.06
+<td style="text-align:center;">
+71
 </td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Fishing
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-0.09
-</td>
-<td style="text-align:right;">
-9
+<td style="text-align:center;">
+59
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-Forest products
-</td>
-<td style="text-align:right;">
-11
-</td>
-<td style="text-align:right;">
-0.12
-</td>
-<td style="text-align:right;">
-12
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Fuelwood/timber
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-0.06
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Grass/fodder
-</td>
-<td style="text-align:right;">
-44
-</td>
-<td style="text-align:right;">
-0.50
-</td>
-<td style="text-align:right;">
-50
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Herding
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-0.08
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Sleeping in house
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-0.03
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Toilet
-</td>
-<td style="text-align:right;">
+<td style="text-align:center;">
 2
 </td>
-<td style="text-align:right;">
-0.02
+<td style="text-align:center;">
+75
 </td>
-<td style="text-align:right;">
-2
+<td style="text-align:center;">
+75
 </td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Walking
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-0.03
-</td>
-<td style="text-align:right;">
-3
+<td style="text-align:center;">
+64
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-Total
+<td style="text-align:center;">
+3
 </td>
-<td style="text-align:right;">
-88
+<td style="text-align:center;">
+82
 </td>
-<td style="text-align:right;">
-1.00
+<td style="text-align:center;">
+73
 </td>
-<td style="text-align:right;">
-100
+<td style="text-align:center;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+76
+</td>
+<td style="text-align:center;">
+74
+</td>
+<td style="text-align:center;">
+69
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+71
+</td>
+<td style="text-align:center;">
+69
+</td>
+<td style="text-align:center;">
+75
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+85
+</td>
+<td style="text-align:center;">
+82
+</td>
+<td style="text-align:center;">
+67
 </td>
 </tr>
 </tbody>
 </table>
-<p>Notice how the frequency table is constructed. You have each human activity listed, followed by the <code>frequency</code> (the number of times someone was killed by a tiger while engaging in each activity), then this column with this frequency converted into a <code>proportion</code>, and finally the proportion converted into a <code>percentage</code>. None of this should be a mystery to you:</p>
-<p><span class="math display">\[proportion = \dfrac{frequency}{Total}\]</span>
-<span class="math display">\[percentage = \left(\dfrac{frequency}{Total}\right) \times 100 = proportion \times 100\]</span></p>
-<p>The last row in the table shows you the total frequency (we have a total of 88 humans killed), the total proportion (which must sum to <span class="math inline">\(1\)</span>), and the total percentage (which should sum to <span class="math inline">\(100\)</span>). I love frequency tables such as these because they show all the data and the story; most kills occurred while the individuals were cutting grass for cattle fodder, followed by while they were out gathering other forest products, and least of all while they were going to the toilet<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. We could improve upon this table and bar-chart by organizing it in such a way that the most dangerous activity is listed/plotted first. This would have the added benefit of quickly drawing the reader’s/viewer’s eyes to the most dangerous activity.</p>
-<p>What if the variable was an ordinal level variable, say something like an individual’s frequency of praying?</p>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:nes">TABLE 3.2: </span>Frequency of Prayer
+<p>Here are some summary statistics …</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:anova02">TABLE 9.2: </span>Descriptive Statistics
 </caption>
 <thead>
 <tr>
 <th style="text-align:left;">
-Response Category
+Location
 </th>
 <th style="text-align:right;">
-Frequency
+Mean
+</th>
+<th style="text-align:right;">
+Variance
+</th>
+<th style="text-align:right;">
+Std. Dev.
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-<ol style="list-style-type: decimal">
-<li>Never
+Atlanta
 </td>
 <td style="text-align:right;">
-196
+79
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+5.83
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-<ol start="2" style="list-style-type: decimal">
-<li>Once a week or less
+Dallas
 </td>
 <td style="text-align:right;">
-226
+74
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+4.47
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-<ol start="3" style="list-style-type: decimal">
-<li>A few times a week
+Seattle
 </td>
 <td style="text-align:right;">
-264
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="4" style="list-style-type: decimal">
-<li>Once a day
+66
 </td>
 <td style="text-align:right;">
-346
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="5" style="list-style-type: decimal">
-<li>Several times a day
+32
 </td>
 <td style="text-align:right;">
-456
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Total
-</td>
-<td style="text-align:right;">
-1488
+5.66
 </td>
 </tr>
 </tbody>
-</table></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nes2"></span>
-<img src="stats_files/figure-html/nes2-1.svg" alt="Frequency of Prayer" width="100%" />
-<p class="caption">
-FIGURE 3.2: Frequency of Prayer
-</p>
-</div>
-<p>We would be facing the same options, a bar-chart or a frequency table. However, we would have to be cautious here in making sure both the table and the bar-chart categories are logically assigned. That is, notice the <code>Response Category</code>; we start with the option “Never” and each category that follows corresponds to a category that reflects praying more often than the preceding category. This order would have to be maintained so that we would be unable to arrange the table or bar-chart in ascending/descending order of the “Frequency” column. If we made that mistake we would be destroying the natural order that exists in the ordinal variable we have before us.</p>
-<p>You might be wondering, what about <code>pie charts</code>? Why not use those with nominal/ordinal data? There are two camps, those who hate them and those who think they may be useful. If you are interested, read <a href="https://goo.gl/OwIPMd">What do you mean I’m not supposed to use Pie Charts?!</a> but I for one do not use them since I find them less useful than bar-charts.</p>
-</div>
-<div id="contingency-tables-and-bar-charts" class="section level3 hasAnchor" number="3.1.2">
-<h3><span class="header-section-number">3.1.2</span> Contingency Tables and Bar-charts<a href="dataviz.html#contingency-tables-and-bar-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Frequency tables and bar-charts are also useful when you have two nominal/ordinal variables to work with and are interested in exploring difference between the two or more groups reflected in one variable versus whatever is being measured by the second variable. Let us use a specific example, one where we ask if religiosity differs between Liberals, Moderates, and Conservatives. First the table.</p>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:nes3">TABLE 3.3: </span>Political Ideology and Religiosity
+</table>
+<p>… and boxplots by location</p>
+<p><img src="stats_files/figure-html/anova03-1.svg" width="75%" style="display: block; margin: auto;" /></p>
+<p>The problem, as it turns out, is the issue of inflated Type I error rates. Come again? In any single comparison of two groups, A versus B, we know that if <span class="math inline">\(\alpha\)</span>, the level of significance, is set to <span class="math inline">\(0.05\)</span>, then that is essentially the probability of our rejecting the Null Hypothesis when in fact the Null Hypothesis is true (i.e., committing a Type I error). By extension, <span class="math inline">\(1-\alpha\)</span> is the probability of no significant result so if <span class="math inline">\(\alpha = 0.05\)</span>, then <span class="math inline">\(1 - \alpha = 0.95\)</span>. Let us now calculate the probability that <code>at least one</code> of these pairs of comparisons throws up a significant result by chance alone …</p>
+<p><span class="math display">\[\begin{align*}
+    P(\text{no Type I error in 1 comparison}) &amp; = &amp; 0.95 \\
+    P(\text{no Type I error in 2 comparisons}) &amp; = &amp; 0.95 \times 0.95 = 0.9025 \\   
+    \text{Note: P(Type I error in 2 comparisons) is} &amp; = &amp; 1 - 0.9025 = 0.0975 \\
+    P(\text{no Type I error in 3 comparisons}) &amp; = &amp; 0.95 \times 0.95 \times 0.95 = 0.8573 \\   
+    \text{Note:  P(Type I error in 3 comparisons) is} &amp; = &amp; 1 - 0.857375 = 0.1426
+\end{align*}\]</span></p>
+<p>Note what is happening here … in making three pairwise comparisons you are going to have a functional <span class="math inline">\(\alpha = 0.1426\)</span> even though you think each pairwise comparison has <span class="math inline">\(\alpha = 0.05\)</span>. This is what we call the problem of <code>multiple comparisons.</code></p>
+<p>There is a way to correct for Multiple Comparisons, by using a corrected level of significance … <span class="math inline">\(\alpha^* = \frac{\alpha}{\text{No. of Trials}}\)</span> and then modifying our decision rules such that we now reject <span class="math inline">\(H_0\)</span> only if p-values <span class="math inline">\(\leq \alpha^*\)</span></p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:anova04">TABLE 9.3: </span>Bonferroni Correction
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;">
+<th style="text-align:center;">
+Number of Trials
 </th>
-<th style="text-align:right;">
-Liberal
-</th>
-<th style="text-align:right;">
-Moderate
-</th>
-<th style="text-align:right;">
-Conservative
-</th>
-<th style="text-align:right;">
-Total
+<th style="text-align:center;">
+Adjusted Alpha
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-<ol style="list-style-type: decimal">
-<li>Never
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0.0500
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+0.0250
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+0.0167
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+0.0125
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+0.0100
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+0.0083
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+0.0071
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+0.0063
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+0.0056
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+0.0050
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="stats_files/figure-html/anova05-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p>In fact, there is a better way to compare three or more groups – by relying on the analysis of variance (ANOVA).</p>
+<div id="the-logic-of-anova" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> The Logic of ANOVA<a href="anova.html#the-logic-of-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ANOVA is a hypothesis testing procedure that allows us to simultaneously compare three or more groups and determine if they are drawn from a common population or from different populations. What does this test look like, this ANOVA test?</p>
+<p>The test statistic is a ratio: <span class="math inline">\(\dfrac{\text{Difference between  groups}}{\text{Difference within groups}}\)</span></p>
+<p>If difference between groups $ &gt; $ difference within the groups, then it must be because something differentiates the groups such that they are noticeably different from each other. Fair enough. But how can we measure the <code>difference between groups</code> and the <code>difference within groups</code>? In fact, come to think of it, what do we mean by <code>difference</code> here? Well, let us break it down.</p>
+<p>If I ignore the fact that there are three service centers and calculate the mean for all 18 satisfaction scores, I get what we call the overall mean <span class="math inline">\(\bar{\bar{x}}\)</span> and this turns out to be <span class="math inline">\(73\)</span>. I can then see how much each satisfaction score differs from this overall mean by calculating <span class="math inline">\(\dfrac{\sum\left(x_i - \bar{\bar{x}}\right)^2}{n - 1}\)</span>. This is just the usual numerator in the sample variance calculation, and we can call it the total squared difference or, the <code>sum of squares total (SST)</code>:</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:anova06">TABLE 9.4: </span>Overall Mean and Squared Differences
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Observation.No.
+</th>
+<th style="text-align:right;">
+Location
+</th>
+<th style="text-align:right;">
+Score
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+difference
+</th>
+<th style="text-align:right;">
+squared difference
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
 </td>
 <td style="text-align:right;">
-62
+Atlanta
 </td>
 <td style="text-align:right;">
-46
+85
 </td>
 <td style="text-align:right;">
-36
+73
+</td>
+<td style="text-align:right;">
+12
 </td>
 <td style="text-align:right;">
 144
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-<ol start="2" style="list-style-type: decimal">
-<li>Once a week or less
+<td style="text-align:center;">
+2
 </td>
 <td style="text-align:right;">
-53
+Atlanta
 </td>
 <td style="text-align:right;">
-63
+75
 </td>
 <td style="text-align:right;">
-52
+73
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-14
+</td>
+<td style="text-align:right;">
+196
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-9
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-11
+</td>
+<td style="text-align:right;">
+121
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+-6
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+</tbody>
+</table>
+<p>The overall squared difference (SST) turns out to be <span class="math inline">\(946\)</span>.</p>
+<p>Okay, fair enough. Now what about the variance within each group? For this I know I have to calculate the mean for each group and then sum the squared difference of each score in the group from the group mean.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:anova07">TABLE 9.5: </span>Group Means and Squared Differences
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Observation.No.
+</th>
+<th style="text-align:right;">
+Location
+</th>
+<th style="text-align:right;">
+Score
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+difference
+</th>
+<th style="text-align:right;">
+squared difference
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+-4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+-3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+-8
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:right;">
+Atlanta
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+-3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+-1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+-5
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:right;">
+Dallas
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+-7
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+-2
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+-4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:right;">
+Seattle
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you add the sum of squared differences for each of the three groups you will get <span class="math inline">\(170\)</span> for Atlanta, <span class="math inline">\(100\)</span> for Dallas, and <span class="math inline">\(160\)</span> for Seattle. So how much is the sum of squared when calculated within each group? That turns out to be <span class="math inline">\(170 + 100 + 160 = 430\)</span></p>
+<p>Now, the total sum of squared differences is composed of the sum of squared differences within groups and between groups, i.e.,</p>
+<p><span class="math display">\[\text{Sum of Squares Total} = \text{Sum of Squares Within Groups} + \text{Sub of Squares Between Groups}\]</span></p>
+<p>Since <span class="math inline">\(\text{Sum of Squares Total} = 946\)</span> and <span class="math inline">\(\text{Sum of Squares Within Groups} = 430\)</span>, it must be that <span class="math inline">\(946 - 430 = 516\)</span> is the <span class="math inline">\(\text{Sum of Squares Between Groups}\)</span></p>
+<p>Now, ANOVA tests the ratio of the variance between groups to the variance within groups. So what would be these respective variances? Recall the formula for the sample variance … <span class="math inline">\(\dfrac{\sum\left(x_i - \bar{x} \right)^2}{n - 1}\)</span></p>
+<p>How many groups are we calculating the variance for? <span class="math inline">\(3\)</span>. So the variance between groups would really be <span class="math inline">\(\dfrac{516}{3 - 1} = \dfrac{516}{2} = 208\)</span></p>
+<p>Similarly, the variance within groups would be <span class="math inline">\(\dfrac{430}{18 - 3} = \dfrac{430}{15} = 28.66667\)</span></p>
+<p>Now the ratio we are chasing … <span class="math inline">\(\dfrac{208}{28.66667} = 7.2558\)</span></p>
+<p>How is this ratio distribution? It is not the <span class="math inline">\(z\)</span> or the <span class="math inline">\(t\)</span>, but instead the <span class="math inline">\(F\)</span> distribution that has two degrees of freedom … one for the numerator and one for the denominator. For the numerator, you have the degrees of freedom calculated as <span class="math inline">\(df_{k-1} = k - 1 = 3 - 1 = 2\)</span> where <span class="math inline">\(k = \text{number of groups}\)</span>. For the denominator, you have the degrees of freedom calculated as <span class="math inline">\(df_{N-k} = N - 3 = 15\)</span>.</p>
+<p>Under the assumption that the Null Hypothesis is true, i.e., that the group means are very similar, <span class="math inline">\(F\)</span> is distributed as <span class="math inline">\(F^{k-1}_{N-k}\)</span>, and we can calculate the probability of finding, for given differences of freedom, by chance alone, <span class="math inline">\(F\)</span> equal to or greater than a given value. Consequently, what we have is an F-statistic that is a ratio of two means – the Mean squared difference due to “treatments”, and the Mean squared difference due to chance and other factors … <span class="math inline">\(F^{k-1}_{N-k} = \dfrac{MSTR}{MSE}\)</span></p>
+<p>If the probability of seeing our calculated <span class="math inline">\(F\)</span> by chance is less than or equal to <span class="math inline">\(\alpha = 0.05\)</span>, we can reject the Null Hypothesis; else we fail to reject the Null Hypothesis. So how are the hypotheses specified?</p>
+<p><span class="math display">\[H_0: \text{The group means are all the same}\]</span>
+<span class="math display">\[H_1: \text{At least one group mean is different from one or more of the other group means}\]</span></p>
+<p>Alternatively, you will see the hypotheses specified as</p>
+<p><span class="math display">\[H_0: \text{All population means are equal}\]</span>
+<span class="math display">\[H_1: \text{All population means are NOT equal}\]</span></p>
+<div id="example-1-systolic-blood-pressure-and-treatments" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Example 1: Systolic Blood Pressure and Treatments<a href="anova.html#example-1-systolic-blood-pressure-and-treatments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Take for example a program that presumably lowers blood pressure, and to do so it assigns participants to one of four conditions (see table), Each participant’s systolic blood pressure is measured after two weeks of treatment. Hypothesis is that a combination (<code>Diet and Drug</code>) of treatments will be more effective than each individual treatment in isolation. These data are shown below.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-86">TABLE 9.6: </span>ANOVA Example 01
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Control
+</th>
+<th style="text-align:right;">
+Diet Only
+</th>
+<th style="text-align:right;">
+Drug Only
+</th>
+<th style="text-align:right;">
+Diet and Drug
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+163
+</td>
+<td style="text-align:right;">
+166
+</td>
+<td style="text-align:right;">
+161
+</td>
+<td style="text-align:right;">
+153
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+173
+</td>
+<td style="text-align:right;">
+171
 </td>
 <td style="text-align:right;">
 168
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-<ol start="3" style="list-style-type: decimal">
-<li>A few times a week
+<td style="text-align:right;">
+180
 </td>
 <td style="text-align:right;">
-53
+188
 </td>
 <td style="text-align:right;">
-69
+178
 </td>
 <td style="text-align:right;">
-76
+176
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+181
+</td>
+<td style="text-align:right;">
+190
+</td>
+<td style="text-align:right;">
+183
 </td>
 <td style="text-align:right;">
 198
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-<ol start="4" style="list-style-type: decimal">
-<li>Once a day
+<td style="text-align:right;">
+185
 </td>
 <td style="text-align:right;">
-76
+193
 </td>
 <td style="text-align:right;">
-89
+195
 </td>
 <td style="text-align:right;">
-107
+200
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="stats_files/figure-html/unnamed-chunk-87-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p>Do one or more of these treatments differ? Let us run an ANOVA and see what the data reveal.</p>
+<p><span class="math inline">\(H_0:\)</span> There is no difference in mean systolic blood pressure between the treatment groups<br />
+<span class="math inline">\(H_1:\)</span> All treatment groups are not the same</p>
+<p>Overall mean <span class="math inline">\(\bar{\bar{x}} = 179\)</span></p>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0be3ee5fb7974b9731ba" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0be3ee5fb7974b9731ba">{"x":{"filter":"none","vertical":false,"data":[[163,178,180,181,185,166,173,188,190,193,161,171,178,183,195,153,168,176,198,200],["Control","Control","Control","Control","Control","Diet Only","Diet Only","Diet Only","Diet Only","Diet Only","Drug Only","Drug Only","Drug Only","Drug Only","Drug Only","Diet and Drug","Diet and Drug","Diet and Drug","Diet and Drug","Diet and Drug"],[-16,-1,1,2,6,-13,-6,9,11,14,-18,-8,-1,4,16,-26,-11,-3,19,21],[256,1,1,4,36,169,36,81,121,196,324,64,1,16,256,676,121,9,361,441]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Systolic Blood Pressure<\/th>\n      <th>Treatment<\/th>\n      <th>Difference<\/th>\n      <th>Squared Difference<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[0,2,3]},{"name":"sbp","targets":0},{"name":"treatment","targets":1},{"name":"Difference","targets":2},{"name":"Sum of Squared Difference","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>Mean for Control group <span class="math inline">\(\bar{x}_{Control} = 177\)</span><br />
+Mean for Diet only group <span class="math inline">\(\bar{x}_{Diet} = 182\)</span><br />
+Mean for Drug only group <span class="math inline">\(\bar{x}_{Drug} = 178\)</span><br />
+Mean for Diet and Drug group <span class="math inline">\(\bar{x}_{Diet+Drug} = 179\)</span></p>
+<p><span class="math inline">\(SST = 3170\)</span></p>
+<p><span class="math inline">\(SSTR = 67.6\)</span></p>
+<p><span class="math inline">\(SSE = 3170 - 67.6 = 3102.4\)</span></p>
+<p><span class="math inline">\(MSTR = \dfrac{SSTR}{k - 1} = \dfrac{67.6}{4-1} = \dfrac{67.6}{3} = 22.5\)</span></p>
+<p><span class="math inline">\(MSE = \dfrac{SSE}{n - k} = \dfrac{3102.4}{20 - 4} = \dfrac{3102.4}{16} = 193.9\)</span></p>
+<p><span class="math inline">\(F = \dfrac{MSTR}{MSE} = \dfrac{22.5}{193.9} = 0.116\)</span></p>
+<p><span class="math inline">\(p-value = 0.949\)</span> so we are unable to reject the null hypothesis; these data suggest that there is no difference in mean systolic blood pressure between the treatment groups.</p>
+</div>
+<div id="example-2-pre-surgical-fitness-and-recovery-times" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Example 2: Pre-surgical Fitness and Recovery Times<a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Does Pre-surgical fitness influence recovery times? That is, do fitter patients undergoing surgery (perhaps for total hip/knee replacement) recover faster than patients with poor fitness? To analyze this question a surgeon gathered data on a sample of 24 males aged 18-30 who underwent corrective knee surgery, measuring their prior fitness level and the number of days each needed for successful physical therapy post-surgery.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Below Average</th>
+<th align="center">Average</th>
+<th align="center">Above Average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">29</td>
+<td align="center">30</td>
+<td align="center">26</td>
+</tr>
+<tr class="even">
+<td align="center">42</td>
+<td align="center">35</td>
+<td align="center">32</td>
+</tr>
+<tr class="odd">
+<td align="center">38</td>
+<td align="center">39</td>
+<td align="center">21</td>
+</tr>
+<tr class="even">
+<td align="center">40</td>
+<td align="center">28</td>
+<td align="center">20</td>
+</tr>
+<tr class="odd">
+<td align="center">43</td>
+<td align="center">31</td>
+<td align="center">23</td>
+</tr>
+<tr class="even">
+<td align="center">40</td>
+<td align="center">31</td>
+<td align="center">22</td>
+</tr>
+<tr class="odd">
+<td align="center">30</td>
+<td align="center">29</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">42</td>
+<td align="center">35</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">29</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">33</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><img src="stats_files/figure-html/unnamed-chunk-89-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p><span class="math inline">\(H_0:\)</span> There is no difference in average number of days needed to recover across the fitness levels</p>
+<p><span class="math inline">\(H_1:\)</span> All fitness level groups are not the same</p>
+<p>Set <span class="math inline">\(\alpha = 0.05\)</span></p>
+<p>The calculated test statistic turns out to be <span class="math inline">\(F^{2}_{21} = 16.96\)</span> with a probability of <span class="math inline">\(0.0000413\)</span>, leading us to reject the Null Hypothesis. These data suggest that all fitness level groups are not the same; at least one is different.</p>
+</div>
+</div>
+<div id="anova-with-two-independent-variables-aka-factors" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> ANOVA with two independent variables (aka factors)<a href="anova.html#anova-with-two-independent-variables-aka-factors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Thus far we have looked at a single source of differences in variation – the location one is in, relationship status, and so on. But what happens when you have more than one factor at work? For example, say you are looking at students’ 3rd grade reading scores and have recorded, in addition to the scores, both the humidity level in the classroom (Factor A), and the temperature in the classroom (Factor B). How can you figure out whether it is the humidity or the temperature that influences 3rd grade reading scores? ANOVA allows us to answer this question.</p>
+<p>We will bypass the mathematics underlying the analysis and instead focus on the mechanics. In brief, we have two sets of hypotheses now …</p>
+<p><span class="math display">\[H_0: \text{There is no main effect of Factor A}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of Factor A}\]</span></p>
+<p>and then …</p>
+<p><span class="math display">\[H_0: \text{There is no main effect of Factor B}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of Factor B}\]</span></p>
+<p>The decision rules remain the same … we reject the Null Hypothesis if the probability of our calculated <span class="math inline">\(F\)</span> statistic turns out to be <span class="math inline">\(\leq 0.05\)</span> and we do not reject if the probability is <span class="math inline">\(&gt; 0.05\)</span>.</p>
+<p>Now, let us assume the following patterns are visible in the data.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"><span class="math inline">\(70^0\)</span></th>
+<th align="left"><span class="math inline">\(80^0\)</span></th>
+<th align="left"><span class="math inline">\(90^0\)</span></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Low Humidity</td>
+<td align="left"><span class="math inline">\(\bar{x} = 85\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 75\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{low} = 80\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">High Humidity</td>
+<td align="left"><span class="math inline">\(\bar{x} = 75\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 70\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 65\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{high} = 70\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(\bar{x}_{70}=80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{80} = 75\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{90}=70\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>We can spell the main effects of each factor as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Main Effect of Factor A (Humidity): Difference between mean scores for high versus low humidity</li>
+<li>Main Effect for Factor B (Temperature): Difference between mean scores for <span class="math inline">\(70^0,\)</span> <span class="math inline">\(80^0,\)</span> and <span class="math inline">\(90^0\)</span> temperatures, respectively</li>
+</ol>
+<p>The Null Hypothesis for testing effects of Factor A would be <span class="math inline">\(H_0: \mu_{A1} = \mu_{A2}\)</span>, and the Null Hypothesis for testing effects of Factor B: <span class="math inline">\(H_0: \mu_{B1} = \mu_{B2} = \mu_{B3}\)</span></p>
+<p>Note how the mean score drops as Temperature increases … by exactly <span class="math inline">\(5\)</span></p>
+<p>Note also how the mean score drops as Humidity rises</p>
+<ul>
+<li>At <span class="math inline">\(70^0\)</span> there is a difference of <span class="math inline">\(10\)</span> between Low/High humidity</li>
+<li>At <span class="math inline">\(80^0\)</span> there is a difference of <span class="math inline">\(10\)</span> between Low/High humidity</li>
+<li>At <span class="math inline">\(90^0\)</span> there is a difference of <span class="math inline">\(10\)</span> between Low/High humidity</li>
+</ul>
+<p>If we plot the means, the following pattern should become visible.</p>
+<p><img src="stats_files/figure-html/unnamed-chunk-90-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p>The key pattern evident here is that there is a constant difference in average performance as humidity goes from low to high or high to low, and then also as temperature goes up or down. Two parallel train tracks are visible, suggesting that high humidity and high temperature are not necessarily worse for learning than high humidity and medium temperature or high humidity and low temperatures. But what if this wasn’t true and the data showed something else altogether? That is, what if we had an <code>interaction</code> between the two factors, Factor A and Factor B?</p>
+</div>
+<div id="interaction-effects" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Interaction effects<a href="anova.html#interaction-effects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At times, we stop and wonder if there are specific combinations of the two factors that exert an additional impact on the outcome. One of the examples I am particularly fond of is that of gender-based pay inequalities. One could hypothesize that at lower educational attainment levels women are paid considerably less than men for the same job but at higher educational attainment levels this gap shrinks.</p>
+<p>Let us stick with the humidity and temperature example for now, and see what an interaction might look like. The data shown below are for learning, humidity, and temperature, but have been modified such that the impact of temperature increases is no longer constant.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"><span class="math inline">\(70^0\)</span></th>
+<th align="left"><span class="math inline">\(80^0\)</span></th>
+<th align="left"><span class="math inline">\(90^0\)</span></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Low Humidity</td>
+<td align="left"><span class="math inline">\(\bar{x} = 80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{low} = 80\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">High Humidity</td>
+<td align="left"><span class="math inline">\(\bar{x} = 80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 70\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x} = 60\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{high} = 70\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(\bar{x}_{70}=80\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{80} = 75\)</span></td>
+<td align="left"><span class="math inline">\(\bar{x}_{90}=70\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Note how the mean score drops as Temperature increases …</p>
+<ul>
+<li><p>At <span class="math inline">\(70^0\)</span> there is a difference of <span class="math inline">\(0\)</span> between Low/High humidity</p></li>
+<li><p>At <span class="math inline">\(80^0\)</span> there is a difference of <span class="math inline">\(10\)</span> between Low/High humidity</p></li>
+<li><p>At <span class="math inline">\(90^0\)</span> there is a difference of <span class="math inline">\(20\)</span> between Low/High humidity</p></li>
+</ul>
+<p>In a nutshell, at Low humidity, raising the temperature has no impact but at high humidity, raising the temperature has an increasing impact!</p>
+<p><img src="stats_files/figure-html/unnamed-chunk-91-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p>This is an interaction – when the <code>effect (impact)</code> of a particular value of one factor depends upon the value of the other factor. Testing now involved three pairs of hypotheses …</p>
+<ol style="list-style-type: lower-alpha">
+<li>Main Effect of Factor A</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no main effect of factor A}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of factor A}\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Main Effect of Factor B</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no main effect of factor B}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of factor B}\]</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Interaction Effect of Factor A and Factor B</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no interaction effect of factor A and factor B}\]</span>
+<span class="math display">\[H_1: \text{There is an interaction effect of factor A and factor B}\]</span></p>
+<div id="example-01-the-drug-and-diet-example-modified" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Example 01: The Drug and Diet Example Modified<a href="anova.html#example-01-the-drug-and-diet-example-modified" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is a modified version of the blood pressure example from before. In brief, say I want to test whether giving the patient a drug (Factor A) lowers their systolic blood pressure, or whether diet (Factor B) has an impact, and then whether a combination of both the drug and the diet (interaction of Factor A and Factor B) has an impact on blood pressure.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-93">TABLE 9.7: </span>Drug and Diet Interaction?
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+No Diet, No Drug
+</th>
+<th style="text-align:right;">
+Diet, No Drug
+</th>
+<th style="text-align:right;">
+No Diet, Drug
+</th>
+<th style="text-align:right;">
+Both Diet &amp; Drug
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+185
 </td>
 <td style="text-align:right;">
-272
+188
+</td>
+<td style="text-align:right;">
+171
+</td>
+<td style="text-align:right;">
+153
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-<ol start="5" style="list-style-type: decimal">
-<li>Several times a day
+<td style="text-align:right;">
+190
 </td>
 <td style="text-align:right;">
-69
-</td>
-<td style="text-align:right;">
-99
+183
 </td>
 <td style="text-align:right;">
 176
 </td>
 <td style="text-align:right;">
-344
+163
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-Total
+<td style="text-align:right;">
+195
 </td>
 <td style="text-align:right;">
-313
+198
 </td>
 <td style="text-align:right;">
-366
+181
 </td>
 <td style="text-align:right;">
-447
-</td>
-<td style="text-align:right;">
-1126
-</td>
-</tr>
-</tbody>
-</table></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol>
-<p>If you look at Table 3.3, you see the frequencies reported in what we call a <code>contingency table</code> or a <code>crosstabulation</code> – where the distributions of two nominal/ordinal variables are jointly displayed. Reading such a table should be simple. In brief, You see how many Liberals said they prayed “Never”, “Once a week or less”, “A few times a week”, “Once a day”, or “Several times a day”. What pattern is evident from this table? Of the 447 conservatives we see most of them saying they pray several times a day, followed by once a day, and the fewest saying they never pray. The pattern is similar for liberals and moderates, although the differences between the numbers responding “Never” and “Several times a day” is smaller for liberals than it is for conservatives.</p>
-<p>The story could be helped a great deal if we calculated percentages for these frequencies. We have two choices when calculating these percentages, we could calculate these as <code>row percentages</code> where we ask “what percent of those who said Never were Liberal, Moderate, and Conservative, respectively?” We could then repeat this for the other categories of religiosity. The result is shown in Table 3.4. This table shows quite clearly that 51.16% of those who say they pray several times a day tend to be Conservative. Likewise, most (43.06%) of those who say they never pray tend to be Liberal.</p>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-13">TABLE 3.4: </span>Political Ideology and Religiosity: Row Percentages
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-Liberal
-</th>
-<th style="text-align:right;">
-Moderate
-</th>
-<th style="text-align:right;">
-Conservative
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-<ol style="list-style-type: decimal">
-<li>Never
-</td>
-<td style="text-align:right;">
-43.06
-</td>
-<td style="text-align:right;">
-31.94
-</td>
-<td style="text-align:right;">
-25.00
+173
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-<ol start="2" style="list-style-type: decimal">
-<li>Once a week or less
-</td>
-<td style="text-align:right;">
-31.55
-</td>
-<td style="text-align:right;">
-37.50
-</td>
-<td style="text-align:right;">
-30.95
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="3" style="list-style-type: decimal">
-<li>A few times a week
-</td>
-<td style="text-align:right;">
-26.77
-</td>
-<td style="text-align:right;">
-34.85
-</td>
-<td style="text-align:right;">
-38.38
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="4" style="list-style-type: decimal">
-<li>Once a day
-</td>
-<td style="text-align:right;">
-27.94
-</td>
-<td style="text-align:right;">
-32.72
-</td>
-<td style="text-align:right;">
-39.34
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="5" style="list-style-type: decimal">
-<li>Several times a day
-</td>
-<td style="text-align:right;">
-20.06
-</td>
-<td style="text-align:right;">
-28.78
-</td>
-<td style="text-align:right;">
-51.16
-</td>
-</tr>
-</tbody>
-</table></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol>
-<p>If we calculated <code>column percentages</code> we would be able to answer such questions as: “What percent of Liberals said they never pray, pray once a week or less, a few times a week, once a day, several times a day?” The same could then be asked of Moderates and Conservatives, respectively. If we used the column percentages shown in Table 3.5 it would be obvious that Moderates and Conservatives tend to be more religious than Liberals. The essential takeaway here is that how you calculate the percentages (row versus column) depends upon what story you want to highlight, the question you want to ask and answer.</p>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-14">TABLE 3.5: </span>Political Ideology and Religiosity: Column Percentages
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-Liberal
-</th>
-<th style="text-align:right;">
-Moderate
-</th>
-<th style="text-align:right;">
-Conservative
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-<ol style="list-style-type: decimal">
-<li>Never
-</td>
-<td style="text-align:right;">
-19.81
-</td>
-<td style="text-align:right;">
-12.57
-</td>
-<td style="text-align:right;">
-8.05
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="2" style="list-style-type: decimal">
-<li>Once a week or less
-</td>
-<td style="text-align:right;">
-16.93
-</td>
-<td style="text-align:right;">
-17.21
-</td>
-<td style="text-align:right;">
-11.63
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="3" style="list-style-type: decimal">
-<li>A few times a week
-</td>
-<td style="text-align:right;">
-16.93
-</td>
-<td style="text-align:right;">
-18.85
-</td>
-<td style="text-align:right;">
-17.00
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="4" style="list-style-type: decimal">
-<li>Once a day
-</td>
-<td style="text-align:right;">
-24.28
-</td>
-<td style="text-align:right;">
-24.32
-</td>
-<td style="text-align:right;">
-23.94
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<ol start="5" style="list-style-type: decimal">
-<li>Several times a day
-</td>
-<td style="text-align:right;">
-22.04
-</td>
-<td style="text-align:right;">
-27.05
-</td>
-<td style="text-align:right;">
-39.37
-</td>
-</tr>
-</tbody>
-</table></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol>
-<p>Graphing these tables is easily done as well, and very effective; see Figure 3.3.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nes4"></span>
-<img src="stats_files/figure-html/nes4-1.svg" alt="Political Ideology and Religiosity" width="100%" />
-<p class="caption">
-FIGURE 3.3: Political Ideology and Religiosity
-</p>
-</div>
-<div class="rmdcomment">
-<p>
-Categorical variables (one or two) -&gt; bar-chart
-</p>
-<p>
-If you have cross-tabulations, choose between stacked versus dodged
-bar-charts
-</p>
-</div>
-</div>
-</div>
-<div id="visualizing-intervalratio-data" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Visualizing Interval/Ratio Data<a href="dataviz.html#visualizing-intervalratio-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We have several visuals we could draw with numeric data that are either interval or ratio levels of measurement. Let us see these first before we look at the one frequency table that could be used with interval/ratio data.</p>
-<div id="the-histogram" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> The Histogram<a href="dataviz.html#the-histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A <code>histogram</code> is used with a single numeric variable and looks like a bar-chart except there are no gaps between consecutive bars unless there are missing data. The example that follows use a popular dataset known as <code>hsb2</code>, which contains information about 200 randomly selected students from a national survey of high school seniors called the <a href="https://nces.ed.gov/surveys/hsb/">High School and Beyond</a> survey. The variables in this dataset include:</p>
-<ol style="list-style-type: decimal">
-<li>id = student id</li>
-<li>female = (0/1)</li>
-<li>race = ethnicity (1=hispanic 2=asian 3=african-amer 4=white)</li>
-<li>ses = (1=low 2=middle 3=high)</li>
-<li>schtyp = type of school (1=public 2=private)</li>
-<li>prog = type of program (1=general 2=academic 3=vocational)</li>
-<li>read = standardized reading score</li>
-<li>write = standardized writing score</li>
-<li>math = standardized math score</li>
-<li>science = standardized science score</li>
-<li>socst = standardized social studies score</li>
-</ol>
-<p>I’ll use <code>read</code> (Reading scores on a standardized test) to plot a histogram. Notice a few things about the histogram in Figure 3.4. The height of the bars, representing how often a particular score occurs, varies a great deal. A few students have done poorly while a few have done very well, but the rest are distributed over the middle range of test scores.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histo1"></span>
-<img src="stats_files/figure-html/histo1-1.svg" alt="Histogram of Reading Scores" width="100%" />
-<p class="caption">
-FIGURE 3.4: Histogram of Reading Scores
-</p>
-</div>
-<p>We could farther break this histogram apart by asking if male and female students (<code>female</code>), private versus public students (<code>schtyp</code>), or students of different races/ethnicities (<code>race</code>) perform differently on the reading test.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histo2"></span>
-<img src="stats_files/figure-html/histo2-1.svg" alt="Histogram of Reading Scores by Various Groups" width="100%" /><img src="stats_files/figure-html/histo2-2.svg" alt="Histogram of Reading Scores by Various Groups" width="100%" /><img src="stats_files/figure-html/histo2-3.svg" alt="Histogram of Reading Scores by Various Groups" width="100%" />
-<p class="caption">
-FIGURE 3.5: Histogram of Reading Scores by Various Groups
-</p>
-</div>
-<p>These plots are hard to read for a number of reasons. First, with just <span class="math inline">\(n = 200\)</span> students in all we have more students in some groups than in others and as a result the histograms look very thin for the groups with fewer data points, making it difficult to tease out any patterns. Second, within any group there are too many different test scores so we don’t see a clear pattern at all. To fix these problems we construct groups of scores, turning what is a numeric variable into an ordinal variable. Let us build this by first creating a <code>grouped frequency table</code> and then plotting this table as a histogram.</p>
-<div class="rmdcomment">
-<p>
-Histogram’s bins must be chosen with some care
-</p>
-</div>
-</div>
-<div id="grouped-frequency-tables" class="section level3 hasAnchor" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Grouped Frequency Tables<a href="dataviz.html#grouped-frequency-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Because numeric variables take on too many values it is often easier to see their distribution by grouping the numeric values. For example, we could start by seeing what are the lowest and highest reading scores. These turn out to be 28 and 76, respectively. We can build the groups as follows:</p>
-<ol style="list-style-type: decimal">
-<li>Calculate difference between maximum and minimum values, which turns out to be <span class="math inline">\(76 - 28 = 48\)</span></li>
-<li>Decide how many groups we want. Good practice suggests no fewer than 4/5 and no more than 6/7. Say we go with 5 groups.</li>
-<li>Divide the gap between the maximum and minimum values by the desired number of groups: <span class="math inline">\(= \dfrac{48}{5} = 9.6\)</span> and round up to the nearest whole number <span class="math inline">\(= 10\)</span>. This tells us how wide each group should be.</li>
-<li>The groups could thus be <span class="math inline">\(28-38, 38-48, 48-58, 58-68, 68-78\)</span>.</li>
-</ol>
-<p>Notice that these groups span, start to finish, all the values of reading scores. But we’ll have to decide which group to include 38, 48, 58, and 68 in. Should 38 go in 28-38 or in 38-48? The choice doesn’t matter so long as we are consistent. Let us choose a rule that says include 38 in 38-48, 48 in 48-58, 58 in 58-68, and 68 in 68-78. Using this rule we now find each reading score and drop it into its group. Then we calculate how many scores fall in each group, creating our Frequency column.</p>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-18">TABLE 3.6: </span>Grouped Frequency Table of Reading Scores
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Grouped Scores
-</th>
-<th style="text-align:right;">
-Frequency
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-28-38
-</td>
-<td style="text-align:right;">
-14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-38-48
-</td>
-<td style="text-align:right;">
-68
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-48-58
-</td>
-<td style="text-align:right;">
-62
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-58-68
-</td>
-<td style="text-align:right;">
-36
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-68-78
-</td>
-<td style="text-align:right;">
-20
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Total
-</td>
 <td style="text-align:right;">
 200
+</td>
+<td style="text-align:right;">
+178
+</td>
+<td style="text-align:right;">
+166
+</td>
+<td style="text-align:right;">
+178
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+180
+</td>
+<td style="text-align:right;">
+193
+</td>
+<td style="text-align:right;">
+161
+</td>
+<td style="text-align:right;">
+168
 </td>
 </tr>
 </tbody>
 </table>
-<p>Now it is easy to see that the largest number of students (68) appear to fall in the 38-48 group of reading scores while the smallest frequency (14) occurs in the 28-38 group. Let us add to this table a percentage column.</p>
-<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-19">TABLE 3.7: </span>Grouped Frequency Table of Reading Scores with Percentages
+<p>The hypotheses would be …</p>
+<ol style="list-style-type: lower-alpha">
+<li>Main Effect of Drug</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no main effect of the drug on blood pressure}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of the drug on blood pressure}\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Main Effect of Diet</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no main effect of the diet on blood pressure}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of the diet on blood pressure}\]</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Interaction Effect of Drug and Diet</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no interaction effect of the drug and diet on blood pressure}\]</span>
+<span class="math display">\[H_1: \text{There is an interaction effect of the drug and diet on blood pressure}\]</span></p>
+<p>For (a) the F turns out to be 28.571 with a p-value of about 0.0000657, so we can reject the Null; these data suggest that the drug does have a main effect on blood pressure.</p>
+<p>For (b) the F is 0.643, with a p-value of 0.434 so we are unable to reject the Null; these data suggest that the diet does not have a main effect on blood pressure.</p>
+<p>For (c), the F is 0.071, with a p-value of 0.793 so again we are unable to reject the Null; these data suggest that there is no interaction effect of drug and diet on blood pressure.</p>
+</div>
+<div id="example-02-pedagogy-subject-and-learning" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Example 02: Pedagogy, Subject, and Learning<a href="anova.html#example-02-pedagogy-subject-and-learning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this example we have three subjects, each taught via the traditional lecture method versus using computers. Students’ scores are recorded for each subject and method.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-94">TABLE 9.8: </span>Interaction of Pedagogy and Subject?
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;">
-Grouped Scores
+<th style="text-align:right;">
+Statistics/Standard
 </th>
 <th style="text-align:right;">
-Frequency
+English/Standard
 </th>
 <th style="text-align:right;">
-Percentage
+History/Standard
+</th>
+<th style="text-align:right;">
+Statistics/Computer
+</th>
+<th style="text-align:right;">
+English/Computer
+</th>
+<th style="text-align:right;">
+History/Computer
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-28-38
+<td style="text-align:right;">
+44
 </td>
 <td style="text-align:right;">
-14
+47
 </td>
 <td style="text-align:right;">
-7
+46
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+45
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-38-48
-</td>
-<td style="text-align:right;">
-68
-</td>
-<td style="text-align:right;">
-34
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-48-58
-</td>
-<td style="text-align:right;">
-62
-</td>
-<td style="text-align:right;">
-31
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-58-68
-</td>
-<td style="text-align:right;">
-36
-</td>
 <td style="text-align:right;">
 18
 </td>
-</tr>
-<tr>
-<td style="text-align:left;">
-68-78
+<td style="text-align:right;">
+37
 </td>
 <td style="text-align:right;">
-20
+21
+</td>
+<td style="text-align:right;">
+42
 </td>
 <td style="text-align:right;">
 10
 </td>
+<td style="text-align:right;">
+36
+</td>
 </tr>
 <tr>
-<td style="text-align:left;">
-Total
+<td style="text-align:right;">
+48
 </td>
 <td style="text-align:right;">
-200
+42
 </td>
 <td style="text-align:right;">
-100
+40
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+47
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+33
 </td>
 </tr>
 </tbody>
 </table>
-<p>The percentages make it even easier to see how the distribution breaks down; 34 percent of the students have scores in the 38-48 range while only 10 percent scored in the highest bracket (68-78). We can also break this down by the three groups we used earlier.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histo3"></span>
-<img src="stats_files/figure-html/histo3-1.svg" alt="Histogram of Grouped Reading Scores by Specific Groups" width="100%" /><img src="stats_files/figure-html/histo3-2.svg" alt="Histogram of Grouped Reading Scores by Specific Groups" width="100%" /><img src="stats_files/figure-html/histo3-3.svg" alt="Histogram of Grouped Reading Scores by Specific Groups" width="100%" />
-<p class="caption">
-FIGURE 3.6: Histogram of Grouped Reading Scores by Specific Groups
-</p>
-</div>
-<p>Histograms were once quite popular but there is a better visual for looking at our numeric variables, one called the <code>box-plot</code> that we’ll see in the next chapter. I am not a huge fan of histograms because grouping decisions influence the story being told. My advice would be to use grouped frequency tables instead of histograms to present a summary overview of your numeric data.</p>
-<div class="rmdcomment">
-<p>
-Histograms of grouped frequencies of numerical variables can be
-useful for summary depictions of the distribution
-</p>
-</div>
-</div>
-<div id="scatterplots" class="section level3 hasAnchor" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> Scatterplots<a href="dataviz.html#scatterplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>With two numeric variables, a <code>scatterplot</code> comes in very handy if we want to explore how one variable might be related to another. For example, we may want to ask whether students who score high on the reading test also tend to score high on the mathematics test. This could be visually explored via a scatter-plot, as shown below. The goal should be to look for a pattern: Does one variable increase as the other increases or does one variable decrease as the other increases? Or does there seem to be no relationship at all?</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:splot1"></span>
-<img src="stats_files/figure-html/splot1-1.svg" alt="Scatterplot of Reading Scores and Mathematics Scores" width="100%" />
-<p class="caption">
-FIGURE 3.7: Scatterplot of Reading Scores and Mathematics Scores
-</p>
-</div>
-<p>Quite clearly, students who do well in Reading also tend to do well in Mathematics. You can see this by virtue of the upward, left-to-right tilt of the cloud of points.</p>
-<p>What about Science scores and Mathematics scores? Is there any relationship between doing well in Science and doing well in Mathematics?</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:splot2"></span>
-<img src="stats_files/figure-html/splot2-1.svg" alt="Scatterplot of Science Scores and Mathematics Scores" width="100%" />
-<p class="caption">
-FIGURE 3.8: Scatterplot of Science Scores and Mathematics Scores
-</p>
-</div>
-<p>Of course, just like everything else we could break this down by any nominal/ordinal variable. The visual below shows you the breakouts by the student’s sex.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:splot3"></span>
-<img src="stats_files/figure-html/splot3-1.svg" alt="Scatterplot of Science Scores and Mathematics Scores, by Sex" width="100%" /><img src="stats_files/figure-html/splot3-2.svg" alt="Scatterplot of Science Scores and Mathematics Scores, by Sex" width="100%" /><img src="stats_files/figure-html/splot3-3.svg" alt="Scatterplot of Science Scores and Mathematics Scores, by Sex" width="100%" />
-<p class="caption">
-FIGURE 3.9: Scatterplot of Science Scores and Mathematics Scores, by Sex
-</p>
-</div>
-<div class="rmdcomment">
-<p>
-Work best with two numerical variables since they show the pattern of
-association between the two variables
-</p>
-</div>
-</div>
-<div id="line-graphs" class="section level3 hasAnchor" number="3.2.4">
-<h3><span class="header-section-number">3.2.4</span> Line Graphs<a href="dataviz.html#line-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If we have time-series data, such as the Presidential Approval data we saw earlier, then a <code>line graph</code> works well because it shows you how the outcome/phenomenon varies over time. Let us take another example, median household incomes. Say I am curious about trends in median household incomes in Ohio, Pennsylvania, and West Virginia.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xts"></span>
-<img src="stats_files/figure-html/xts-1.svg" alt="Trends in Real Median Household Incomes in OH, PA, and WV" width="100%" />
-<p class="caption">
-FIGURE 3.10: Trends in Real Median Household Incomes in OH, PA, and WV
-</p>
-</div>
-<p>These plots don’t work well just for financial or election data, they are ideally suited for any phenomenon that is measured over time. For example, the size of the immigrant population over the years, and even the number of lynx pelts reported in Canada per year from 1752 to 1819.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:immig"></span>
-<img src="stats_files/figure-html/immig-1.svg" alt="Number of Legal Permanent Residents in the USA" width="100%" />
-<p class="caption">
-FIGURE 3.11: Number of Legal Permanent Residents in the USA
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lynx"></span>
-<img src="stats_files/figure-html/lynx-1.svg" alt="Number of lynx pelts reported in Canada per year from 1752 to 1819" width="100%" />
-<p class="caption">
-FIGURE 3.12: Number of lynx pelts reported in Canada per year from 1752 to 1819
-</p>
-</div>
-<div class="rmdcomment">
-<p>
-Line graphs are the default choice for showing trends – patterns over
-time
-</p>
-</div>
-</div>
-<div id="polar-charts" class="section level3 hasAnchor" number="3.2.5">
-<h3><span class="header-section-number">3.2.5</span> Polar Charts<a href="dataviz.html#polar-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>These charts are helpful for visualizing data that might have otherwise been explored via a bar-chart. For example, say you want to look at the miles per gallon given by a number of different automobiles. We could use a bar-chart, as shown below:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:polar1"></span>
-<img src="stats_files/figure-html/polar1-1.svg" alt="Miles per Gallon" width="90%" />
-<p class="caption">
-FIGURE 3.13: Miles per Gallon
-</p>
-</div>
-<p>Quite obviously, the Toyota Corolla has the best fuel economy, followed by the Fiat 128, while the Cadillac Fleetwood is tied with the Lincoln Continental for the worst fuel economy. A polar chart would present the same information as seen in the bar-chart, albeit in a more aesthetically pleasing manner.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:polar2"></span>
-<img src="stats_files/figure-html/polar2-1.svg" alt="Polar Chart of Miles per Gallon" width="90%" />
-<p class="caption">
-FIGURE 3.14: Polar Chart of Miles per Gallon
-</p>
-</div>
-</div>
-</div>
-<div id="some-essential-rules-for-good-visualizations" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Some Essential Rules for Good Visualizations<a href="dataviz.html#some-essential-rules-for-good-visualizations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are several rules, some favored by this expert or that, but regardless of the source of the rule, its merit is not in doubt. So here are the ones I try to follow (although I do break these at times, some times by design and other times unintentionally). It all starts of course with <a href="https://www.edwardtufte.com/">Edward Tufte’s maxims</a>: show the data, tell the truth, help the viewer think about the information rather than the design, encourage the eye to compare the data, make large data sets coherent.</p>
-<p>A more specific listing of the rules I try to keep in mind follows:</p>
-<ol style="list-style-type: decimal">
-<li>Do not include anything in your visualization that is not very informative. Give titles and subtitles where needed and make these stand on their own. At the same time, do not clutter your charts and tables with too much information otherwise the reader gets lost.</li>
-<li>Use colors wisely. Is this visual to be printed on a color printer? Is it part of a presentation in a poorly lit room? Choose bright colors that stand out from each each other and yet are visible on a printed page or on the projection screen in the room. Remember, a fair share of men seeing the visual could be color-blind so use color palettes designed for color-blind individuals. If this is news to you, read <a href="https://goo.gl/B6Ygru">How a dog sees a rainbow, and 12 other images that explain how we see color</a>. Pay attention to what is being plotted: Use <code>sequential</code> colors for ordered data values (that go from low to high or vice-versa); <code>qualitative</code> colors nominal data, and; <code>diverging</code> colors if the goal is to put equal emphasis on mid-range critical values and extremes at both ends of the data range but emphasize the middle with light colors and the low/high extremes with dark colors that have contrasting hues.</li>
-<li>The visualization is not your personal Mona Lisa; it must be effective for the target audience and help you tell the story. Do not get carried away in creating it.</li>
-<li>Use a table if a table would be more effective than a graph but remember, while tables are useful for audiences that will want to see more (not less of the actual data you have) graphs are favored by those who want a quick take-away.</li>
-<li>Always have your <code>y-axis</code> (or <code>x-axis</code> if relevant) starting at zero. If you don’t do this you can misrepresent the data. If you are forced to truncate the axis, point this out to the reader so that they can interpret dips and swells in line charts or differences between heights of frequency bars with care.</li>
-<li>Combine multiple graphs/tables into a single figure if you can so long as it does not lead to information overload. Go back and look at the scatterplots and line charts and try to visualize what these might look like if the y-axis had been forced to start at <span class="math inline">\(0\)</span>; they would certainly look different. For illustration purposes I have let the plotting software pick the starting coordinates.</li>
-<li>For non-technical audiences you should round up all percentages/proportions to no more than one decimal place and ideally to no decimal place unless doing so distorts the picture. For technical audiences, stay with two or four decimal places.</li>
-<li>Above all, start with pencil and paper and consider all alternate visualizations possible by drawing a rough sketch of what the finished product should look like.</li>
-<li>Consider using a choropleth map if geographic variation is one of the key narratives.</li>
-<li>Be prepared to alter your visual if it does not work; we are all hesitant to delete a page or a graphic and start from scratch but this locks you into something that isn’t working to begin with and you will be stuck in a rut.</li>
-<li>Avoid jargon like the plague. We often think we sound intelligent when we use jargon but this distracts from the oral/written presentation. Think of your audience and write and present in a manner that will resonate with them.</li>
-<li>Show as much data as you can; it vastly improves the effectiveness of the visual narration.</li>
+<p>The hypotheses would be …</p>
+<ol style="list-style-type: lower-alpha">
+<li>Main Effect of Subject</li>
 </ol>
-<hr />
-</div>
-<div id="chapter-3-practice-problems" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Chapter 3 Practice Problems<a href="dataviz.html#chapter-3-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="problem-1-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 1<a href="dataviz.html#problem-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Download the monthly Great Lakes water level dataset <a href="https://aniruhil.github.io/avsr/teaching/dataviz/greatlakes.sav">SPSS format from here</a> and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/greatlakes.xlsx">Excel format from here</a>. Construct an appropriate chart to display the data for Lake Superior. Be sure to label the x- and y-axis, and to title the chart. Note that water level is in meters.</p>
-</div>
-<div id="problem-2-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 2<a href="dataviz.html#problem-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Download the number of births per 10,000 of 23 year old women, U.S., 1917-1975 <a href="https://aniruhil.github.io/avsr/teaching/dataviz/usbirths.sav">SPSS format from here</a> and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/usbirths.xlsx">Excel format from here</a>. Construct an appropriate chart to display the trend in the data. Be sure to label the x- and y-axis, and to title the chart.</p>
-</div>
-<div id="problem-3-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 3<a href="dataviz.html#problem-3-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Download the winning speed (in kilometers per hour) for several men’s track and field distances world meets over the 1900 - 2012 period <a href="https://aniruhil.github.io/avsr/teaching/dataviz/olympics.sav">SPSS format from here</a> and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/olympics.xlsx">Excel format from here</a>. Construct an appropriate chart to display the speeds for the 100 meter dash. Be sure to label the x- and y-axis, and to title the chart. Note that the data are monthly and replicate the speed from the preceding month if the fastest speed was not eclipsed.</p>
-</div>
-<div id="problem-4-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 4<a href="dataviz.html#problem-4-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Use this <a href="https://aniruhil.github.io/avsr/teaching/dataviz/af.xls">data-set</a> used in Practice Problem 4 in the preceding Chapter, noting <a href="https://aniruhil.github.io/avsr/teaching/dataviz/Agresti%20%26%20Finlay%20Data%20Variables.pdf">these details of each variable</a>. Construct a frequency table for <code>belief in life after death</code>, showing both the frequencies and the relative frequencies (as percentages). Based on the table, what do most people seem to believe? Report the percentage for your answer. Construct an appropriate chart for these data, making sure to label all axis and providing a title.</p>
-</div>
-<div id="problem-5-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 5<a href="dataviz.html#problem-5-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Construct an appropriate chart that shows the relationship between high school GPA and college GPA. Label both axis and title the chart. What does this plot show? Are the two positively/negatively related? How strong would you guess is the relationship?</p>
-</div>
-<div id="problem-6-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 6<a href="dataviz.html#problem-6-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Construct a contingency table of vegetarianism against belief in life after death. What percent of vegetarians believe in life after death? What percent of those who believe in life after death are vegetarians? Use an appropriate chart to show the relationship between vegetarianism and belief in life after death. Label everything.</p>
-</div>
-<div id="problem-7-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 7<a href="dataviz.html#problem-7-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Construct a grouped frequency table with <code>five groups</code> of the variable <code>age</code>. Report both the frequencies and the relative frequencies (as percentages). Plot the relative frequencies using an appropriate chart. Label everything as usual. What is the modal age group?</p>
-<hr />
-<p><strong>The next set of questions revolve around the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/BostonMarathon.csv">2016 Boston Marathon race results available here</a>.</strong> The dataset contains the following variables:</p>
-<ul>
-<li>Bib = the runner’s bib number</li>
-<li>Name = the runner’s name</li>
-<li>Age = the runner’s age (in years)</li>
-<li>M/F = the runner’s gender (M = Male; F = Female)</li>
-<li>City = the runner’s home city</li>
-<li>State = the runner’s home state</li>
-<li>Country = the runner’s home country</li>
-<li>finishtime = the runner’s time (in seconds) to the finish line</li>
-</ul>
-</div>
-<div id="problem-8-1" class="section level4 unnumbered hasAnchor">
-<h4>Problem 8<a href="dataviz.html#problem-8-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>What countries had the largest and second-largest number of runners in the race?</p>
-</div>
-<div id="problem-9" class="section level4 unnumbered hasAnchor">
-<h4>Problem 9<a href="dataviz.html#problem-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>What was the distribution of the runners’ gender? Use a suitable chart to reflect the distribution.</p>
-</div>
-<div id="problem-10" class="section level4 unnumbered hasAnchor">
-<h4>Problem 10<a href="dataviz.html#problem-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Construct a grouped frequency table of the runners’ age, using the following groupings – 18-25; 25-32; 32-39; 39-46; 46-53; 53-60; 60-67; 67-74; 74-81; 81-88. Also construct a grouped histogram. What is the modal age group?</p>
-</div>
-<div id="problem-11" class="section level4 unnumbered hasAnchor">
-<h4>Problem 11<a href="dataviz.html#problem-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Draw a scatter-plot of runners’ age and finish times. Does this show any relationship? If it does, what sort of a relationship?</p>
-</div>
-<div id="problem-12" class="section level4 unnumbered hasAnchor">
-<h4>Problem 12<a href="dataviz.html#problem-12" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Using a reasonable grouping structure, construct country-specific histograms of finish times for runners from each the following countries – AUS, BRA, CAN, CHN, FRA, GBR, GER, ITA, JPN, MEX, and USA. Are finish times skewed for each country? Is the direction of the skew similar? What country seems to have the least skew? What country seems to have the most skew?</p>
-<hr />
-<p>Use <a href="https://aniruhil.github.io/avsr/teaching/dataviz/HR_comma_sep.csv">this data-set</a>, also used in <code>Practice Problem 5</code> in the preceding Chapter, to answer the following questions.</p>
-</div>
-<div id="problem-13" class="section level4 unnumbered hasAnchor">
-<h4>Problem 13<a href="dataviz.html#problem-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Were employees who had a workplace accident more likely to leave than employees who did not have an accident? Briefly explain your conclusion with appropriate charts/tables.</p>
-</div>
-<div id="problem-14" class="section level4 unnumbered hasAnchor">
-<h4>Problem 14<a href="dataviz.html#problem-14" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Are low salary employees more likely to leave than medium/high salary employees? Why do you conclude as you do? Briefly explain your reasoning with appropriate charts/tables.</p>
-</div>
-<div id="problem-15" class="section level4 unnumbered hasAnchor">
-<h4>Problem 15<a href="dataviz.html#problem-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Construct an appropriate chart that shows the distribution of the number of years employees spent in the company. What patterns do you see in this chart?</p>
-<hr />
-<p>Download the 2020 County Health Rankings data <a href="https://aniruhil.github.io/avsr/teaching/dataviz/CountyHealthRankings2017.sav">SPSS format from here</a>, <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2020_0.csv">CSV format from here</a> and the <a href="https://www.countyhealthrankings.org/sites/default/files/media/document/2020%20Analytic%20Documentation_0.pdf">accompanying analytic codebook</a></p>
-</div>
-<div id="problem-16" class="section level4 unnumbered hasAnchor">
-<h4>Problem 16<a href="dataviz.html#problem-16" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>You should see the following measures (<code>measurename</code>)</p>
-<ol style="list-style-type: lower-roman">
-<li>Adult obesity</li>
-<li>Children in poverty</li>
-<li>High school graduation</li>
-<li>Preventable hospital stays</li>
-<li>Unemployment rate</li>
+<p><span class="math display">\[H_0: \text{There is no main effect of the subject on scores}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of the subject on scores}\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Main Effect of Method</li>
 </ol>
-<p>Looking at pairs of variables in turn, briefly (20 words or less) state whether you would expect a positive/negative/no relationship between the variables in each pair and why you deduce as you do?</p>
-</div>
-<div id="problem-17" class="section level4 unnumbered hasAnchor">
-<h4>Problem 17<a href="dataviz.html#problem-17" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Construct scatterplots of all pairs of the five variables.</p>
-</div>
-<div id="problem-18" class="section level4 unnumbered hasAnchor">
-<h4>Problem 18<a href="dataviz.html#problem-18" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>How do the scatterplots you constructed in the preceding problem stack up against the expectations you listed in <code>Problem 16</code>? Which plots surprised you and how? Be brief.</p>
+<p><span class="math display">\[H_0: \text{There is no main effect of the method on scores}\]</span>
+<span class="math display">\[H_1: \text{There is a main effect of the dmethod on scores}\]</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Interaction Effect of Subject and Method</li>
+</ol>
+<p><span class="math display">\[H_0: \text{There is no interaction effect of the subject and the method on scores}\]</span>
+<span class="math display">\[H_1: \text{There is an interaction effect of the subject and the method on scores}\]</span></p>
+<p>The results will show that subject has a main effect on scores – F is 10.737 with a p-value of 0.000304, and there is an interaction of subject and method – F is 25.629 with a p-value of 0.000000323. However, the method has no main effect on scores.</p>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
 <script>
@@ -1516,19 +2161,13 @@ FIGURE 3.14: Polar Chart of Miles per Gallon
 </div>
 </div>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="4">
-<li id="fn4"><p>Indoor plumbing is lacking in many still developing countries, particularly in the rural areas. In some of these countries, particularly India, <a href="http://www.npr.org/sections/parallels/2014/06/09/319529037/indias-rape-uproar-ignites-demand-to-end-open-defecation">tigers aren’t the most dangerous animals</a><a href="dataviz.html#fnref4" class="footnote-back">↩︎</a></p></li>
-</ol>
-</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="meansd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chisq.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

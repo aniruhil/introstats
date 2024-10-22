@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <title>Chapter 10 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:title" content="Chapter 10 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta name="twitter:title" content="Chapter 10 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:" />
   
   <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hypothesis.html"/>
+<link rel="prev" href="anova.html"/>
 <link rel="next" href="props.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -55,10 +55,18 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
-<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.33/datatables.js"></script>
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
@@ -91,6 +99,7 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -328,85 +337,99 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
+<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
-<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
-<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
-<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
-<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
-<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
-<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
-<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
-<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
-<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
-<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
-<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<li class="chapter" data-level="10.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>10.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
-<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+<li class="chapter" data-level="10.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>10.1.1</b> Assumptions</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
-<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
-<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
-<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
-<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
-<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+<li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>10.5</b> Chapter 9 Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
-<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
-<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
-</ul></li>
-<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
 <ul>
-<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
-<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
-<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
-<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
-<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
-<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
-<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
-<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
-<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
-<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
-<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
-<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>11.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>12.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>12.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="12.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>12.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>12.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>12.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="12.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>12.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="12.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>12.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="12.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>12.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="12.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>12.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="12.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>12.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>12.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>12.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="12.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>12.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="12.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>12.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="12.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>12.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="12.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>12.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>12.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>13.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="13.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>13.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="13.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>13.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="13.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>13.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -428,11 +451,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chisq" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Working with Multinomial Data<a href="chisq.html#chisq" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chisq" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Working with Multinomial Data<a href="chisq.html#chisq" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Very often the variables of interest will be <code>multinomial</code> – variables that have more than two categories. For example, you may be working with <a href="http://www.gallup.com/poll/5392/trust-government.aspx">Gallup Poll</a> data where the responses to a question asking how an individual feels about the statement “How much of the time do you think you can trust government in Washington to do what is right – just about always, most of the time, or only some of the time?”. Here we have three discrete response categories. Maybe you work for <a href="https://qz.com/918008/the-color-distribution-of-mms-as-determined-by-a-phd-in-statistics/">Mars Inc.</a> and have been tasked to spruce up quality control because some intrepid researcher has found the color distribution of M&amp;Ms to be way off what the company would like it to be. Now you have a six category response – blue, orange, green, yellow, red and brown. You go to the Tennessee plant and draw a sample of M&amp;Ms coming off the production line and count the number of candies of each color. How can you analyze your sample data to figure out if indeed the color distribution is way off? You can do it via a hypothesis test involving the <code>Chi-square</code> <span class="math inline">\((\chi^2)\)</span> distribution. Let us start with a stylized example.</p>
-<div id="a-single-multinomial-variable-goodness-of-fit-test" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> A Single Multinomial Variable (Goodness-of-fit test)<a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a-single-multinomial-variable-goodness-of-fit-test" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> A Single Multinomial Variable (Goodness-of-fit test)<a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Say the research group I am working with is developing four public service announcements (PSAs) that warn listeners about the warning signs of a developing opioid addiction. These announcements are aired daily on major television networks during prime time. After two weeks of air time a telephone survey is used to gauge which of the four PSAs was recalled in the greatest detail by a listener. Of the 300 respondents, here is the breakdown of recall: PSA a = 85; PSA b = 95; PSA c = 50, and; PSA d = 70.</p>
 <p>Is this what we expected to see? We had no clue going in as to which one would be more effective than another and so the best we can do is admit that we started airing the PSAs assuming each was equally effective. If they were equally effective, then recall should be evenly distributed as well, i.e., exactly one-fourth of those surveyed should have recalled PSA a, another fourth b, another fourth c, and the last fourth d. That is, we expected to see the following distribution: PSA a = 75; PSA b= 75; PSA c = 75; PSA d = 75. This situation naturally leads to specific hypotheses:</p>
 <p><span class="math display">\[\begin{array}{l}
@@ -442,7 +465,7 @@ H_1: \text{PSAs are NOT equally effective, (i.e., } P_a \neq P_b \neq P_c \neq P
 <p>Let us organize these two sets of numbers, the observed frequencies <span class="math inline">\((f_i)\)</span> and the expected frequencies <span class="math inline">\((e_i)\)</span>, into a table.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:PSAs">TABLE 9.1: </span>Expected and Observed Recall of the four PSAs
+<span id="tab:PSAs">TABLE 10.1: </span>Expected and Observed Recall of the four PSAs
 </caption>
 <thead>
 <tr>
@@ -519,7 +542,7 @@ Total
 <p>We then add the resulting value for each cell of the table, ending up with the <span class="math inline">\(\text{calculated } \chi^2_{df}\)</span>. This sum can be compared to the critical value from the <span class="math inline">\(\chi^2\)</span> distribution with degrees of freedom given by <span class="math inline">\(df = \text{No. of categories } - 1\)</span> or we can simply calculate the <span class="math inline">\(p-value\)</span> for our <span class="math inline">\(\text{calculated } \chi^2_{df}\)</span>. If the <span class="math inline">\(p-value\)</span> is <span class="math inline">\(\leq \alpha\)</span>, we reject the null hypothesis. The table below shows you the calculations. Note that we have four columns and hence the degrees of freedom are <span class="math inline">\(df=4-1=3\)</span>.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:PSAs2">TABLE 9.2: </span>Calculating the Chi-square
+<span id="tab:PSAs2">TABLE 10.2: </span>Calculating the Chi-square
 </caption>
 <thead>
 <tr>
@@ -649,24 +672,24 @@ Total
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq2"></span>
 <img src="images/chisq_dist.png" alt="The Chi-Square distribution for specific degrees of freedom" width="70%" />
 <p class="caption">
-FIGURE 9.1: The Chi-Square distribution for specific degrees of freedom
+FIGURE 10.1: The Chi-Square distribution for specific degrees of freedom
 </p>
 </div>
 <p>In our case, the <span class="math inline">\(\chi^2_{df=3} = 15.33\)</span> is marked by the red dot and is clearly located well below the <span class="math inline">\(p-value = 0.05\)</span> line. In fact, the <span class="math inline">\(\chi^2_{df=3}\)</span> has a <span class="math inline">\(p-value = 0.001555293\)</span>. Consequently, we can reject the null hypothesis; the four PSAs are not recalled with equal frequency.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq3"></span>
 <img src="stats_files/figure-html/chisq3-1.svg" alt="Chi-Square = 15.33, df = 3" width="70%" />
 <p class="caption">
-FIGURE 9.2: Chi-Square = 15.33, df = 3
+FIGURE 10.2: Chi-Square = 15.33, df = 3
 </p>
 </div>
 <p>Note: There is an <a href="http://www.socscistatistics.com/pvalues/chidistribution.aspx">online p-value calculator</a>. You can also <a href="http://vassarstats.net/csfit.html">conduct the test online</a>.</p>
-<div id="example-1-10" class="section level4 hasAnchor" number="9.1.0.1">
-<h4><span class="header-section-number">9.1.0.1</span> Example 1<a href="chisq.html#example-1-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1-10" class="section level4 hasAnchor" number="10.1.0.1">
+<h4><span class="header-section-number">10.1.0.1</span> Example 1<a href="chisq.html#example-1-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In the preceding example we had no <em>a priori</em> information as to what distribution to expect and hence we set each PSA’s recall to 25%. At times we may have the necessary information as, for instance, in the M&amp;Ms example that follows. Specifically, we know that Mars Inc. claims the following distribution for M&amp;Ms’ colors: Blue = 24%; Orange = 20%; Green = 16%; Yellow = 14%; Red = 13%, and; Brown = 13%.</p>
 <p>Now, say you have a sample of 200 M&amp;Ms that you randomly collect from the production line. How should you <code>expect</code> the six colors to be distributed if Mars Inc. has perfect quality control? Well, you should expect to see 24% Blue, which would be <span class="math inline">\(0.24 \times 200 = 48\)</span>, 20% Orange, which would be <span class="math inline">\(0.20 \times 200 = 40\)</span>, and in a similar vein, <span class="math inline">\(0.16 \times 200 = 32\)</span> Green, <span class="math inline">\(0.14 \times 200 = 28\)</span> Yellow, <span class="math inline">\(0.13 \times 200 = 26\)</span> Red, and <span class="math inline">\(26\)</span> Brown. But the <code>observed distribution of colors</code> turns out to be somewhat different than expected (see the table).</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:mars">TABLE 9.3: </span>Calculating the Chi-square
+<span id="tab:mars">TABLE 10.3: </span>Calculating the Chi-square
 </caption>
 <thead>
 <tr>
@@ -768,7 +791,7 @@ H_1: \text{Colors are NOT distributed as claimed by Mars Inc.}
 <p>Let us now setup the table of calculations:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:mars2">TABLE 9.4: </span>Calculating the Chi-square
+<span id="tab:mars2">TABLE 10.4: </span>Calculating the Chi-square
 </caption>
 <thead>
 <tr>
@@ -938,13 +961,13 @@ Total
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq4"></span>
 <img src="stats_files/figure-html/chisq4-1.svg" alt="Chi-Square = 2.388461, df = 5" width="70%" />
 <p class="caption">
-FIGURE 9.3: Chi-Square = 2.388461, df = 5
+FIGURE 10.3: Chi-Square = 2.388461, df = 5
 </p>
 </div>
 <p>In this example, we were unable to reject the null hypothesis because the difference between the observed and the expected frequencies was too small and these small differences yielded a small <span class="math inline">\(\chi^2\)</span> value. One simple takeaway, therefore, should be that if we see large differences <em>before we start the test</em> we should anticipate that the null hypothesis will not be rejected.</p>
 </div>
-<div id="example-2-10" class="section level4 hasAnchor" number="9.1.0.2">
-<h4><span class="header-section-number">9.1.0.2</span> Example 2<a href="chisq.html#example-2-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-2-10" class="section level4 hasAnchor" number="10.1.0.2">
+<h4><span class="header-section-number">10.1.0.2</span> Example 2<a href="chisq.html#example-2-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>During March 5-7 in 2001, Gallup asked a random sample of U.S. Adults living in the 50 states and Washington DC the following question: “Next, I’m going to read a list of problems facing the country. For each one, please tell me if you personally worry about this problem a great deal, a fair amount, only a little, or not at all? First, how much do you personally worry Race Relations?” The responses were: Great deal <span class="math inline">\(=28\%\)</span>, Fair amount <span class="math inline">\(=34\%\)</span>, Only a little <span class="math inline">\(=23\%\)</span>, and Not at all <span class="math inline">\(15\%\)</span>. When Gallup asked the question again this year (during March 1-5, 2017), the responses were as follows: Great deal <span class="math inline">\(=428\)</span>, Fair amount <span class="math inline">\(= 275\)</span>, Only a little <span class="math inline">\(= 173\)</span>, and Not at all <span class="math inline">\(=122\)</span>. Have American adults’ concerns over race relations changed since 2001?</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{ American adults&#39; concerns over race relations have not changed since 2001} \\
@@ -953,7 +976,7 @@ H_1: \text{ American adults&#39; concerns over race relations HAVE changed since
 <p>The sample size is 998 so we first calculate expected frequencies based on the distribution of responses in 2001. The observed frequencies are given so the rest of the calculations can proceed as usual. See the table below:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:opine">TABLE 9.5: </span>Calculating the Chi-square
+<span id="tab:opine">TABLE 10.5: </span>Calculating the Chi-square
 </caption>
 <thead>
 <tr>
@@ -1081,8 +1104,8 @@ Total
 </table>
 <p>The resulting <span class="math inline">\(\chi^2_{df=3} = 110.2242\)</span>, and has a <span class="math inline">\(p-value\)</span> that is practically zero. We can thus reject the null hypothesis; these data suggest that American adults’ concerns over race relations HAVE changed since 2001.</p>
 </div>
-<div id="assumptions-3" class="section level3 hasAnchor" number="9.1.1">
-<h3><span class="header-section-number">9.1.1</span> Assumptions<a href="chisq.html#assumptions-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="assumptions-3" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Assumptions<a href="chisq.html#assumptions-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <span class="math inline">\(\chi^2\)</span> test is also premised upon some assumptions. Namely,</p>
 <ol style="list-style-type: decimal">
 <li>No category has expected frequencies <span class="math inline">\((e_i)\)</span> less than <span class="math inline">\(1\)</span></li>
@@ -1091,7 +1114,7 @@ Total
 <p>If these assumptions are violated and we nevertheless proceed with the test, the resulting conclusion will be unreliable if not completely invalid. With either assumption going unmet, we may have a working solution though, but this depends upon what the categories represent. For example, say the categories refer to a survey question where the response options were “Strongly Disagree”, “Disagree Somewhat”, “Neither Agree nor Disagree”, “Agree Somewhat”, and “Strongly Agree”. If the violation occurs for Strongly Agree or Agree Somewhat, or then for Strongly Disagree or Disagree Somewhat, we could collapse the offending categories, as shown below.</p>
 <table class="kable_wrapper table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:collapsing">TABLE 9.6: </span>Collapsing Response Categories
+<span id="tab:collapsing">TABLE 10.6: </span>Collapsing Response Categories
 </caption>
 <tbody>
 <tr>
@@ -1194,12 +1217,12 @@ Agree
 </table>
 </div>
 </div>
-<div id="the-chi2-test-of-independenceassociation" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association<a href="chisq.html#the-chi2-test-of-independenceassociation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-chi2-test-of-independenceassociation" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association<a href="chisq.html#the-chi2-test-of-independenceassociation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <span class="math inline">\(\chi^2\)</span> test can also be used to test for an association (aka a relationship) between two categorical variables. For example, Dunkin may have retained you to advise them on how to pitch different coffees to men and women. You monitor sales at a store and walk away with the following data:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:coffeesex">TABLE 9.7: </span>Coffee Preferences by Sex
+<span id="tab:coffeesex">TABLE 10.7: </span>Coffee Preferences by Sex
 </caption>
 <thead>
 <tr>
@@ -1296,7 +1319,7 @@ H_1: \text{Coffee preferences ARE associated with sex}
 <p>where <span class="math inline">\(df=(r-1)(c-1)\)</span>, with <span class="math inline">\(r=\)</span> the number of rows in the table and <span class="math inline">\(c=\)</span> number of columns in the table. Our example has 2 rows and 3 columns so <span class="math inline">\(df = (r-1)(c-1) = (2-1)(3-1) = (1)(2) = 2\)</span></p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:coffeesex2">TABLE 9.8: </span>Calculations for Coffee Preference by Sex
+<span id="tab:coffeesex2">TABLE 10.8: </span>Calculations for Coffee Preference by Sex
 </caption>
 <thead>
 <tr>
@@ -1468,7 +1491,7 @@ Total
 <p>Here is another example, this time from the <a href="https://opendatapolicing.com/il/agency/168/">Open Data Policing project</a>. The specific piece of data I want to look at are the number of traffic stops resulting in a ticket, by race, in the Greater Chicago area.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:racepolice">TABLE 9.9: </span>Race, Traffic Stops, and Tickets
+<span id="tab:racepolice">TABLE 10.9: </span>Race, Traffic Stops, and Tickets
 </caption>
 <thead>
 <tr>
@@ -1547,12 +1570,12 @@ H_1: \text{Driver&#39;s race is NOT independent of traffic stops resulting in a 
 \end{array}\]</span></p>
 <p>Using the <a href="http://vassarstats.net/newcs.html">online calculator</a> we find <span class="math inline">\(\chi^2_{df=3} = 1077.88\)</span> with a <span class="math inline">\(p-value &lt; 0.0001\)</span> and can easily reject the null hypothesis; these data suggest that driver’s race and getting a ticket are not independent.</p>
 </div>
-<div id="fishers-exact-test" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Fisher’s Exact Test<a href="chisq.html#fishers-exact-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="fishers-exact-test" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Fisher’s Exact Test<a href="chisq.html#fishers-exact-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This test involves calculating the probability of ending up with the observed frequencies as recorded. It is computationally intensive because it involves calculating, under the assumption that <span class="math inline">\(H_0\)</span> is true, all possible tables that would yield the same row totals and column totals. For example, if we had a <span class="math inline">\(2 \times 2\)</span> contingency table such as the one below,</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:fishers1">TABLE 9.10: </span>A Stylized Example of Fisher’s Exact Test
+<span id="tab:fishers1">TABLE 10.10: </span>A Stylized Example of Fisher’s Exact Test
 </caption>
 <thead>
 <tr>
@@ -1617,7 +1640,7 @@ Total
 <p>the perturbations of cell frequencies would be as shown below, all holding the row and column totals fixed:</p>
 <table class="kable_wrapper table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:fishers2">TABLE 9.11: </span>All Possible Tables with fixed Marginals (1)
+<span id="tab:fishers2">TABLE 10.11: </span>All Possible Tables with fixed Marginals (1)
 </caption>
 <tbody>
 <tr>
@@ -1752,7 +1775,7 @@ Total
 </table>
 <table class="kable_wrapper table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:fishers2">TABLE 9.11: </span>All Possible Tables with fixed Marginals (2)
+<span id="tab:fishers2">TABLE 10.11: </span>All Possible Tables with fixed Marginals (2)
 </caption>
 <tbody>
 <tr>
@@ -1887,7 +1910,7 @@ Total
 </table>
 <table class="kable_wrapper table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:fishers2">TABLE 9.11: </span>All Possible Tables with fixed Marginals (3)
+<span id="tab:fishers2">TABLE 10.11: </span>All Possible Tables with fixed Marginals (3)
 </caption>
 <tbody>
 <tr>
@@ -2023,13 +2046,13 @@ Total
 <p>The probability of observing a given table would have to be calculated as <span class="math inline">\(\dfrac{(a+b)!(c+d)!(a+c)!(b+d)!}{n!a!b!c!d!}\)</span>, and once that is done, the <span class="math inline">\(p-value\)</span> for Fisher’s exact test calculated by summing all probabilities less than or equal to the probability of the observed table. I am sure it is clear why you would only do this test via a computer, not by hand. There is an <a href="http://vassarstats.net/index.html">online calculator</a> as well for <span class="math inline">\(2 \times 2\)</span>, <span class="math inline">\(2 \times 4\)</span>, and <span class="math inline">\(3 \times 3\)</span> contingency tables.</p>
 <p>To complete the example, note that the observed table has a probability of <span class="math inline">\(0.132\)</span>. The <span class="math inline">\(p-value\)</span> for Fisher’s exact test is the sum of four of the other tables <span class="math inline">\(0.132 + 0.132 + 0.0147 + 0.0147 = 0.293\)</span>. This <span class="math inline">\(pvalue\)</span> is not <span class="math inline">\(\leq 0.05\)</span> so we would fail to reject the null hypothesis; the data suggest that the row variable and the column variable are independent.</p>
 </div>
-<div id="a-cautionary-tale" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> A Cautionary Tale<a href="chisq.html#a-cautionary-tale" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a-cautionary-tale" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> A Cautionary Tale<a href="chisq.html#a-cautionary-tale" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One has to be careful when working with large samples because if you have enough data, finding statistical significance becomes easy. You can see this very clearly with the <span class="math inline">\(\chi^2\)</span>.</p>
 <p>Washington state’s Public Interest Research Group (PIRG) found in its recent study that 46% of full-time college students work 25 or more hours per week. A sample of 200 included 90 who worked 1-15 hours per week, 60 who worked 16-24 hours per week, and 50 who worked 25-34 hours per week. Students were also asked if their work had a positive, negative, or no effect on their grades. Assume you have access to the data shown in the “Small Sample” table below while your neighbor has access to the data shown in the “Large Sample” table. Look at the data carefully and note that the cell frequencies differ by a constant factor, that is the only difference.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:cautiontale">TABLE 9.12: </span>A Cautionary Tale about Sample Sizes (Sample 1)
+<span id="tab:cautiontale">TABLE 10.12: </span>A Cautionary Tale about Sample Sizes (Sample 1)
 </caption>
 <thead>
 <tr>
@@ -2122,7 +2145,7 @@ Total
 </table>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:cautiontale">TABLE 9.12: </span>A Cautionary Tale about Sample Sizes (Sample 2)
+<span id="tab:cautiontale">TABLE 10.12: </span>A Cautionary Tale about Sample Sizes (Sample 2)
 </caption>
 <thead>
 <tr>
@@ -2216,8 +2239,8 @@ Total
 <p>Now, if you calculated the <span class="math inline">\(\chi^2\)</span> for both sample sizes, the Small Sample would yield <span class="math inline">\(\chi^2_{df=4} = 10.59\)</span> and with <span class="math inline">\(\alpha = 0.01\)</span> you would be unable to reject the null hypothesis because the <span class="math inline">\(p-value = 0.03157959\)</span>.</p>
 <p>In contrast, the large sample would yield <span class="math inline">\(\chi^2_{df=4} = 106.03\)</span> and this would have a <span class="math inline">\(p-value = 5.109665e-22\)</span>, which is practically <span class="math inline">\(0\)</span>, easily allowing you to reject the null hypothesis of no association. How come such contrasting conclusions? Strictly because of a difference in sample size. What should we do then? For the moment, nothing, since the solutions go beyond the purview of this course. I do, however, want you to recognize the issue of large samples being preordained to more often than not yield statistically significant results. This recognition will come in handy should you ever have large samples to work with.</p>
 </div>
-<div id="chapter-9-practice-problems" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> Chapter 9 Practice Problems<a href="chisq.html#chapter-9-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chapter-9-practice-problems" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Chapter 9 Practice Problems<a href="chisq.html#chapter-9-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For all problems involving a hypothesis test, you must state the null and the alternative nhypotheses AND your conclusion, in words. Merely saying “we reject” or “we fail to reject” is insufficient.</p>
 <p><strong>Problem 1</strong></p>
 <p>Revisit the <code>Titanic</code> data-set and answer the following questions with a suitable test:</p>
@@ -2273,7 +2296,7 @@ questions:</p>
 <p>Hurricanes hit the US often and hard, causing some loss of life and many economic costs. They are ranked in severity by the Saffir-Simpson scale, which ranges from category 1 to category 5, with 5 being the worst. In some years, as many as 3 hurricanes that rate a category 3 or higher hit the US coastline, while in other years no hurricane of this severity hits the US. The following table gives the number of years that had 0, 1, 2, 3 or more hurricanes of at least category 3 in severity, over the 100 years of the twentieth century <a href="http://www.nhc.noaa.gov/pdf/NWS-TPC-5.pdf">Blake et al. 2007</a>:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:hurricaning">TABLE 9.13: </span>Number of hurricanes Category 3 or higher
+<span id="tab:hurricaning">TABLE 10.13: </span>Number of hurricanes Category 3 or higher
 </caption>
 <thead>
 <tr>
@@ -2389,7 +2412,7 @@ Number of Years
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-KlemJr2004" class="csl-entry">
 Klem Jr, Daniel, David C Keck, Karl L Marty, Amy J Miller Ball, Elizabeth E Niciu, and Corry T Platt. 2004. <span>“Effects of Window Angling, Feeder Placement, and Scavengers on Avian Mortality at Plate Glass.”</span> <em>The Wilson Bulletin</em> 116 (1): 69–73.
 </div>
@@ -2399,7 +2422,7 @@ Klem Jr, Daniel, David C Keck, Karl L Marty, Amy J Miller Ball, Elizabeth E Nici
           </div>
         </div>
       </div>
-<a href="hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="anova.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="props.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

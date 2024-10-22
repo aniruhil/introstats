@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <title>Chapter 11 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:title" content="Chapter 11 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta name="twitter:title" content="Chapter 11 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:" />
   
   <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
   
@@ -55,10 +55,18 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
 <script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
-<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.33/datatables.js"></script>
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
@@ -91,6 +99,7 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -328,85 +337,99 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#chapter-8-practice-problems"><i class="fa fa-check"></i><b>8.8</b> Chapter 8 Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>9</b> Working with Multinomial Data</a>
+<li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>9.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>9.1.1</b> Assumptions</a></li>
+<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
+<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>9.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
-<li class="chapter" data-level="9.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>9.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="9.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>9.4</b> A Cautionary Tale</a></li>
-<li class="chapter" data-level="9.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>9.5</b> Chapter 9 Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>10</b> Comparing Proportions</a>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>10.1</b> Specifyng Hypotheses for One-group Tests</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>10.1.1</b> The Normal Approximation to One-group Tests</a></li>
-<li class="chapter" data-level="10.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>10.1.2</b> The Binomial Test</a></li>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>10.2</b> Two-group Tests</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>10.2.1</b> Example 1</a></li>
-<li class="chapter" data-level="10.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>10.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
-<li class="chapter" data-level="10.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>10.2.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="10.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>10.2.4</b> Example 2</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>10.3</b> Measuring the Strength of the Association</a>
+<li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>10.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
-<li class="chapter" data-level="10.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>10.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
-<li class="chapter" data-level="10.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>10.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
-<li class="chapter" data-level="10.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>10.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
-<li class="chapter" data-level="10.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>10.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
-<li class="chapter" data-level="10.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>10.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
-<li class="chapter" data-level="10.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>10.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>10.4</b> Chapter 10 Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>11</b> Linear Regression</a>
+<li class="chapter" data-level="10.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>10.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>11.1</b> Correlations</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.1</b> Pearson Correlation Coefficient</a></li>
-<li class="chapter" data-level="11.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>11.1.2</b> Spearman Correlation Coefficient</a></li>
+<li class="chapter" data-level="10.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>10.1.1</b> Assumptions</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>11.2</b> Bivariate Regression</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>11.2.1</b> The Method of Ordinary Least Squares</a></li>
-<li class="chapter" data-level="11.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>11.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
-<li class="chapter" data-level="11.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>11.2.3</b> Hypotheses</a></li>
-<li class="chapter" data-level="11.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>11.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
-<li class="chapter" data-level="11.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>11.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
-<li class="chapter" data-level="11.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>11.2.6</b> Dummy Variables</a></li>
+<li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#chapter-9-practice-problems"><i class="fa fa-check"></i><b>10.5</b> Chapter 9 Practice Problems</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Multiple Regression</a>
+<li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>11.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
-<li class="chapter" data-level="11.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>11.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
-<li class="chapter" data-level="11.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>11.3.3</b> Interaction Effects</a></li>
-</ul></li>
-<li class="chapter" data-level="11.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>11.4</b> Assumptions of Linear Regression</a>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
 <ul>
-<li class="chapter" data-level="11.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>11.4.1</b> Assumption 1: Linear Regression Model</a></li>
-<li class="chapter" data-level="11.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>11.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
-<li class="chapter" data-level="11.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>11.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
-<li class="chapter" data-level="11.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>11.4.4</b> Assumption 4: Homoscedasticity</a></li>
-<li class="chapter" data-level="11.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>11.4.5</b> Assumption 5: No Autocorrelation</a></li>
-<li class="chapter" data-level="11.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>11.4.6</b> Assumptions 6, 7, and 8</a></li>
-<li class="chapter" data-level="11.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>11.4.7</b> Assumptions 9 and 10</a></li>
+<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>11.5</b> Chapter 11 Practice Problems</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>12</b> The Summation Operator</a>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>12.1</b> The Single Summation Operator</a></li>
-<li class="chapter" data-level="12.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>12.2</b> The Double Subscript</a></li>
-<li class="chapter" data-level="12.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>12.3</b> The Constant Rule</a></li>
-<li class="chapter" data-level="12.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>12.4</b> The Distributive Rule</a></li>
-<li class="chapter" data-level="12.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>12.5</b> The Dot Notation</a></li>
-<li class="chapter" data-level="12.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>12.6</b> The Basic Rules of Summation</a></li>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#chapter-10-practice-problems"><i class="fa fa-check"></i><b>11.4</b> Chapter 10 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>12.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>12.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="12.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>12.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>12.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>12.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="12.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>12.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="12.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>12.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="12.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>12.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="12.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>12.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="12.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>12.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>12.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>12.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="12.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>12.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="12.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>12.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="12.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>12.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="12.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>12.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#chapter-11-practice-problems"><i class="fa fa-check"></i><b>12.5</b> Chapter 11 Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>13.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="13.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>13.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="13.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>13.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="13.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>13.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -428,8 +451,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="props" class="section level1 hasAnchor" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Comparing Proportions<a href="props.html#props" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="props" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Comparing Proportions<a href="props.html#props" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Thus far we have worked with continuous and multinomial outcomes but the more common measures you are likely to encounter in the social and behavioral sciences happen to be dichotomous – did the job-training participant get employment <span class="math inline">\((y=1)\)</span> or not <span class="math inline">\((y=0)\)</span>?; did the patient improve post-surgery because he/she received pre-operative physical therapy <span class="math inline">\((y=1)\)</span> or not <span class="math inline">\((y=0)\)</span>? Does the community support this initiative <span class="math inline">\((y=1)\)</span> or not <span class="math inline">\((y=0)\)</span>? Did someone volunteer for the food drive <span class="math inline">\((y=1)\)</span> or not <span class="math inline">\((y=0)\)</span>? The dichotomy may also arise in other ways as, for example, with the questions of whether women are more likely to vote <span class="math inline">\((y=1)\)</span> than men <span class="math inline">\((y=0)\)</span>, whether women are more likely to vote Democrat <span class="math inline">\((y=1)\)</span> than men <span class="math inline">\((y=0)\)</span>, and so on. With data such as these, while the basic logic of hypothesis testing continues to guide analysis, the manner in which we analyze such data differs from the <span class="math inline">\(t-tests\)</span> used in the preceding chapter. The need for hypothesis testing remains the same: We have to determine whether the proportions we see in our sample are very likely to reflect what is true in the population before we state a claim.</p>
 <p>Take, for instance, the question of <a href="https://mappingpoliceviolence.org">blacks killed by police officers</a>. If you read the story you see statements such as “30% of black victims were unarmed compared to 21% of white victims in 2015”. The Washington Post releases a continually updated data-set of <a href="https://aniruhil.github.io/avsr/teaching/dataviz/fatal_police_shootings.csv">all individuals killed by a police officer</a> and so we could analyze the statement for ourselves. Similarly, we could shatter the myth of the <a href="http://www.nytimes.com/2012/08/07/health/law-of-the-sea-women-and-children-fare-poorly-in-ship-disasters.html?mcubz=1">chivalry of the seas</a> with the specific example of the sinking of the Titanic and asking whether women were more likely to survive than men by studying the details of the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/titanic3.xls">passenger manifest</a>. These are but two examples of the ways in which categorical data tied to a pressing issue or to a lingering romantic historical artifact can be used to judge claims for ourselves, and to correct the record if necessary.</p>
 <p>To begin to do so we could recognize that dichotomous (or binary) outcomes where only one of two events is likely to occur at a time per person – a passenger either survives or does not survive – and that the <code>binomial distribution</code> characterizes such outcomes. We covered this distribution in Chapter 6, section 6.2.1.1 to be precise. How could the binomial distribution help us here?</p>
@@ -442,26 +465,26 @@ P\left[x \text{ successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binomtitanic"></span>
 <img src="stats_files/figure-html/binomtitanic-1.svg" alt="Binomial Distribution of Female Passenger's Survival with p = 0.5" width="75%" />
 <p class="caption">
-FIGURE 10.1: Binomial Distribution of Female Passenger’s Survival with p = 0.5
+FIGURE 11.1: Binomial Distribution of Female Passenger’s Survival with p = 0.5
 </p>
 </div>
 <p>How many of the female passengers survived the Titanic sinking? Some 339 did, which makes the actual probability of survival approximately <span class="math inline">\(0.7275\)</span>. If this were the <code>true probability</code> of a female passenger surviving a shipwreck, the distribution of survivals should have looked as follows:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binomtitanic2"></span>
 <img src="stats_files/figure-html/binomtitanic2-1.svg" alt="Binomial Distribution of Female Passenger's Survival with p = 0.5 vs. p = 0.7275" width="75%" />
 <p class="caption">
-FIGURE 10.2: Binomial Distribution of Female Passenger’s Survival with p = 0.5 vs. p = 0.7275
+FIGURE 11.2: Binomial Distribution of Female Passenger’s Survival with p = 0.5 vs. p = 0.7275
 </p>
 </div>
 <p>Note how the actual distribution of survival (in blue) differs from the expected distribution of survival (in red), and this difference is stark. But this is no surprise given that we had seen a massive gap between the expected probability of <span class="math inline">\(0.50\)</span> and the actual probability of <span class="math inline">\(0.7275\)</span>. Assuming no complications with the data and factors shaping survival, this simple analysis would lead us to conclude that survival probabilities, at least on the Titanic, were quite a bit higher than <span class="math inline">\(0.5\)</span> for female passengers. What about for the 843 male passengers? Their survival probability was about <span class="math inline">\(0.1910\)</span>, leading to two very different distributions of survival for the sexes.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binomtitanic3"></span>
 <img src="stats_files/figure-html/binomtitanic3-1.svg" alt="Binomial Distribution of Female vs. Male Passengers" width="75%" />
 <p class="caption">
-FIGURE 10.3: Binomial Distribution of Female vs. Male Passengers
+FIGURE 11.3: Binomial Distribution of Female vs. Male Passengers
 </p>
 </div>
 <p>This side-by-side comparison would also lead us to suspect that males were less likely to survive than females. But how could we draw these sorts of conclusions via hypothesis tests? As it turns out, in a fairly straightforward manner, and I demonstrate the approach below.</p>
-<div id="specifyng-hypotheses-for-one-group-tests" class="section level2 hasAnchor" number="10.1">
-<h2><span class="header-section-number">10.1</span> Specifyng Hypotheses for One-group Tests<a href="props.html#specifyng-hypotheses-for-one-group-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="specifyng-hypotheses-for-one-group-tests" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Specifyng Hypotheses for One-group Tests<a href="props.html#specifyng-hypotheses-for-one-group-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now we no longer refer to the null population mean <span class="math inline">\(mu\)</span> but instead to the null population proportion <span class="math inline">\(p_0\)</span> when constructing hypotheses, with the sample proportion represented by <span class="math inline">\(\bar{p}\)</span>. In particular, the hypotheses will look as follows:</p>
 <p><span class="math display">\[\begin{eqnarray*}
 \text{Lower Tail Test } \ldots H_{0}: p \geq p_{0}; H_{1}: p &lt; p_{0} \\
@@ -474,11 +497,11 @@ FIGURE 10.3: Binomial Distribution of Female vs. Male Passengers
 <p><span class="math display">\[\bar{s}_{\bar{p}} = \sqrt{ \dfrac{ \left( \bar{p} \times (1-\bar{p}) \right) }{n} }\]</span></p>
 <p>leading to the confidence interval defined as <span class="math inline">\(\bar{p} \pm z_{\alpha/2} (\bar{s}_{\bar{p}})\)</span>. We also make a <code>coninuity correction</code> used to adjust for the fact that we are approximating a discrete distribution with a continuous distribution, the correction being the addition and subtraction of <span class="math inline">\(\dfrac{0.5}{n}\)</span> from the upper and lower confidence interval limits, respectively.</p>
 <p>The decision rules stay the same: Specify the hypotheses, set <span class="math inline">\(\alpha = 0.05\)</span> or <span class="math inline">\(\alpha=0.01\)</span>, reject the null hypothesis if the <span class="math inline">\(p-value \leq \alpha\)</span>, state the conclusion in words, and then report and interpret the confidence interval for the estimate.</p>
-<div id="the-normal-approximation-to-one-group-tests" class="section level3 hasAnchor" number="10.1.1">
-<h3><span class="header-section-number">10.1.1</span> The Normal Approximation to One-group Tests<a href="props.html#the-normal-approximation-to-one-group-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-normal-approximation-to-one-group-tests" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> The Normal Approximation to One-group Tests<a href="props.html#the-normal-approximation-to-one-group-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We will start with the <code>normal approximation tests</code> before switching to the more precise tests, if only because you will see the normal approximation tests in use in other texts.</p>
-<div id="example-1-11" class="section level4 hasAnchor" number="10.1.1.1">
-<h4><span class="header-section-number">10.1.1.1</span> Example 1<a href="props.html#example-1-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1-11" class="section level4 hasAnchor" number="11.1.1.1">
+<h4><span class="header-section-number">11.1.1.1</span> Example 1<a href="props.html#example-1-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The probability of surviving a shipwreck is assumed to be <span class="math inline">\(0.5\)</span>. When the Titanic went down, only some 38.1971% of its 1,309 passengers survived. Did the Titanic have a significantly lower survival rate than the assumed probability of <span class="math inline">\(0.5\)</span>?</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{ Probability of surviving the Titanic } (p \geq 0.50) \\
@@ -490,8 +513,8 @@ H_1: \text{ Probability of surviving the Titanic } (p &lt; 0.50)
 <p>The test statistic is <span class="math inline">\(z=\dfrac{\bar{p}-p_{0}}{s_{\bar{p}}} = \dfrac{0.381971 - 0.5}{0.01381975} = \dfrac{-0.118029}{0.01381975} = -8.540603\)</span>. The <span class="math inline">\(p-value\)</span> is practically <span class="math inline">\(0\)</span> (to be precise, it is <span class="math inline">\(6.676161e-18\)</span>) so we can easily reject the null hypothesis. The data suggest that the Titanic had a significantly lower survival rate than <span class="math inline">\(0.5\)</span>.</p>
 <p>The 99% confidence interval is <span class="math inline">\(\bar{p} \pm z_{\alpha/2}(\bar{s}_{\bar{p}}) = 0.381971 \pm 2.327 \left(\sqrt{\dfrac{0.381971 \times (1 - 0.381971)}{1309}}\right) = (0.3507213, 0.4132207)\)</span>. With the continuity correction we have <span class="math inline">\((0.3507213 - 0.000381971)\)</span> and <span class="math inline">\((0.4132207 + 0.000381971)\)</span>, respectively. That is, we can be about 99% confident that the true survival rate for shipwrecks lies in the interval given by <span class="math inline">\(0.3503\)</span> and <span class="math inline">\(0.4136\)</span>.</p>
 </div>
-<div id="example-2-11" class="section level4 hasAnchor" number="10.1.1.2">
-<h4><span class="header-section-number">10.1.1.2</span> Example 2<a href="props.html#example-2-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-2-11" class="section level4 hasAnchor" number="11.1.1.2">
+<h4><span class="header-section-number">11.1.1.2</span> Example 2<a href="props.html#example-2-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Your public school district carried out a drug-use survey and found the proportion of the 497 students reporting “occasional recreational use of opioids” to be <span class="math inline">\(0.11\)</span>. The national average is reported to be <span class="math inline">\(0.06\)</span>; is your school district’s rate significantly different from the national average? Use <span class="math inline">\(\alpha = 0.05\)</span>.</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{ The district&#39;s rate is not different from the national average } (p = 0.06) \\
@@ -503,37 +526,37 @@ H_1: \text{ The district&#39;s rate is different from the national average } (p 
 <p>The 95% confidence interval is <span class="math inline">\(\bar{p} \pm z_{\alpha/2} (\bar{s}_{\bar{p}}) = 0.11 \pm 1.96 (0.01403502) = (0.08249136, 0.1375086)\)</span>, and with the continuity correction we have <span class="math inline">\((0.08249136 - 0.001006036, 0.1375086 + 0.001006036)\)</span> indicating that we can be about 95% confident the true rate lies in the interval of 8.14% and 13.85%.</p>
 </div>
 </div>
-<div id="the-binomial-test" class="section level3 hasAnchor" number="10.1.2">
-<h3><span class="header-section-number">10.1.2</span> The Binomial Test<a href="props.html#the-binomial-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-binomial-test" class="section level3 hasAnchor" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> The Binomial Test<a href="props.html#the-binomial-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The normal approximation we used above works well in “large samples” though defining “large” is tricky. Some folks are perfectly content to rely on the <code>central limit theorem</code> to use the normal approximation so long as they have 30 or more cases but others proceed with more caution. The latter group will focus on the known or, if unknown, the suspected population proportion <span class="math inline">\(p\)</span>. If <span class="math inline">\(p = 0.5\)</span>, then one can get away with the normal approximation when the sample size is 9. As <span class="math inline">\(p\)</span> gets closer to <span class="math inline">\(01\)</span> or <span class="math inline">\(1\)</span>, the sample size needed increases. If <span class="math inline">\(p=0.8\)</span> or <span class="math inline">\(p=0.2\)</span>, you need <span class="math inline">\(n=36\)</span> and if <span class="math inline">\(p=0.9\)</span> or <span class="math inline">\(p=0.1\)</span> you need <span class="math inline">\(n=81\)</span>.</p>
 <p>Others will eschew the normal approximation in favor of more precise binomial tests. I follow this route because with the availability of computers there is really no longer any need to use the normal approximation with proportions. In fact, you don’t even need a statistics package, all you need is a calculator and a browser and you can run the tests via, for example, <a href="http://stattrek.com/online-calculator/binomial.aspx">this applet</a> or <a href="http://onlinestatbook.com/2/calculators/binomial_dist.html">this applet</a>.</p>
-<div id="example-1-revisited" class="section level4 hasAnchor" number="10.1.2.1">
-<h4><span class="header-section-number">10.1.2.1</span> Example 1 Revisited<a href="props.html#example-1-revisited" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1-revisited" class="section level4 hasAnchor" number="11.1.2.1">
+<h4><span class="header-section-number">11.1.2.1</span> Example 1 Revisited<a href="props.html#example-1-revisited" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Using the first applet, enter the values asked for and click <code>Calculate</code>. The first line of results will have a row called “Binomial Probability: P(X = 500)” and the corresponding <span class="math inline">\(p-value\)</span> will be shown as <span class="math inline">\(&lt; 0.000001\)</span>. This <span class="math inline">\(p-value\)</span> is clearly smaller than <span class="math inline">\(\alpha = 0.05\)</span> so we can reject the null hypothesis. This is the same conclusion we arrived at earlier.</p>
 <p>The 99% confidence interval is <span class="math inline">\(0.3480\)</span> and <span class="math inline">\(0.4170\)</span>, respectively.</p>
 </div>
-<div id="example-2-revisited" class="section level4 hasAnchor" number="10.1.2.2">
-<h4><span class="header-section-number">10.1.2.2</span> Example 2 Revisited<a href="props.html#example-2-revisited" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-2-revisited" class="section level4 hasAnchor" number="11.1.2.2">
+<h4><span class="header-section-number">11.1.2.2</span> Example 2 Revisited<a href="props.html#example-2-revisited" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Once again, if you enter the values asked for and calculate the <span class="math inline">\(p-value\)</span> you will see “Cumulative Probability: P(X &gt; 55)” with a corresponding value of <span class="math inline">\(5.74906923800356E-06\)</span>. Since it is a two-tailed hypothesis test, the <span class="math inline">\(p-value\)</span> becomes <span class="math inline">\(0.00001149814\)</span>, again allowing us to reject the null hypothesis.</p>
 <p>The 95% confidence interval is <span class="math inline">\(0.0858\)</span> and <span class="math inline">\(0.1414\)</span>, respectively.</p>
 </div>
 </div>
 </div>
-<div id="two-group-tests" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> Two-group Tests<a href="props.html#two-group-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="two-group-tests" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Two-group Tests<a href="props.html#two-group-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>What if we have two groups instead of one as, for example, in the question of survival rates of males versus females on the Titanic, or even drug use among male versus female students in the school district? How can we carry out hypothesis tests for these designs?</p>
-<div id="example-1-12" class="section level3 hasAnchor" number="10.2.1">
-<h3><span class="header-section-number">10.2.1</span> Example 1<a href="props.html#example-1-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="example-1-12" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Example 1<a href="props.html#example-1-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Assume, for example, that we are studying the Titanic disaster and interested in how survival rates differed by the passenger’s sex. A simple cross-tabulation of sex by survival status would look like the following:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:titanictable2"></span>
 <img src="stats_files/figure-html/titanictable2-1.svg" alt="Titanic Passengers' Survival by Sex" width="65%" /><img src="stats_files/figure-html/titanictable2-2.svg" alt="Titanic Passengers' Survival by Sex" width="65%" />
 <p class="caption">
-FIGURE 10.4: Titanic Passengers’ Survival by Sex
+FIGURE 11.4: Titanic Passengers’ Survival by Sex
 </p>
 </div>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:titanictable3">TABLE 10.1: </span>Survival Status by Sex
+<span id="tab:titanictable3">TABLE 11.1: </span>Survival Status by Sex
 </caption>
 <thead>
 <tr>
@@ -598,8 +621,8 @@ Total
 <p>The bar-chart shows a marked difference in the chance of survival for male versus female passengers, with female passengers more likely to survive. Specifically, only 19.1% of males survived versus 72.75% of females. The same pattern is visible in the contingency table as well. On the basis of these visualizations is is very likely that if we test for an association between sex and survival we are likely to reject the null hypothesis of no association between the two variables. Let us now turn to the hypothesis test.</p>
 <p>In essence, we have a <span class="math inline">\(2 \times 2\)</span> contingency table and could test whether the proportion of female deaths differs from the proportion of male deaths via a normal approximation but instead we will rely upon two other tests – (i) the <span class="math inline">\(\chi^2\)</span> test, and (ii) the more precise Fisher’s Exact test.</p>
 </div>
-<div id="the-chi2-test" class="section level3 hasAnchor" number="10.2.2">
-<h3><span class="header-section-number">10.2.2</span> The <span class="math inline">\(\chi^2\)</span> Test<a href="props.html#the-chi2-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-chi2-test" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> The <span class="math inline">\(\chi^2\)</span> Test<a href="props.html#the-chi2-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We saw this test in action in the preceding chapter so the mechanics are familiar to us. Let us run through them.</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{ Survival was independent of a passenger&#39;s sex } (p_{male} = p_{female}) \\
@@ -607,12 +630,12 @@ H_1: \text{ Survival was NOT independent of a passenger&#39;s sex } (p_{male} \n
 \end{array}\]</span></p>
 <p>Using the <a href="http://vassarstats.net/newcs.html">online calculator</a> we obtain <span class="math inline">\(\chi^2_{1} = 363.62\)</span> with a <span class="math inline">\(p-value &lt; 0.0001\)</span> so we can easily reject the null hypothesis; these data suggest that survival was not independent of a passenger’s sex.</p>
 </div>
-<div id="fishers-exact-test-1" class="section level3 hasAnchor" number="10.2.3">
-<h3><span class="header-section-number">10.2.3</span> Fisher’s Exact Test<a href="props.html#fishers-exact-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="fishers-exact-test-1" class="section level3 hasAnchor" number="11.2.3">
+<h3><span class="header-section-number">11.2.3</span> Fisher’s Exact Test<a href="props.html#fishers-exact-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There is an online calculator for <span class="math inline">\(2 \times 2\)</span> tables; <a href="http://www.socscistatistics.com/tests/fisher/Default2.aspx">see here</a>, although you won’t see the exact <span class="math inline">\(p-value\)</span> reported but it is the one calculator we currently have. As it turns out, the <span class="math inline">\(p-value\)</span> is indeed very small (almost <span class="math inline">\(0\)</span>) and so this too allows us to reject the null hypothesis.</p>
 </div>
-<div id="example-2-12" class="section level3 hasAnchor" number="10.2.4">
-<h3><span class="header-section-number">10.2.4</span> Example 2<a href="props.html#example-2-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="example-2-12" class="section level3 hasAnchor" number="11.2.4">
+<h3><span class="header-section-number">11.2.4</span> Example 2<a href="props.html#example-2-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suicidal deaths tend to be very high in India, with the causes ranging from indebtedness to a sense of shame for having failed an exam, divorce, and other life course events. Farmers tend to be one of the more vulnerable groups with, by some account, some 60,000 farmers having committed suicide over the past three decades due to <a href="https://www.theguardian.com/environment/2017/jul/31/suicides-of-nearly-60000-indian-farmers-linked-to-climate-change-study-claims">rising temperatures and the resultant stress on India’s agricultural sector</a>. We have access to data on suicides over the 2001-2012 period, and <a href="https://aniruhil.github.io/avsr/teaching/dataviz/suicides_2012.csv">this data-set</a> contains information on 3,193 of 19,799 suicides that occurred in 2012.</p>
 <p>The question of interest is whether men and women are just as likely to commit suicide for the following two causes: (i) Fall in Social Reputation, and (ii) Dowry Dispute.</p>
 <p><span class="math display">\[\begin{array}{l}
@@ -622,7 +645,7 @@ H_1: \text{ There is an association between the cause and the suicide victim&#39
 <p>The contingency table and bar-chart are shown below:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:suicides2">TABLE 10.2: </span>Suicide Cause by Sex (India, 2012)
+<span id="tab:suicides2">TABLE 11.2: </span>Suicide Cause by Sex (India, 2012)
 </caption>
 <thead>
 <tr>
@@ -687,19 +710,19 @@ Total
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:suicides3"></span>
 <img src="stats_files/figure-html/suicides3-1.svg" alt="Cause of Suicide by Sex" width="65%" /><img src="stats_files/figure-html/suicides3-2.svg" alt="Cause of Suicide by Sex" width="65%" />
 <p class="caption">
-FIGURE 10.5: Cause of Suicide by Sex
+FIGURE 11.5: Cause of Suicide by Sex
 </p>
 </div>
 <p>Running the <span class="math inline">\(\chi^2\)</span> test yields <span class="math inline">\(\chi^2_{df = 1} = 22.79\)</span> with a <span class="math inline">\(p-value = 0.000001807\)</span> and so we can reject the null hypothesis; these data suggest that cause of suicide and the victim’s sex are not independent.</p>
 </div>
 </div>
-<div id="measuring-the-strength-of-the-association" class="section level2 hasAnchor" number="10.3">
-<h2><span class="header-section-number">10.3</span> Measuring the Strength of the Association<a href="props.html#measuring-the-strength-of-the-association" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="measuring-the-strength-of-the-association" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Measuring the Strength of the Association<a href="props.html#measuring-the-strength-of-the-association" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Merely rejecting or failing to reject a null hypothesis is rarely the ultimate goal of any analysis. Say you reject the null hypothesis of a passenger’s survival being independent of their sex. Wouldn’t you at least want to know how strong is the association between these two variables? You often do, and we can answers questions about the <code>strength of the association</code> between categorical variables (be they nominal or ordinal) by way of some statistics. In this section we will not only look at our options but also at what measure of association should be used and when.</p>
 <p>Say our contingency table is made up of two nominal variables, one being support for abortion and the other being the respondent’s educational attainment level. The data are mapped for you in the table that follows:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:pretab1">TABLE 10.3: </span>Educational Attainment and Support for Abortion
+<span id="tab:pretab1">TABLE 11.3: </span>Educational Attainment and Support for Abortion
 </caption>
 <thead>
 <tr>
@@ -807,7 +830,7 @@ NA
 <p>Now, what if you were provided the missing information, the missing cell frequencies?</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:pretab2">TABLE 10.4: </span>Educational Attainment and Support for Abortion
+<span id="tab:pretab2">TABLE 11.4: </span>Educational Attainment and Support for Abortion
 </caption>
 <thead>
 <tr>
@@ -919,8 +942,8 @@ Total (%)
 </ol>
 <p>Now calculate <span class="math inline">\(PRE = \dfrac{E_1 - E_2}{E_1} = \dfrac{417 - 378}{417} = \dfrac{39}{417} = 0.09\)</span>. We improved our predictive ability by 9% when using educational attainment as compared to if we ignored or did not have access to information about an individual’s educational attainment.</p>
 <p>There are several PRE measures that could be used, depending upon the nature of the variables that comprise the contingency table. Let us see each of these in turn.</p>
-<div id="goodman-kruskal-lambda-lambda" class="section level3 hasAnchor" number="10.3.1">
-<h3><span class="header-section-number">10.3.1</span> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span><a href="props.html#goodman-kruskal-lambda-lambda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="goodman-kruskal-lambda-lambda" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span><a href="props.html#goodman-kruskal-lambda-lambda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(\lambda = \dfrac{E_1 - E_2}{E_1}\)</span> was used in the preceding example that explained the concept of proportional reduction in error. It is an <code>asymmetrical</code> measure of association in that its value will differ depending upon which variable is used as the dependent variable. For example, consider the following two tables, built with the same data except that one uses violence as the dependent variable while the other uses assailant’s status as the dependent variable.</p>
 <p>In the first table,
 <span class="math display">\[\begin{array}{l}
@@ -941,14 +964,14 @@ E_2 = (472,760 - 350,670) + (1,161,900 - 930,860) + (8,264,320 - 4,272,230) \\
 \end{array}\]</span></p>
 <p>Conventionally, the dependent variable is always the <code>row variable</code> and you should follow this rule.</p>
 </div>
-<div id="phi-phi-coefficient" class="section level3 hasAnchor" number="10.3.2">
-<h3><span class="header-section-number">10.3.2</span> Phi <span class="math inline">\((\phi)\)</span> Coefficient<a href="props.html#phi-phi-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="phi-phi-coefficient" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> Phi <span class="math inline">\((\phi)\)</span> Coefficient<a href="props.html#phi-phi-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If both variables are nominal and you have a <span class="math inline">\(2 \times 2\)</span> contingency table, then we use the <code>phi coefficient</code> to measure the strength of the association between the two variables.</p>
 <p><span class="math inline">\(\phi = \sqrt{\dfrac{\chi^2}{n}}\)</span></p>
 <p>Technically, if the table is as follows,</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:phi">TABLE 10.5: </span>Calculating phi
+<span id="tab:phi">TABLE 11.5: </span>Calculating phi
 </caption>
 <thead>
 <tr>
@@ -989,8 +1012,8 @@ d
 </table>
 <p>where <span class="math inline">\(\phi = \dfrac{ad - bc}{\sqrt{(a+b)(c+d)(a+c)(b+d)}}\)</span> with <span class="math inline">\(df=(r-1)(c-1)\)</span>.</p>
 </div>
-<div id="cramers-v-and-contingency-c" class="section level3 hasAnchor" number="10.3.3">
-<h3><span class="header-section-number">10.3.3</span> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span><a href="props.html#cramers-v-and-contingency-c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cramers-v-and-contingency-c" class="section level3 hasAnchor" number="11.3.3">
+<h3><span class="header-section-number">11.3.3</span> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span><a href="props.html#cramers-v-and-contingency-c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cramer’s <span class="math inline">\(V\)</span> is used when both variables are nominal but at least one has more than <span class="math inline">\(2\)</span> categories. Cramer’s V <span class="math inline">\(= \sqrt{\dfrac{\chi^2}{n \times m}}\)</span> where <span class="math inline">\(m\)</span> is the smaller of <span class="math inline">\((r-1)\)</span> or <span class="math inline">\((c-1)\)</span>.</p>
 <p>Contingency Coefficient <span class="math inline">\(C = \sqrt{ \dfrac{\chi^{2}}{\chi^{2} \times n} }\)</span> is recommended for <span class="math inline">\(5 \times 5\)</span> tables since it appears to underestimate the strength of the association in smaller tables.</p>
 <p>Both <span class="math inline">\(c\)</span> and <span class="math inline">\(V\)</span> will fall in the <span class="math inline">\(\left[0,1\right]\)</span> range, i.e., <span class="math inline">\(0 \leq V \leq 1\)</span> and <span class="math inline">\(0 \leq C \leq 1\)</span>.</p>
@@ -1016,12 +1039,12 @@ d
 </ul></li>
 </ol>
 </div>
-<div id="goodman-kruskal-gamma-gamma" class="section level3 hasAnchor" number="10.3.4">
-<h3><span class="header-section-number">10.3.4</span> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span><a href="props.html#goodman-kruskal-gamma-gamma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="goodman-kruskal-gamma-gamma" class="section level3 hasAnchor" number="11.3.4">
+<h3><span class="header-section-number">11.3.4</span> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span><a href="props.html#goodman-kruskal-gamma-gamma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>What if we have two ordinal variables, as is the case in the contingency table shown below?</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:gamma1">TABLE 10.6: </span>Two Ordinal Variables
+<span id="tab:gamma1">TABLE 11.6: </span>Two Ordinal Variables
 </caption>
 <thead>
 <tr>
@@ -1098,15 +1121,15 @@ N_s &gt; N_d, \gamma \to +1 \\
 N_s &lt; N_d, \gamma \to -1 \\
 N_s = N_d, \gamma = 0
 \end{array}\]</span></p>
-<p>In the present example, we have <span class="math inline">\(\gamma = \dfrac{N_s - N_d}{N_s + N_d} = \dfrac{175,518 - 92,061}{175,518 + 92,061}=0.31\)</span>, indicating a moderate impact of education on financial satisfaction.</p>
+<p>In the present example, we have <span class="math inline">\(\gamma = \dfrac{N_s - N_d}{N_s + N_d} =  \dfrac{175,518 - 92,061}{175,518 + 92,061}=0.31\)</span>, indicating a moderate impact of education on financial satisfaction.</p>
 <p>Note, before we move on, that if <span class="math inline">\(N_s = 100, N_d = 0, \gamma = \dfrac{N_s - N_d}{N_s + N_d} = \dfrac{100 - 0}{100 + 0} = 1\)</span> and if <span class="math inline">\(N_s = 0, N_d = 100, \gamma = \dfrac{N_s - N_d}{N_s + N_d} = \dfrac{0 - 100}{0 + 100} = -1\)</span></p>
 </div>
-<div id="kendalls-tau_b" class="section level3 hasAnchor" number="10.3.5">
-<h3><span class="header-section-number">10.3.5</span> Kendall’s <span class="math inline">\((\tau_b)\)</span><a href="props.html#kendalls-tau_b" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="kendalls-tau_b" class="section level3 hasAnchor" number="11.3.5">
+<h3><span class="header-section-number">11.3.5</span> Kendall’s <span class="math inline">\((\tau_b)\)</span><a href="props.html#kendalls-tau_b" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Unfortunately, however, <span class="math inline">\(\gamma\)</span> ignores what are called <code>tied pairs</code>. Say what?</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:gamma2">TABLE 10.7: </span>Tied Dependent and Independent Pairs
+<span id="tab:gamma2">TABLE 11.7: </span>Tied Dependent and Independent Pairs
 </caption>
 <thead>
 <tr>
@@ -1176,12 +1199,12 @@ T_x = (1,194 \times 477) + (193 \times 147) = 569,538 + 28,371 = 597,909
 <p>Then, we can calculate <span class="math inline">\(\gamma&#39;s\)</span> replacement:<span class="math inline">\(\tau_b = \dfrac{N_s - N_d}{\sqrt{(N_s + N_d + T_y)(N_s + N_d + T_x)}} = \dfrac{83,457}{701,226} =0.12\)</span>, indicative of a weak positive association. This estimate is much smaller than what we had for <span class="math inline">\(\gamma\)</span> but that should be no surprise given that <span class="math inline">\(\tau_b\)</span> will, as a rule, be <span class="math inline">\(&lt; \gamma\)</span> because <span class="math inline">\(\tau_b\)</span> takes all tied pairs into account whereas <span class="math inline">\(\gamma\)</span> does not.</p>
 <p><span class="math inline">\(\tau_b\)</span> is best used with <code>square tables</code> – <span class="math inline">\(2 \times 2\)</span>, <span class="math inline">\(3 \times 3\)</span>, and so on.</p>
 </div>
-<div id="kendalls-tau_c" class="section level3 hasAnchor" number="10.3.6">
-<h3><span class="header-section-number">10.3.6</span> Kendall’s <span class="math inline">\((\tau_c)\)</span><a href="props.html#kendalls-tau_c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="kendalls-tau_c" class="section level3 hasAnchor" number="11.3.6">
+<h3><span class="header-section-number">11.3.6</span> Kendall’s <span class="math inline">\((\tau_c)\)</span><a href="props.html#kendalls-tau_c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This measure can be used instead of <span class="math inline">\(\tau_b\)</span> when you have tables that are <code>not square</code> – <span class="math inline">\(2 \times 3\)</span>, <span class="math inline">\(3 \times 4\)</span>, and so on. Specifically, <span class="math inline">\(tau_c = \left(N_s - N_d\right) \times \left[2m / (n^{2} (m - 1) )\right]\)</span>, where <span class="math inline">\(m\)</span> is the number of rows or columns, whichever is smaller, and <span class="math inline">\(n\)</span> is sample size. All properties that hold for <span class="math inline">\(\tau_b\)</span> apply to <span class="math inline">\(\tau_c\)</span> as well.</p>
 </div>
-<div id="somers-d" class="section level3 hasAnchor" number="10.3.7">
-<h3><span class="header-section-number">10.3.7</span> Somer’s <span class="math inline">\(D\)</span><a href="props.html#somers-d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="somers-d" class="section level3 hasAnchor" number="11.3.7">
+<h3><span class="header-section-number">11.3.7</span> Somer’s <span class="math inline">\(D\)</span><a href="props.html#somers-d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(\gamma, tau_b, tau_c\)</span> are all symmetric measures in that it does not matter what variable is an independent variable and what variable is dependent. Indeed, you may have no <em>a priori</em> idea of what is your dependent variable when using these and the resulting estimates would be fine. However, when you have <em>a priori</em> hypotheses about a particular variable being the dependent variable of interest, then you should use Somer’s <span class="math inline">\(D\)</span>.</p>
 <p><span class="math display">\[D_{yx} = \dfrac{N_s - N_d}{N_s + N_d + T_y}\]</span></p>
 <p>Again, because this measure adjusts for tied dependent pairs its value will be less than <span class="math inline">\(\gamma\)</span>. In the ongoing example of education and financial satisfaction,</p>
@@ -1189,8 +1212,8 @@ T_x = (1,194 \times 477) + (193 \times 147) = 569,538 + 28,371 = 597,909
 <p>Somer’s <span class="math inline">\(D\)</span> will work with square and non-square tables of any size.</p>
 </div>
 </div>
-<div id="chapter-10-practice-problems" class="section level2 hasAnchor" number="10.4">
-<h2><span class="header-section-number">10.4</span> Chapter 10 Practice Problems<a href="props.html#chapter-10-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chapter-10-practice-problems" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Chapter 10 Practice Problems<a href="props.html#chapter-10-practice-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Problem 1</strong>
 <a href="https://www.theguardian.com/film/2015/jun/06/downwinders-nuclear-fallout-hollywood-john-wayne">Radioactive waste, John Wayne, and Hollywood</a>. Yup, not making that up, read it for yourself! Turns out that John Wayne starred in a movie (The Conqueror) that was shot in St. George (Utah) in 1954, on a site 137 miles downwind of A nuclear testing site in Yucca Flat (Nevada). As it happens, by the early 1980s some 91 of the 220 cast and crew had been diagnosed with cancer of one form or another, and . According to epidemiological data available to us, only 14% of the population this group of 220 represented should have been diagnosed with cancer between 1954 and the early 1980s. Was a cast or crew member more likely to get cancer because of exposure to radioactive waste while working on the film?</p>
 <p><strong>Problem 2</strong></p>
