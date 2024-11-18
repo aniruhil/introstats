@@ -211,7 +211,7 @@ nominal
 ordinal
 intervalratio
 the-tricky-business-of-cause-and-effect
-chapter-2-practice-problems
+practice-problems
 dataviz
 visualizing-nominalordinal-data
 bar-charts-and-frequency-tables
@@ -223,7 +223,7 @@ scatterplots
 line-graphs
 polar-charts
 some-essential-rules-for-good-visualizations
-chapter-3-practice-problems
+practice-problems-1
 meansd
 central-tendency
 mean
@@ -246,7 +246,7 @@ the-five-number-summary-and-the-box-plot
 the-power-of-summary-statistics-married-to-graphical-explorations
 outliers-outliers-what-do-i-do-with-them
 beware-the-flawed-rule
-chapter-4-practice-problems
+practice-problems-2
 prob
 basic-concepts-and-terminology-of-probability-theory
 counting-rules-with-permutations-and-combinations
@@ -269,7 +269,7 @@ bayes-theorem
 another-example
 extending-bayes-rule
 key-things-to-remember
-chapter-5-practice-problems
+practice-problems-3
 distributions
 random-variables
 probability-distributions
@@ -279,7 +279,7 @@ the-poisson-distribution
 continuous-probability-distributions
 the-normal-distribution
 the-standard-normal-distribution
-chapter-6-practice-problems
+practice-problems-4
 sampling
 the-standard-error
 the-central-limit-theorem
@@ -301,7 +301,7 @@ example-1-6
 example-2-6
 example-3
 key-concepts-to-remember
-chapter-7-practice-problems
+practice-problems-5
 hypothesis
 articulating-the-hypotheses-to-be-tested
 type-i-and-type-ii-errors
@@ -318,7 +318,7 @@ caution
 paired-t-tests
 example-1-9
 example-2-9
-chapter-8-practice-problems
+practice-problems-6
 anova
 the-logic-of-anova
 example-1-systolic-blood-pressure-and-treatments
@@ -335,7 +335,7 @@ assumptions-3
 the-chi2-test-of-independenceassociation
 fishers-exact-test
 a-cautionary-tale
-chapter-9-practice-problems
+practice-problems-7
 props
 specifyng-hypotheses-for-one-group-tests
 the-normal-approximation-to-one-group-tests
@@ -357,7 +357,7 @@ goodman-kruskal-gamma-gamma
 kendalls-tau_b
 kendalls-tau_c
 somers-d
-chapter-10-practice-problems
+practice-problems-8
 linreg
 correlations
 pearson-correlation-coefficient
@@ -386,7 +386,7 @@ assumption-4-homoscedasticity
 assumption-5-no-autocorrelation
 assumptions-6-7-and-8
 assumptions-9-and-10
-chapter-11-practice-problems
+practice-problems-9
 summation
 the-single-summation-operator
 the-double-subscript
