@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:</title>
+  <meta name="description" content="This is a free textbook written for students in my research methods classes." />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:" />
+  
+  <meta name="twitter:description" content="This is a free textbook written for students in my research methods classes." />
+  
+
+<meta name="author" content="Anirudh V. S. Ruhil" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="meansd.html"/>
+<link rel="next" href="distributions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/d3-4.10.2/d3.min.js"></script>
+<link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
+<script src="libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.33/datatables.js"></script>
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"],
+      bcancel: ["Extension","cancel"],
+      xcancel: ["Extension","cancel"],
+      cancelto: ["Extension","cancel"]
+    });
+  });
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-2');
+</script>
+
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="yihui_style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Analysis for Public Affairs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#the-chapters-that-follow"><i class="fa fa-check"></i><b>1.2</b> The chapters that follow</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#keys-to-learning-data-analysis"><i class="fa fa-check"></i><b>1.3</b> Keys to Learning Data Analysis</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.4</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Core Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#statistics-versus-statistic"><i class="fa fa-check"></i><b>2.1</b> Statistics versus Statistic</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#parameters-versus-estimates"><i class="fa fa-check"></i><b>2.1.1</b> Parameters versus Estimates</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#sampling-error-and-bias"><i class="fa fa-check"></i><b>2.1.2</b> Sampling Error and Bias</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#key-elements-of-random-sampling"><i class="fa fa-check"></i><b>2.1.3</b> Key Elements of Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#useful-research-designs"><i class="fa fa-check"></i><b>2.2</b> Useful Research Designs</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#experimental"><i class="fa fa-check"></i><b>2.2.1</b> Experimental</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#natural-experiments"><i class="fa fa-check"></i><b>2.2.2</b> Natural Experiments</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#quasi-experiments"><i class="fa fa-check"></i><b>2.2.3</b> Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#elements-of-a-data-set"><i class="fa fa-check"></i><b>2.3</b> Elements of a Data-set</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#variable-types"><i class="fa fa-check"></i><b>2.4</b> Variable Types</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#cross-sectional-time-series-and-panel-data"><i class="fa fa-check"></i><b>2.5</b> Cross-sectional, Time-Series, and Panel Data</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="intro.html"><a href="intro.html#cross-sectional-data"><i class="fa fa-check"></i><b>2.5.1</b> Cross-sectional Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="intro.html"><a href="intro.html#time-series-data"><i class="fa fa-check"></i><b>2.5.2</b> Time-Series Data</a></li>
+<li class="chapter" data-level="2.5.3" data-path="intro.html"><a href="intro.html#panel-data"><i class="fa fa-check"></i><b>2.5.3</b> Panel Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#levels-of-measurement"><i class="fa fa-check"></i><b>2.6</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#nominal"><i class="fa fa-check"></i><b>2.6.1</b> Nominal</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#ordinal"><i class="fa fa-check"></i><b>2.6.2</b> Ordinal</a></li>
+<li class="chapter" data-level="2.6.3" data-path="intro.html"><a href="intro.html#intervalratio"><i class="fa fa-check"></i><b>2.6.3</b> Interval/Ratio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#the-tricky-business-of-cause-and-effect"><i class="fa fa-check"></i><b>2.7</b> The Tricky Business of Cause-and-Effect</a></li>
+<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#practice-problems"><i class="fa fa-check"></i><b>2.8</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dataviz.html"><a href="dataviz.html"><i class="fa fa-check"></i><b>3</b> Visualizing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dataviz.html"><a href="dataviz.html#visualizing-nominalordinal-data"><i class="fa fa-check"></i><b>3.1</b> Visualizing Nominal/Ordinal Data</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dataviz.html"><a href="dataviz.html#bar-charts-and-frequency-tables"><i class="fa fa-check"></i><b>3.1.1</b> Bar-charts and Frequency Tables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dataviz.html"><a href="dataviz.html#contingency-tables-and-bar-charts"><i class="fa fa-check"></i><b>3.1.2</b> Contingency Tables and Bar-charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dataviz.html"><a href="dataviz.html#visualizing-intervalratio-data"><i class="fa fa-check"></i><b>3.2</b> Visualizing Interval/Ratio Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dataviz.html"><a href="dataviz.html#the-histogram"><i class="fa fa-check"></i><b>3.2.1</b> The Histogram</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dataviz.html"><a href="dataviz.html#grouped-frequency-tables"><i class="fa fa-check"></i><b>3.2.2</b> Grouped Frequency Tables</a></li>
+<li class="chapter" data-level="3.2.3" data-path="dataviz.html"><a href="dataviz.html#scatterplots"><i class="fa fa-check"></i><b>3.2.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="dataviz.html"><a href="dataviz.html#line-graphs"><i class="fa fa-check"></i><b>3.2.4</b> Line Graphs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="dataviz.html"><a href="dataviz.html#polar-charts"><i class="fa fa-check"></i><b>3.2.5</b> Polar Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="dataviz.html"><a href="dataviz.html#some-essential-rules-for-good-visualizations"><i class="fa fa-check"></i><b>3.3</b> Some Essential Rules for Good Visualizations</a></li>
+<li class="chapter" data-level="3.4" data-path="dataviz.html"><a href="dataviz.html#practice-problems-1"><i class="fa fa-check"></i><b>3.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="meansd.html"><a href="meansd.html"><i class="fa fa-check"></i><b>4</b> Central Tendency and Dispersion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="meansd.html"><a href="meansd.html#central-tendency"><i class="fa fa-check"></i><b>4.1</b> Central Tendency</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="meansd.html"><a href="meansd.html#mean"><i class="fa fa-check"></i><b>4.1.1</b> Mean</a></li>
+<li class="chapter" data-level="4.1.2" data-path="meansd.html"><a href="meansd.html#median"><i class="fa fa-check"></i><b>4.1.2</b> Median</a></li>
+<li class="chapter" data-level="4.1.3" data-path="meansd.html"><a href="meansd.html#mode"><i class="fa fa-check"></i><b>4.1.3</b> Mode</a></li>
+<li class="chapter" data-level="4.1.4" data-path="meansd.html"><a href="meansd.html#some-features-of-measures-of-central-tendency"><i class="fa fa-check"></i><b>4.1.4</b> Some Features of Measures of Central Tendency</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="meansd.html"><a href="meansd.html#dispersion-aka-variability"><i class="fa fa-check"></i><b>4.2</b> Dispersion (aka Variability)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="meansd.html"><a href="meansd.html#range"><i class="fa fa-check"></i><b>4.2.1</b> Range</a></li>
+<li class="chapter" data-level="4.2.2" data-path="meansd.html"><a href="meansd.html#quartiles-and-interquartile-range"><i class="fa fa-check"></i><b>4.2.2</b> Quartiles and Interquartile Range</a></li>
+<li class="chapter" data-level="4.2.3" data-path="meansd.html"><a href="meansd.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.3</b> Variance and Standard Deviation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="meansd.html"><a href="meansd.html#why-n-1"><i class="fa fa-check"></i><b>4.2.4</b> Why <span class="math inline">\(n-1\)</span>?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="meansd.html"><a href="meansd.html#properties-of-the-mean-and-variancestandard-deviation"><i class="fa fa-check"></i><b>4.3</b> Properties of the Mean and Variance/Standard Deviation</a></li>
+<li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
+<li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
+<li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
+<li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
+<li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
+<li class="chapter" data-level="4.11" data-path="meansd.html"><a href="meansd.html#beware-the-flawed-rule"><i class="fa fa-check"></i><b>4.11</b> Beware the flawed rule</a></li>
+<li class="chapter" data-level="4.12" data-path="meansd.html"><a href="meansd.html#practice-problems-2"><i class="fa fa-check"></i><b>4.12</b> Practice Problems</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-1-2"><i class="fa fa-check"></i>Problem 1</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-2-2"><i class="fa fa-check"></i>Problem 2</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-3-2"><i class="fa fa-check"></i>Problem 3</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-4-2"><i class="fa fa-check"></i>Problem 4</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-5-2"><i class="fa fa-check"></i>Problem 5</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-6-2"><i class="fa fa-check"></i>Problem 6</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-7-2"><i class="fa fa-check"></i>Problem 7</a></li>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#problem-8-2"><i class="fa fa-check"></i>Problem 8</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>5</b> Probability</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="probability.html"><a href="probability.html#basic-concepts-and-terminology-of-probability-theory"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts and Terminology of Probability Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="probability.html"><a href="probability.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
+<li class="chapter" data-level="5.3" data-path="probability.html"><a href="probability.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="probability.html"><a href="probability.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
+<li class="chapter" data-level="5.3.2" data-path="probability.html"><a href="probability.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
+<li class="chapter" data-level="5.3.3" data-path="probability.html"><a href="probability.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
+<li class="chapter" data-level="5.3.4" data-path="probability.html"><a href="probability.html#example-4-fortune-500-companies"><i class="fa fa-check"></i><b>5.3.4</b> Example 4: Fortune 500 Companies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="probability.html"><a href="probability.html#the-complement-of-an-event"><i class="fa fa-check"></i><b>5.4</b> The Complement of an Event</a></li>
+<li class="chapter" data-level="5.5" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>5.5</b> Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.6" data-path="probability.html"><a href="probability.html#the-addition-rule-for-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.6</b> The Addition Rule for Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.7" data-path="probability.html"><a href="probability.html#addition-rule-for-non-mutually-exclusive-events"><i class="fa fa-check"></i><b>5.7</b> Addition Rule for Non-Mutually Exclusive Events</a></li>
+<li class="chapter" data-level="5.8" data-path="probability.html"><a href="probability.html#independent-events-and-the-multiplication-rule"><i class="fa fa-check"></i><b>5.8</b> Independent Events and the Multiplication Rule</a></li>
+<li class="chapter" data-level="5.9" data-path="probability.html"><a href="probability.html#decision-trees"><i class="fa fa-check"></i><b>5.9</b> Decision Trees</a></li>
+<li class="chapter" data-level="5.10" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>5.10</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="probability.html"><a href="probability.html#the-gender-bias-example"><i class="fa fa-check"></i><b>5.10.1</b> The Gender-bias Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="probability.html"><a href="probability.html#dependent-events"><i class="fa fa-check"></i><b>5.11</b> Dependent Events</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="probability.html"><a href="probability.html#the-monty-hall-problem"><i class="fa fa-check"></i><b>5.11.1</b> The Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>5.12</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="5.12.1" data-path="probability.html"><a href="probability.html#another-example"><i class="fa fa-check"></i><b>5.12.1</b> Another Example</a></li>
+<li class="chapter" data-level="5.12.2" data-path="probability.html"><a href="probability.html#extending-bayes-rule"><i class="fa fa-check"></i><b>5.12.2</b> Extending Bayes Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="probability.html"><a href="probability.html#key-things-to-remember"><i class="fa fa-check"></i><b>5.13</b> Key Things to Remember</a></li>
+<li class="chapter" data-level="5.14" data-path="probability.html"><a href="probability.html#practice-problems-3"><i class="fa fa-check"></i><b>5.14</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="distributions.html"><a href="distributions.html"><i class="fa fa-check"></i><b>6</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="distributions.html"><a href="distributions.html#random-variables"><i class="fa fa-check"></i><b>6.1</b> Random Variables</a></li>
+<li class="chapter" data-level="6.2" data-path="distributions.html"><a href="distributions.html#probability-distributions"><i class="fa fa-check"></i><b>6.2</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="distributions.html"><a href="distributions.html#discrete-probability-distributions"><i class="fa fa-check"></i><b>6.2.1</b> Discrete Probability Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="distributions.html"><a href="distributions.html#continuous-probability-distributions"><i class="fa fa-check"></i><b>6.3</b> Continuous Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="distributions.html"><a href="distributions.html#the-normal-distribution"><i class="fa fa-check"></i><b>6.3.1</b> The Normal Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="distributions.html"><a href="distributions.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>6.3.2</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="distributions.html"><a href="distributions.html#practice-problems-4"><i class="fa fa-check"></i><b>6.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>7</b> The Theory of Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sampling.html"><a href="sampling.html#the-standard-error"><i class="fa fa-check"></i><b>7.1</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.2" data-path="sampling.html"><a href="sampling.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>7.2</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.3" data-path="sampling.html"><a href="sampling.html#applying-the-standard-error-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>7.3</b> Applying the Standard Error and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="sampling.html"><a href="sampling.html#example-1-2"><i class="fa fa-check"></i><b>7.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.3.2" data-path="sampling.html"><a href="sampling.html#example-2-2"><i class="fa fa-check"></i><b>7.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="sampling.html"><a href="sampling.html#the-sampling-distribution-of-binary-proportions"><i class="fa fa-check"></i><b>7.4</b> The Sampling Distribution of Binary Proportions</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="sampling.html"><a href="sampling.html#example-1-3"><i class="fa fa-check"></i><b>7.4.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.4.2" data-path="sampling.html"><a href="sampling.html#example-2-3"><i class="fa fa-check"></i><b>7.4.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="sampling.html"><a href="sampling.html#point-estimates"><i class="fa fa-check"></i><b>7.5</b> Point Estimates</a></li>
+<li class="chapter" data-level="7.6" data-path="sampling.html"><a href="sampling.html#interval-estimates"><i class="fa fa-check"></i><b>7.6</b> Interval Estimates</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="sampling.html"><a href="sampling.html#example-1-4"><i class="fa fa-check"></i><b>7.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.2" data-path="sampling.html"><a href="sampling.html#example-2-4"><i class="fa fa-check"></i><b>7.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.6.3" data-path="sampling.html"><a href="sampling.html#interval-estimates-for-binary-proportions"><i class="fa fa-check"></i><b>7.6.3</b> Interval Estimates for Binary Proportions</a></li>
+<li class="chapter" data-level="7.6.4" data-path="sampling.html"><a href="sampling.html#example-1-5"><i class="fa fa-check"></i><b>7.6.4</b> Example 1</a></li>
+<li class="chapter" data-level="7.6.5" data-path="sampling.html"><a href="sampling.html#example-2-5"><i class="fa fa-check"></i><b>7.6.5</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="sampling.html"><a href="sampling.html#students-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Student’s t distribution</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="sampling.html"><a href="sampling.html#example-1-6"><i class="fa fa-check"></i><b>7.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="7.7.2" data-path="sampling.html"><a href="sampling.html#example-2-6"><i class="fa fa-check"></i><b>7.7.2</b> Example 2</a></li>
+<li class="chapter" data-level="7.7.3" data-path="sampling.html"><a href="sampling.html#example-3"><i class="fa fa-check"></i><b>7.7.3</b> Example 3</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="sampling.html"><a href="sampling.html#key-concepts-to-remember"><i class="fa fa-check"></i><b>7.8</b> Key Concepts to Remember</a></li>
+<li class="chapter" data-level="7.9" data-path="sampling.html"><a href="sampling.html#practice-problems-5"><i class="fa fa-check"></i><b>7.9</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> The Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#articulating-the-hypotheses-to-be-tested"><i class="fa fa-check"></i><b>8.1</b> Articulating the Hypotheses to be tested</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.2</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#the-process-of-hypothesis-testing-an-example"><i class="fa fa-check"></i><b>8.3</b> The Process of Hypothesis Testing: An Example</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-7"><i class="fa fa-check"></i><b>8.3.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-7"><i class="fa fa-check"></i><b>8.3.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis.html"><a href="hypothesis.html#confidence-intervals-for-hypothesis-tests"><i class="fa fa-check"></i><b>8.4</b> Confidence Intervals for Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis.html"><a href="hypothesis.html#the-one-sample-t-test"><i class="fa fa-check"></i><b>8.5</b> The One-Sample t-test</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis.html"><a href="hypothesis.html#assumptions"><i class="fa fa-check"></i><b>8.5.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis.html"><a href="hypothesis.html#the-two-group-or-two-sample-t-test"><i class="fa fa-check"></i><b>8.6</b> The Two-group (or Two-sample) t-test</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-1"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-8"><i class="fa fa-check"></i><b>8.6.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-8"><i class="fa fa-check"></i><b>8.6.2</b> Example 2</a></li>
+<li class="chapter" data-level="8.6.3" data-path="hypothesis.html"><a href="hypothesis.html#caution"><i class="fa fa-check"></i><b>8.6.3</b> Caution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="hypothesis.html"><a href="hypothesis.html#paired-t-tests"><i class="fa fa-check"></i><b>8.7</b> Paired t-tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#assumptions-2"><i class="fa fa-check"></i>Assumptions</a></li>
+<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#the-testing-protocol"><i class="fa fa-check"></i>The Testing Protocol</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis.html"><a href="hypothesis.html#example-1-9"><i class="fa fa-check"></i><b>8.7.1</b> Example 1</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis.html"><a href="hypothesis.html#example-2-9"><i class="fa fa-check"></i><b>8.7.2</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="hypothesis.html"><a href="hypothesis.html#practice-problems-6"><i class="fa fa-check"></i><b>8.8</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
+<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="chisq.html"><a href="chisq.html#a-single-multinomial-variable-goodness-of-fit-test"><i class="fa fa-check"></i><b>10.1</b> A Single Multinomial Variable (Goodness-of-fit test)</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="chisq.html"><a href="chisq.html#assumptions-3"><i class="fa fa-check"></i><b>10.1.1</b> Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
+<li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-7"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
+<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-12"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
+<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
+<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
+<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
+<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#practice-problems-8"><i class="fa fa-check"></i><b>11.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="linreg.html"><a href="linreg.html#correlations"><i class="fa fa-check"></i><b>12.1</b> Correlations</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="linreg.html"><a href="linreg.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>12.1.1</b> Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="12.1.2" data-path="linreg.html"><a href="linreg.html#spearman-correlation-coefficient"><i class="fa fa-check"></i><b>12.1.2</b> Spearman Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="linreg.html"><a href="linreg.html#bivariate-regression"><i class="fa fa-check"></i><b>12.2</b> Bivariate Regression</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="linreg.html"><a href="linreg.html#the-method-of-ordinary-least-squares"><i class="fa fa-check"></i><b>12.2.1</b> The Method of Ordinary Least Squares</a></li>
+<li class="chapter" data-level="12.2.2" data-path="linreg.html"><a href="linreg.html#population-regression-function-vs.-sample-regression-function"><i class="fa fa-check"></i><b>12.2.2</b> Population Regression Function vs. Sample Regression Function</a></li>
+<li class="chapter" data-level="12.2.3" data-path="linreg.html"><a href="linreg.html#hypotheses"><i class="fa fa-check"></i><b>12.2.3</b> Hypotheses</a></li>
+<li class="chapter" data-level="12.2.4" data-path="linreg.html"><a href="linreg.html#the-r2"><i class="fa fa-check"></i><b>12.2.4</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="12.2.5" data-path="linreg.html"><a href="linreg.html#confidence-intervals-vs.-prediction-intervals"><i class="fa fa-check"></i><b>12.2.5</b> Confidence Intervals vs. Prediction Intervals</a></li>
+<li class="chapter" data-level="12.2.6" data-path="linreg.html"><a href="linreg.html#dummy-variables"><i class="fa fa-check"></i><b>12.2.6</b> Dummy Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="linreg.html"><a href="linreg.html#multiple-regression"><i class="fa fa-check"></i><b>12.3</b> Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
+<li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="linreg.html"><a href="linreg.html#assumption-1-linear-regression-model"><i class="fa fa-check"></i><b>12.4.1</b> Assumption 1: Linear Regression Model</a></li>
+<li class="chapter" data-level="12.4.2" data-path="linreg.html"><a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling"><i class="fa fa-check"></i><b>12.4.2</b> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling</a></li>
+<li class="chapter" data-level="12.4.3" data-path="linreg.html"><a href="linreg.html#assumption-3-zero-conditional-mean-value-of-residuals"><i class="fa fa-check"></i><b>12.4.3</b> Assumption 3: Zero conditional mean value of Residuals</a></li>
+<li class="chapter" data-level="12.4.4" data-path="linreg.html"><a href="linreg.html#assumption-4-homoscedasticity"><i class="fa fa-check"></i><b>12.4.4</b> Assumption 4: Homoscedasticity</a></li>
+<li class="chapter" data-level="12.4.5" data-path="linreg.html"><a href="linreg.html#assumption-5-no-autocorrelation"><i class="fa fa-check"></i><b>12.4.5</b> Assumption 5: No Autocorrelation</a></li>
+<li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
+<li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-9"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="summation.html"><a href="summation.html#the-single-summation-operator"><i class="fa fa-check"></i><b>13.1</b> The Single Summation Operator</a></li>
+<li class="chapter" data-level="13.2" data-path="summation.html"><a href="summation.html#the-double-subscript"><i class="fa fa-check"></i><b>13.2</b> The Double Subscript</a></li>
+<li class="chapter" data-level="13.3" data-path="summation.html"><a href="summation.html#the-constant-rule"><i class="fa fa-check"></i><b>13.3</b> The Constant Rule</a></li>
+<li class="chapter" data-level="13.4" data-path="summation.html"><a href="summation.html#the-distributive-rule"><i class="fa fa-check"></i><b>13.4</b> The Distributive Rule</a></li>
+<li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
+<li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Analysis for Leadership &amp; Public Affairs:</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probability" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Probability<a href="probability.html#probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Probability theory is one of the hardest fields to master. Most people often get tripped up by what should be simple calculations, thinking that the answer for how often something will happen has to have a fantastically rare probability of occurrence. For example, on the first anniversary of 9/11, the winning pick-three number in the second draw was 9-1-1. This lit up the news of course because it seemed to be an astonishing coincidence. As it turns out, the probability of this happening was very high, <a href="http://www.snopes.com/rumors/lottery.asp">exactly <span class="math inline">\(\dfrac{1}{500}\)</span></a>. Several pages have been devoted to the <a href="https://goo.gl/xPy4Uj">Monty Hall Problem</a> wherein the contestant sees three doors, two with a goat behind them and one with a car, and picks one. The host opens one of the other doors that turns out to have a goat behind it. The contestant is given a choice, should he/she stick with the door they chose or should he/she switch their choice to the unopened door? Probability also comes in handy with party tricks: With 23 people in a room there is a 50-50 chance of two people having the same birthday! In a more serious vein, NASA engineers knew that the probability of a Challenger disaster on flight day was unacceptably high (13%) but most folks never understood this before the shuttle launch was given the green light. How probability works its magic in any of these examples would be elementary if you understood the core principles of probability theory. However, remember, we are not looking to become probability theorists. Not at all. Our task is simpler, to grasp the essence of some probability mechanics so that we can build a bridge between the samples we gather and the population our samples should represent.</p>
+<div id="basic-concepts-and-terminology-of-probability-theory" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Basic Concepts and Terminology of Probability Theory<a href="probability.html#basic-concepts-and-terminology-of-probability-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In statistics, we think of every study as an <code>experiment</code>. Not in the sense of a laboratory experiment but in terms of a real-world experiment that nature is carrying out without revealing to us all the truths. For example, a district tries to boost literacy by spending a lot of money on programs that claim to have every third grader proficient in English language arts. The district has just carried out an experiment whose outcomes are unknown (i.e., will the program work, worsen the situation, or have no impact?). A prison implements a prisoner rehabilitation program with wrap-around skills; will it have the desired effect? Patients battling Parkinson’s disease are given a new drug designed to control tremors; will it work as designed? Experiments surround us, every day of our lives and with consequences big and small.</p>
+<p>All experiments have <code>outcomes</code> that we can identify <em>a priori</em> (before the experiment is conducted). For example, a drug either makes the patient better (outcome 1), worse (outcome 2), or has no impact (outcome 3). If we could list all outcomes likely in an experiment we would have the <code>sample space</code> denoted by the symbol <span class="math inline">\(S\)</span>. Let us run a few simple experiments.</p>
+<ol style="list-style-type: decimal">
+<li>I toss a coin knowing it can come up <em>Heads</em> or <em>Tails</em>. Only two outcomes are likely in this experiment and so the sample space can be written as <span class="math inline">\(S = \{Heads \text{, } Tails\} = \{H,T\}\)</span></li>
+<li>I roll a six-sided dice knowing it can come up with the face showing one of the following numbers: <span class="math inline">\(S = \{1,2,3,4,5,6\}\)</span>.<br />
+</li>
+<li>A state trooper pulls over a driver she thinks is driving while intoxicated and administers the field sobriety test. The driver is either sober or above the legal limit. That is, <span class="math inline">\(S=\{Sober \text{, } Drunk\}\)</span></li>
+<li>A politician runs for elected office. She either wins or loses; <span class="math inline">\(S=\{Win \text{, } Lose\}\)</span><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></li>
+</ol>
+<p>Each outcome of an experiment is <code>a sample point</code>, with all likely outcomes together making up <code>the sample space</code>. One or more sample points of the sample space could make up an <code>event</code>. For example, we could define event <span class="math inline">\(A\)</span> as seeing an odd-number show up on the dice when it is rolled once. That is, <span class="math inline">\(A=\{1, 3, 5\}\)</span>. Or we could define an event <span class="math inline">\(B\)</span> as having a perfect square show up on the face of the dice, i.e., <span class="math inline">\(B=\{1, 4\}\)</span>.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:prob1">TABLE 5.1: </span>Some Experiments and their Outcomes
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Experiment
+</th>
+<th style="text-align:left;">
+Outcomes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Coin Toss
+</td>
+<td style="text-align:left;">
+(Head, Tail)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sales Call
+</td>
+<td style="text-align:left;">
+(Sale, No Sale)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Roll a Die
+</td>
+<td style="text-align:left;">
+({1,2,3,4,5,6})
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Product Test
+</td>
+<td style="text-align:left;">
+(Defective Not defective)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Health Campaign
+</td>
+<td style="text-align:left;">
+(Behavior modified Not)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Green Eyes
+</td>
+<td style="text-align:left;">
+(Yes, No)
+</td>
+</tr>
+</tbody>
+</table>
+<p>Each outcome occurs with some <code>probability</code>. For example, we all recognize that if I have a fair coin that I toss, it could either land Heads or Tails. Since it is a fair coin, not biased towards Heads or Tails, only one of two likely outcomes could occur in a single toss. Therefore, there is a 50:50 chance of seeing a Heads or a Tails in a coin toss. However, you could flip a coin ten times and see more (or all) of Heads or Tails. How does that make for a 50:50 chance then? It does not <em>unless</em> you think in a very specific way. In particular, in statistics, we define probability as <strong>a numerical measure of the likelihood that an event will occur</strong>. It is, essentially, the proportion of times the event would occur <code>if we repeated the random trial under identical conditions an infinite number of times</code>. See the example below where I toss a coin 10 times, 100 times, 1,000 times, and then 10,000,000 (ten million) times, counting in each case the proportions of Heads and Tails, respectively.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:coinflips"></span>
+<img src="_stats_files/figure-html/coinflips-1.svg" alt="Simulated Coin Flips" width="100%" />
+<p class="caption">
+FIGURE 5.1: Simulated Coin Flips
+</p>
+</div>
+<p>It is only in the case of 10 million coin flips that I approach anything close to a 50:50 split between the proportion of Heads and the proportion of Tails. Even here the split actually is 50.02% Heads and 49.97% Tails. What is the point of this demonstration? That probability of any outcome only makes sense in the sense of an <code>infinite</code> number of <code>identical trials/experiments</code>. In the coming chapters I will keep pointing out how to see your single sample “as if” you had tossed it back into the population and then drawn a random sample of <code>exactly the same size</code>, done your analysis, tossed the sample back, drawn another random sample of exactly the same size, and on and on until all unique samples of identical size had been drawn and analyzed.</p>
+<p>Before we move on, though, notice that we can define probability as a proportion: the ratio of the number of times an outcome occurs to the sample space. By definition, the probability of any event must lie between 0 and 1, i.e., <span class="math inline">\(0 \le P(Event) \le 1\)</span>. If an event has a probability of 1 then it always occurs. Similarly if an event has a probability of 0 it never occurs. Many outcomes tend to have well-defined probabilities. For instance, if I toss a fair coin once, I know <em>a priori</em> that <span class="math inline">\(P(Heads)=P(Tails)=\dfrac{1}{2}=0.50\)</span>. Similarly, if it is a very tight political contest between three candidates and no polls are available to forecast the outcome, I might as well assume that <span class="math inline">\(P(\text{Candidate A wins})=P(\text{Candidate B wins})==P(\text{Candidate C wins})\)</span> so that the probability of Candidate A or B or C winning is <span class="math inline">\(\dfrac{1}{3}=0.33\)</span>.</p>
+</div>
+<div id="counting-rules-with-permutations-and-combinations" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Counting Rules with Permutations and Combinations<a href="probability.html#counting-rules-with-permutations-and-combinations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Calculating the number of likely outcomes is easy when you have a simple experiment such as flipping a coin once. But what if you were flipping 10 coins 10 times each? <code>Counting rules</code> simplify these calculations a great deal.</p>
+<p>Consider tossing one coin twice, and knowing that the possible outcomes are four in total: <span class="math inline">\(S=\{H,H\},\{H,T\},\{T,H\},\{T,T\}\)</span>. Generally, in a multi-step experiment with <span class="math inline">\(k\)</span> sequential steps with <span class="math inline">\(n_{1}\)</span> outcomes in Step 1, <span class="math inline">\(n_{2}\)</span> outcomes in Step 2, <span class="math inline">\(n_{3}\)</span> outcomes in Step 3, <span class="math inline">\(\ldots\)</span> and <span class="math inline">\(n_{k}\)</span> outcomes in Step <span class="math inline">\(k\)</span>, the total number of experimental outcomes is given by:</p>
+<p><span class="math display">\[(n_{1})(n_{2})(n_{3})\cdots(n_{k})\]</span></p>
+<p>For example, tossing one coin twice yields <span class="math inline">\((n_{1})(n_{2})=(2)(2)=4\)</span> outcomes while tossing one coin six times yields <span class="math inline">\((n_{1})(n_{2})(n_{3})(n_{4})(n_{5})(n_{6})=(2)(2)(2)(2)(2)(2)=64\)</span> outcomes. In all of these cases of coin flips we have said nothing about whether the order matters at all; we do not care whether Heads or Tails shows up first.</p>
+<p>Sometimes you may have to select <span class="math inline">\(n\)</span> objects from a larger pool of <span class="math inline">\(N\)</span> objects. In these situations, we can calculate the number of experimental outcomes possible via</p>
+<p><span class="math display">\[ C^{N}_{n} = \left(^{N}_{n}\right) = \frac{N!}{n!(N-n)!} \]</span></p>
+<p>You may not remember this from the good old high school days but <span class="math inline">\(!\)</span> stands for <code>factorial</code> such that <span class="math inline">\(N! = N(N-1)(N-2)\cdots(2)(1)\)</span> and <span class="math inline">\(n! = n(n-1)(n-2)\cdots(2)(1)\)</span>. Note that <span class="math inline">\(0! = 1\)</span>, <span class="math inline">\(3! = 3 \times 2 \times 1 = 6\)</span>, and <span class="math inline">\(5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\)</span>. How is this useful?</p>
+<p>For instance, I work in the quality control department of a manufacturing plant that makes noise cancelling headphones. My job is to randomly select two headphones out of a batch of five and check for defects. In how many ways can I select two headphones from a batch of five headphones? Let us use the formula:</p>
+<p><span class="math display">\[ C^{N}_{n} = \left(^{N}_{n}\right) = \frac{N!}{n!(N-n)!} \]</span></p>
+<p><span class="math display">\[C^{5}_{2} == \frac{5!}{2!(5 - 2)!} = \frac{5 \times 4 \times \cancel{3} \times \cancel{2} \times \cancel{1}}{(2 \times 1) (\cancel{3} \times \cancel{2} \times \cancel{1})} = \frac{5 \times 4}{2 \times 1} = \frac{20}{2} = 10\]</span></p>
+<p>You could label the headphones A, B, C, D, and E, and then count the number of combinations: AB, AC, AD, AE, BC, BD, BE, CD, CE, and DE until no unique sample is left; this is the sample space. This would be a very tedious and potentially error-prone method of manually calculating the result if either <span class="math inline">\(n\)</span> or <span class="math inline">\(N\)</span> were large; the formula helps ease our task a great deal. Before we proceed any farther, note that we draw no distinction here between whether A is the first headphone or the second or the third. That is, AB counts the same as BA and hence BA does not show up as an outcome. These situations, where the order of the outcomes is of no interest are called <code>combinations</code> but if the order matters, then we have <code>permutations</code>. Here is an example of permutations in action. Assume now that we do want to draw distinction between cases such as AB versus BA, AC versus CA, and so on. In how many ways could we gather two headphones out of five? The formula is slightly different here:</p>
+<p><span class="math display">\[ P_{n}^{N} = n!\left(^{N}_{n}\right) = \frac{N!}{(N-n)!} \]</span></p>
+<p><span class="math display">\[ P^{5}_{2} = \frac{5!}{(5-2)!} = \frac{5!}{3!} = \frac{(5)(4)(3)(2)(1)}{(3)(2)(1)} = \frac{(5)(4)\cancel{(3)}\cancel{(2)}\cancel{(1)}}{\cancel{(3)}\cancel{(2)}\cancel{(1)}} = 20 \]</span></p>
+<p>Spelling these out would give us AB, BA, AC, CA, AD, DA, AE, EA, BC, CB, BD, DB, BE, EB, CD, DC, CE, EC, DE, and ED; this is the Sample Space.</p>
+</div>
+<div id="assigning-probabilities-to-events" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Assigning Probabilities to Events<a href="probability.html#assigning-probabilities-to-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Thus far we’ve seen how to use counting rules to establish the Sample Space. Now let us think about the probabilities associated with each outcome. We can assign probabilities to outcomes so long as we use <strong>two rules</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>For an event <span class="math inline">\(E_{i}\)</span>, <span class="math inline">\(0\leq P(E_{i})\leq 1\)</span></li>
+<li>Given <span class="math inline">\(n\)</span> outcomes, <span class="math inline">\(P(E_{1})+P(E_{2})+P(E_{3})+\cdots + P(E_{n}) = 1\)</span></li>
+</ol>
+<p>For example, in tossing a fair coin, <span class="math inline">\(P(H) = 0.5; P(T) = 0.5\)</span>. Therefore <span class="math inline">\(P(H)+P(T)=1\)</span>. Likewise, in tossing a fair dice, <span class="math inline">\(P(1) = \frac{1}{6}; P(2) = \frac{1}{6}; \cdots P(6) = \frac{1}{6}\)</span>. Therefore, <span class="math inline">\(P(1)+P(2)+\cdots+P(6)=1\)</span>. This method of assigning probabilities is known as the <code>classical method</code>, i.e., all outcomes are equally likely.</p>
+<p>Assume a clerk in the student health center at a university tracks how many patients are on the waiting list at 9 AM on 20 successive days. These data are given below:</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt2">TABLE 5.2: </span>Example of the Relative Frequency Method
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+No. Waiting
+</th>
+<th style="text-align:right;">
+No. of Days
+</th>
+<th style="text-align:left;">
+Proportion
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+2/20 = 0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+5/20 = 0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+6/20 = 0.30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+4/20 = 0.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+3/20 = 0.15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+20/20 = 1.00
+</td>
+</tr>
+</tbody>
+</table>
+<p>It seems, based on his observations, that on any given day he should expect 2 patients on the waiting list since this outcome has the highest relative frequency of <span class="math inline">\(0.30\)</span>. I want you to note how the data and calculating frequencies and relative frequencies has lead to this conclusion; they have enabled us to answer what would be most likely if we picked a day at random.</p>
+<p>Here is another example, where a company is looking to build a bridge over an expanse of water and gathering data on how long the two phases – design versus construction – have taken for similar sized bridges built in the recent past. These data are shown below:</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt3">TABLE 5.3: </span>Bridge-building and Relative Frequencies
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Design
+</th>
+<th style="text-align:right;">
+Construction
+</th>
+<th style="text-align:left;">
+Time/Phase
+</th>
+<th style="text-align:right;">
+Total Time
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+<th style="text-align:left;">
+P(Time)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+(2,6)
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+6/40 = 0.15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+(2,7)
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+6/40 = 0.15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+(2,8)
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+2/40 = 0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+(3,6)
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+4/40 = 0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+(3,7)
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+8/40 = 0.20
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+(3,8)
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+2/40 = 0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+(4,6)
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+2/40 = 0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+(4,7)
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+4/40 = 0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+(4,8)
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+6/40 = 0.15
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that most projects seem to have taken three months for design and seven months for construction; hence the company feels this is the most likely outcome for its own project.</p>
+<p>In some instances, we may have no hard data to go by, only our own subjective perceptions (right or wrong) of what might happen. Here, for instance, we have a couple bidding on a house. They each have their own estimates of whether their bid will be accepted or denied.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt33">TABLE 5.4: </span>Subjective Probabilities
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Person
+</th>
+<th style="text-align:right;">
+P(Acceptance)
+</th>
+<th style="text-align:right;">
+P(Rejection)
+</th>
+<th style="text-align:right;">
+Sum
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Pat
+</td>
+<td style="text-align:right;">
+0.8
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chris
+</td>
+<td style="text-align:right;">
+0.6
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+<p>Subjective probabilities are used more often than not in international security. Today we might think of it in terms of a drone strike on a potentially high value target based on hazy intelligence but a classic example comes from the infamous <a href="http://www.bbc.com/news/magazine-20719382">Christmas bombing of Hanoi</a>. Here is an extract from <a href="http://www.politico.com/magazine/story/2017/08/11/donald-trump-nuclear-weapons-richard-nixon-215478">Politico</a> though you should read the original piece in its entirety to appreciate the value of what has come to be known as “The Madman Theory.”</p>
+<blockquote>
+<p>In the summer of 1969, Nixon knew he needed to do something bold about Vietnam. He’d been elected with a promise to end the war, but months later, the conflict continued to consume his presidency, and peace was nowhere in sight. When the Paris peace talks had collapsed earlier that summer, the North Vietnamese had declared that they’d sit silently “until the chairs rot.” Nixon and Kissinger sought to restart the negotiations by pushing the Soviets to lean on the North Vietnamese. And so, Nixon turned to what came to be known as the “Madman Theory” —- a game-theory based approach he had witnessed as Dwight Eisenhower’s vice president that was meant to raise uncertainty in the Soviet mind about whether Nixon would launch his nuclear weapons if provoked. The White House needed to convince the Soviets that Nixon would resort to anything — including a nuclear attack — to get peace in Vietnam. As Defense Secretary Melvin Laird said later, “He never [publicly] used the term ‘madman,’ but he wanted adversaries to have the feeling that you could never put your finger on what he might do next. Nixon got this from Ike, who always felt this way.”</p>
+</blockquote>
+<p>Where game-theory comes into the story is in the indisputable fact that reasonable individuals disagreed whether the North Vietnamese would return to the negotiating table and sue for peace after their sudden withdrawal from the talks on December 13, 1972. Some felt that the Russians would bring the North Vietnamese back to the table but others, including Nixon and Kissinger, thought otherwise. Consequently, on December 18, Operation Linebacker II began, lasting for two weeks and involving 741 B-52 sorties that rained 20,000 tons of munitions on Hanoi and Haiphong, knocking out almost all of the electricity supply grid and killing 1,600 civilians. Regardless of who held more accurate <code>subjective beliefs</code> about the North Vietnamese’s intentions, by December 29 they had agreed to resume the talks and the Vietnam War ended soon thereafter.</p>
+<p>Thus far we have covered a good bit of ground, putting into place several rules of probability theory, but not really applied them to concrete problems. Let us do so, starting with a simple example.</p>
+<div id="example-1-venture-capital-funding" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Example 1: Venture Capital Funding<a href="probability.html#example-1-venture-capital-funding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Of 2,374 venture capital awards disbursed nationwide in 2016, 1,434 went to CA, 390 to MA, 217 to NY, and 112 to CO. Some 22% went to companies in early stages and 55% to expanding companies.</p>
+<p>What is P(Company from CA)? <span class="math inline">\(P(California)=\frac{1434}{2374}=0.60\)</span></p>
+<p>What is P(Company from other state)? Number that went to other than these 4 states <span class="math inline">\(=2374 - \{1434+390+217+112)=221\)</span>. So, P(Other states) <span class="math inline">\(=\frac{221}{2374} = 0.09\)</span>.</p>
+<p>What is P(Company not in early stage)? P(Not in early stage) <span class="math inline">\(=1-0.22 = 0.78\)</span></p>
+<p>P(How many MA companies were in early stages, assuming early stage companies were evenly distributed across states)? Approximate number of MA companies in early stages <span class="math inline">\(=(0.22)(390) \approx 86\)</span></p>
+<p>If the total amount was $32.4 million, how much went to CO? Assume fund amounts were distributed in proportion to the relative distribution of awards. Then, <span class="math inline">\(=\frac{112}{2374}(\$32.4 \text{ billion}) = \$1.53 \text{ billion}\)</span></p>
+</div>
+<div id="example-2-powerball" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Example 2: Powerball<a href="probability.html#example-2-powerball" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Powerball played twice per week in 23 states, VI, and DC. Player must buy $1 ticket and pick five numbers from <span class="math inline">\(1 \ldots 53\)</span> and one Powerball number from <span class="math inline">\(1 \ldots 42\)</span>. Lottery officials draw (i) 5 White balls out of drum with 53 White balls, and (ii) 1 Red ball from drum with 42 Red balls. The winner must match 5 numbers on White balls (any order) and the number on the Red Powerball. In Augusts 2001, 4 winners shared $295 million by matching <span class="math inline">\(8, 17, 22, 42, 47\)</span> plus Powerball number <span class="math inline">\(21\)</span>. Minor prizes of $100,000 given if 5 White ball numbers matched. In how many ways can five numbers be selected?</p>
+<p><span class="math display">\[C^{53}_{5}=\dfrac{53!}{5!(53-5)!}=\dfrac{53!}{5!(48)!} = \dfrac{(53)(52)(51)(50)(49)}{(5)(4)(3)(2)(1)}=2,869,685\]</span></p>
+<p>What is P(winning $100,000)? <span class="math inline">\(=\dfrac{1}{2,869,685}\)</span></p>
+<p>What are the odds of picking the Red Powerball?</p>
+<p><span class="math display">\[C^{42}_{1}=\dfrac{42!}{1!(42-1)!}=\dfrac{42!}{41!} = 42; \therefore \mbox  {Odds of picking Red ball} = \dfrac{1}{42}\]</span></p>
+<p>What are the odds of winning the Powerball jackpot? <span class="math inline">\(P(A) \mbox{and} P(B) = P(A) \times P(B) = \left(\dfrac{1}{2869685}\right)\times\left(\dfrac{1}{42}\right)=\dfrac{1}{120,526,770}\)</span></p>
+</div>
+<div id="example-3-rolling-two-dice" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Example 3: Rolling Two Dice<a href="probability.html#example-3-rolling-two-dice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Two dice are rolled and we are interested in the <code>sum of face values showing on the 2</code> dice. Possible outcomes are (1,1), (1,2), (1,3), (1,4), (1,5), (1,6) … (6,1), (6,2), (6,3), (6,4), (6,5), (6,6). In other words, <span class="math inline">\(C^{6}_{1} \times C^{6}_{1} =(6)(6)=36\)</span> outcomes are likely.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:ptobt4">TABLE 5.5: </span>Sum of Two Dice
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+<th style="text-align:right;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the first row with columns 1, 2, 3, 4, 5, and 6 are the numbers that show up on a roll of Dice 1 and the first column with rows 1, 2, 3, 4, 5, and 6 are the numbers that show up on a roll of Dice 2.</p>
+<p>What is P(value of 7)? <span class="math inline">\(P(7)=\dfrac{\{(1,6), (6,1), (2,5), (5,2), (3,4), (4,3)\}}{36} = \dfrac{6}{36}=\dfrac{1}{6}\)</span></p>
+<p>What is P(value <span class="math inline">\(\geq 9\)</span>)? <span class="math inline">\(P(\geq 9)=\dfrac{10}{36}=\dfrac{5}{18}\)</span></p>
+<p>Will the sum of the two dice show even values more often than odd values? No because P(Odd) = P(Even) =
+<span class="math inline">\(\dfrac{18}{36} = \dfrac{1}{2}\)</span></p>
+<p>How did you assign probabilities? <code>Classical</code>, because each outcome has an identical probability of occurring.</p>
+</div>
+<div id="example-4-fortune-500-companies" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Example 4: Fortune 500 Companies<a href="probability.html#example-4-fortune-500-companies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The table below shows the registration of Fortune 500 companies in some states.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt5">TABLE 5.6: </span>Headquarters of Fortune 500 Companies
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+State Headquartered
+</th>
+<th style="text-align:right;">
+No. of Fortune 500 Cos.
+</th>
+<th style="text-align:right;">
+Proportion
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+New York
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+0.112
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+California
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+0.106
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Texas
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+0.086
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Illinois
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+0.074
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ohio
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+0.056
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pennsylvania
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+0.056
+</td>
+</tr>
+</tbody>
+</table>
+<p>If I pick a company at random,</p>
+<p>What is P(NY)? <span class="math inline">\(P(NY)=\frac{56}{500}=0.112\)</span></p>
+<p>What is P(TX)? <span class="math inline">\(P(TX)=\frac{43}{500}=0.086\)</span></p>
+<p>What is P(in any of these six states)? <span class="math inline">\(=\frac{(56+53+43+37+28+28)}{500}=\frac{245}{500}=0.49\)</span></p>
+</div>
+</div>
+<div id="the-complement-of-an-event" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> The Complement of an Event<a href="probability.html#the-complement-of-an-event" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given an event A, its <code>complement</code> is defined as the event consisting of all sample points that do not belong to (i.e., are not in) event A, and is denoted as <span class="math inline">\(A^c\)</span>.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P(A) + P(A^c) = 1 \\
+    \therefore P(A) = 1 - P(A^c) \\
+        \therefore P(A^c) = 1 - P(A)
+\end{eqnarray*}\]</span></p>
+<p>Toss a coin once: <span class="math inline">\(P(H) = 0.5; P(H^c) = 1- P(H) = 1-0.5 = 0.5\)</span></p>
+<p>Roll two dice: <span class="math inline">\(P(\text{value } \geq 9) = \dfrac{5}{18}\)</span></p>
+<p><span class="math inline">\(P(\text{value } &lt; 9) = 1 -  P(\text{value } \geq 9) = 1 - \dfrac{5}{18} = \dfrac{13}{18}\)</span></p>
+<p>Why is this notion of the complement of an event useful? Because given that the probabilities of the event happening and not happening must sum to unity i.e., <span class="math inline">\((1)\)</span>, given one probability we can always calculate the other.</p>
+</div>
+<div id="mutually-exclusive-events" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Mutually Exclusive Events<a href="probability.html#mutually-exclusive-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Two events are <code>mutually exclusive</code> if both cannot occur simultaneously. That is, if event A occurs then event B cannot occur, and vice-versa. Say I toss a coin once. It can only come up Heads or Tails. Let, for example,</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P(A) = Heads; P(B) = Tails \\
+    P(A \text{ and } B) = 0 \\
+    \ldots \text{ because there is no overlap  ... A and B are mutually exclusive}
+\end{eqnarray*}\]</span></p>
+<p>Similarly, say I roll a dice once. Let, for example,</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P(A) = \{1, 3, 5\}; P(B) = \{2, 4, 6\} \\
+    P(A \text{ and } B) = 0 \\
+    \ldots \text{ because there is no overlap  ... A and B are mutually exclusive}
+\end{eqnarray*}\]</span></p>
+<p>What if I again roll a dice once and this time</p>
+<p><span class="math display">\[\begin{eqnarray*}
+    P(A) = \{2, 4, 6\}; P(B) = \{1, 4\} \\
+    P(A \text{ and } B) \neq 0 \\
+    \ldots \text{ because there is an overlap ... A and B are not mutually exclusive}
+\end{eqnarray*}\]</span></p>
+<p>Knowing that two events are mutually exclusive (or not) is critical in order to calculate the probability of some outcome that involves more than one event. You can see this rule in action vis-a-vis the addition rules for mutually exclusive versus non-mutually exclusive events.</p>
+</div>
+<div id="the-addition-rule-for-mutually-exclusive-events" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> The Addition Rule for Mutually Exclusive Events<a href="probability.html#the-addition-rule-for-mutually-exclusive-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For two mutually exclusive events, A and B, the probability that either A or B occurs is given by <span class="math inline">\(P(A \text{ or } B) = P(A) + P(B)\)</span>. The rule also extends to more than 2 events so long as they are all mutually exclusive events.</p>
+<p>A dice is rolled once. What is <span class="math inline">\(P(3 \text{ or more})\)</span>?</p>
+<p><span class="math display">\[\begin{eqnarray*}
+= P(3) + P(4) + P(5) + P(6) \\
+= \dfrac{1}{6} + \dfrac{1}{6} + \dfrac{1}{6} + \dfrac{1}{6}  \\
+= \dfrac{4}{6} \\
+= \dfrac{2}{3}  
+\end{eqnarray*}\]</span></p>
+<p>What is <span class="math inline">\(P(\text{not rolling 3 or more})\)</span>? … <span class="math inline">\(1 - P(3 \text{ or more}) = 1 - \dfrac{2}{3} = \dfrac{1}{3}\)</span></p>
+</div>
+<div id="addition-rule-for-non-mutually-exclusive-events" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Addition Rule for Non-Mutually Exclusive Events<a href="probability.html#addition-rule-for-non-mutually-exclusive-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For <code>non-mutually exclusive events</code> we calculate the probability that event A or B occurs as <span class="math inline">\(P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)\)</span></p>
+<p>Assume on a typical day in a plant, of 50 workers 5 complete the work late, 6 assemble a defective product, and 2 both complete the work late and produce a defective product</p>
+<p>Let L = Late completion. Then, <span class="math inline">\(P(L)=\dfrac{5}{50} =0.10\)</span></p>
+<p>Let D = Defective product. Then, <span class="math inline">\(P(D)=\dfrac{6}{50} =0.12\)</span></p>
+<p><span class="math inline">\(P(L \text{ and } D) = \dfrac{2}{50}=0.04\)</span></p>
+<p>What is the probability that a randomly selected worker either is late or produces a defective product? <span class="math inline">\(P(L \text{ or } D)=P(L)+P(D)-P(L \text{ and } D) = 0.10 + 0.12 - 0.04 = 0.18\)</span></p>
+</div>
+<div id="independent-events-and-the-multiplication-rule" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Independent Events and the Multiplication Rule<a href="probability.html#independent-events-and-the-multiplication-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We also take into consideration whether two or more events are independent or dependent, i.e., whether the probability of one event occurring is not at all influenced by whether the other event(s) has/have occurred or not or if it is conditioned by the other event(s) occurrence/non-occurrence. Specifically, two events, A and B, are<code>independent events</code> if P(A) is not influenced by whether event B has occurred or not (and vice-versa). For instance, (1) rolling a 4, and rolling a 1 on a second roll of the same dice, and (2) picking the Ace of Spades from a fair deck of 52 cards, replacing it, and then choosing the Ace of Spades again are both independent events; what happens in the first step does not influence what happens in the second step.</p>
+<p>If two events A and B are independent, then the probability that both A and B occur is given by <span class="math inline">\(P(A \text{ and } B) = P(A) \times P(B)\)</span>. For example,</p>
+<p>for <em>(1)</em> above <span class="math inline">\(P(A \text{ and } B) = \dfrac{1}{6} \times \dfrac{1}{6} = \dfrac{1}{36}\)</span></p>
+<p>for <em>(2)</em> above <span class="math inline">\(P(A \text{ and } B) = \dfrac{1}{52} \times \dfrac{1}{52} = \dfrac{1}{2704}\)</span></p>
+<p>Here is a substantive example: Assume we are told that for a randomly chosen adult, <span class="math inline">\(P(\text{smoking})=0.17\)</span> and <span class="math inline">\(P(\text{high blood pressure}) = 0.22\)</span>. If smoking and high blood pressure are independent, what is <span class="math inline">\(P(\text{smoking and high blood pressure})\)</span>? This would be <span class="math inline">\(P(smoking \text{ and } blood \text{ } pressure) = P(A) \times P(B) = 0.17 \times 0.22 = 0.037\)</span>.</p>
+</div>
+<div id="decision-trees" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Decision Trees<a href="probability.html#decision-trees" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Trees are handy ways to depict sequential events and their probabilities and often used to understand sequential outcomes. Game theorists, for example, put decision trees to good use. In the example below we see the case of a tree built with the question of two-child families. Specifically, the tree outlines for us the probabilities of a family having both kids of a given sex versus having one kid of each sex.</p>
+<p>What is <span class="math inline">\(P(1 \text{ Boy and } 1 \text{ Girl})\)</span>? <span class="math inline">\(=(0.249856 + 0.249856) = 0.499712\)</span></p>
+<p>What is <span class="math inline">\(P(\text{at least } 1 \text{ Girl})\)</span>? <span class="math inline">\(=(1 - 0.262144) = 0.737856\)</span>. This is also <span class="math inline">\(1 - P( \text{both are Boys})\)</span></p>
+<p>What is <span class="math inline">\(P(\text{at least } 1 \text{ Boy})\)</span>? <span class="math inline">\(=(1 - 0.238144) = 0.761856\)</span>. This is also <span class="math inline">\(1 - P(\text{both are Girls})\)</span></p>
+<p>What is <span class="math inline">\(P(\text{both are of the same sex})\)</span>? <span class="math inline">\(=(0.262144 + 0.2381444) = 0.5002884\)</span></p>
+<div class="collapsibleTree html-widget html-fill-item" id="htmlwidget-193b59a57c287c01ad70" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-193b59a57c287c01ad70">{"x":{"data":{"name":"Birth","children":[{"name":"Boy (0.512)","children":[{"name":"Boy (0.512 x 0.512)"},{"name":"Girl (0.512 x 0.488)"}]},{"name":"Girl (0.488)","children":[{"name":"Boy (0.488 x 0.512)"},{"name":"Girl (0.488 x 0.488)"}]}]},"options":{"hierarchy":["level1","level2"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":true,"margin":{"top":20,"bottom":20,"left":50,"right":125},"fill":"lightsteelblue"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="conditional-probability" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> Conditional Probability<a href="probability.html#conditional-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The conditional probability of an event is the probability of that event occurring given that a condition is met (i.e., some other event is known to have occurred). Conditional probabilities are denoted as <span class="math inline">\(P(A | B)\)</span> (i.e., the probability of A <code>given that B has occurred</code>) and <span class="math inline">\(P(A | B) = \dfrac{P(A \text{ and } B)}{P(B)}\)</span>. Similarly, we have <span class="math inline">\(P(B | A) = \dfrac{P(A \text{ and } B)}{P(A)}\)</span>, (i.e., the probability of B <code>given that A has occurred</code>).</p>
+<p>For example, let B be an event of getting a perfect square when a dice is rolled. Let A be the event that the number on the dice is an odd number. What is <span class="math inline">\(P(B|A)\)</span>? The Sample Space is <span class="math inline">\(S=\{1,2,3,4,5,6\}\)</span>; <span class="math inline">\(A =\{1,3,5\}\)</span>; <span class="math inline">\(B=\{1,4\}\)</span>. Then, <span class="math inline">\(P(A \text{ and } B)=\dfrac{1}{6}; P(A)=\dfrac{1}{2}; P(B)=\dfrac{1}{3}\)</span> and hence <span class="math inline">\(P(B|A)=\dfrac{P(A \text{ and } B)}{P(A)}=\dfrac{\dfrac{1}{6}}{\dfrac{1}{2}}=\dfrac{1}{6} \times \dfrac{2}{1}=\dfrac{2}{6}=\dfrac{1}{3}\)</span></p>
+<p>For dependent events, the <code>multiplication rule</code> that determines the probability that both A B occur becomes:</p>
+<p><span class="math display">\[\begin{array}{l}
+P(A \text{ and } B) = P(A) \times P(B | A), \text{ and} \\
+P(A \text{ and } B) = P(B) \times P(A | B)
+\end{array}\]</span></p>
+<p>Here is a specific example that pulls together various elements of basic probability theory we have covered thus far, and especially so the concept of conditional probability.</p>
+<div id="the-gender-bias-example" class="section level3 hasAnchor" number="5.10.1">
+<h3><span class="header-section-number">5.10.1</span> The Gender-bias Example<a href="probability.html#the-gender-bias-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Say we have a city police department and there have been claims that men and women are not promoted at the same rate. Let us assume that when candidates are eligible for promotion they are equally qualified, regardless of sex. You are hired to investigate whether this claim of a gender bias has any merit to it. You ask for data on all officers currently serving in the city and for each officer whether they were promoted or not. The data are shown below.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt6">TABLE 5.7: </span>An Example of Conditional Probability
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Action
+</th>
+<th style="text-align:right;">
+Men
+</th>
+<th style="text-align:right;">
+Women
+</th>
+<th style="text-align:right;">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Promoted
+</td>
+<td style="text-align:right;">
+288
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+324
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Denied Promotion
+</td>
+<td style="text-align:right;">
+672
+</td>
+<td style="text-align:right;">
+204
+</td>
+<td style="text-align:right;">
+876
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+960
+</td>
+<td style="text-align:right;">
+240
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+</tbody>
+</table>
+<p>If Men and Women had the same probability of being promoted each group should have <span class="math inline">\(P(A)=\dfrac{324}{1200}= 0.27\)</span>. This means we should have <span class="math inline">\(P(A \text{ and } M) = P(A \text{ and } W) = 0.27\)</span>. We can now ask: What is the probability that an officer is promoted <code>given that the officer is a man</code>? <span class="math inline">\(P(A|M) = \dfrac{P(A \text{ and } M)}{P(M)} = \dfrac{288/1200}{960/1200} = \dfrac{288}{960} = 0.30\)</span>. Similarly, we might ask: What is the probability of being denied a promotion <code>given that the officer is a woman</code>? <span class="math inline">\(P(A^{c}|W) = \dfrac{P(A^{c} \text{ and } W)}{P(W)} = \dfrac{204/1200}{240/1200} = \dfrac{204}{240} = 0.85\)</span></p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt7">TABLE 5.8: </span>Probabilities for the preceding table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Action
+</th>
+<th style="text-align:left;">
+Men
+</th>
+<th style="text-align:left;">
+Women
+</th>
+<th style="text-align:left;">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Promoted
+</td>
+<td style="text-align:left;">
+P(.) = 0.24
+</td>
+<td style="text-align:left;">
+P(.) = 0.03
+</td>
+<td style="text-align:left;">
+P(.) = 0.27
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Denied Promotion
+</td>
+<td style="text-align:left;">
+P(.) = 0.56
+</td>
+<td style="text-align:left;">
+P(.) = 0.17
+</td>
+<td style="text-align:left;">
+P(.) = 0.73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:left;">
+P(.) = 0.80
+</td>
+<td style="text-align:left;">
+P(.) = 0.20
+</td>
+<td style="text-align:left;">
+P(.) = 1.00
+</td>
+</tr>
+</tbody>
+</table>
+<p>What would you conclude and report back to the city? Unfortunately, that female officers do not seem to be promoted at the same rate as are male officers. Notice how the notion of conditional probability and independent events allowed you to tackle this question!</p>
+</div>
+</div>
+<div id="dependent-events" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Dependent Events<a href="probability.html#dependent-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Many events are not independent of one another; the odds of event A change if event B has occurred (and vice versa). Take the Nasonia’s fascinating behavior, for example. The jewel wasp <code>Nasonia vitripennis</code> is a parasite laying its eggs on the pupae of flies. The larval Nasonia hatch inside the pupal case, feed on the live host, and grow until they emerge as adults from the now dead, emaciated host. Emerging males and females, possibly brother and sister, mate on the spot.</p>
+<p>Nasonia females have a remarkable ability to manipulate the sex of the eggs that they lay; if they fertilize the egg with stored sperm the offspring will be a female. When a female finds a fresh host (i.e., not parasitized), she lays mainly female eggs and a few sons needed to fertilize all her daughters. If the female finds the host to be parasitized she produces a higher proportion of sons. Thus the state of the host (parasitized or not) and the sex of an egg are dependent events.</p>
+<p>Let the probability a host already has eggs be = 0.20. If it is a fresh host, the female lays a male egg with a probability of 0.05 and a female egg with a probability of 0.95. If the host already has eggs the female lays a male egg with a probability of 0.90 and a female egg with a probability of 0.10.
+What is the probability that an egg, chosen at random, is male?</p>
+<p>What is <span class="math inline">\(P(\text{egg is male})\)</span>? … <span class="math inline">\(0.18 + 0.04 = 0.22\)</span>
+What is <span class="math inline">\(P(\text{egg is female})\)</span>? … <span class="math inline">\(0.02 + 0.76 = 0.78\)</span></p>
+<p><code>The Law of Total Probability</code> stipulates that the total probability of an event <span class="math inline">\(A\)</span> is given by
+<span class="math inline">\(P(A) = \left[P(A|B) \times P(B)\right] + \left[ P(A|B^c) \times P(B^c)\right]\)</span></p>
+<p><code>The Multiplication Rule:</code> The probability of both of two events occurring is given by <span class="math inline">\(P(A \text{ and } B) = P(A) \times P(B | A)\)</span>. If the two events are <code>independent</code> then we know that <span class="math inline">\(P(A \text{ and } B) = P(A) \times P(B)\)</span>. So what is <span class="math inline">\(P(\text{egg is male})\)</span>? Well, we don’t know if the host is parasitized so …</p>
+<p><span class="math inline">\(P(\text{egg is male}) = P(\text{host parasitized}) \times P(\text{egg is male } | \text{ host parasitized}) + P(\text{host not parasitized}) \times P(\text{egg is male } | \text{ host is not parasitized})\)</span></p>
+<p><span class="math inline">\(P(\text{egg is male}) = (0.20 \times 0.90) + (0.80 \times 0.05) = 0.22\)</span></p>
+<p>What is <span class="math inline">\(P(\text{egg is female})\)</span>? We don’t know if the host is parasitized so …</p>
+<p><span class="math inline">\(P(\text{egg is female}) = P(\text{host parasitized}) \times P(\text{egg is female } | \text{ host parasitized}) + P(\text{host not parasitized}) \times P(\text{egg is female } | \text{ host is not parasitized})\)</span></p>
+<p><span class="math inline">\(P(\text{egg is female}) = (0.20 \times 0.10) + (0.80 \times 0.95) = 0.78\)</span></p>
+<div id="the-monty-hall-problem" class="section level3 hasAnchor" number="5.11.1">
+<h3><span class="header-section-number">5.11.1</span> The Monty Hall Problem<a href="probability.html#the-monty-hall-problem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose you’re on a game show, and you’re given the choice of three doors: Behind one door is a car; behind each of the other doors, a goat. You pick a door, say No.1, and the host, who knows what’s behind the doors, opens another door, say No.3, which has a goat. He then says to you, “Do you want to pick door No.2?” Well, what should you do? Stay with your original pick or switch? The winning strategy is to always switch to the still closed door you didn’t originally pick. Why? How?</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:montyhall">TABLE 5.9: </span>The Monty Hall Problem
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Scenarios
+</th>
+<th style="text-align:left;">
+Door 1
+</th>
+<th style="text-align:left;">
+Door 2
+</th>
+<th style="text-align:left;">
+Door 3
+</th>
+<th style="text-align:left;">
+Host’s Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Scenario 1
+</td>
+<td style="text-align:left;">
+Goat
+</td>
+<td style="text-align:left;">
+Car
+</td>
+<td style="text-align:left;">
+Goat
+</td>
+<td style="text-align:left;">
+Opens Door 3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scenario 2
+</td>
+<td style="text-align:left;">
+Car
+</td>
+<td style="text-align:left;">
+Goat
+</td>
+<td style="text-align:left;">
+Goat
+</td>
+<td style="text-align:left;">
+Opens Door 2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scenario 3
+</td>
+<td style="text-align:left;">
+Goat
+</td>
+<td style="text-align:left;">
+Goat
+</td>
+<td style="text-align:left;">
+Car
+</td>
+<td style="text-align:left;">
+Opens Door 2
+</td>
+</tr>
+</tbody>
+</table>
+<p>Say you pick Door 1 and you know there are three possibilities here. Either the car is behind Door 1, it is behind Door 2, or it is behind Door 3. So the probability the car is behind Door 1 is <span class="math inline">\(\dfrac{1}{3}\)</span>, behind Door 2 is <span class="math inline">\(\dfrac{1}{3}\)</span> and behind Door 3 is <span class="math inline">\(\dfrac{1}{3}\)</span>. You can also think of this as there is a <span class="math inline">\(\dfrac{1}{3}\)</span> probability the prize is behind Door 1 and hence there is a <span class="math inline">\(\dfrac{2}{3}\)</span> probability that the prize is behind Door 2 or 3. That is, <span class="math inline">\(P(\text{Car behind Door 2 or Door 3}) = \dfrac{2}{3}\)</span>.</p>
+<p>Once the host opens up one of the doors you did not pick, say Door 3, and this door will always have a goat, <span class="math inline">\(P(\text{Car behind Door 2 or Door 3}) = \dfrac{2}{3}\)</span> is still true BUT now you know the car is not behind Door 3 and hence <span class="math inline">\(P(\text{Car behind Door 2 or Door 3}) = P(\text{Car behind Door 2}) = \dfrac{2}{3}\)</span>; you better switch!</p>
+<p>This puzzle has spawned a book and several pages of explanations. Try out <a href="https://betterexplained.com/articles/understanding-the-monty-hall-problem/">this simulation here</a> to convince yourself switching is the winning strategy.</p>
+</div>
+</div>
+<div id="bayes-theorem" class="section level2 hasAnchor" number="5.12">
+<h2><span class="header-section-number">5.12</span> Bayes’ Theorem<a href="probability.html#bayes-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Having established some basic rules of probability theory, we can now turn to one of the most exciting developments that occurred a long time ago but is being seen in a new light only in recent decades: <code>Bayesian statistics</code>. Who knew an eighteenth century Presbyterian minister could wreak such positive havoc! Indeed, his early insights have applications in such diverse areas as medical testing, ecology, Google’s self-driving cars, spam filters that protect your email, and <a href="https://www.nytimes.com/2014/09/30/science/the-odds-continually-updated.html">even saving a fisherman’s life</a>?. Let us appreciate Bayes’ Theorem with reference to an often used problem.</p>
+<p>Say I present you with the following information: 1% of women at age forty who participate in routine screening have breast cancer. 80% of women with breast cancer will get positive mammographies. 9.6% of women without breast cancer will also get positive mammographies. A 40-year old woman had a positive mammography in a routine screening. <em>What is the probability that she actually has breast cancer?</em></p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt8">TABLE 5.10: </span>Breast Cancer and Bayes Theorem
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Test
+</th>
+<th style="text-align:left;">
+Cancer
+</th>
+<th style="text-align:left;">
+No
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Positive
+</td>
+<td style="text-align:left;">
+0.800
+</td>
+<td style="text-align:left;">
+0.096
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Negative
+</td>
+<td style="text-align:left;">
+?
+</td>
+<td style="text-align:left;">
+?
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt9">TABLE 5.11: </span>Breast Cancer and Bayes Theorem (Part 2)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Test Result
+</th>
+<th style="text-align:left;">
+Will have cancer
+</th>
+<th style="text-align:left;">
+Will not have cancer
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Positive
+</td>
+<td style="text-align:left;">
+0.800
+</td>
+<td style="text-align:left;">
+0.096
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Negative
+</td>
+<td style="text-align:left;">
+0.200
+</td>
+<td style="text-align:left;">
+0.964
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:left;">
+1.000
+</td>
+<td style="text-align:left;">
+1.000
+</td>
+</tr>
+</tbody>
+</table>
+<p>The question we are tasked with is this: If a woman has a positive test result, what is the probability that she has breast cancer? That is, what is <span class="math inline">\(P(\text{Breast Cancer } | +\text{Mammography)}\)</span>, i.e., <span class="math inline">\(P(B | A)\)</span>? We might struggle if it weren’t for the clean logic that Bayes encapsulated into an elegant mathematical statement. For now, let us break the problem down based on the information given to us.</p>
+<p>Start by assuming a certain population size of 40-year old women who are tested, i.e., <span class="math inline">\(N = 100,000\)</span>. We know that 1% of this population will have breast cancer, which amounts to <span class="math inline">\(1,000\)</span> women. Some 80% of women who have breast cancer will test positive for breast cancer, i.e, <span class="math inline">\(0.80 \times 1000 = 800\)</span>, which means <span class="math inline">\(200\)</span> women who have breast cancer will test negative.</p>
+<p>We are also told that 9.6% of women without breast cancer will also get a positive test result. This amounts to <span class="math inline">\(0.096 \times 99000 = 9,504\)</span>. This means that <span class="math inline">\(86,696\)</span> women will have a negative test and have no breast cancer.</p>
+<p>Entering these values into the table we can calculate the probability that a woman with a positive test result actually has breast cancer to be <span class="math inline">\(\dfrac{800}{10304} = 0.0776\)</span> or 7.76%. What about the probability that the woman has a negative test result and yet has breast cancer? This would be <span class="math inline">\(\dfrac{200}{89696} = 0.0022\)</span> or 0.22%. The table below is populated with the estimates.</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt10">TABLE 5.12: </span>Breast Cancer and Bayes Theorem (Part 3)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Test Result
+</th>
+<th style="text-align:right;">
+Will have cancer
+</th>
+<th style="text-align:right;">
+Will not have cancer
+</th>
+<th style="text-align:right;">
+Row Total
+</th>
+<th style="text-align:left;">
+Probability
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Positive
+</td>
+<td style="text-align:right;">
+800
+</td>
+<td style="text-align:right;">
+9504
+</td>
+<td style="text-align:right;">
+10304
+</td>
+<td style="text-align:left;">
+800/10304 = 0.0776
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Negative
+</td>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+89496
+</td>
+<td style="text-align:right;">
+89696
+</td>
+<td style="text-align:left;">
+200/89696 = 0.0022
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+99000
+</td>
+<td style="text-align:right;">
+100000
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+<p>One could arrive at the same conclusion via applying Bayes’ Theorem, as shown below.</p>
+<p><span class="math display">\[\begin{eqnarray*}
+P(B | A) = \dfrac{P(A | B) \times P(B)}{\left[ P(A | B) \times P(B) \right] + \left[ P(A | B^c) \times P(B^c)  \right]} \\
+= \dfrac{0.800 \times 0.01}{\left[ 0.800 \times 0.01 \right] + \left[0.096 \times 0.990 \right]} = \dfrac{0.008}{\left[0.008 + 0.09504 \right]} = \dfrac{0.008}{0.10304} = 0.0776
+\end{eqnarray*}\]</span></p>
+<p><span class="math inline">\(P(B|A) = \dfrac{P(A|B) \times P(B)}{P(A)}\)</span></p>
+<p>What is <span class="math inline">\(P(A|B)\)</span> … the probability that a woman has Breast Cancer and gets a positive mammography? <span class="math inline">\(= 0.80\)</span>?</p>
+<p>What is <span class="math inline">\(P(B)\)</span>? … this is 0.01</p>
+<p>What is <span class="math inline">\(P(A)\)</span>? … This is the probability of getting a positive mammography, which can happen as follows:</p>
+<ol style="list-style-type: decimal">
+<li>when she has Breast Cancer … <span class="math inline">\((0.80 \times 0.01)\)</span>, or</li>
+<li>when she doesn’t have Breast Cancer … <span class="math inline">\((0.096 \times 0.99)\)</span></li>
+</ol>
+<p><span class="math display">\[\begin{eqnarray*}
+P(A) = (0.80 \times 0.01) + (0.096 \times 0.99) = 0.10304 \\
+\therefore P(B|A) = \dfrac{P(A|B) \times P(B)}{P(A)} \\
+= \dfrac{0.80 \times 0.01}{0.10304} = \dfrac{0.008}{0.10304} = 0.07763975
+\end{eqnarray*}\]</span></p>
+<div id="another-example" class="section level3 hasAnchor" number="5.12.1">
+<h3><span class="header-section-number">5.12.1</span> Another Example<a href="probability.html#another-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose a patient exhibits symptoms that make her physician concerned that she may have a particular disease. The disease is relatively rare in this population, with a prevalence of 0.2% (meaning it affects 2 out of every 1,000 persons). The physician recommends a screening test that costs $250 and requires a blood sample. Before agreeing to the screening test, the patient wants to know what will be learned from the test, specifically she wants to know the probability of disease, given a positive test result, i.e., P(Disease | Screen Positive). The physician reports that the screening test is widely used and has a reported sensitivity of 85%. In addition, the test comes back positive 8% of the time and negative 92% of the time. <a href="http://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/bs704_probability_print.html">Source</a></p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt11">TABLE 5.13: </span>Testing Positive and Bayes Theorem
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Test Result
+</th>
+<th style="text-align:right;">
+Sick
+</th>
+<th style="text-align:right;">
+Healthy
+</th>
+<th style="text-align:right;">
+Total
+</th>
+<th style="text-align:left;">
+Probability
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Positive
+</td>
+<td style="text-align:right;">
+170
+</td>
+<td style="text-align:right;">
+7830
+</td>
+<td style="text-align:right;">
+8000
+</td>
+<td style="text-align:left;">
+170/8000 = 0.02125
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Negative
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+91970
+</td>
+<td style="text-align:right;">
+92000
+</td>
+<td style="text-align:left;">
+30/92000 = 0.000326087
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+99800
+</td>
+<td style="text-align:right;">
+100000
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+<p>What is <span class="math inline">\(P(Sick | +Test)\)</span>?</p>
+<p>We know that <span class="math inline">\(P(Sick | +Test) = \dfrac{P(+{Test} | S) \times P(Sick)}{P(+{Test})}\)</span></p>
+<p>We know that <span class="math inline">\(P(+{Test} | Sick) = 0.85\)</span>, that <span class="math inline">\(P(Sick) = 0.002\)</span>, and that <span class="math inline">\(P(+{Test}) = 0.08\)</span></p>
+<p>Therefore, <span class="math inline">\(P(Sick | +Test) = \dfrac{0.85 \times 0.002}{0.08} = 0.021\)</span> … There is a 2.1% chance the patient is actually sick if the test comes back positive.</p>
+<p>What if the test comes back as a false positive … i.e., What is the chance the patient is actually healthy but the test is positive? This requires calculating <span class="math inline">\(P(+Test | \text{ Not Sick }) = \dfrac{P(\text{Healthy } | +{Test}) \times P(+Test)}{P(Healthy)} = \dfrac{1 - 0.021 \times (0.08)}{1 - 0.002} = 0.078\)</span> or 7.8%; a healthy patient can still test positive for the disease 7.8% of the time.</p>
+</div>
+<div id="extending-bayes-rule" class="section level3 hasAnchor" number="5.12.2">
+<h3><span class="header-section-number">5.12.2</span> Extending Bayes Rule<a href="probability.html#extending-bayes-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Bayes theorem is not limited to simple <span class="math inline">\(2 \times 2\)</span> contingency tables, as demonstrated by the example below. An aircraft emergency locator transmitter (ELT) is a device designed to transmit a signal
+in the case of a crash. The Altigauge Manufacturing Company makes 80% of the ELTs,
+the Bryant Company makes 15% of them, and the Chartair Company makes the other
+5%. The ELTs made by Altigauge have a 4% rate of defects, the Bryant ELTs have a 6%
+rate of defects, and the Chartair ELTs have a 9% rate of defects. What is <span class="math inline">\(P(Altigauge|Defective)\)</span>?</p>
+<table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:probt12">TABLE 5.14: </span>Extending Bayes Theorem
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Manufacturer
+</th>
+<th style="text-align:right;">
+Defective
+</th>
+<th style="text-align:right;">
+Not Defective
+</th>
+<th style="text-align:right;">
+Total
+</th>
+<th style="text-align:left;">
+Probability
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Altigauge
+</td>
+<td style="text-align:right;">
+320
+</td>
+<td style="text-align:right;">
+7680
+</td>
+<td style="text-align:right;">
+8000
+</td>
+<td style="text-align:left;">
+320/455 = 0.7032967
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bryant
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+1410
+</td>
+<td style="text-align:right;">
+1500
+</td>
+<td style="text-align:left;">
+90/455 = 0.1978022
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chartair
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+455
+</td>
+<td style="text-align:right;">
+500
+</td>
+<td style="text-align:left;">
+45/455 = 0.0989011
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+455
+</td>
+<td style="text-align:right;">
+9545
+</td>
+<td style="text-align:right;">
+10000
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\begin{eqnarray*}
+P(A|D) = \dfrac{P(D|A) \times P(A)}{\left[P(D|A) \times P(A) \right] + \left[P(D|B) \times P(B) \right] + \left[P(D|C) \times P(C) \right]} \\
+= \dfrac{0.80 \times 0.04}{\left[ 0.80 \times 0.04 \right] + \left[0.15 \times 0.06 \right] + \left[0.05 \times 0.09 \right]} \\
+= \dfrac{0.0320}{0.0320 + 0.0090 + 0.0045} = \dfrac{0.0320}{0.0455} = 0.7032967
+\end{eqnarray*}\]</span></p>
+</div>
+</div>
+<div id="key-things-to-remember" class="section level2 hasAnchor" number="5.13">
+<h2><span class="header-section-number">5.13</span> Key Things to Remember<a href="probability.html#key-things-to-remember" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: lower-alpha">
+<li><p>The Addition Rule</p>
+<ol style="list-style-type: lower-roman">
+<li>Non-Mutually Exclusive Events: <span class="math inline">\(P(\text{A or B}) = P(A) + P(B) - P(\text{A and B})\)</span></li>
+<li>Mutually Exclusive Events: <span class="math inline">\(P(\text{A or B}) = P(A) + P(B)\)</span></li>
+</ol></li>
+<li><p>Multiplication Rule</p>
+<ol style="list-style-type: lower-roman">
+<li>Independent Events: <span class="math inline">\(P(\text{A and B}) = P(A) \times P(B)\)</span></li>
+<li>Dependent Events: <span class="math inline">\(P(\text{A and B}) = P(A) \times P(B | A)\)</span> and <span class="math inline">\(P(\text{B and A}) = P(B) \times P(A | B)\)</span></li>
+</ol></li>
+<li><p>A and B are mutually exclusive if <span class="math inline">\(P(\text{A and B}) = 0\)</span></p></li>
+<li><p>A and B are independent if <span class="math inline">\(P(A|B) = P(A)\)</span>; <span class="math inline">\(P(B|A) = P(B)\)</span></p></li>
+<li><p>Total Probability: <span class="math inline">\(P(B) = P(A)\times P(B|A) + P(A^c)\times P(B|A^c)\)</span></p></li>
+<li><p>Bayes’ Rule: <span class="math inline">\(P(A|B) = \dfrac{P(A)\times P(B|A)}{P(B)}\)</span>; and <span class="math inline">\(P(B|A) = \dfrac{P(B)\times P(A|B)}{P(A)}\)</span></p></li>
+</ol>
+</div>
+<div id="practice-problems-3" class="section level2 hasAnchor" number="5.14">
+<h2><span class="header-section-number">5.14</span> Practice Problems<a href="probability.html#practice-problems-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Problem 1</strong></p>
+<p>In the first hour of a hunting trip, the probability that a pride of Serengeti lions will encounter a Cape buffalo is 0.035. If it encounters a buffalo, the probability that the pride successfully captures the buffalo is 0.40. What is the probability that the next one-hour of a hunt the pride will successfully capture a Cape buffalo?</p>
+<p><strong>Problem 2</strong></p>
+<p>You graduated with a Biology degree and are interviewed for a lucrative job as a snake handler in a circus. As part of the audition you must pick up two rattlesnakes from a pit containing eight rattlesnakes, three of which have been defanged (so they cannot bite you) but the other five are still dangerous (they can bite you). You skipped the herpetology course while in school so you cannot identify the defanged snakes from the others. Luckily for you, you did take a course on probability. As you thank your stars you bend down and pick up one snake with your left hand and another with your right hand.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that you picked up no dangerous snakes?</li>
+<li>Assuming any of the five dangerous snakes will, if picked up, bite with a probability of 0.8. What is the chance that in picking up two snakes you will be bitten at least once?</li>
+<li>If you picked up only one snake and it did not bite you, what is the probability that it is defanged?</li>
+</ol>
+<p><strong>Problem 3</strong></p>
+<p><a href="http://www.iflscience.com/physics/schr%C3%B6dinger%E2%80%99s-cat-explained/">Schrodinger’s cat</a> lives under a constant threat of death from the random release of a deadly poisonous gas. The probability of a release of the poison on any given day is 0.01, and releases are independent across days.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that the cat will survive one day?</li>
+<li>What is the probability that the cat survives seven days?</li>
+<li>What is the probability that the cat survives a year (365 days)?</li>
+<li>What is the probability that the cat will die by the end of a year?</li>
+</ol>
+<p><strong>Problem 4</strong></p>
+<p>You are the health inspector for your city and tasked with improving airport washroom hygiene in the city’s lone airport. You know that the probability of a man washing his hands after using the washroom is 0.74 and that of a woman is 0.83. Assume there are 40 men and 60 women waiting to use the washroom. What is the probability that the next person to use the washroom will wash his/her hands?</p>
+<p><strong>Problem 5</strong></p>
+<p>Rapid HIV tests allow for quick diagnosis without expensive laboratory equipment but their accuracy is in doubt. In a population of 1517 tested individuals in a country, 4 had HIV but tested negative (false negative) with the rapid test, 166 had HIV and tested positive, 129 were HIV free but tested positive (false positive), and 1218 were HIV free and tested negative.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of a false positive?</li>
+<li>What was the false negative rate?</li>
+<li>If a randomly sampled individual from this population tests positive on a rapid test, what is the probability that he/she has HIV?</li>
+</ol>
+<p><strong>Problem 6</strong></p>
+<p>Taking a group photograph is tricky because someone or the other usually seems to blink just as the photograph is taken. We know the probability of an individual blinking during a photo is 0.04.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If you photograph one person, what is the probability that he/she will not blink?</li>
+<li>If you are photographing a group of 10 individuals, what is the probability that at least one person will blink?</li>
+</ol>
+<p><strong>Problem 7</strong></p>
+<p>In Vancouver (British Columbia), the probability of rain on any given winter’s day is 0.58, on a spring day it is 0.38, on a summer day it is 0.25, and in the fall it is 0.53.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of rain on any given randomly chosen day in a year (365 days)?</li>
+<li>If I tell you that it rained on a particular day (but I don’t tell you the date), what is the probability that this was a winter’s day?</li>
+</ol>
+<p><strong>Problem 8</strong></p>
+<p>A standard deck of cards has 52 cards, 13 of each suit Spades, Diamonds, Hearts, and Clubs. Each suite has 13 cards, an Ace, King, Queen, Jack, and nine numbered cards 2 through 10. Face cards are King, Queen, and Jack.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If you draw one card, what is the probability that the card is a King?</li>
+<li>What is the probability of drawing a face card that is also a Spade?</li>
+<li>What is the probability of drawing a card without a number on it?</li>
+<li>What is the probability of drawing a red card? What is the probability of drawing an ace? What is the probability of drawing a red Ace? Are these events (“Ace” and “red”) mutually exclusive? Are they independent?</li>
+<li>List two events that are mutually exclusive for a single draw from a standard deck of cards.</li>
+<li>What is the probability of drawing a red King? What is the probability of drawing a face card in hearts? Are these two events mutually exclusive? Are they independent?</li>
+</ol>
+<p><strong>Problem 9</strong></p>
+<p>A boy mentions that none of the 21 kids in his third-grade class has had a birthday since school began 56 days ago. Assume that in the population the probability of having a birthday on any given day is the same for every day of the year (365 days). What is the probability that 21 kids in such a class would not yet have a birthday in 56 days?</p>
+<p><strong>Problem 10</strong></p>
+<p>The probability of getting a heads or tails on a single flip of a fair coin is 0.5, each.</p>
+<ol style="list-style-type: lower-alpha">
+<li>If you flip a coin twice, what is the probability of getting no heads?</li>
+<li>If you flip a coin twice, what is the probability of getting exactly two heads?</li>
+<li>If you flip a coin twice, what is the probability of getting exactly one tail?</li>
+<li>If you flip a coin twice, what is the probability of getting no tails?</li>
+</ol>
+<p><strong>Problem 11</strong></p>
+<p>Two dice are rolled, find the probability that the sum of the two faces is</p>
+<ol style="list-style-type: lower-alpha">
+<li>equal to 1</li>
+<li>equal to 4</li>
+<li>less than 13</li>
+<li>greater than 7</li>
+</ol>
+<p><strong>Problem 12</strong></p>
+<p>The blood groups of 200 people is distributed as follows: 50 have type A blood, 65 have B blood type, 70 have O blood type and 15 have type AB blood. If a person from this group is selected at random, what is the probability that this person has O blood type?</p>
+<p><strong>Problem 13</strong></p>
+<p>A box is filled with candies in different colors. We have 40 white candies, 24 green ones, 12 red ones, 24 yellow ones and 20 blue ones. If we have selected one candy from the box without peeking into it, find the probability of getting a green or a red candy.</p>
+<p><strong>Problem 14</strong></p>
+<p>You go to see the doctor about an ingrowing toenail. The doctor selects you at random to have a blood test for swine flu, which for the purposes of this exercise we will say is currently suspected to affect 1 in 10,000 people in Ohio. The test is 99% accurate, in the sense that the probability of a false positive is 1%. The probability of a false negative is zero. You test positive. What is the new probability that you have swine flu?</p>
+<p>Now imagine that you went to a friend’s wedding in Mexico recently, and (for the purposes of this exercise) it is known that 1 in 200 people who visited Mexico recently come back with swine flu. Given the same test result as above, what should your revised estimate be for the probability you have the disease?</p>
+<p><strong>Problem 15</strong></p>
+<p>In a TV Game show, a contestant selects one of three doors; behind one of the doors there is a prize, and behind the other two there are no prizes. After the contestant selects a door, the game-show host opens one of the remaining doors, and reveals that there is no prize behind it. The host then asks the contestant whether they want to SWITCH their choice to the other unopened door, or STICK to their original choice. Is it probabilistically advantageous for the contestant to SWITCH doors, or is the probability of winning the prize the same whether they STICK or SWITCH? (Assume that the host selects a door to open, from those available, with equal probability).</p>
+<p><strong>Problem 16</strong></p>
+<p>A diagnostic test has a probability 0.95 of giving a positive result when applied to a person suffering from a certain disease, and a probability 0.10 of giving a (false) positive when applied to a non-sufferer. It is estimated that 0.5 % of the population are sufferers. Suppose that the test is now administered to a person about whom we have no relevant information relating to the disease (apart from the fact that he/she comes from this population). Calculate the following probabilities:</p>
+<ol style="list-style-type: lower-alpha">
+<li>that the test result will be positive</li>
+<li>that, given a positive result, the person is a sufferer</li>
+<li>that, given a negative result, the person is a non-sufferer</li>
+<li>that the person will be misclassified</li>
+</ol>
+<p><strong>Problem 17</strong></p>
+<p>On the first anniversary of the September 11, 2001 terrorist attack on the Twin Towers in New York City, the winning pick-3 number in the city was 911. This lottery involves choosing a three-digit sequence between 000 and 999, with the winning draw determined by numbered balls circulating in a machine.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of the winning number being 911 on September 11, 2002 if a single draw is held for the lottery?</li>
+<li>In reality there are two draws daily. What is the probability of the winning number being 911 on September 11, 2002 in two draws held for the lottery that day?</li>
+</ol>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107619033-1');
+</script>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>Note that in each of these cases we haven’t said what will happen yet we have been able to list all possible outcomes that might occur. This is important because if we omit any likely outcome our sample space would be inaccurate.<a href="probability.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="meansd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "serif",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "css": "toc.css"
+  },
+  "theme": "sandstone"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
