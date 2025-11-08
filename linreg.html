@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Linear Regression | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Linear Regression | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -59,12 +59,12 @@
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.33/datatables.js"></script>
+<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
 <link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
@@ -487,22 +487,26 @@ H_A: \rho \neq 0
 <p>Let us see scatter-plots and correlations in action with some real-world data to get a feel for patterns we might encounter.</p>
 <div id="example-1-13" class="section level4 unnumbered hasAnchor">
 <h4>Example 1<a href="linreg.html#example-1-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><a href="http://www.countyhealthrankings.org/our-approach">The Robert Wood Johnson Foundation’s County Health Rankings</a> measure the health of nearly all counties in the nation and rank them within states. The Rankings are compiled using county-level measures from a variety of national and state data sources. The rankings employ a number of measures but those of interest and in use below are: (a) Premature Death (Years of potential life lost before age 75 per 100,000 population), (b) Adult Obesity (Percentage of adults that report a BMI of 30 or more), (c) Physical Inactivity (Percentage of adults aged 20 and over reporting no leisure-time physical activity
-), (d) Uninsured (Percentage of population under age 65 without health insurance), (e) High School Graduation (Percentage of ninth-grade cohort that graduates in four years), and (f) Unemployment (Percentage of population ages 16 and older unemployed but seeking work).</p>
-<p>If we look at all unique pairs of these variables, what should we expect? Well, I would expect premature death to be positively correlated with obesity, physical inactivity, uninsured, unemployment, and negatively correlated with high school graduation (under the belief that if you have <span class="math inline">\(\geq\)</span> high school education you are more likely to be employed, insured, etc).</p>
+<p><a href="http://www.countyhealthrankings.org/our-approach">The Robert Wood Johnson Foundation’s County Health Rankings</a> measure the health of nearly all counties in the nation and rank them within states. The Rankings are compiled using county-level measures from a variety of national and state data sources. The rankings employ a number of measures but those of interest and in use below are: (a) Adult Obesity (Percentage of adults that report a BMI of 30 or more), (b) Physical Inactivity (Percentage of adults aged 20 and over reporting no leisure-time physical activity), (c) Uninsured (Percentage of population under age 65 without health insurance), (d) High School Graduation (Percentage of ninth-grade cohort that graduates in four years), and (e) Unemployment (Percentage of population ages 16 and older unemployed but seeking work).</p>
+<p>If we look at some of these measures, what do we see?</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chr2"></span>
-<img src="_stats_files/figure-html/chr2-1.svg" alt="Correlations in the County Health Rankings" width="75%" /><img src="_stats_files/figure-html/chr2-2.svg" alt="Correlations in the County Health Rankings" width="75%" /><img src="_stats_files/figure-html/chr2-3.svg" alt="Correlations in the County Health Rankings" width="75%" />
+<img src="_stats_files/figure-html/chr2-1.svg" alt="Select Correlations in the 2017 County Health Rankings Data" width="75%" /><img src="_stats_files/figure-html/chr2-2.svg" alt="Select Correlations in the 2017 County Health Rankings Data" width="75%" /><img src="_stats_files/figure-html/chr2-3.svg" alt="Select Correlations in the 2017 County Health Rankings Data" width="75%" /><img src="_stats_files/figure-html/chr2-4.svg" alt="Select Correlations in the 2017 County Health Rankings Data" width="75%" />
 <p class="caption">
-FIGURE 12.2: Correlations in the County Health Rankings
+FIGURE 12.2: Select Correlations in the 2017 County Health Rankings Data
 </p>
 </div>
 <p>I’ll setup a single pair of hypotheses so that you get the basic idea.</p>
 <p><span class="math display">\[\begin{array}{l}
-H_0: \text{ Adult Obesity and Premature Death are not correlated } (\rho = 0) \\
-H_1: \text{ Adult Obesity and Premature Death ARE correlated } (\rho \neq 0)
+H_0: \text{ Percent of Adults Uninsured and Percent Reporting Poor/Fair Health are not correlated } (\rho = 0) \\
+H_1: \text{ Percent of Adults Uninsured and Percent Reporting Poor/Fair Health are correlated } (\rho \neq 0)
 \end{array}\]</span></p>
 <p>As usual, we reject the null hypothesis if <span class="math inline">\(p-value \leq \alpha\)</span></p>
-<p>In (a) and (b) we see a positive relationship with premature death increasing as adult obesity increases and uninsured rates increase, respectively. In (c), however, we see a negative relationship with premature death decreasing as high school graduation rates increase. The estimated correlation coefficients and <span class="math inline">\(p-values\)</span> are: (a) <span class="math inline">\(r = 0.4966, p-value &lt; 2.2e-16\)</span>, (b) <span class="math inline">\(r = 0.3784, p-value &lt; 2.2e-16\)</span>, and (c) <span class="math inline">\(-0.1477, p-value = 1.055e-14\)</span>, with 95% confidence intervals of <span class="math inline">\(0.4697, 0.5226\)</span>, <span class="math inline">\(0.3480, 0.4081\)</span>, and <span class="math inline">\(-0.1843, -0.1107\)</span>, respectively.</p>
+<blockquote>
+<p>Adult Obesity and the Percent Uninsured is correlated at 0.049, p-value = 0.0056, and 95% CI is 0.014-0.084.</p>
+</blockquote>
+<blockquote>
+<p>Adult Smoking and Poor/Fair Health is correlated at 0.711, with a p-value of &lt; 0.001, and 95% CI is 0.694-0.728</p>
+</blockquote>
 </div>
 <div id="example-2-13" class="section level4 unnumbered hasAnchor">
 <h4>Example 2<a href="linreg.html#example-2-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1409,7 +1413,7 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 </div>
 <div id="example-2-15" class="section level4 hasAnchor" number="12.2.5.2">
 <h4><span class="header-section-number">12.2.5.2</span> Example 2<a href="linreg.html#example-2-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Let us revisit the question of premature death and adult obesity. How well can we predict premature death from adult obesity? Since the original data we looked at included all counties in the U.S., I will draw a random sample of 100 counties to fit the regression model.</p>
+<p>Let us visit the question of premature death and adult obesity. How well can we predict premature death from adult obesity? Since the original data we looked at included all counties in the U.S., I will draw a random sample of 100 counties to fit the regression model.</p>
 <table style="border-collapse:collapse; border:none;">
 <tr>
 <th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">
@@ -1438,13 +1442,13 @@ p
 (Intercept)
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-0.94
+72044.41
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-0.79 – 1.10
+-315184.26 – 459273.07
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-<strong>&lt;0.001</strong>
+0.713
 </td>
 </tr>
 <tr>
@@ -1452,13 +1456,13 @@ p
 Adult Obesity
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-0.00
+24445.46
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
--0.01 – 0.01
+11804.17 – 37086.74
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-0.626
+<strong>&lt;0.001</strong>
 </td>
 </tr>
 <tr>
@@ -1474,15 +1478,15 @@ Observations
 R<sup>2</sup> / R<sup>2</sup> adjusted
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">
-0.002 / -0.008
+0.132 / 0.123
 </td>
 </tr>
 </table>
 <ul>
-<li>The intercept is <span class="math inline">\(-28.83\)</span> but is not statistically significant since the <span class="math inline">\(p-value = 0.988\)</span></li>
-<li>The slope is <span class="math inline">\(264.78\)</span> and is statistically significant given the <span class="math inline">\(p-value = -1.77e-05\)</span>, indicating that as the percent of obese adults increases by <span class="math inline">\(1\)</span>, the number of premature deaths increases by about 265.</li>
-<li>The <span class="math inline">\(\bar{R}^2 = 0.1652\)</span>, indicating that we can explain about <span class="math inline">\(16.52\%\)</span> of the variation in premature deaths with this regression model.</li>
-<li>The <span class="math inline">\(RMSE = 2355.516\)</span>, indicating that average prediction error would be <span class="math inline">\(\pm 2355.516\)</span> if this model were used. Note the high value here, indicative of a sizable prediction error. Being off the truth by <span class="math inline">\(2355\)</span> premature deaths is a lot!</li>
+<li>The intercept is <span class="math inline">\(72044.41\)</span> but is not statistically significant since the <span class="math inline">\(p-value = 0.713\)</span></li>
+<li>The slope is <span class="math inline">\(24445.46\)</span> and is statistically significant given the <span class="math inline">\(p-value &lt; 0.001\)</span>, indicating that as the percent of adults obese in the county increases by <span class="math inline">\(1\)</span>, the years of life lost increases by about <span class="math inline">\(24445\)</span>.</li>
+<li>The <span class="math inline">\(\bar{R}^2 = 0.123\)</span>, indicating that we can explain about <span class="math inline">\(12.3\%\)</span> of the variation in premature deaths with this regression model.</li>
+<li>The <span class="math inline">\(RMSE = 1774\)</span>, indicating that average prediction error would be <span class="math inline">\(\pm 1774\)</span> if this model were used for prediction purposes.</li>
 </ul>
 <p>Here are the data with the scatter-plot, regression line, and confidence intervals. Note that the regression equation superimposed on the plot has estimates rounded up; hence the marginal difference between these and the estimates interpreted above. Note also that the <span class="math inline">\(R^2\)</span> is being reported, not <span class="math inline">\(\bar{R}^2\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chrplots"></span>
