@@ -26,42 +26,43 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
+<rect x='-0.000000000000032' y='0.00' width='432.00' height='288.00' style='stroke-width: 1.12; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpNjAuOTZ8MzMxLjM4fDI5Ljg5fDIzMy40Mw=='>
-    <rect x='60.96' y='29.89' width='270.42' height='203.55' />
+  <clipPath id='cpNjMuMjV8MzMxLjM4fDI5Ljg5fDIzMS4xNA=='>
+    <rect x='63.25' y='29.89' width='268.13' height='201.25' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNjAuOTZ8MzMxLjM4fDI5Ljg5fDIzMy40Mw==)'>
-<polyline points='60.96,197.05 331.38,197.05 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,142.78 331.38,142.78 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,88.52 331.38,88.52 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,34.26 331.38,34.26 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,224.18 331.38,224.18 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,169.92 331.38,169.92 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,115.65 331.38,115.65 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,61.39 331.38,61.39 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='134.71,233.43 134.71,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='257.63,233.43 257.63,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<rect x='79.39' y='189.72' width='55.31' height='34.46' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
-<rect x='202.31' y='132.20' width='55.31' height='91.98' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
-<rect x='134.71' y='39.14' width='55.31' height='185.04' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
-<rect x='257.63' y='180.50' width='55.31' height='43.68' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
+<g clip-path='url(#cpNjMuMjV8MzMxLjM4fDI5Ljg5fDIzMS4xNA==)'>
+<polyline points='63.25,195.17 331.38,195.17 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,141.51 331.38,141.51 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,87.86 331.38,87.86 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,34.21 331.38,34.21 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,221.99 331.38,221.99 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,168.34 331.38,168.34 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,114.69 331.38,114.69 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,61.03 331.38,61.03 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='136.37,231.14 136.37,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='258.25,231.14 258.25,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<rect x='81.53' y='187.92' width='54.84' height='34.07' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
+<rect x='203.41' y='131.05' width='54.84' height='90.94' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
+<rect x='136.37' y='39.04' width='54.84' height='182.96' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
+<rect x='258.25' y='178.80' width='54.84' height='43.19' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
 </g>
 <g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
-<text x='58.09' y='228.27' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='5.67px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='58.09' y='174.00' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>200</text>
-<text x='58.09' y='119.74' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>400</text>
-<text x='58.09' y='65.47' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>600</text>
-<text x='134.71' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='20.30px' lengthAdjust='spacingAndGlyphs'>Died</text>
-<text x='257.63' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='38.61px' lengthAdjust='spacingAndGlyphs'>Survived</text>
+<text x='58.09' y='226.08' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='5.67px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='58.09' y='172.43' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>200</text>
+<text x='58.09' y='118.77' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>400</text>
+<text x='58.09' y='65.12' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>600</text>
+<text x='136.37' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='20.30px' lengthAdjust='spacingAndGlyphs'>Died</text>
+<text x='258.25' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='38.61px' lengthAdjust='spacingAndGlyphs'>Survived</text>
 <text x='331.38' y='256.19' text-anchor='end' style='font-size: 9.00px; font-family: "Roboto Condensed";' textLength='57.69px' lengthAdjust='spacingAndGlyphs'>Passenger's Sex</text>
 <text transform='translate(36.29,29.89) rotate(-90)' text-anchor='end' style='font-size: 9.00px; font-family: "Roboto Condensed";' textLength='36.42px' lengthAdjust='spacingAndGlyphs'>Frequency</text>
-<text x='348.56' y='115.60' style='font-size: 11.50px; font-family: "Roboto Condensed";' textLength='15.67px' lengthAdjust='spacingAndGlyphs'>sex</text>
-<rect x='349.27' y='123.27' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
-<rect x='349.27' y='140.55' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
-<text x='371.57' y='134.46' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='24.81px' lengthAdjust='spacingAndGlyphs'>female</text>
-<text x='371.57' y='151.74' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='17.72px' lengthAdjust='spacingAndGlyphs'>male</text>
+<text x='348.56' y='114.46' style='font-size: 11.50px; font-family: "Roboto Condensed";' textLength='15.67px' lengthAdjust='spacingAndGlyphs'>sex</text>
+<rect x='349.30' y='122.15' width='15.80' height='15.80' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
+<rect x='349.30' y='139.43' width='15.80' height='15.80' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
+<text x='371.57' y='133.32' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='24.81px' lengthAdjust='spacingAndGlyphs'>female</text>
+<text x='371.57' y='150.60' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='17.72px' lengthAdjust='spacingAndGlyphs'>male</text>
 </g>
 </g>
 </svg>

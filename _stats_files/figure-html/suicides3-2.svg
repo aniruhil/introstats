@@ -26,48 +26,49 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
+<rect x='-0.000000000000032' y='0.00' width='432.00' height='288.00' style='stroke-width: 1.12; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpNjAuOTZ8MzI5Ljg1fDI5Ljg5fDIzMy40Mw=='>
-    <rect x='60.96' y='29.89' width='268.89' height='203.55' />
+  <clipPath id='cpNjMuMjV8MzI5Ljg1fDI5Ljg5fDIzMS4xNA=='>
+    <rect x='63.25' y='29.89' width='266.60' height='201.25' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNjAuOTZ8MzI5Ljg1fDI5Ljg5fDIzMy40Mw==)'>
-<polyline points='60.96,201.05 329.85,201.05 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,154.79 329.85,154.79 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,108.53 329.85,108.53 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,62.27 329.85,62.27 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,224.18 329.85,224.18 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,177.92 329.85,177.92 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,131.66 329.85,131.66 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,85.40 329.85,85.40 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='60.96,39.14 329.85,39.14 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='134.29,233.43 134.29,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<polyline points='256.51,233.43 256.51,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
-<rect x='91.51' y='223.28' width='42.78' height='0.90' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
-<rect x='213.73' y='223.23' width='42.78' height='0.95' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
-<rect x='134.29' y='223.90' width='42.78' height='0.28' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
-<rect x='256.51' y='222.61' width='42.78' height='1.57' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
-<text x='106.79' y='232.45' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";' textLength='21.38px' lengthAdjust='spacingAndGlyphs'>48.45</text>
-<text x='229.01' y='232.40' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";' textLength='21.38px' lengthAdjust='spacingAndGlyphs'>51.55</text>
-<text x='161.79' y='233.07' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";' textLength='21.38px' lengthAdjust='spacingAndGlyphs'>15.05</text>
-<text x='284.01' y='231.78' text-anchor='middle' style='font-size: 8.54px; font-family: "Arial";' textLength='21.38px' lengthAdjust='spacingAndGlyphs'>84.95</text>
+<g clip-path='url(#cpNjMuMjV8MzI5Ljg1fDI5Ljg5fDIzMS4xNA==)'>
+<polyline points='63.25,199.12 329.85,199.12 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,153.38 329.85,153.38 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,107.65 329.85,107.65 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,61.91 329.85,61.91 ' style='stroke-width: 0.32; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,221.99 329.85,221.99 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,176.25 329.85,176.25 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,130.51 329.85,130.51 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,84.78 329.85,84.78 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='63.25,39.04 329.85,39.04 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='135.96,231.14 135.96,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<polyline points='257.14,231.14 257.14,29.89 ' style='stroke-width: 0.43; stroke: #CCCCCC; stroke-linecap: butt;' />
+<rect x='93.54' y='221.11' width='42.41' height='0.89' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
+<rect x='214.72' y='221.05' width='42.41' height='0.94' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
+<rect x='135.96' y='221.72' width='42.41' height='0.28' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
+<rect x='257.14' y='220.44' width='42.41' height='1.55' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
+<text x='108.69' y='230.20' text-anchor='middle' style='font-size: 8.54px; font-family: "Roboto Condensed";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>48.45</text>
+<text x='229.87' y='230.14' text-anchor='middle' style='font-size: 8.54px; font-family: "Roboto Condensed";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>51.55</text>
+<text x='163.22' y='230.81' text-anchor='middle' style='font-size: 8.54px; font-family: "Roboto Condensed";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>15.05</text>
+<text x='284.40' y='229.53' text-anchor='middle' style='font-size: 8.54px; font-family: "Roboto Condensed";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>84.95</text>
 </g>
 <g clip-path='url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)'>
-<text x='58.09' y='228.27' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='5.67px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='58.09' y='182.01' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.34px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='58.09' y='135.75' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.34px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='58.09' y='89.49' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.34px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='58.09' y='43.23' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>100</text>
-<text x='134.29' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='65.28px' lengthAdjust='spacingAndGlyphs'>Dowry Dispute</text>
-<text x='256.51' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='109.09px' lengthAdjust='spacingAndGlyphs'>Fall in Social Reputation</text>
+<text x='58.09' y='226.08' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='5.67px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='58.09' y='180.34' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.34px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='58.09' y='134.60' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.34px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='58.09' y='88.86' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='11.34px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='58.09' y='43.12' text-anchor='end' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='17.02px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text x='135.96' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='65.28px' lengthAdjust='spacingAndGlyphs'>Dowry Dispute</text>
+<text x='257.14' y='244.47' text-anchor='middle' style='font-size: 11.50px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='109.09px' lengthAdjust='spacingAndGlyphs'>Fall in Social Reputation</text>
 <text x='329.85' y='256.19' text-anchor='end' style='font-size: 9.00px; font-family: "Roboto Condensed";' textLength='22.08px' lengthAdjust='spacingAndGlyphs'>Cause</text>
 <text transform='translate(36.29,29.89) rotate(-90)' text-anchor='end' style='font-size: 9.00px; font-family: "Roboto Condensed";' textLength='27.19px' lengthAdjust='spacingAndGlyphs'>Percent</text>
-<text x='347.03' y='115.60' style='font-size: 11.50px; font-family: "Roboto Condensed";' textLength='32.34px' lengthAdjust='spacingAndGlyphs'>Gender</text>
-<rect x='347.74' y='123.27' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
-<rect x='347.74' y='140.55' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
-<text x='370.04' y='134.46' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='26.34px' lengthAdjust='spacingAndGlyphs'>Female</text>
-<text x='370.04' y='151.74' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='17.75px' lengthAdjust='spacingAndGlyphs'>Male</text>
+<text x='347.03' y='114.46' style='font-size: 11.50px; font-family: "Roboto Condensed";' textLength='32.34px' lengthAdjust='spacingAndGlyphs'>Gender</text>
+<rect x='347.77' y='122.15' width='15.80' height='15.80' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #FBB4AE;' />
+<rect x='347.77' y='139.43' width='15.80' height='15.80' style='stroke-width: 1.12; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3CDE3;' />
+<text x='370.04' y='133.32' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='26.34px' lengthAdjust='spacingAndGlyphs'>Female</text>
+<text x='370.04' y='150.60' style='font-size: 9.20px; font-family: "Roboto Condensed";' textLength='17.75px' lengthAdjust='spacingAndGlyphs'>Male</text>
 </g>
 </g>
 </svg>
