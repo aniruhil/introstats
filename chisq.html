@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 10 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 10 Working with Multinomial Data | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -675,7 +646,7 @@ FIGURE 10.1: The Chi-Square distribution for specific degrees of freedom
 </div>
 <p>In our case, the <span class="math inline">\(\chi^2_{df=3} = 15.33\)</span> is marked by the red dot and is clearly located well below the <span class="math inline">\(p-value = 0.05\)</span> line. In fact, the <span class="math inline">\(\chi^2_{df=3}\)</span> has a <span class="math inline">\(p-value = 0.001555293\)</span>. Consequently, we can reject the null hypothesis; the four PSAs are not recalled with equal frequency.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq3"></span>
-<img src="_stats_files/figure-html/chisq3-1.svg" alt="Chi-Square = 15.33, df = 3" width="70%" />
+<img src="_stats_files/figure-html/chisq3-1.png" alt="Chi-Square = 15.33, df = 3" width="70%" />
 <p class="caption">
 FIGURE 10.2: Chi-Square = 15.33, df = 3
 </p>
@@ -957,7 +928,7 @@ Total
 </table>
 <p>We have six categories so <span class="math inline">\(df = 6 - 1 = 5\)</span>. The calculated <span class="math inline">\(\chi^2_{df=5} = 2.388461\)</span>, and has a <span class="math inline">\(p-value = 0.7931913\)</span>. Since this is greater than <span class="math inline">\(\alpha = 0.05\)</span> we fail to reject the null hypothesis; This sample suggests that M&amp;M colors are likely distributed as claimed by Mars Inc. The graph shows you where the <span class="math inline">\(p-value\)</span> falls for our calculated <span class="math inline">\(\chi^2\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq4"></span>
-<img src="_stats_files/figure-html/chisq4-1.svg" alt="Chi-Square = 2.388461, df = 5" width="70%" />
+<img src="_stats_files/figure-html/chisq4-1.png" alt="Chi-Square = 2.388461, df = 5" width="70%" />
 <p class="caption">
 FIGURE 10.3: Chi-Square = 2.388461, df = 5
 </p>
@@ -2418,7 +2389,7 @@ Number of Years
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-KlemJr2004" class="csl-entry">
 Klem Jr, Daniel, David C Keck, Karl L Marty, Amy J Miller Ball, Elizabeth E Niciu, and Corry T Platt. 2004. <span>“Effects of Window Angling, Feeder Placement, and Scavengers on Avian Mortality at Plate Glass.”</span> <em>The Wilson Bulletin</em> 116 (1): 69–73.
 </div>
@@ -2456,7 +2427,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -2477,10 +2448,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

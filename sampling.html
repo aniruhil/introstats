@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 The Theory of Sampling Distributions | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 The Theory of Sampling Distributions | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -452,12 +423,8 @@ div.csl-indent {
 <div id="sampling" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Chapter 7</span> The Theory of Sampling Distributions<a href="sampling.html#sampling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Every time that we draw a sample, we hope that it does indeed reflect the population from which it was drawn. But how much faith can we place in this hope? As it turns out, quite a fair amount of faith so long as we haven’t violated key tenets of <code>sampling</code>, have a sufficiently large sample to work with, and understand key elements of the theory of sampling distributions. That is our holy grail so let us not dither a second.</p>
-<p>We can start by understanding two key elements of sampling, the science of drawing samples. One could draw samples in many different ways, several more complicated than others but at the heart of it all is our not violating two principles:</p>
-<ol style="list-style-type: decimal">
-<li>Each and every observation in the population has the same chance of being drawn into the sample</li>
-<li>Each observation is drawn into the sample independently of all other observations</li>
-</ol>
-<p>For example, if sampling from applicants to a job-training program at the welfare center, perhaps to see if a specific job-training program works (or not), I shouldn’t select applicants who seem to be younger or more engaged or non-Hispanic Whites, and so on because this would mean anybody who did not meet the selection criterion would have a <span class="math inline">\(0\)</span> probability of being sampled. Similarly, it would be a bad idea to select individuals who are obviously familiar with each other, maybe even related; by selecting one of them the chance of selecting another individual with them is far greater now than it would be if I didn’t know they knew each other, were related, etc. Samples that meet criteria (1) and (2) are referred to as <code>simple random samples</code>.</p>
+<p>We can start by understanding the <code>simple random sample</code>, one of several probability-sampling designs. In a simple random sample of size <span class="math inline">\(n\)</span>, every possible sample of size <span class="math inline">\(n\)</span> has the same probability of selection. Consequently, every population member has the same inclusion probability. When sampling without replacement from a finite population, individual selections are not strictly independent, although this dependence is often negligible when the sampling fraction is small. Other valid probability designs, such as stratified sampling with disproportionate allocation, may use unequal inclusion probabilities and account for them with the design and sampling weights.</p>
+<p>For example, if sampling from applicants to a job-training program at the welfare center, perhaps to see if a specific job-training program works (or not), I shouldn’t select applicants who seem to be younger or more engaged or non-Hispanic Whites, and so on because this would mean anybody who did not meet the selection criterion would have a <span class="math inline">\(0\)</span> probability of being sampled. Similarly, selecting only individuals who are obviously familiar with one another would create clustered observations. Such a design can be valid if the clustering is intentional and incorporated into the analysis; otherwise, treating those observations as independent will usually understate uncertainty.</p>
 <p>We also draw a distinction between <code>finite populations</code> (where we know the population size) and <code>infinite populations</code> (where we do not know the population size).</p>
 <ul>
 <li>Finite Population: Draw a sample of size <span class="math inline">\(n\)</span> from the population such that each possible sample of size <span class="math inline">\(n\)</span> has an identical probability of selection
@@ -722,7 +689,7 @@ Mean
 <p>Eyeball the sample means in the column title <span class="math inline">\(\bar{x}\)</span> and you will see that the most commonly occurring sample mean is <span class="math inline">\(\bar{x}=5\)</span>, which is equal to the population mean <span class="math inline">\(\mu = 5\)</span>. Is this luck? Not at all. This is what the theory of sampling distributions tell us: On average, the sample mean will equal the population mean so long as the tenets of random sampling have not been violated. Formally, we state this as the Sampling Distribution of <span class="math inline">\(\bar{x}\)</span> is the probability distribution of all possible values of the sample mean <span class="math inline">\(\bar{x}\)</span>. The <code>Expected Value</code> of <span class="math inline">\(\bar{x}\)</span> is <span class="math inline">\(E(\bar{x})=\mu\)</span> and the Standard Deviation of <span class="math inline">\(\bar{x}\)</span> is the <code>Standard Error</code> of <span class="math inline">\(\bar{x}\)</span>, calculated for (a) Finite Populations as <span class="math inline">\(\sigma_{\bar{x}}=\sqrt{\dfrac{N-n}{N-1}}\left(\dfrac{\sigma}{\sqrt{n}}\right)\)</span> and for (b) Infinite Populations as <span class="math inline">\(\sigma_{\bar{x}}=\dfrac{\sigma}{\sqrt{n}}\)</span></p>
 <p>Now, it should be somewhat intuitive that the larger the sample that we draw, the more likely is the sample mean to mirror the population mean. Is this true? Let us see with respect to the length of the <a href="http://phylo.bio.ku.edu/biostats/geneLenDemo.html">human genome</a>, something we have mapped almost completely, to the extent that we can deem it a known population. One way of seeing this in action is by first looking at the distribution of gene lengths (measured in <a href="http://www.biologyreference.com/Mo-Nu/Nucleotides.html">nucleotides</a>, “the sub-units that are linked to form the nucleic acids ribonucleic acid (RNA) and deoxyribonucleic acid (DNA), which serve as the cell’s storehouse of genetic information”). The population is shown below:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:genes1"></span>
-<img src="_stats_files/figure-html/genes1-1.svg" alt="Population Distribution of Human Gene Lengths" width="85%" />
+<img src="_stats_files/figure-html/genes1-1.png" alt="Population Distribution of Human Gene Lengths" width="85%" />
 <p class="caption">
 FIGURE 7.1: Population Distribution of Human Gene Lengths
 </p>
@@ -855,9 +822,9 @@ FIGURE 7.4: Bias and Efficiency of point estimates
 </div>
 <div id="interval-estimates" class="section level2 hasAnchor" number="7.6">
 <h2><span class="header-section-number">7.6</span> Interval Estimates<a href="sampling.html#interval-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Although point estimates (for e.g., <span class="math inline">\(\bar{x}\)</span>) tell us the expected value of a parameter based on a sample statistic, we know samples are not all the same even though they were drawn randomly, and have the same sample size. So we try to ask: How much confidence can we place in the point estimate? The <code>margin of error</code> helps us answer this question. Formally, the interval estimate of <span class="math inline">\(\mu =  \bar{x} \pm \text{ Margin of error}\)</span> and the interval estimate of <span class="math inline">\(p = \bar{p} \pm \text{ Margin of error}\)</span> where the margin of error <span class="math inline">\(= \left(z \times \sigma \right)\)</span>. In a base sense, what the margin of error is telling you is how far off, above or below the population mean or proportion, you should expect your sample mean or proportion to be. Hence the reference made in surveys to “The margin of error for this survey is <span class="math inline">\(\pm 2.5\)</span> percent”, and so on.</p>
-<p>In any normal distribution of sample means with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, the following statement is true: Over all samples of size <span class="math inline">\(n\)</span>, the probability is <span class="math inline">\(0.95\)</span> for the event in question. That is, the distance between the sample mean and the population mean will fall in an interval covered by the margin of error: <span class="math inline">\(-1.96\sigma \leq \bar{x}-\mu \leq +1.96\sigma\)</span>.</p>
-<p>Rearranging the former identity yields: <span class="math inline">\(\bar{x}-1.96\sigma \leq \mu \leq \bar{x} +1.96\sigma\)</span>. This expression says that in all possible samples of identical size <span class="math inline">\(n\)</span>, there is a 95% probability that <span class="math inline">\(\mu\)</span> falls within a span of values given by <span class="math inline">\(\bar{x} \pm 1.96\sigma\)</span>. The range of values within <span class="math inline">\(\bar{x} \pm 1.96 \sigma\)</span> yield the 95 percent <code>confidence interval (CI)</code> of <span class="math inline">\(\mu\)</span>, and the two boundaries are the <code>95 percent confidence interval limits</code>. Be careful! We aren’t saying <span class="math inline">\(\mu\)</span> falls within a known interval, although this is how most people treat confidence intervals. Rather, what we are saying is that in repeated random sampling if we drew all possible samples of a specific sample size <span class="math inline">\(n\)</span>, calculated the 95 percent confidence interval in each sample, then plotted these confidence intervals, 95 percent of these 95 percent confidence intervals will include <span class="math inline">\(\mu\)</span>. By extension, this also means that some 5 percent of these 95 percent confidence intervals <strong>will not include <span class="math inline">\(\mu\)</span></strong>. Watch the graph that follows; it shows you this principle in action.</p>
+<p>Although point estimates (for e.g., <span class="math inline">\(\bar{x}\)</span>) estimate a parameter with a sample statistic, we know samples are not all the same even when they were drawn randomly and have the same sample size. So we try to ask: How much confidence can we place in the point estimate? The <code>margin of error</code> helps us answer this question. Formally, an interval estimate for <span class="math inline">\(\mu\)</span> is <span class="math inline">\(\bar{x} \pm \text{margin of error}\)</span>, and an interval estimate for <span class="math inline">\(p\)</span> is <span class="math inline">\(\hat{p} \pm \text{margin of error}\)</span>. The margin of error is a critical value times the standard error. For a population mean with known population standard deviation, it is <span class="math inline">\(z^*\dfrac{\sigma}{\sqrt{n}}\)</span>. In a basic sense, the margin of error describes the expected sampling uncertainty around the point estimate. Hence the reference made in surveys to “The margin of error for this survey is <span class="math inline">\(\pm 2.5\)</span> percent”, and so on.</p>
+<p>If the sampling distribution of <span class="math inline">\(\bar{x}\)</span> is normal with mean <span class="math inline">\(\mu\)</span> and standard error <span class="math inline">\(\sigma/\sqrt{n}\)</span>, then over repeated samples of size <span class="math inline">\(n\)</span>, the probability is <span class="math inline">\(0.95\)</span> that <span class="math inline">\(\bar{x}\)</span> falls within 1.96 standard errors of <span class="math inline">\(\mu\)</span>: <span class="math inline">\(-1.96\dfrac{\sigma}{\sqrt{n}} \leq \bar{x}-\mu \leq +1.96\dfrac{\sigma}{\sqrt{n}}\)</span>.</p>
+<p>Rearranging the former identity yields <span class="math inline">\(\bar{x}-1.96\dfrac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{x}+1.96\dfrac{\sigma}{\sqrt{n}}\)</span>. The endpoints form a 95 percent <code>confidence interval (CI)</code> for <span class="math inline">\(\mu\)</span>. Before the sample is drawn, the procedure has a 95 percent probability of producing an interval that contains <span class="math inline">\(\mu\)</span>. After a particular interval has been calculated, <span class="math inline">\(\mu\)</span> is fixed and the interval either contains it or it does not; we do not assign a 95 percent probability to that realized interval. In repeated random sampling, 95 percent of intervals constructed by this procedure will include <span class="math inline">\(\mu\)</span>, while about 5 percent <strong>will not include <span class="math inline">\(\mu\)</span></strong>. Watch the graph that follows; it shows you this principle in action.</p>
 <p>In particular, the graph shows 100 confidence intervals as horizontal lines, with a vertical line demarcating the value of the population mean <span class="math inline">\((\mu = 20)\)</span>. Red horizontal lines are 95% confidence intervals that have completely missed the population mean.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:confint1"></span>
 <img src="images/confint.png" alt="95 Percent Confidence Intervals in 100 Random Samples" width="60%" />
@@ -1172,14 +1139,14 @@ Proportion
 <p>Note what happens when <span class="math inline">\(\bar{p}=0\)</span> and <span class="math inline">\(\bar{p}=1\)</span>: Your numerator in the formula <span class="math inline">\(s_{\bar{p}} = \sqrt{\dfrac{\bar{p}(1-\bar{p})}{n}}\)</span> is driven to <span class="math inline">\(0\)</span> and hence so is the standard error. So this problem occurs at the extremes of <span class="math inline">\(\bar{p}\)</span>. Where the numerator <span class="math inline">\(\bar{p}(1 - \bar{p})\)</span> is the widest is when <span class="math inline">\(\bar{p}=0.50\)</span>; as <span class="math inline">\(\bar{p}\)</span> moves away towards <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, <span class="math inline">\(\bar{p}(1 - \bar{p})\)</span> steadily decreases. At the extremes, the Wilson will do well but not so the Wald or Agresti-Coull</p>
 <p>If you calculated the garden variety of confidence intervals for a case where <span class="math inline">\(\bar{p} = 0.04166667\)</span> you would see the following:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-71"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-71-1.svg" alt="95 percent Confidence Intervals when Sample Proportion = 0.0417" width="70%" />
+<img src="_stats_files/figure-html/unnamed-chunk-71-1.png" alt="95 percent Confidence Intervals when Sample Proportion = 0.0417" width="70%" />
 <p class="caption">
 FIGURE 7.7: 95 percent Confidence Intervals when Sample Proportion = 0.0417
 </p>
 </div>
 <p>Note the variance in how wide the intervals are and that some of them cross <span class="math inline">\(0\)</span>, which doesn’t make sense because you cannot have a negative sample proportion. On the other hand, if you calculated the garden variety of confidence intervals for a case where <span class="math inline">\(\bar{p} = 0.5\)</span> you would see muted differences between the different methods used to calculate confidence intervals (see below).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-72"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-72-1.svg" alt="95 percent Confidence Intervals when Sample Proportion = 0.5000" width="70%" />
+<img src="_stats_files/figure-html/unnamed-chunk-72-1.png" alt="95 percent Confidence Intervals when Sample Proportion = 0.5000" width="70%" />
 <p class="caption">
 FIGURE 7.8: 95 percent Confidence Intervals when Sample Proportion = 0.5000
 </p>
@@ -1214,7 +1181,7 @@ FIGURE 7.8: 95 percent Confidence Intervals when Sample Proportion = 0.5000
 <div id="students-t-distribution" class="section level2 hasAnchor" number="7.7">
 <h2><span class="header-section-number">7.7</span> Student’s t distribution<a href="sampling.html#students-t-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the preceding work with standard errors, margins of error, and confidence intervals we made a bold assumption – that we knew <span class="math inline">\(\sigma\)</span>, variability in the population. However, if we don’t know <span class="math inline">\(\mu\)</span> and hence are trying to come up with the most precise estimate of <span class="math inline">\(\mu\)</span> via our sample <span class="math inline">\(\bar{x}\)</span>, how can we really know <span class="math inline">\(\sigma\)</span>? We cannot, and this is where <code>Student's t distribution</code> comes into play. This distribution was the brainchild of William Sealy Gosset, an employee of the Guinness Brewery. He worked with Karl Pearson on figuring out the challenges of using the standard normal distribution with small samples and unknown population variances. The distribution looks like the standard normal distribution but is <code>fatter in the tails</code> since in small samples more extreme results are possible. An applet is available <a href="http://www.stat.tamu.edu/~jhardin/applets/signed/T.html">here</a> but let us see how this distribution works and why it matters.</p>
-<p>Assume <span class="math inline">\(X \sim N(13,2)\)</span>. If <span class="math inline">\(x = 12, n=16\)</span>, what is <span class="math inline">\(z_{x=12}\)</span>? It turns out that <span class="math inline">\(z_{x=12}=2\)</span>. Now, what if we don’t know <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> and draw three samples, each with <span class="math inline">\(n=16\)</span> but <span class="math inline">\(s\)</span> differs in each sample?</p>
+<p>Assume observations come from a normal population with <span class="math inline">\(\mu=13\)</span> and <span class="math inline">\(\sigma=2\)</span>. If a sample of <span class="math inline">\(n=16\)</span> has <span class="math inline">\(\bar{x}=12\)</span>, then <span class="math inline">\(z=(12-13)/(2/\sqrt{16})=-2\)</span>. Now, what if we do not know <span class="math inline">\(\sigma\)</span> and draw three samples, each with <span class="math inline">\(n=16\)</span> and <span class="math inline">\(\bar{x}=12\)</span>, but <span class="math inline">\(s\)</span> differs in each sample? The resulting standardized statistics are <span class="math inline">\(t=(\bar{x}-\mu)/(s/\sqrt{n})\)</span>:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:t74">TABLE 7.3: </span>The t distribution: An Example
@@ -1231,7 +1198,7 @@ Std. Dev.
 Std. Error
 </th>
 <th style="text-align:right;">
-z-score
+t-score
 </th>
 </tr>
 </thead>
@@ -1282,7 +1249,7 @@ z-score
 </table>
 <p>Notice what happens here: Each sample yields a different value of <span class="math inline">\(z\)</span> for the same <span class="math inline">\(x=12\)</span> simply because each sample is generating differing <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(s\)</span>. This leads to our making far more mistakes than we should if we continue to rely on the <span class="math inline">\(z\)</span> distribution. However, if you switch to the <span class="math inline">\(t\)</span> distribution we gain back some precision. The <span class="math inline">\(t = \dfrac{x - \bar{x}}{s_{\bar{x}}}\)</span> where <span class="math inline">\(s_{\bar{x}} = \dfrac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(t\)</span> is distributed with <span class="math inline">\(n-1\)</span> degrees of freedom.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-74"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-74-1.svg" alt="Student's t versus the Standard Normal z Distribution" width="60%" />
+<img src="_stats_files/figure-html/unnamed-chunk-74-1.png" alt="Student's t versus the Standard Normal z Distribution" width="60%" />
 <p class="caption">
 FIGURE 7.9: Student’s t versus the Standard Normal z Distribution
 </p>
@@ -1290,9 +1257,9 @@ FIGURE 7.9: Student’s t versus the Standard Normal z Distribution
 <p>The red distribution is for the standard normal (<span class="math inline">\(z\)</span>), and the blue distributions are for varying degrees of freedom, first for <span class="math inline">\(df=1\)</span> (panel (a)), then for <span class="math inline">\(df=2\)</span> (panel (b)), then for <span class="math inline">\(df=3\)</span> (panel (c)), and the black distribution is for <span class="math inline">\(df=29\)</span> (panel (d)). Notice that the distribution for <span class="math inline">\(df=29\)</span> is very close to the <span class="math inline">\(z\)</span> distribution. These plots illustrate the work of the <span class="math inline">\(t\)</span> distribution; for small samples, which then have smaller degrees of freedom, the <span class="math inline">\(t\)</span> deviates from the <span class="math inline">\(z\)</span> but as the <span class="math inline">\(df\)</span> increases, the <span class="math inline">\(t\)</span> starts mirroring the <span class="math inline">\(z\)</span> distribution. So is there a rule when you should use the <span class="math inline">\(t\)</span> <code>instead of</code> the <span class="math inline">\(z\)</span>? Yes there is:</p>
 <ul>
 <li>Use the <span class="math inline">\(t\)</span> distribution whenever <span class="math inline">\(\sigma\)</span> is unknown and hence the sample standard deviation <span class="math inline">\((s)\)</span> must be used, regardless of the sample size</li>
-<li>Use the <span class="math inline">\(t\)</span> distribution whenever <span class="math inline">\(n &lt; 30\)</span> even if <span class="math inline">\(\sigma\)</span> is known</li>
+<li>If <span class="math inline">\(\sigma\)</span> is genuinely known and the population is normal, use the <span class="math inline">\(z\)</span> distribution even when <span class="math inline">\(n &lt; 30\)</span>. If the population is not normal, a small sample may not justify either procedure without additional assumptions or a different method</li>
 </ul>
-<p>Note that disciplines vary in how they settle the question of when to use the <span class="math inline">\(z\)</span> versus the <span class="math inline">\(t\)</span>. For example, some will use the <span class="math inline">\(t\)</span> whenever the sample size is less than 200 even if <span class="math inline">\(\sigma\)</span> is known while others will use <span class="math inline">\(z\)</span> whenever <span class="math inline">\(\sigma\)</span> is known regardless of the sample size. More prudent analysts will look for outliers and/or heavily skewed data, and if they see either of these issues, they may not rely on the <span class="math inline">\(z\)</span> unless the sample size is at least 50 or more (others would hold a higher standard, that of 100 or 200 data points). For our purposes, however, we will stick with the rule-of-thumb listed above for now.</p>
+<p>In practice, <span class="math inline">\(\sigma\)</span> is rarely known, so the <span class="math inline">\(t\)</span> procedure is the usual choice for inference about a population mean. With large samples the <span class="math inline">\(t\)</span> and <span class="math inline">\(z\)</span> critical values are nearly identical. Sample size does not by itself cure severe skewness, outliers, dependence, or a biased sampling design, so those features should be examined before either procedure is used.</p>
 <div id="example-1-6" class="section level3 hasAnchor" number="7.7.1">
 <h3><span class="header-section-number">7.7.1</span> Example 1<a href="sampling.html#example-1-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Find the following <span class="math inline">\(t\)</span> score(s):</p>
@@ -1476,7 +1443,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -1497,10 +1464,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

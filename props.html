@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Comparing Proportions | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -461,21 +432,21 @@ P\left[x \text{ successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
 \end{eqnarray*}\]</span></p>
 <p>How many female passengers (aka trials) do we have? 466. Let us take this piece of data, together with <span class="math inline">\(p=0.50\)</span> to generate the distribution of female passengers’ survival via the binomial distribution. The resulting number of female passengers surviving the shipwreck is shown below. The distribution peaks at 233, which is <span class="math inline">\(=0.5 \times 466\)</span> … i.e., the most likely outcome is that one-half of the female passengers survive.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binomtitanic"></span>
-<img src="_stats_files/figure-html/binomtitanic-1.svg" alt="Binomial Distribution of Female Passenger's Survival with p = 0.5" width="75%" />
+<img src="_stats_files/figure-html/binomtitanic-1.png" alt="Binomial Distribution of Female Passenger's Survival with p = 0.5" width="75%" />
 <p class="caption">
 FIGURE 11.1: Binomial Distribution of Female Passenger’s Survival with p = 0.5
 </p>
 </div>
 <p>How many of the female passengers survived the Titanic sinking? Some 339 did, which makes the actual probability of survival approximately <span class="math inline">\(0.7275\)</span>. If this were the <code>true probability</code> of a female passenger surviving a shipwreck, the distribution of survivals should have looked as follows:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binomtitanic2"></span>
-<img src="_stats_files/figure-html/binomtitanic2-1.svg" alt="Binomial Distribution of Female Passenger's Survival with p = 0.5 vs. p = 0.7275" width="75%" />
+<img src="_stats_files/figure-html/binomtitanic2-1.png" alt="Binomial Distribution of Female Passenger's Survival with p = 0.5 vs. p = 0.7275" width="75%" />
 <p class="caption">
 FIGURE 11.2: Binomial Distribution of Female Passenger’s Survival with p = 0.5 vs. p = 0.7275
 </p>
 </div>
 <p>Note how the actual distribution of survival (in blue) differs from the expected distribution of survival (in red), and this difference is stark. But this is no surprise given that we had seen a massive gap between the expected probability of <span class="math inline">\(0.50\)</span> and the actual probability of <span class="math inline">\(0.7275\)</span>. Assuming no complications with the data and factors shaping survival, this simple analysis would lead us to conclude that survival probabilities, at least on the Titanic, were quite a bit higher than <span class="math inline">\(0.5\)</span> for female passengers. What about for the 843 male passengers? Their survival probability was about <span class="math inline">\(0.1910\)</span>, leading to two very different distributions of survival for the sexes.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binomtitanic3"></span>
-<img src="_stats_files/figure-html/binomtitanic3-1.svg" alt="Binomial Distribution of Female vs. Male Passengers" width="75%" />
+<img src="_stats_files/figure-html/binomtitanic3-1.png" alt="Binomial Distribution of Female vs. Male Passengers" width="75%" />
 <p class="caption">
 FIGURE 11.3: Binomial Distribution of Female vs. Male Passengers
 </p>
@@ -547,7 +518,7 @@ H_1: \text{ The district&#39;s rate is different from the national average } (p 
 <h3><span class="header-section-number">11.2.1</span> Example 1<a href="props.html#example-1-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Assume, for example, that we are studying the Titanic disaster and interested in how survival rates differed by the passenger’s sex. A simple cross-tabulation of sex by survival status would look like the following:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:titanictable2"></span>
-<img src="_stats_files/figure-html/titanictable2-1.svg" alt="Titanic Passengers' Survival by Sex" width="65%" /><img src="_stats_files/figure-html/titanictable2-2.svg" alt="Titanic Passengers' Survival by Sex" width="65%" />
+<img src="_stats_files/figure-html/titanictable2-1.png" alt="Titanic Passengers' Survival by Sex" width="65%" /><img src="_stats_files/figure-html/titanictable2-2.png" alt="Titanic Passengers' Survival by Sex" width="65%" />
 <p class="caption">
 FIGURE 11.4: Titanic Passengers’ Survival by Sex
 </p>
@@ -706,7 +677,7 @@ Total
 </tbody>
 </table>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:suicides3"></span>
-<img src="_stats_files/figure-html/suicides3-1.svg" alt="Cause of Suicide by Sex" width="65%" /><img src="_stats_files/figure-html/suicides3-2.svg" alt="Cause of Suicide by Sex" width="65%" />
+<img src="_stats_files/figure-html/suicides3-1.png" alt="Cause of Suicide by Sex" width="65%" /><img src="_stats_files/figure-html/suicides3-2.png" alt="Cause of Suicide by Sex" width="65%" />
 <p class="caption">
 FIGURE 11.5: Cause of Suicide by Sex
 </p>
@@ -1322,7 +1293,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -1343,10 +1314,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

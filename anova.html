@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Analysis of Variance (ANOVA) | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Analysis of Variance (ANOVA) | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -626,7 +597,7 @@ Seattle
 </tbody>
 </table>
 <p>… and boxplots by location</p>
-<p><img src="_stats_files/figure-html/anova03-1.svg" width="75%" style="display: block; margin: auto;" /></p>
+<p><img src="_stats_files/figure-html/anova03-1.png" alt="" width="75%" style="display: block; margin: auto;" /></p>
 <p>The problem, as it turns out, is the issue of inflated Type I error rates. Come again? In any single comparison of two groups, A versus B, we know that if <span class="math inline">\(\alpha\)</span>, the level of significance, is set to <span class="math inline">\(0.05\)</span>, then that is essentially the probability of our rejecting the Null Hypothesis when in fact the Null Hypothesis is true (i.e., committing a Type I error). By extension, <span class="math inline">\(1-\alpha\)</span> is the probability of no significant result so if <span class="math inline">\(\alpha = 0.05\)</span>, then <span class="math inline">\(1 - \alpha = 0.95\)</span>. Let us now calculate the probability that <code>at least one</code> of these pairs of comparisons throws up a significant result by chance alone …</p>
 <p><span class="math display">\[\begin{align*}
     P(\text{no Type I error in 1 comparison}) &amp; = &amp; 0.95 \\
@@ -734,7 +705,7 @@ Adjusted Alpha
 </tr>
 </tbody>
 </table>
-<p><img src="_stats_files/figure-html/anova05-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_stats_files/figure-html/anova05-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 <p>In fact, there is a better way to compare three or more groups – by relying on the analysis of variance (ANOVA).</p>
 <div id="the-logic-of-anova" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> The Logic of ANOVA<a href="anova.html#the-logic-of-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1634,13 +1605,13 @@ Diet and Drug
 </tr>
 </tbody>
 </table>
-<p><img src="_stats_files/figure-html/unnamed-chunk-92-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_stats_files/figure-html/unnamed-chunk-92-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 <p>Do one or more of these treatments differ? Let us run an ANOVA and see what the data reveal.</p>
 <p><span class="math inline">\(H_0:\)</span> There is no difference in mean systolic blood pressure between the treatment groups<br />
 <span class="math inline">\(H_1:\)</span> All treatment groups are not the same</p>
 <p>Overall mean <span class="math inline">\(\bar{\bar{x}} = 179\)</span></p>
-<div class="datatables html-widget html-fill-item" id="htmlwidget-d11508046a2bd4860be3" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d11508046a2bd4860be3">{"x":{"filter":"none","vertical":false,"data":[[163,178,180,181,185,166,173,188,190,193,161,171,178,183,195,153,168,176,198,200],["Control","Control","Control","Control","Control","Diet Only","Diet Only","Diet Only","Diet Only","Diet Only","Drug Only","Drug Only","Drug Only","Drug Only","Drug Only","Diet and Drug","Diet and Drug","Diet and Drug","Diet and Drug","Diet and Drug"],[-16,-1,1,2,6,-13,-6,9,11,14,-18,-8,-1,4,16,-26,-11,-3,19,21],[256,1,1,4,36,169,36,81,121,196,324,64,1,16,256,676,121,9,361,441]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Systolic Blood Pressure<\/th>\n      <th>Treatment<\/th>\n      <th>Difference<\/th>\n      <th>Squared Difference<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[0,2,3]},{"name":"sbp","targets":0},{"name":"treatment","targets":1},{"name":"Difference","targets":2},{"name":"Sum of Squared Difference","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-37e18defe0642684c557" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-37e18defe0642684c557">{"x":{"filter":"none","vertical":false,"data":[[163,178,180,181,185,166,173,188,190,193,161,171,178,183,195,153,168,176,198,200],["Control","Control","Control","Control","Control","Diet Only","Diet Only","Diet Only","Diet Only","Diet Only","Drug Only","Drug Only","Drug Only","Drug Only","Drug Only","Diet and Drug","Diet and Drug","Diet and Drug","Diet and Drug","Diet and Drug"],[-16,-1,1,2,6,-13,-6,9,11,14,-18,-8,-1,4,16,-26,-11,-3,19,21],[256,1,1,4,36,169,36,81,121,196,324,64,1,16,256,676,121,9,361,441]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Systolic Blood Pressure<\/th>\n      <th>Treatment<\/th>\n      <th>Difference<\/th>\n      <th>Squared Difference<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[0,2,3]},{"name":"sbp","targets":0},{"name":"treatment","targets":1},{"name":"Difference","targets":2},{"name":"Sum of Squared Difference","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>Mean for Control group <span class="math inline">\(\bar{x}_{Control} = 177\)</span><br />
 Mean for Diet only group <span class="math inline">\(\bar{x}_{Diet} = 182\)</span><br />
 Mean for Drug only group <span class="math inline">\(\bar{x}_{Drug} = 178\)</span><br />
@@ -1717,7 +1688,7 @@ Mean for Diet and Drug group <span class="math inline">\(\bar{x}_{Diet+Drug} = 1
 </tr>
 </tbody>
 </table>
-<p><img src="_stats_files/figure-html/unnamed-chunk-94-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_stats_files/figure-html/unnamed-chunk-94-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 <p><span class="math inline">\(H_0:\)</span> There is no difference in average number of days needed to recover across the fitness levels</p>
 <p><span class="math inline">\(H_1:\)</span> All fitness level groups are not the same</p>
 <p>Set <span class="math inline">\(\alpha = 0.05\)</span></p>
@@ -1790,7 +1761,7 @@ Mean for Diet and Drug group <span class="math inline">\(\bar{x}_{Diet+Drug} = 1
 <li>At <span class="math inline">\(90^0\)</span> there is a difference of <span class="math inline">\(10\)</span> between Low/High humidity</li>
 </ul>
 <p>If we plot the means, the following pattern should become visible.</p>
-<p><img src="_stats_files/figure-html/unnamed-chunk-95-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_stats_files/figure-html/unnamed-chunk-95-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 <p>The key pattern evident here is that there is a constant difference in average performance as humidity goes from low to high or high to low, and then also as temperature goes up or down. Two parallel train tracks are visible, suggesting that high humidity and high temperature are not necessarily worse for learning than high humidity and medium temperature or high humidity and low temperatures. But what if this wasn’t true and the data showed something else altogether? That is, what if we had an <code>interaction</code> between the two factors, Factor A and Factor B?</p>
 </div>
 <div id="interaction-effects" class="section level2 hasAnchor" number="9.3">
@@ -1845,7 +1816,7 @@ Mean for Diet and Drug group <span class="math inline">\(\bar{x}_{Diet+Drug} = 1
 <li><p>At <span class="math inline">\(90^0\)</span> there is a difference of <span class="math inline">\(20\)</span> between Low/High humidity</p></li>
 </ul>
 <p>In a nutshell, at Low humidity, raising the temperature has no impact but at high humidity, raising the temperature has an increasing impact!</p>
-<p><img src="_stats_files/figure-html/unnamed-chunk-96-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_stats_files/figure-html/unnamed-chunk-96-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 <p>This is an interaction – when the <code>effect (impact)</code> of a particular value of one factor depends upon the value of the other factor. Testing now involved three pairs of hypotheses …</p>
 <ol style="list-style-type: lower-alpha">
 <li>Main Effect of Factor A</li>
@@ -2192,7 +2163,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -2213,10 +2184,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

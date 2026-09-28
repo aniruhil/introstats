@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Central Tendency and Dispersion | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Central Tendency and Dispersion | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -1054,7 +1025,7 @@ Total
 </li>
 <li>the mean will be deflated (i.e., pulled downwards) if the unusual data point occurs on the low side of the variable’s values.</li>
 </ul>
-<p>The median is also useful when you have open-ended data or incomplete data. For instance, say you give kindergarten kids some task to complete and are timing them. Some of them do not finish the task so you cannot record a time value for these kids. Maybe the times (in minutes) look as follows: <span class="math inline">\(x = 7, 8, 6, 9, 1, 3, 12, 18, NA, NA\)</span>. If you had to calculate the average, what could you do? You may be tempted to discard the data for all kids who did not finish the task and calculate the mean time based on all other kids’ data this would lead to a mean time of <span class="math inline">\(8\)</span> minutes. But this would lead to a flawed conclusion. After all, it would be important to recognize the truth that some kids couldn’t finish the task. How then could you calculate the average? You could arrange the data in increasing order of time taken to complete the task, putting all the kids who did not finish at the very high end of the times, and then calculate the median time! If you did this you would have: <span class="math inline">\(x = 1, 3, 6, 7, 8, 9, 12, 18, NA, NA\)</span> and the median time would be <span class="math inline">\(8.5\)</span> minutes, a more accurate portrayal of average time on task.</p>
+<p>The median can also be useful with open-ended observations, but incomplete completion times require special care. Suppose you give kindergarten children a task and stop observing after 18 minutes. The recorded data might be <span class="math inline">\(x = 7, 8, 6, 9, 1, 3, 12, 18, &gt;18, &gt;18\)</span>. The last two observations are not ordinary missing values; they are <code>right-censored</code> because we know only that the completion times exceed 18 minutes. Discarding them and reporting the mean of the eight observed times, <span class="math inline">\(8\)</span> minutes, would understate typical completion time. Because at least five children completed the task by 8.5 minutes and at least five took 8.5 minutes or longer, the sample median is <span class="math inline">\(8.5\)</span> minutes. More generally, censored data should be analyzed with methods designed for censoring, especially when the median itself is not fully observed.</p>
 <p>The mean has two things going for it though; it uses all data points (assuming no incomplete or missing data) and is used in most statistical calculations. This is why we often fall back on the mean as the best measure of the average value of a variable.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 </div>
 </div>
@@ -1326,7 +1297,7 @@ NA
 </tr>
 </tbody>
 </table>
-<p>Now the average distance would be <span class="math inline">\(\dfrac{522}{6} = 87\)</span>, but interpreting this would be difficult since this is average distance in <code>squared units</code>. This isn’t an intractable problem though since just as we squared the distances, we could also take the <code>square root</code> to get average distance in meaningful units of the original metric. That is, we could calculate <span class="math inline">\(\sqrt{\dfrac{522}{6}} = \sqrt{87} = 9.32379\)</span>! That is, average variability is 9.32379. Congratulations! You have just calculated the <code>variance</code> and the <code>standard deviation</code>. Formally, for a variable <span class="math inline">\(x\)</span>,</p>
+<p>If we treat these six values as the entire population of interest, the average squared distance is <span class="math inline">\(\dfrac{522}{6} = 87\)</span>. This is the <code>population variance</code>, expressed in squared units. Taking its square root returns us to the original units: <span class="math inline">\(\sqrt{\dfrac{522}{6}} = \sqrt{87} = 9.32379\)</span>. This is the <code>population standard deviation</code>. If the six values are instead a sample used to estimate population variability, we divide by <span class="math inline">\(n-1=5\)</span>, as shown in the sample formulas below. Formally, for a variable <span class="math inline">\(x\)</span>,</p>
 <p><span class="math display" id="eq:popvar">\[\begin{equation}
 \tag{4.4}
 \text{Population Variance } = \sigma^2 = \dfrac{\sum(x_i - \mu)^2}{N}
@@ -1799,7 +1770,7 @@ Standard Deviation
 <ol style="list-style-type: decimal">
 <li>Changing the value of any observation changes the mean</li>
 <li>Adding or subtracting a <code>constant</code> <span class="math inline">\(k\)</span> from all observations is equivalent to adding or subtracting the constant <span class="math inline">\(k\)</span> from the original mean and leaves the standard deviation and variance unchanged</li>
-<li>Multiplying or dividing a constant <span class="math inline">\(k\)</span> from all observations is equivalent to multiplying or dividing the original mean by the constant <span class="math inline">\(k\)</span> and the original variance and standard deviation will also be multiplied or divided by <span class="math inline">\(k\)</span></li>
+<li>Multiplying all observations by a constant <span class="math inline">\(k\)</span> multiplies the mean by <span class="math inline">\(k\)</span>, the standard deviation by <span class="math inline">\(|k|\)</span>, and the variance by <span class="math inline">\(k^2\)</span>. Dividing by a nonzero constant <span class="math inline">\(k\)</span> has the corresponding effects: divide the mean by <span class="math inline">\(k\)</span>, the standard deviation by <span class="math inline">\(|k|\)</span>, and the variance by <span class="math inline">\(k^2\)</span></li>
 </ol>
 </div>
 <div id="the-empirical-rule" class="section level2 hasAnchor" number="4.4">
@@ -1948,34 +1919,34 @@ Boston (MA)
 <h2><span class="header-section-number">4.7</span> Symmetric, Skewed and Bi-modal Distributions<a href="meansd.html#symmetric-skewed-and-bi-modal-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>All data follow a <code>shape</code> and you will often see references to the <code>shape of a distribution</code>, how <code>peaked</code> and <code>spreadout</code> the values of a variable are. A distribution is said to be symmetric if you could carve it in the middle and fold each half perfectly onto the other half. The bell-shaped distribution (see below) is one such distribution but not the only one that is symmetric.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-33-1.svg" alt="A Bell-Shaped Distribution" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-33-1.png" alt="A Bell-Shaped Distribution" width="100%" />
 <p class="caption">
 FIGURE 4.1: A Bell-Shaped Distribution
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-34-1.svg" alt="A Uniform Distribution" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-34-1.png" alt="A Uniform Distribution" width="100%" />
 <p class="caption">
 FIGURE 4.2: A Uniform Distribution
 </p>
 </div>
 <p>In contrast, we may have <code>skewed</code> distributions that have tails that extend more to the right (<code>positively-skewed</code>) or to the left (<code>negatively-skewed</code>), as shown below.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-35-1.svg" alt="Skewed Distributions" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-35-1.png" alt="Skewed Distributions" width="100%" />
 <p class="caption">
 FIGURE 4.3: Skewed Distributions
 </p>
 </div>
 <p>A skew means you have unusual data points on the right (positively-skewed) or on the left (negatively-skewed). These patterns are evident from histograms as well, though the direction of the skew isn’t always clear.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-36-1.svg" alt="Skewed Histograms" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-36-1.png" alt="Skewed Histograms" width="100%" />
 <p class="caption">
 FIGURE 4.4: Skewed Histograms
 </p>
 </div>
 <p>The peak in each of the preceding graphs reflects the <code>modal value</code> of the variable – the value of <span class="math inline">\(x\)</span> that occurs most frequently. Most distributions may have a single modal value but at times there may be two or more modes. A <code>bimodal distribution</code> is shown below:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-37-1.svg" alt="A Bimodal Distribution" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-37-1.png" alt="A Bimodal Distribution" width="100%" />
 <p class="caption">
 FIGURE 4.5: A Bimodal Distribution
 </p>
@@ -2000,7 +1971,7 @@ skewness = \dfrac{1}{n}\sum\left( \dfrac{x_i - \bar{x}}{s} \right)^3
 <p>Looking at just these five values tells us a lot about the <code>shape</code> of our data. In fact, this five-number summary is used in a very powerful graphic called the <code>box-plot</code>.</p>
 <p>The box-plot relies on the five-number summary and also identifies extremely unusual values. An example is given below. Here we are looking at the distribution of reading scores of male/female students as reflected in the <code>hsb2</code> data we saw earlier.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-39-1.svg" alt="Box-plot of Reading Scores by Sex" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-39-1.png" alt="Box-plot of Reading Scores by Sex" width="100%" />
 <p class="caption">
 FIGURE 4.6: Box-plot of Reading Scores by Sex
 </p>
@@ -2012,7 +1983,7 @@ For Females: <span class="math inline">\(Min = 28.0; Q_1 = 44.0, Md = 50.0, Q_3 
 <p>Look at the distance between <span class="math inline">\(Min\)</span> and <span class="math inline">\(Md\)</span> for each sex. For Male students, the distance is <span class="math inline">\(21\)</span> and for Female students it is <span class="math inline">\(22\)</span>. If you then look at the distance between the <span class="math inline">\(Md\)</span> and <span class="math inline">\(Max\)</span> for each group, you see that for Males it is <span class="math inline">\(24\)</span> and for Females it is <span class="math inline">\(26\)</span>. For both groups, the distance between <span class="math inline">\(Md\)</span> and <span class="math inline">\(Max\)</span> is greater than the distance between <span class="math inline">\(Min\)</span> and <span class="math inline">\(Md\)</span>, indicating the the distribution is more <code>stretched</code> to the right; hence both Male and Female students’ reading scores are positively-skewed.</p>
 <p>These box-plots show no <code>outliers</code> (unusual data values) but the next set do (see below). Here we have broken out science scores by the student’s socioeconomic status. Notice the two isolated dots for the High SES group.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-40-1.svg" alt="Box-plots of Science Scores by Socioeconomic Status" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-40-1.png" alt="Box-plots of Science Scores by Socioeconomic Status" width="100%" />
 <p class="caption">
 FIGURE 4.7: Box-plots of Science Scores by Socioeconomic Status
 </p>
@@ -2021,7 +1992,7 @@ FIGURE 4.7: Box-plots of Science Scores by Socioeconomic Status
 <p><span class="math display">\[Min = 26.00,   Q_1 = 50.00,   Md = 58.00,   Q_3 = 62.50,   Max = 69.00\]</span></p>
 <p>Given these values we know <span class="math inline">\(IQR = Q_3 - Q_1 = 62.50 - 50.00 = 12.50\)</span> and thus <span class="math inline">\(1.5 \times IQR = 1.5 \times 12.50 = 18.75\)</span>. So anything that is more than 18.75 points below/above <span class="math inline">\(Q_1\)</span>/<span class="math inline">\(Q_3\)</span> will be an outlier. The boundary values then are <span class="math inline">\(50.00 - 18.75 = 31.25\)</span> so any science score smaller than <span class="math inline">\(31.25\)</span> will be an outlier. As it turns out we do have two scores below this – <span class="math inline">\(26, \text{ and } 31\)</span>; hence the two outliers shown. There are no other outliers for the High SES group, and certainly none for the Low and Middle SES groups. Outliers may be present on both sides of a distribution as well as shown in the graph below.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-41"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-41-1.svg" alt="Ohio School District Performance by District Type" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-41-1.png" alt="Ohio School District Performance by District Type" width="100%" />
 <p class="caption">
 FIGURE 4.8: Ohio School District Performance by District Type
 </p>
@@ -2379,7 +2350,7 @@ y4
 </table>
 <p>Note the similarity in the means for the <span class="math inline">\(x\)</span> and the <span class="math inline">\(y\)</span> variables, respectively. If you calculate the correlation between each pair, you will find this to be <span class="math inline">\(0.8164205\)</span> for each pair of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. So looking just at these numerical summaries it seems the pairs are similar if not downright identical. But if we plot each pair of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> variables, do the distributions still look similar?</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-43"></span>
-<img src="_stats_files/figure-html/unnamed-chunk-43-1.svg" alt="Anscombe's Quartet" width="100%" />
+<img src="_stats_files/figure-html/unnamed-chunk-43-1.png" alt="Anscombe's Quartet" width="100%" />
 <p class="caption">
 FIGURE 4.9: Anscombe’s Quartet
 </p>
@@ -2388,24 +2359,9 @@ FIGURE 4.9: Anscombe’s Quartet
 </div>
 <div id="outliers-outliers-what-do-i-do-with-them" class="section level2 hasAnchor" number="4.10">
 <h2><span class="header-section-number">4.10</span> Outliers, Outliers, What do I do with them?<a href="meansd.html#outliers-outliers-what-do-i-do-with-them" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you encounter outliers, the overriding question has to be the next step: Do you delete them or do you keep them? Deleting data points is never a good idea unless you have good reason to do so. The only good reason might be one of measurement error, in that the data were entered incorrectly or you have good reason to believe whoever recorded the measurement did so with error. If you see a skewed distribution with outliers, and there is no good reason to believe this is because of measurement error, then try a transformation.</p>
-<ol style="list-style-type: decimal">
-<li>Try <span class="math inline">\(x^* = x^3\)</span> to reduce extreme negative skewness</li>
-<li>Try <span class="math inline">\(x^* = x^2\)</span> to reduce negative skewness</li>
-<li>Try <span class="math inline">\(x^* = x^{\frac{1}{2}}\)</span> to reduce positive skewness</li>
-<li>Try <span class="math inline">\(x^* = -\dfrac{1}{\sqrt{x}}\)</span> to reduce extreme positive skewness</li>
-<li>Try <span class="math inline">\(x^* = -\dfrac{1}{x}\)</span> to reduce even more extreme positive skewness</li>
-<li>If <span class="math inline">\(x\)</span> can assume a value of <span class="math inline">\(0\)</span>, add a small constant <span class="math inline">\(c\)</span>, such that <span class="math inline">\(x^* = x + c\)</span>. Folks often use <span class="math inline">\(c = 0.01\)</span> or even <span class="math inline">\(c = 1\)</span>. Then try options (1) through (5) depending upon the direction and strength of the skewness</li>
-</ol>
-<p>You will also see the <code>natural logarithm</code> used to transform data. It only works if <span class="math inline">\(x\)</span> is strictly <span class="math inline">\(\geq 1\)</span> so if <span class="math inline">\(x \text{ is } \geq 0\)</span>, be sure to add a constant to <span class="math inline">\(x\)</span> before trying the natural logarithm. The reason many shy away from it is because it is difficult to interpret the results. An easy fix to this problem is to use the <code>antilogarithm</code>, i.e., <span class="math inline">\(e^{x^*}\)</span>. This same rule, of flipping the final result back into the original metric also works for the other transformation discussed here. Specifically,</p>
-<ol style="list-style-type: decimal">
-<li>If you used <span class="math inline">\(x^* = x^3\)</span> to reduce extreme negative skewness, convert the final answer via <span class="math inline">\((x^*)^\frac{1}{3}\)</span><br />
-</li>
-<li>If you used <span class="math inline">\(x^* = x^2\)</span> to reduce negative skewness, convert the final answer via <span class="math inline">\((x^*)^\frac{1}{2}\)</span></li>
-<li>If you used <span class="math inline">\(x^* = x^{\frac{1}{2}}\)</span> to reduce positive skewness, convert the final answer via <span class="math inline">\((x^*)^2\)</span></li>
-<li>If you used <span class="math inline">\(x^* = -\dfrac{1}{\sqrt{x}}\)</span> to reduce extreme positive skewness, convert the final answer via <span class="math inline">\(\dfrac{1}{(x^*)^2}\)</span></li>
-<li>If you used <span class="math inline">\(x^* = -\dfrac{1}{x}\)</span> to reduce even more extreme positive skewness, convert the final answer via <span class="math inline">\(\dfrac{1}{-x^*}\)</span></li>
-</ol>
+<p>If you encounter outliers, the overriding question has to be the next step: Do you delete them or do you keep them? Delete an observation only when there is a defensible reason, such as a documented measurement or data-entry error, and record that decision. A transformation can sometimes make a skewed distribution easier to model, but it does not make a valid extreme observation disappear or repair every problem caused by outliers. The choice should reflect the variable’s support, the substantive question, and the assumptions of the intended analysis.</p>
+<p>For positive data, common members of the power-transformation family include the square root and natural logarithm for right-skewed data, and powers such as <span class="math inline">\(x^2\)</span> for left-skewed data. Reciprocal transformations are stronger but reverse or otherwise complicate interpretation, so they should be used with particular care. If zero or negative values occur, do not add an arbitrary constant automatically: the chosen shift changes the analysis and should have a substantive justification. Methods such as Box–Cox (for positive data) or Yeo–Johnson can help select a transformation systematically.</p>
+<p>The <code>natural logarithm</code>, <span class="math inline">\(x^*=\log(x)\)</span>, is defined for any <span class="math inline">\(x&gt;0\)</span>, not only for values of at least 1. Results may sometimes be returned to the original scale with the appropriate inverse transformation, but back-transforming a mean or regression prediction requires care because, in general, <span class="math inline">\(E(e^{X^*}) \neq e^{E(X^*)}\)</span>. The same interpretive caution applies to other nonlinear transformations.</p>
 </div>
 <div id="beware-the-flawed-rule" class="section level2 hasAnchor" number="4.11">
 <h2><span class="header-section-number">4.11</span> Beware the flawed rule<a href="meansd.html#beware-the-flawed-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -2512,7 +2468,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -2533,10 +2489,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

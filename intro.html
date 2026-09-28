@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Introduction to Core Concepts | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -459,7 +430,7 @@ div.csl-indent {
 </blockquote>
 <p>What Gallup is working with is a <em>subset</em> of all U.S. adults aged 18 and older and living in the 50 states plus Washington DC. As they gather the data, they may be doing so to study the trend in presidential approval (see graph below).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:approval"></span>
-<img src="_stats_files/figure-html/approval-1.svg" alt="A chart that shows dates on the horizontal axis and the estimated percent of the electorate saying they approve of the current United States President's job performance. The line that plots presidential approval over time shows swings up and down, reflecting upswings and dips in approval." width="100%" />
+<img src="_stats_files/figure-html/approval-1.png" alt="A chart that shows dates on the horizontal axis and the estimated percent of the electorate saying they approve of the current United States President's job performance. The line that plots presidential approval over time shows swings up and down, reflecting upswings and dips in approval." width="100%" />
 <p class="caption">
 FIGURE 2.1: Presidential Approval over Time
 </p>
@@ -495,24 +466,19 @@ population.
 <div id="sampling-error-and-bias" class="section level3 hasAnchor" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Sampling Error and Bias<a href="intro.html#sampling-error-and-bias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Samples can mislead of course, and by sheer chance at that. When this happens our (sample) estimates will <span class="math inline">\(\neq\)</span> their corresponding (population) parameters, leading to <code>sampling error</code>. Sampling error is difficult to eradicate completely but can be minimized up to a point. What we should worry about far more than sampling error is <code>bias</code>. Bias can arise in many ways, with some of the more common sources of bias being <code>measurement bias</code> (you have a systematic error in how you are measuring something but don’t realize it); <code>sampling bias</code> (survey non-response and/or the way you are drawing your sample is generating bias); <code>model misspecification</code> (you do not fully understand the phenomenon you are studying and thus end up with a flawed statistical model that will yield biased estimates because of variables you forgot to include, mis-characterized relationships between variables, and so on).</p>
-<p><code>Measurement error</code> is a particularly interesting feature of working with samples. For example, say I am working with a “healthy living” group that is working to help folks live healthier lives by eating better and exercising more. I am tasked with studying the program and then releasing a final report on how well (or poorly) the program worked. I could measure participants’ attendance at organized events, their online studying of food and exercise modules we are providing to them via the web and smart phones/tablets, and of course we have their height, weight, and maybe some other data recorded when they enrolled in the program. Unfortunately, however, we can only record their eating and exercise patterns based on what they tell us! People don’t keep very accurate logs of food intake and exercise, so often when they are completing surveys they are doing their best to recall these behaviors over the last week. In recalling the recent past, there will be some mistakes, that is to be expected. Some may overestimate how much they ate and/or exercised while others will underestimate how much they ate and/or exercised. If these overestimates and underestimates were purely random, then they would cancel each other out and we would have no measurement error. However, we do know that <a href="https://www.cdc.gov/nchs/tutorials/Dietary/Basic/StatisticalConsiderations/Info2.htm">self-reported dietary intake measures are not random</a> and hence could generate bias.</p>
+<p><code>Measurement error</code> is a particularly interesting feature of working with samples. For example, say I am working with a “healthy living” group that is working to help folks live healthier lives by eating better and exercising more. I am tasked with studying the program and then releasing a final report on how well (or poorly) the program worked. I could measure participants’ attendance at organized events, their online studying of food and exercise modules we are providing to them via the web and smart phones/tablets, and of course we have their height, weight, and maybe some other data recorded when they enrolled in the program. Unfortunately, however, we can only record their eating and exercise patterns based on what they tell us! People don’t keep very accurate logs of food intake and exercise, so often when they are completing surveys they are doing their best to recall these behaviors over the last week. In recalling the recent past, there will be some mistakes, that is to be expected. Some may overestimate how much they ate and/or exercised while others will underestimate how much they ate and/or exercised. If these errors were purely random and centered on zero, they might cancel on average and create little systematic bias, but measurement error would still be present and would usually reduce precision. We also know that <a href="https://www.cdc.gov/nchs/tutorials/Dietary/Basic/StatisticalConsiderations/Info2.htm">errors in self-reported dietary intake are not purely random</a> and hence can generate bias.</p>
 </div>
 <div id="key-elements-of-random-sampling" class="section level3 hasAnchor" number="2.1.3">
 <h3><span class="header-section-number">2.1.3</span> Key Elements of Random Sampling<a href="intro.html#key-elements-of-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>At minimum two things must hold for a random sample …</p>
-<ol style="list-style-type: decimal">
-<li>Every unit of analysis (i.e., the entity that is to be analyzed) in the population must have the <code>same chance</code> of being selected into the sample, and</li>
-<li>Every unit of analysis in the population must be sampled <code>independently</code> of all other units of analysis</li>
-</ol>
-<p>If you violate (1) you end up with <em>biased estimates</em> and if you violate (2) you will have <em>imprecise estimates</em>. Examples of these violations are aplenty. For instance, imagine I carry out a landline survey of health behaviors and outcomes. How many of you have a landline? Not many I would suspect. So what is the consequence of my using a landline survey? All cellphone-only households have a zero chance of being selected into my sample. If the cellphone-only population were no different from the population that has kept a landline there would be no problem. But we know that isn’t the case. If you are curious, see <a href="http://www.aapor.org/Education-Resources/Reports/Cell-Phone-Task-Force-Report.aspx">New Considerations for Survey Researchers When Planning and Conducting RDD Telephone Surveys in the U.S. With Respondents Reached via Cell Phone Numbers</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910572/">Growing Cell-Phone Population and Noncoverage Bias in Traditional Random Digit Dial Telephone Health Surveys</a>. I could also violate (2) if I am conducting a survey of Freshman’s opinions about healthy food options in a university’s dining halls and end up talking only to people seated together, even if I pick a few tables to talk to. Why is this a problem? Because it is likely that these students are friends/roommates who maybe also share a common major, etc., and most likely come from similar socioeconomic and demographic backgrounds, have shared tastes and preferences, and so on.</p>
+<p>For a <code>simple random sample</code> of size <span class="math inline">\(n\)</span>, every possible sample of size <span class="math inline">\(n\)</span> must have the same probability of being selected. This implies that every unit of analysis (i.e., the entity to be analyzed) has the same probability of inclusion. Broader probability-sampling designs may deliberately give units unequal probabilities of selection; when they do, the design and any resulting sampling weights must be incorporated into the analysis. Also, observations sampled without replacement from a finite population are not strictly independent, although the dependence is usually negligible when the sample is a small fraction of the population.</p>
+<p>Violating the intended probability-sampling design can produce biased estimates or standard errors that are too small. Examples are aplenty. For instance, imagine I carry out a landline survey of health behaviors and outcomes. How many of you have a landline? Not many I would suspect. So what is the consequence of my using a landline survey? All cellphone-only households have a zero chance of being selected into my sample. If the cellphone-only population were no different from the population that has kept a landline there would be no problem. But we know that isn’t the case. If you are curious, see <a href="http://www.aapor.org/Education-Resources/Reports/Cell-Phone-Task-Force-Report.aspx">New Considerations for Survey Researchers When Planning and Conducting RDD Telephone Surveys in the U.S. With Respondents Reached via Cell Phone Numbers</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910572/">Growing Cell-Phone Population and Noncoverage Bias in Traditional Random Digit Dial Telephone Health Surveys</a>. Dependence can also arise if I am conducting a survey of freshmen’s opinions about healthy food options in a university’s dining halls and end up talking only to people seated together, even if I pick a few tables to talk to. Why is this a problem? These students are likely to be friends or roommates who may share a major, socioeconomic and demographic backgrounds, tastes, and preferences. Unless that clustering is taken into account, the sample contains less independent information than its head count suggests.</p>
 <div class="rmdcomment">
 <p>
-Biased estimates will result if every unit in the population does not
-have the same chance of being drawn into the sample.
-</p>
-<p>
-Imprecise estimates will result if the units are not sampled
-independently of each other.
+A probability sample must give every unit a known, nonzero inclusion
+probability; those probabilities need not be equal in every valid
+design. The analysis must account for unequal probabilities, clustering,
+stratification, and other design features to avoid biased estimates or
+incorrect standard errors.
 </p>
 </div>
 </div>
@@ -943,13 +909,7 @@ influence the outcome.
 <thead>
 <tr>
 <th style="text-align:right;">
-firm
-</th>
-<th style="text-align:right;">
-year
-</th>
-<th style="text-align:right;">
-inv
+invest
 </th>
 <th style="text-align:right;">
 value
@@ -957,16 +917,16 @@ value
 <th style="text-align:right;">
 capital
 </th>
+<th style="text-align:left;">
+firm
+</th>
+<th style="text-align:right;">
+year
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1935
-</td>
 <td style="text-align:right;">
 317.6
 </td>
@@ -976,14 +936,14 @@ capital
 <td style="text-align:right;">
 2.8
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1935
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1936
-</td>
 <td style="text-align:right;">
 391.8
 </td>
@@ -993,14 +953,14 @@ capital
 <td style="text-align:right;">
 52.6
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1936
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1937
-</td>
 <td style="text-align:right;">
 410.6
 </td>
@@ -1010,14 +970,14 @@ capital
 <td style="text-align:right;">
 156.9
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1937
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1938
-</td>
 <td style="text-align:right;">
 257.7
 </td>
@@ -1027,14 +987,14 @@ capital
 <td style="text-align:right;">
 209.2
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1938
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1939
-</td>
 <td style="text-align:right;">
 330.8
 </td>
@@ -1044,14 +1004,14 @@ capital
 <td style="text-align:right;">
 203.4
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1939
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1940
-</td>
 <td style="text-align:right;">
 461.2
 </td>
@@ -1061,14 +1021,14 @@ capital
 <td style="text-align:right;">
 207.2
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1940
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1941
-</td>
 <td style="text-align:right;">
 512.0
 </td>
@@ -1078,14 +1038,14 @@ capital
 <td style="text-align:right;">
 255.2
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1941
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1942
-</td>
 <td style="text-align:right;">
 448.0
 </td>
@@ -1095,14 +1055,14 @@ capital
 <td style="text-align:right;">
 303.7
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1942
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1943
-</td>
 <td style="text-align:right;">
 499.6
 </td>
@@ -1112,14 +1072,14 @@ capital
 <td style="text-align:right;">
 264.1
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1943
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1944
-</td>
 <td style="text-align:right;">
 547.5
 </td>
@@ -1129,14 +1089,14 @@ capital
 <td style="text-align:right;">
 201.6
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1944
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1945
-</td>
 <td style="text-align:right;">
 561.2
 </td>
@@ -1146,14 +1106,14 @@ capital
 <td style="text-align:right;">
 265.0
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1945
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1946
-</td>
 <td style="text-align:right;">
 688.1
 </td>
@@ -1163,14 +1123,14 @@ capital
 <td style="text-align:right;">
 402.2
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1946
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1947
-</td>
 <td style="text-align:right;">
 568.9
 </td>
@@ -1180,14 +1140,14 @@ capital
 <td style="text-align:right;">
 761.5
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1947
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1948
-</td>
 <td style="text-align:right;">
 529.2
 </td>
@@ -1197,14 +1157,14 @@ capital
 <td style="text-align:right;">
 922.4
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1948
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1949
-</td>
 <td style="text-align:right;">
 555.1
 </td>
@@ -1214,14 +1174,14 @@ capital
 <td style="text-align:right;">
 1020.1
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1949
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1950
-</td>
 <td style="text-align:right;">
 642.9
 </td>
@@ -1231,14 +1191,14 @@ capital
 <td style="text-align:right;">
 1099.0
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1950
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1951
-</td>
 <td style="text-align:right;">
 755.9
 </td>
@@ -1248,14 +1208,14 @@ capital
 <td style="text-align:right;">
 1207.7
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1951
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1952
-</td>
 <td style="text-align:right;">
 891.2
 </td>
@@ -1265,14 +1225,14 @@ capital
 <td style="text-align:right;">
 1430.5
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1952
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1953
-</td>
 <td style="text-align:right;">
 1304.4
 </td>
@@ -1282,14 +1242,14 @@ capital
 <td style="text-align:right;">
 1777.3
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1953
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1954
-</td>
 <td style="text-align:right;">
 1486.7
 </td>
@@ -1299,14 +1259,14 @@ capital
 <td style="text-align:right;">
 2226.3
 </td>
+<td style="text-align:left;">
+General Motors
+</td>
+<td style="text-align:right;">
+1954
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1935
-</td>
 <td style="text-align:right;">
 209.9
 </td>
@@ -1316,14 +1276,14 @@ capital
 <td style="text-align:right;">
 53.8
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1935
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1936
-</td>
 <td style="text-align:right;">
 355.3
 </td>
@@ -1333,14 +1293,14 @@ capital
 <td style="text-align:right;">
 50.5
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1936
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1937
-</td>
 <td style="text-align:right;">
 469.9
 </td>
@@ -1350,14 +1310,14 @@ capital
 <td style="text-align:right;">
 118.1
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1937
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1938
-</td>
 <td style="text-align:right;">
 262.3
 </td>
@@ -1367,14 +1327,14 @@ capital
 <td style="text-align:right;">
 260.2
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1938
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1939
-</td>
 <td style="text-align:right;">
 230.4
 </td>
@@ -1384,14 +1344,14 @@ capital
 <td style="text-align:right;">
 312.7
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1939
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1940
-</td>
 <td style="text-align:right;">
 361.6
 </td>
@@ -1401,14 +1361,14 @@ capital
 <td style="text-align:right;">
 254.2
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1940
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1941
-</td>
 <td style="text-align:right;">
 472.8
 </td>
@@ -1418,14 +1378,14 @@ capital
 <td style="text-align:right;">
 261.4
 </td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1941
+</td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1942
-</td>
 <td style="text-align:right;">
 445.6
 </td>
@@ -1434,6 +1394,12 @@ capital
 </td>
 <td style="text-align:right;">
 298.7
+</td>
+<td style="text-align:left;">
+US Steel
+</td>
+<td style="text-align:right;">
+1942
 </td>
 </tr>
 </tbody>
@@ -1657,7 +1623,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -1678,10 +1644,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Probability | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -451,7 +422,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="probability" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Probability<a href="probability.html#probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Probability theory is one of the hardest fields to master. Most people often get tripped up by what should be simple calculations, thinking that the answer for how often something will happen has to have a fantastically rare probability of occurrence. For example, on the first anniversary of 9/11, the winning pick-three number in the second draw was 9-1-1. This lit up the news of course because it seemed to be an astonishing coincidence. As it turns out, the probability of this happening was very high, <a href="http://www.snopes.com/rumors/lottery.asp">exactly <span class="math inline">\(\dfrac{1}{500}\)</span></a>. Several pages have been devoted to the <a href="https://goo.gl/xPy4Uj">Monty Hall Problem</a> wherein the contestant sees three doors, two with a goat behind them and one with a car, and picks one. The host opens one of the other doors that turns out to have a goat behind it. The contestant is given a choice, should he/she stick with the door they chose or should he/she switch their choice to the unopened door? Probability also comes in handy with party tricks: With 23 people in a room there is a 50-50 chance of two people having the same birthday! In a more serious vein, NASA engineers knew that the probability of a Challenger disaster on flight day was unacceptably high (13%) but most folks never understood this before the shuttle launch was given the green light. How probability works its magic in any of these examples would be elementary if you understood the core principles of probability theory. However, remember, we are not looking to become probability theorists. Not at all. Our task is simpler, to grasp the essence of some probability mechanics so that we can build a bridge between the samples we gather and the population our samples should represent.</p>
+<p>Probability theory is one of the hardest fields to master. Most people often get tripped up by what should be simple calculations, thinking that the answer for how often something will happen has to have a fantastically rare probability of occurrence. For example, on the first anniversary of 9/11, the winning pick-three number in the second draw was 9-1-1. This lit up the news of course because it seemed to be an astonishing coincidence. For a single pick-three drawing, the probability of any specified three-digit sequence is <span class="math inline">\(1/1000\)</span>. With two independent drawings that day, the probability of seeing 9-1-1 at least once was <span class="math inline">\(1-(999/1000)^2=0.001999\)</span>, or approximately <a href="http://www.snopes.com/rumors/lottery.asp">1 in 500</a>. Several pages have been devoted to the <a href="https://goo.gl/xPy4Uj">Monty Hall Problem</a> wherein the contestant sees three doors, two with a goat behind them and one with a car, and picks one. The host opens one of the other doors that turns out to have a goat behind it. The contestant is given a choice, should he/she stick with the door they chose or should he/she switch their choice to the unopened door? Probability also comes in handy with party tricks: With 23 people in a room there is a 50-50 chance of two people having the same birthday! In a more serious vein, NASA engineers knew that the probability of a Challenger disaster on flight day was unacceptably high (13%) but most folks never understood this before the shuttle launch was given the green light. How probability works its magic in any of these examples would be elementary if you understood the core principles of probability theory. However, remember, we are not looking to become probability theorists. Not at all. Our task is simpler, to grasp the essence of some probability mechanics so that we can build a bridge between the samples we gather and the population our samples should represent.</p>
 <div id="basic-concepts-and-terminology-of-probability-theory" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Basic Concepts and Terminology of Probability Theory<a href="probability.html#basic-concepts-and-terminology-of-probability-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In statistics, we think of every study as an <code>experiment</code>. Not in the sense of a laboratory experiment but in terms of a real-world experiment that nature is carrying out without revealing to us all the truths. For example, a district tries to boost literacy by spending a lot of money on programs that claim to have every third grader proficient in English language arts. The district has just carried out an experiment whose outcomes are unknown (i.e., will the program work, worsen the situation, or have no impact?). A prison implements a prisoner rehabilitation program with wrap-around skills; will it have the desired effect? Patients battling Parkinson’s disease are given a new drug designed to control tremors; will it work as designed? Experiments surround us, every day of our lives and with consequences big and small.</p>
@@ -531,7 +502,7 @@ Green Eyes
 </table>
 <p>Each outcome occurs with some <code>probability</code>. For example, we all recognize that if I have a fair coin that I toss, it could either land Heads or Tails. Since it is a fair coin, not biased towards Heads or Tails, only one of two likely outcomes could occur in a single toss. Therefore, there is a 50:50 chance of seeing a Heads or a Tails in a coin toss. However, you could flip a coin ten times and see more (or all) of Heads or Tails. How does that make for a 50:50 chance then? It does not <em>unless</em> you think in a very specific way. In particular, in statistics, we define probability as <strong>a numerical measure of the likelihood that an event will occur</strong>. It is, essentially, the proportion of times the event would occur <code>if we repeated the random trial under identical conditions an infinite number of times</code>. See the example below where I toss a coin 10 times, 100 times, 1,000 times, and then 10,000,000 (ten million) times, counting in each case the proportions of Heads and Tails, respectively.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:coinflips"></span>
-<img src="_stats_files/figure-html/coinflips-1.svg" alt="Simulated Coin Flips" width="100%" />
+<img src="_stats_files/figure-html/coinflips-1.png" alt="Simulated Coin Flips" width="100%" />
 <p class="caption">
 FIGURE 5.1: Simulated Coin Flips
 </p>
@@ -1381,7 +1352,7 @@ Total
 </tr>
 </tbody>
 </table>
-<p>If Men and Women had the same probability of being promoted each group should have <span class="math inline">\(P(A)=\dfrac{324}{1200}= 0.27\)</span>. This means we should have <span class="math inline">\(P(A \text{ and } M) = P(A \text{ and } W) = 0.27\)</span>. We can now ask: What is the probability that an officer is promoted <code>given that the officer is a man</code>? <span class="math inline">\(P(A|M) = \dfrac{P(A \text{ and } M)}{P(M)} = \dfrac{288/1200}{960/1200} = \dfrac{288}{960} = 0.30\)</span>. Similarly, we might ask: What is the probability of being denied a promotion <code>given that the officer is a woman</code>? <span class="math inline">\(P(A^{c}|W) = \dfrac{P(A^{c} \text{ and } W)}{P(W)} = \dfrac{204/1200}{240/1200} = \dfrac{204}{240} = 0.85\)</span></p>
+<p>If promotion were independent of sex, each group would have the overall promotion probability <span class="math inline">\(P(A)=\dfrac{324}{1200}=0.27\)</span>; that is, <span class="math inline">\(P(A|M)=P(A|W)=P(A)=0.27\)</span>. This does not mean that the joint probabilities <span class="math inline">\(P(A \text{ and } M)\)</span> and <span class="math inline">\(P(A \text{ and } W)\)</span> would equal 0.27, because the groups have different sizes. We can now ask: What is the probability that an officer is promoted <code>given that the officer is a man</code>? <span class="math inline">\(P(A|M) = \dfrac{P(A \text{ and } M)}{P(M)} = \dfrac{288/1200}{960/1200} = \dfrac{288}{960} = 0.30\)</span>. Similarly, we might ask: What is the probability of being denied a promotion <code>given that the officer is a woman</code>? <span class="math inline">\(P(A^{c}|W) = \dfrac{P(A^{c} \text{ and } W)}{P(W)} = \dfrac{204/1200}{240/1200} = \dfrac{204}{240} = 0.85\)</span></p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:probt7">TABLE 5.8: </span>Probabilities for the preceding table
@@ -2100,7 +2071,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -2121,10 +2092,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>

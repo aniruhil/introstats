@@ -18,7 +18,7 @@ fig:histo3
 fig:splot1
 fig:splot2
 fig:splot3
-fig:xts
+fig:fredr
 fig:immig
 fig:lynx
 fig:polar1

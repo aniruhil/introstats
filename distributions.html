@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Probability Distributions | Data Analysis for Leadership &amp; Public Affairs:</title>
   <meta name="description" content="This is a free textbook written for students in my research methods classes." />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Probability Distributions | Data Analysis for Leadership &amp; Public Affairs:" />
   <meta property="og:type" content="book" />
@@ -53,7 +53,7 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
@@ -65,26 +65,6 @@
 <script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
-    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
-      cancel: ["Extension","cancel"],
-      bcancel: ["Extension","cancel"],
-      xcancel: ["Extension","cancel"],
-      cancelto: ["Extension","cancel"]
-    });
-  });
-</script>
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107619033-2');
-</script>
-
 
 
 
@@ -97,7 +77,6 @@
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -116,8 +95,6 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="yihui_style.css" type="text/css" />
-<link rel="stylesheet" href="fontawesome.css" type="text/css" />
 </head>
 
 <body>
@@ -130,9 +107,6 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Data Analysis for Public Affairs</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-analysis-and-public-affairs"><i class="fa fa-check"></i><b>1.1</b> Data Analysis and Public Affairs</a></li>
@@ -429,9 +403,6 @@ div.csl-indent {
 <li class="chapter" data-level="13.5" data-path="summation.html"><a href="summation.html#the-dot-notation"><i class="fa fa-check"></i><b>13.5</b> The Dot Notation</a></li>
 <li class="chapter" data-level="13.6" data-path="summation.html"><a href="summation.html#the-basic-rules-of-summation"><i class="fa fa-check"></i><b>13.6</b> The Basic Rules of Summation</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -583,7 +554,7 @@ No. waiting (x)
 Frequency (f)
 </th>
 <th style="text-align:right;">
-x * f(x)
+Probability f(x)
 </th>
 </tr>
 </thead>
@@ -656,9 +627,9 @@ x * f(x)
 </tr>
 </tbody>
 </table>
-<p>Note that <span class="math inline">\(\sum f = 300\)</span> and <span class="math inline">\(\sum x*f(x) = 1.00\)</span></p>
+<p>Note that the frequencies sum to <span class="math inline">\(\sum f = 300\)</span> and the probabilities sum to <span class="math inline">\(\sum f(x) = 1.00\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:xrays"></span>
-<img src="_stats_files/figure-html/xrays-1.svg" alt="Frequency Distribution of Number Waiting" width="100%" />
+<img src="_stats_files/figure-html/xrays-1.png" alt="Frequency Distribution of Number Waiting" width="100%" />
 <p class="caption">
 FIGURE 6.1: Frequency Distribution of Number Waiting
 </p>
@@ -667,14 +638,14 @@ FIGURE 6.1: Frequency Distribution of Number Waiting
 <p>What if you were rolling dice instead?</p>
 <p>Note, again, that the first row with columns 1, 2, 3, 4, 5, and 6 are the numbers that show up on a roll of Dice 1 and the first column with rows 1, 2, 3, 4, 5, and 6 are the numbers that show up on a roll of Dice 2.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:dice"></span>
-<img src="_stats_files/figure-html/dice-1.svg" alt="Rolling Two Dice" width="100%" />
+<img src="_stats_files/figure-html/dice-1.png" alt="Rolling Two Dice" width="100%" />
 <p class="caption">
 FIGURE 6.2: Rolling Two Dice
 </p>
 </div>
 <p>You have seen Table 6.4 before so it should be easy to figure out what would be the most likely sum of the numbers showing up on the faces of two dice you roll: <span class="math inline">\(7\)</span>. Why? Because that happens most often.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:sumdice"></span>
-<img src="_stats_files/figure-html/sumdice-1.svg" alt="Sum from Rolling Two Dice" width="100%" />
+<img src="_stats_files/figure-html/sumdice-1.png" alt="Sum from Rolling Two Dice" width="100%" />
 <p class="caption">
 FIGURE 6.3: Sum from Rolling Two Dice
 </p>
@@ -897,8 +868,8 @@ P\left[x \text{ successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
 <p><span class="math display">\[\begin{eqnarray*}
     P\left[x \text{ Successes}\right] = \binom{n}{x}p^{x}\left(1 - p\right)^{n-x} \\
     \therefore P\left[0 \text{ Success}\right] = \binom{10}{0}(0.50)^{0}\left(1 - 0.50\right)^{10-0} = \binom{10}{0}(0.50)^{0}\left(0.50\right)^{10} \\
-    \binom{10}{0} = \dfrac{10 \times 9 \times 8 \times \ldots\times 2\times 1}{\left(0\right) \left(10 \times 9 \times 8 \times \ldots \times 2 \times 1 \right)} = 1 \\
-    \therefore, P\left[0 \text{ Successes}\right] = (1) \times (0.5) \times (0.0009765625) = 0.0009765625
+    \binom{10}{0} = \dfrac{10!}{0!10!} = 1 \\
+    \therefore, P\left[0 \text{ Successes}\right] = (1) \times (1) \times (0.0009765625) = 0.0009765625
 \end{eqnarray*}\]</span></p>
 <p>For 1 head it would be</p>
 <p><span class="math display">\[\begin{eqnarray*}
@@ -1015,7 +986,7 @@ Relative frequency f(x)
 </table>
 <p>These relative frequencies (the probabilities) can also be seen in the plot below.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:flips"></span>
-<img src="_stats_files/figure-html/flips-1.svg" alt="Proportion of Heads in 10 Coin Flips" width="100%" />
+<img src="_stats_files/figure-html/flips-1.png" alt="Proportion of Heads in 10 Coin Flips" width="100%" />
 <p class="caption">
 FIGURE 6.4: Proportion of Heads in 10 Coin Flips
 </p>
@@ -1195,16 +1166,16 @@ Expected Value (x * fx())
 <p>We can also track hurricanes, cyclones, earthquakes, etc. and measure their intensity. Or perhaps you are interested in figuring out the probability of a Shark Attack in a given year in a given place. You could look at the historical data and figure out the average number of attacks in this place per year. These data are <a href="http://www.sharkattackfile.net/spreadsheets/GSAF5.xls">available here</a>.</p>
 <p>Say I am only interested in incidents in the USA and Australia over the 1900-2017 period and want to know the number of incidents per year per country. This evident in the plot that follows.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:sharks2"></span>
-<img src="_stats_files/figure-html/sharks2-1.svg" alt="Shark Incidents in the USA and Australia (1900-2017)" width="100%" />
+<img src="_stats_files/figure-html/sharks2-1.png" alt="Shark Incidents in the USA and Australia (1900-2017)" width="100%" />
 <p class="caption">
 FIGURE 6.5: Shark Incidents in the USA and Australia (1900-2017)
 </p>
 </div>
 <p>The average number of incidents per country turns out to be almost 10 for Australia and about 17 for the USA. This would tell us that in any given year we should expect, on average, these many shark incidents in each country, respectively. Of course, something has gone on since about 2000 as reflected by the surge in the number of incidents. If we calculated the averages just for the 2000-2017 period we would likely see higher averages than for the pre-2000 period. In passing, note the surprising results both in the plot and in these means: Australia has fewer shark incidents, on average, than does the USA, but the news media usually carry stories of attacks in Australian waters.</p>
 <p>As it turns out, the variable of interest – number of shark incidents per country per year – is a discrete variable that can never drop below 0 but can assume any value <span class="math inline">\(x = 0, 1, 2, 3, 4, 5, \ldots, n\)</span>. Variables such as these are called count variables and belong to a specific distribution: The <code>Poisson distribution</code>. Mathematically, the Poisson probability distribution is expressed as:</p>
-<p><span class="math display">\[f(x) = \dfrac{e^{-x}\lambda^{x}}{x!}\]</span></p>
+<p><span class="math display">\[f(x) = \dfrac{e^{-\lambda}\lambda^{x}}{x!}\]</span></p>
 <p>where <span class="math inline">\(x = 0, 1, 2, 3, \ldots\)</span>, <span class="math inline">\(\lambda &gt; 0\)</span> is the mean and variance of the distribution, and <span class="math inline">\(e=2.71828\)</span>.</p>
-<p>Several discrete random variables are assumed to be Poisson distributed – number of highway fatalities, number of persons in a household, number of patient visits to the Emergency Room, number of traffic stops, number of terrorist attacks, number of hurricanes rated Category 5 on the <a href="http://www.nhc.noaa.gov/aboutsshws.php">Saffir-Simpson Hurricane Wind Scale</a>, the number of citizen complaints filed with the City Clerk, the number of hazardous waste sites per county, the number of parolees violating the conditions of their parole per month, and so on. Say, for example, that on average 10 complaints are filed per month with the City Clerk. If you pick a month at random, what would be the probability of seeing no complaint?; 1 complaint?; 2 complaints; <span class="math inline">\(\ldots\)</span> 20 complaints? These turn out to be:</p>
+<p>Several discrete random variables are assumed to be Poisson distributed – number of highway fatalities, number of persons in a household, number of patient visits to the Emergency Room, number of traffic stops, number of terrorist attacks, number of hurricanes rated Category 5 on the <a href="http://www.nhc.noaa.gov/aboutsshws.php">Saffir-Simpson Hurricane Wind Scale</a>, the number of citizen complaints filed with the City Clerk, the number of hazardous waste sites per county, the number of parolees violating the conditions of their parole per month, and so on. Say, for example, that on average 5 complaints are filed per month with the City Clerk. If you pick a month at random, what would be the probability of seeing no complaints, 1 complaint, 2 complaints, <span class="math inline">\(\ldots\)</span>, 15 complaints? These turn out to be:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:pois">TABLE 6.7: </span>Probability of Complaints
@@ -1351,7 +1322,7 @@ Probability
 </tbody>
 </table>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:complaints"></span>
-<img src="_stats_files/figure-html/complaints-1.svg" alt="Probability Distribution of Complaints" width="100%" />
+<img src="_stats_files/figure-html/complaints-1.png" alt="Probability Distribution of Complaints" width="100%" />
 <p class="caption">
 FIGURE 6.6: Probability Distribution of Complaints
 </p>
@@ -1366,22 +1337,22 @@ FIGURE 6.6: Probability Distribution of Complaints
 <li>The probability <span class="math inline">\((p)\)</span> of observing a success in a small space or interval of time is independent of the probability <span class="math inline">\((p)\)</span> of observing a success in the next small space or interval of time</li>
 </ol>
 <p>If the mean exceeds the variance then we have a <code>dispersed</code> variable (i.e., events occur farther apart in space/time than would be expected by chance). An example of dispersion might be observed in the behavior of territorial animals such as lions and tigers that mark their own territory and guard it from competitors. So if you see one “success” (say, a lion), the probability of seeing another nearby/soon decreases. If the variance exceeds the mean we have <code>clumping</code> (i.e., events occur closer together in space/time than would be expected by chance). An example of clumping might be social animals (that herd together) and contagious diseases (outbreaks will occur within a spatial group). So if you see one “success” (say, a wildebeest), the probability of seeing another nearby/soon increases.</p>
-<p>Before we move on, note what happens to the distribution as the mean <span class="math inline">\((\lambda)\)</span> increases. The more commonly the event occurs, the more “normal” does the distribution look. The lower is the mean, the more likely you are to see a <code>positively skewed</code> distribution, and the higher the mean the more likely you will see a <code>negatively skewed</code> distribution.</p>
+<p>Before we move on, note what happens to the distribution as the mean <span class="math inline">\((\lambda)\)</span> increases. The more commonly the event occurs, the more nearly symmetric and “normal” the distribution looks. A Poisson distribution is always positively skewed, with skewness <span class="math inline">\(1/\sqrt{\lambda}\)</span>, but that skewness approaches zero as <span class="math inline">\(\lambda\)</span> increases.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:pois2"></span>
-<img src="_stats_files/figure-html/pois2-1.svg" alt="Some Poisson Distributions" width="100%" />
+<img src="_stats_files/figure-html/pois2-1.png" alt="Some Poisson Distributions" width="100%" />
 <p class="caption">
 FIGURE 6.7: Some Poisson Distributions
 </p>
 </div>
 <p>When <span class="math inline">\(n \rightarrow \infty\)</span> and <span class="math inline">\(p \rightarrow 0\)</span>, the Poisson distribution approximates the Binomial distribution. Likewise, as <span class="math inline">\(\lambda \rightarrow \infty\)</span>, the Poisson distribution approximates the Normal distribution. This pattern is visible in the plots that follow.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:pois3"></span>
-<img src="_stats_files/figure-html/pois3-1.svg" alt="Some Poisson Distributions tending to the Binomial" width="100%" />
+<img src="_stats_files/figure-html/pois3-1.png" alt="Some Poisson Distributions tending to the Binomial" width="100%" />
 <p class="caption">
 FIGURE 6.8: Some Poisson Distributions tending to the Binomial
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:pois4"></span>
-<img src="_stats_files/figure-html/pois4-1.svg" alt="Some Poisson Distributions tending to the Normal" width="100%" />
+<img src="_stats_files/figure-html/pois4-1.png" alt="Some Poisson Distributions tending to the Normal" width="100%" />
 <p class="caption">
 FIGURE 6.9: Some Poisson Distributions tending to the Normal
 </p>
@@ -1394,7 +1365,8 @@ FIGURE 6.9: Some Poisson Distributions tending to the Normal
 <ol style="list-style-type: lower-alpha">
 <li>What is the probability that in a 24 hour period the ACPD will see 10 or fewer crime reports filed?</li>
 </ol>
-<p><span class="math display">\[f(x) = \dfrac{e^{-x}\lambda^{x}}{x!} = \dfrac{e^{-10}0.833^{10}}{10!}\]</span></p>
+<p>For a 24-hour period, the relevant mean is <span class="math inline">\(\lambda=24(0.833)=19.992\)</span>. Because the question asks for 10 or fewer reports, we need the cumulative probability</p>
+<p><span class="math display">\[P(X \leq 10)=\sum_{x=0}^{10}\dfrac{e^{-19.992}19.992^x}{x!}.\]</span></p>
 <p>Let us use the <a href="http://stattrek.com/m/online-calculator/poisson.aspx">online calculator for the poisson distribution</a>. We have <span class="math inline">\(\lambda=19.992\)</span> since the mean for a 24-hour period would be <span class="math inline">\(= 0.833 \times 24 = 19.992\)</span>, and are given <span class="math inline">\(x = 10\)</span>. Entering these values into the calculator yields <span class="math inline">\(P(x \leq 10) = 0.0108583424514613 \approx 0.0108\)</span>. Note that the calculator also generates other probabilities: <span class="math inline">\(P(x = 10) = 0.0058396136640344; P(x &lt; 10) = 0.0050187287874269; P(x &gt; 10) = 0.989141657548539; P(x \geq 10) = 0.9949812712125\)</span>. The answer: There is 1.08% chance of seeing 10 or fewer reports filed within a 24-hour period.</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>What is the probability of 20 or more crime reports being filed in the 24 hour period?</li>
@@ -1420,20 +1392,20 @@ FIGURE 6.9: Some Poisson Distributions tending to the Normal
 <p>where <span class="math inline">\(\mu\)</span> is the mean of <span class="math inline">\(X\)</span>, <span class="math inline">\(\sigma\)</span> is the standard deviation of <span class="math inline">\(X\)</span>, <span class="math inline">\(\pi=3.14159\)</span>, and <span class="math inline">\(e=2.71828\)</span>
 Two parameters describe a Normal distribution – the mean and the standard deviation. As such, different means and/or standard deviations generate different Normal distributions. The examples below show you three different Normal distributions, each with its own unique combination of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:norm1"></span>
-<img src="_stats_files/figure-html/norm1-1.svg" alt="Three Normal Distributions: Different Means, Equal Standard Deviations" width="100%" />
+<img src="_stats_files/figure-html/norm1-1.png" alt="Three Normal Distributions: Different Means, Equal Standard Deviations" width="100%" />
 <p class="caption">
 FIGURE 6.10: Three Normal Distributions: Different Means, Equal Standard Deviations
 </p>
 </div>
 <p>Similarly, we could have a completely different set of Normal distributions:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:norm2"></span>
-<img src="_stats_files/figure-html/norm2-1.svg" alt="Three Normal Distributions: Different Means, Different Standard Deviations" width="100%" />
+<img src="_stats_files/figure-html/norm2-1.png" alt="Three Normal Distributions: Different Means, Different Standard Deviations" width="100%" />
 <p class="caption">
 FIGURE 6.11: Three Normal Distributions: Different Means, Different Standard Deviations
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:norm3"></span>
-<img src="_stats_files/figure-html/norm3-1.svg" alt="Three Normal Distributions with Differing Means and Standard Deviations" width="100%" />
+<img src="_stats_files/figure-html/norm3-1.png" alt="Three Normal Distributions with Differing Means and Standard Deviations" width="100%" />
 <p class="caption">
 FIGURE 6.12: Three Normal Distributions with Differing Means and Standard Deviations
 </p>
@@ -1504,19 +1476,19 @@ Boston (MA)
 </ul>
 <p>Graphically, we could depict the areas demarcated by the 1, 2 and 3 standard deviations as follows:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:1sd"></span>
-<img src="_stats_files/figure-html/1sd-1.svg" alt="Area of the Standard Normal Distribution within 1 Standard Deviation" width="100%" />
+<img src="_stats_files/figure-html/1sd-1.png" alt="Area of the Standard Normal Distribution within 1 Standard Deviation" width="100%" />
 <p class="caption">
 FIGURE 6.13: Area of the Standard Normal Distribution within 1 Standard Deviation
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:2sd"></span>
-<img src="_stats_files/figure-html/2sd-1.svg" alt="Area of the Standard Normal Distribution within 2 Standard Deviations" width="100%" />
+<img src="_stats_files/figure-html/2sd-1.png" alt="Area of the Standard Normal Distribution within 2 Standard Deviations" width="100%" />
 <p class="caption">
 FIGURE 6.14: Area of the Standard Normal Distribution within 2 Standard Deviations
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:3sd"></span>
-<img src="_stats_files/figure-html/3sd-1.svg" alt="Area of the Standard Normal Distribution within 3 Standard Deviations" width="100%" />
+<img src="_stats_files/figure-html/3sd-1.png" alt="Area of the Standard Normal Distribution within 3 Standard Deviations" width="100%" />
 <p class="caption">
 FIGURE 6.15: Area of the Standard Normal Distribution within 3 Standard Deviations
 </p>
@@ -2361,14 +2333,14 @@ FIGURE 6.15: Area of the Standard Normal Distribution within 3 Standard Deviatio
 <p>The <a href="http://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_probability/standardnormaltable.pdf">standard normal table</a> shows you the <code>area below a specific z-score</code>. For example, the area below <span class="math inline">\(z = -3.40\)</span> is 0.0003369. We would denote this as <span class="math inline">\(P(z \leq -3.40) = 0.0003369\)</span>. The meaning of “area” should now be taken as the proportion of z-scores that fall at or below a specific z-score. Indeed, we might as well speak in terms of probability: The probability of finding a z-score less than or equal to -3.40 is 0.0003369. Now look at the table and figure out how much of the area falls at or below <span class="math inline">\(z = -1.00\)</span>. This turns out to be 0.1586552, highlighted for you in panel (a) of the figure.</p>
 <p>Given the symmetry of the curve, this means that the area at or above <span class="math inline">\(z = +1.00\)</span> must also be 0.1586552. If we add these two areas we see that the combined area below and above <span class="math inline">\(z = -1.00; z = +1.00\)</span> works out to <span class="math inline">\(0.1586552 + 0.1586552 = 0.3173\)</span>. Since the area under the curve must sum to 1, this means the area between <span class="math inline">\(z = -1.00; z = +1.00\)</span> must be <span class="math inline">\(1 - 0.3173 = 0.6827\)</span>. That is, 68.27% of z-scores lie in the interval given by <span class="math inline">\(z = \pm 1\)</span>; see the shaded portion in panel (b) below. Similarly, we could calculate areas between <span class="math inline">\(z = \pm 2.00\)</span> (see panel (c) below), <span class="math inline">\(z = \pm 3.00\)</span> (see panel (d) below), and any other pair of z-scores.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:area1"></span>
-<img src="_stats_files/figure-html/area1-1.svg" alt="Areas Under the Standard Normal Curve" width="100%" />
+<img src="_stats_files/figure-html/area1-1.png" alt="Areas Under the Standard Normal Curve" width="100%" />
 <p class="caption">
 FIGURE 6.16: Areas Under the Standard Normal Curve
 </p>
 </div>
 <p>Take, for example, the area between z-scores of -0.52 and +1.26. To calculate <span class="math inline">\(P(-0.52 \leq z \leq +1.26)\)</span> we start by calculating the area at or below <span class="math inline">\(z = -0.52\)</span>. <span class="math inline">\(P(z \leq -0.52)\)</span> turns out to be 0.30153. We then calculate the area at or above <span class="math inline">\(z = +1.26\)</span>. <span class="math inline">\(P(z \geq +1.26)\)</span> turns out to be 0.10383. So the total area at or beyond these two z-scores is <span class="math inline">\(0.30153 + 0.10383 = 0.40536\)</span>. This isn’t the area we need; we need <span class="math inline">\(P(-0.52 \leq z \leq +1.26)\)</span> and this can now be calculated as <span class="math inline">\(1 - P(z \leq -0.52) - P(z \geq +1.26) = 1 - 0.30153 - 0.10383 = 1 - 0.40536 = 0.59464\)</span>. The figure below shows this area:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:area2"></span>
-<img src="_stats_files/figure-html/area2-1.svg" alt="Areas Under the Standard Normal Curve" width="100%" />
+<img src="_stats_files/figure-html/area2-1.png" alt="Areas Under the Standard Normal Curve" width="100%" />
 <p class="caption">
 FIGURE 6.17: Areas Under the Standard Normal Curve
 </p>
@@ -2395,7 +2367,7 @@ z = \dfrac{9 - 5}{1.25} = 3.2 \\
 P(z \geq 3.2) = 0.00069
 \end{aligned}\right.
 \end{eqnarray*}\]</span></p>
-<p>i.e., 0.069% of schools in the states had dropout rates of 8% or worse.</p>
+<p>i.e., 0.069% of schools in the state had dropout rates of 9% or worse.</p>
 <p>We can also ask a different question: What dropout rates demarcate the top 10% and the bottom 10% of schools, respectively? We first find the z-scores that demarcate the top 10% and the bottom 10%, respectively. These turn out to be <span class="math inline">\(z = +1.28\)</span> and <span class="math inline">\(z = -1.28\)</span>, respectively.</p>
 <p><span class="math display">\[\begin{eqnarray*}
 z = \dfrac{x - \mu}{\sigma} \\
@@ -2606,7 +2578,7 @@ gitbook.start({
   },
   "fontsettings": {
     "theme": "white",
-    "family": "serif",
+    "family": "sans",
     "size": 2
   },
   "edit": {
@@ -2627,10 +2599,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "css": "toc.css"
-  },
-  "theme": "sandstone"
+    "collapse": "subsection"
+  }
 });
 });
 </script>
