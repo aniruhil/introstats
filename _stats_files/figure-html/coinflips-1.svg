@@ -60,6 +60,13 @@
 <text transform='translate(34.66,49.00) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='13.83px' lengthAdjust='spacingAndGlyphs'>1.0</text>
 </g>
 <defs>
+  <clipPath id='cpMzAxLjAwfDQ3OC45MHw0OS4wMHwxOTEuMDQ='>
+    <rect x='301.00' y='49.00' width='177.90' height='142.04' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzAxLjAwfDQ3OC45MHw0OS4wMHwxOTEuMDQ=)'>
+</g>
+<defs>
   <clipPath id='cpMjUyLjAwfDUwNC4wMHwwLjAwfDI1Mi4wMA=='>
     <rect x='252.00' y='0.00' width='252.00' height='252.00' />
   </clipPath>
@@ -92,6 +99,13 @@
 <text transform='translate(286.66,49.00) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='13.83px' lengthAdjust='spacingAndGlyphs'>1.0</text>
 </g>
 <defs>
+  <clipPath id='cpNDkuMDB8MjI2LjkwfDMwMS4wMHw0NDMuMDQ='>
+    <rect x='49.00' y='301.00' width='177.90' height='142.04' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDkuMDB8MjI2LjkwfDMwMS4wMHw0NDMuMDQ=)'>
+</g>
+<defs>
   <clipPath id='cpMC4wMHwyNTIuMDB8MjUyLjAwfDUwNC4wMA=='>
     <rect x='0.00' y='252.00' width='252.00' height='252.00' />
   </clipPath>
@@ -122,6 +136,13 @@
 <text transform='translate(34.66,357.82) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='13.83px' lengthAdjust='spacingAndGlyphs'>0.6</text>
 <text transform='translate(34.66,329.41) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='13.83px' lengthAdjust='spacingAndGlyphs'>0.8</text>
 <text transform='translate(34.66,301.00) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='13.83px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+</g>
+<defs>
+  <clipPath id='cpMzAxLjAwfDQ3OC45MHwzMDEuMDB8NDQzLjA0'>
+    <rect x='301.00' y='301.00' width='177.90' height='142.04' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzAxLjAwfDQ3OC45MHwzMDEuMDB8NDQzLjA0)'>
 </g>
 <defs>
   <clipPath id='cpMjUyLjAwfDUwNC4wMHwyNTIuMDB8NTA0LjAw'>
