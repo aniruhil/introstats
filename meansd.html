@@ -183,7 +183,10 @@ div.csl-indent {
 <li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
 <li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
 <li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
-<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#try-it-build-a-skewed-distribution"><i class="fa fa-check"></i>Try It: Build a Skewed Distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
 <li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
 <li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
@@ -206,6 +209,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.2" data-path="probability.html"><a href="probability.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
 <li class="chapter" data-level="5.3" data-path="probability.html"><a href="probability.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
 <ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#try-it-coin-flips-and-long-run-probability"><i class="fa fa-check"></i>Try It: Coin Flips and Long-run Probability</a></li>
 <li class="chapter" data-level="5.3.1" data-path="probability.html"><a href="probability.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
 <li class="chapter" data-level="5.3.2" data-path="probability.html"><a href="probability.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
 <li class="chapter" data-level="5.3.3" data-path="probability.html"><a href="probability.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
@@ -1937,7 +1941,15 @@ FIGURE 4.2: A Uniform Distribution
 FIGURE 4.3: Skewed Distributions
 </p>
 </div>
-<p>A skew means you have unusual data points on the right (positively-skewed) or on the left (negatively-skewed). These patterns are evident from histograms as well, though the direction of the skew isn’t always clear.</p>
+<p>A skew means that one tail of the distribution extends farther than the other: a longer right tail indicates positive skew, while a longer left tail indicates negative skew. Extreme observations can create or strengthen skew, but a skewed distribution need not contain isolated outliers. These patterns are often evident in histograms, though the direction of the skew is not always immediately clear.</p>
+<div id="try-it-build-a-skewed-distribution" class="section level3 unnumbered hasAnchor">
+<h3>Try It: Build a Skewed Distribution<a href="meansd.html#try-it-build-a-skewed-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The sample below starts with approximately symmetric random data. Click toward either end of the histogram to add observations, or use the buttons to add observations in the tails. Watch how the mean, median, and skewness respond. Each click adds one observation, so several clicks may be needed before the shape changes substantially.</p>
+<div class="stats-lab" data-stats-lab="skew">
+<p class="stats-lab__fallback">
+The interactive distribution lab requires JavaScript.
+</p>
+</div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
 <img src="_stats_files/figure-html/unnamed-chunk-36-1.png" alt="Skewed Histograms" width="100%" />
 <p class="caption">
@@ -1963,6 +1975,7 @@ skewness = \dfrac{1}{n}\sum\left( \dfrac{x_i - \bar{x}}{s} \right)^3
 \dfrac{n(n+1)(n-1)}{(n-2)(n-3)} \dfrac{\sum \left(x_i - \bar{x}\right)^4}{\left(\sum(x_i - \bar{x})^2 \right)^2}
 \end{equation}\]</span></p>
 <p>The normal distribution has kurtosis <span class="math inline">\(=0\)</span> and is said to be <code>mesokurtic</code>. A negative kurtosis would be indicative of a thin-tailed distribution, also called a <code>platykurtic</code> distribution while a positive kurtosis would be indicative of a fat-tailed distribution, also called a <code>leptokurtic</code> distribution. Again, for the same data for which we calculated skewness, measures of kurtosis would be 0.5144074 and 0.6626601, respectively.</p>
+</div>
 </div>
 <div id="the-five-number-summary-and-the-box-plot" class="section level2 hasAnchor" number="4.8">
 <h2><span class="header-section-number">4.8</span> The Five-number Summary and the Box-plot<a href="meansd.html#the-five-number-summary-and-the-box-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>

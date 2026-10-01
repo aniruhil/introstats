@@ -183,7 +183,10 @@ div.csl-indent {
 <li class="chapter" data-level="4.4" data-path="meansd.html"><a href="meansd.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a></li>
 <li class="chapter" data-level="4.5" data-path="meansd.html"><a href="meansd.html#z-scores"><i class="fa fa-check"></i><b>4.5</b> Z-scores</a></li>
 <li class="chapter" data-level="4.6" data-path="meansd.html"><a href="meansd.html#the-coefficient-of-variation"><i class="fa fa-check"></i><b>4.6</b> The Coefficient of Variation</a></li>
-<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a></li>
+<li class="chapter" data-level="4.7" data-path="meansd.html"><a href="meansd.html#symmetric-skewed-and-bi-modal-distributions"><i class="fa fa-check"></i><b>4.7</b> Symmetric, Skewed and Bi-modal Distributions</a>
+<ul>
+<li class="chapter" data-level="" data-path="meansd.html"><a href="meansd.html#try-it-build-a-skewed-distribution"><i class="fa fa-check"></i>Try It: Build a Skewed Distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="4.8" data-path="meansd.html"><a href="meansd.html#the-five-number-summary-and-the-box-plot"><i class="fa fa-check"></i><b>4.8</b> The Five-number Summary and the Box-plot</a></li>
 <li class="chapter" data-level="4.9" data-path="meansd.html"><a href="meansd.html#the-power-of-summary-statistics-married-to-graphical-explorations"><i class="fa fa-check"></i><b>4.9</b> The Power of Summary Statistics Married to Graphical Explorations</a></li>
 <li class="chapter" data-level="4.10" data-path="meansd.html"><a href="meansd.html#outliers-outliers-what-do-i-do-with-them"><i class="fa fa-check"></i><b>4.10</b> Outliers, Outliers, What do I do with them?</a></li>
@@ -206,6 +209,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.2" data-path="probability.html"><a href="probability.html#counting-rules-with-permutations-and-combinations"><i class="fa fa-check"></i><b>5.2</b> Counting Rules with Permutations and Combinations</a></li>
 <li class="chapter" data-level="5.3" data-path="probability.html"><a href="probability.html#assigning-probabilities-to-events"><i class="fa fa-check"></i><b>5.3</b> Assigning Probabilities to Events</a>
 <ul>
+<li class="chapter" data-level="" data-path="probability.html"><a href="probability.html#try-it-coin-flips-and-long-run-probability"><i class="fa fa-check"></i>Try It: Coin Flips and Long-run Probability</a></li>
 <li class="chapter" data-level="5.3.1" data-path="probability.html"><a href="probability.html#example-1-venture-capital-funding"><i class="fa fa-check"></i><b>5.3.1</b> Example 1: Venture Capital Funding</a></li>
 <li class="chapter" data-level="5.3.2" data-path="probability.html"><a href="probability.html#example-2-powerball"><i class="fa fa-check"></i><b>5.3.2</b> Example 2: Powerball</a></li>
 <li class="chapter" data-level="5.3.3" data-path="probability.html"><a href="probability.html#example-3-rolling-two-dice"><i class="fa fa-check"></i><b>5.3.3</b> Example 3: Rolling Two Dice</a></li>
@@ -1134,7 +1138,16 @@ Expected Value (x * fx())
 </tbody>
 </table>
 <p>Makes sense, doesn’t it? On average you would expect to see 5 heads in 10 flips of an unbiased coin. However, as the table makes quite clear, there is a small but non-zero probability of ending up with fewer or more heads as well.</p>
+<div id="try-it-binomial-probabilities" class="section level5 unnumbered hasAnchor">
+<h5>Try It: Binomial Probabilities<a href="distributions.html#try-it-binomial-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Change the number of trials, probability of success, and event of interest. The highlighted bars are the outcomes included in the reported probability.</p>
+<div class="stats-lab" data-stats-lab="binomial">
+<p class="stats-lab__fallback">
+The interactive binomial calculator requires JavaScript.
+</p>
+</div>
 <p>How does any of this apply to the real world? In more ways than one can imagine. For example, based on more than a century of birth statistics we know that the next birth will be a boy is 0.512 and hence that it will be a girl is 0.488. So if you wanted to predict the sex of the child born next the better bet would be that it is a boy. Let us put the binomial distribution into action with a few examples.</p>
+</div>
 <div id="example-1" class="section level5 unnumbered hasAnchor">
 <h5>Example 1<a href="distributions.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>Your city council has been charged with sex discrimination in hiring. In the last fiscal year your city council hired only 3 women out of a candidate pool numbering 12 qualified applicants. On average, some 40% of women tend to make up the qualified applicant pool for these positions. If the city council was not discriminating based on the applicant’s sex, what is the probability of the city hiring three or fewer women?</p>
@@ -1175,6 +1188,14 @@ FIGURE 6.5: Shark Incidents in the USA and Australia (1900-2017)
 <p>As it turns out, the variable of interest – number of shark incidents per country per year – is a discrete variable that can never drop below 0 but can assume any value <span class="math inline">\(x = 0, 1, 2, 3, 4, 5, \ldots, n\)</span>. Variables such as these are called count variables and belong to a specific distribution: The <code>Poisson distribution</code>. Mathematically, the Poisson probability distribution is expressed as:</p>
 <p><span class="math display">\[f(x) = \dfrac{e^{-\lambda}\lambda^{x}}{x!}\]</span></p>
 <p>where <span class="math inline">\(x = 0, 1, 2, 3, \ldots\)</span>, <span class="math inline">\(\lambda &gt; 0\)</span> is the mean and variance of the distribution, and <span class="math inline">\(e=2.71828\)</span>.</p>
+<div id="try-it-poisson-probabilities" class="section level5 unnumbered hasAnchor">
+<h5>Try It: Poisson Probabilities<a href="distributions.html#try-it-poisson-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Choose a rate and an event. The calculator reports the probability and shades the counts included in that event. Remember that the Poisson rate <span class="math inline">\(\lambda\)</span> is both the distribution’s mean and its variance.</p>
+<div class="stats-lab" data-stats-lab="poisson">
+<p class="stats-lab__fallback">
+The interactive Poisson calculator requires JavaScript.
+</p>
+</div>
 <p>Several discrete random variables are assumed to be Poisson distributed – number of highway fatalities, number of persons in a household, number of patient visits to the Emergency Room, number of traffic stops, number of terrorist attacks, number of hurricanes rated Category 5 on the <a href="http://www.nhc.noaa.gov/aboutsshws.php">Saffir-Simpson Hurricane Wind Scale</a>, the number of citizen complaints filed with the City Clerk, the number of hazardous waste sites per county, the number of parolees violating the conditions of their parole per month, and so on. Say, for example, that on average 5 complaints are filed per month with the City Clerk. If you pick a month at random, what would be the probability of seeing no complaints, 1 complaint, 2 complaints, <span class="math inline">\(\ldots\)</span>, 15 complaints? These turn out to be:</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
@@ -1326,6 +1347,7 @@ Probability
 <p class="caption">
 FIGURE 6.6: Probability Distribution of Complaints
 </p>
+</div>
 </div>
 <div id="dispersion-versus-clumping" class="section level5 unnumbered hasAnchor">
 <h5>Dispersion versus Clumping<a href="distributions.html#dispersion-versus-clumping" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -1494,6 +1516,14 @@ FIGURE 6.15: Area of the Standard Normal Distribution within 3 Standard Deviatio
 </p>
 </div>
 <p>Given the symmetry of the distribution, if 68% of the data fall within <span class="math inline">\(\pm 1\)</span> standard deviation units of the mean, then it must be that 34% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(-1\)</span> and 34% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(+1\)</span>. Likewise, 47.5% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(-2\)</span> and <span class="math inline">\(+2\)</span> standard deviation units, respectively, and 49.5% of the data fall between the mean <span class="math inline">\((0)\)</span> and <span class="math inline">\(-3\)</span> and <span class="math inline">\(+3\)</span> standard deviation units, respectively. Indeed, given any interval of z-scores we can easily find the area between these two z-scores via the <code>Standard Normal Distribution table</code>.</p>
+<div id="try-it-areas-under-the-standard-normal-curve" class="section level4 unnumbered hasAnchor">
+<h4>Try It: Areas Under the Standard Normal Curve<a href="distributions.html#try-it-areas-under-the-standard-normal-curve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Select a one-tailed, two-tailed, between, or outside probability and enter the relevant z-score or scores. The shaded region and probability update together. The two-tailed option uses equal tails beyond <span class="math inline">\(-|z|\)</span> and <span class="math inline">\(+|z|\)</span>.</p>
+<div class="stats-lab" data-stats-lab="normal">
+<p class="stats-lab__fallback">
+The interactive standard-normal calculator requires JavaScript.
+</p>
+</div>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:ztables">TABLE 6.9: </span>The Standard Normal Table
@@ -2346,6 +2376,7 @@ FIGURE 6.17: Areas Under the Standard Normal Curve
 </p>
 </div>
 <p>Online tables are available as well; see one excellent applet by <a href="http://davidmlane.com/hyperstat/z_table.html">David M. Lane</a> here as well as the popular one at <a href="https://sites.csn.edu/mgreenwich/stat/normal.htm">surfstat</a>. If using the David M. Lane calculator, be sure to enter values of the desired area Above/Below/Between/Outside. The same table will also allow you to enter an area and find the z-score(s) associated with that area if you select <code>Value from an area</code>. If using surfstat, select the appropriate graph of the distribution (the area in red shows you what area will be calculated), and then either enter the <span class="math inline">\(z-score\)</span> to find the area/probability or the area/probability (as a proportion) to get the <span class="math inline">\(z-score\)</span>.</p>
+</div>
 <div id="working-with-the-standard-normal-distribution" class="section level4 unnumbered hasAnchor">
 <h4>Working with the Standard Normal Distribution<a href="distributions.html#working-with-the-standard-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Assume that for all traditional public schools in your state, the mean dropout rate in 2017 was <span class="math inline">\(\mu = 5\)</span>, and the standard deviation was <span class="math inline">\(\sigma = 1.25\)</span>. Given these parameters, if a school had a dropout rate of 7%, what percent of schools in the state did as badly or worse? The answer could be obtained as follows:</p>
