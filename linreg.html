@@ -58,15 +58,73 @@
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
-<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -320,17 +378,43 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#why-not-run-many-unadjusted-t-tests"><i class="fa fa-check"></i><b>9.1</b> Why Not Run Many Unadjusted <span class="math inline">\(t\)</span>-tests?</a></li>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#the-logic-of-one-way-anova"><i class="fa fa-check"></i><b>9.2</b> The Logic of One-way ANOVA</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
-<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
+<li class="chapter" data-level="9.2.1" data-path="anova.html"><a href="anova.html#manual-decomposition-for-the-call-center-data"><i class="fa fa-check"></i><b>9.2.1</b> Manual decomposition for the call-center data</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
-<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#estimation-and-effect-size"><i class="fa fa-check"></i><b>9.3</b> Estimation and Effect Size</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
-<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#mean-differences-and-confidence-intervals"><i class="fa fa-check"></i><b>9.3.1</b> Mean differences and confidence intervals</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#eta2-and-omega2"><i class="fa fa-check"></i><b>9.3.2</b> <span class="math inline">\(\eta^2\)</span> and <span class="math inline">\(\omega^2\)</span></a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="anova.html"><a href="anova.html#planned-contrasts-and-post-hoc-comparisons"><i class="fa fa-check"></i><b>9.4</b> Planned Contrasts and Post-hoc Comparisons</a></li>
+<li class="chapter" data-level="9.5" data-path="anova.html"><a href="anova.html#assumptions-and-diagnostics"><i class="fa fa-check"></i><b>9.5</b> Assumptions and Diagnostics</a></li>
+<li class="chapter" data-level="9.6" data-path="anova.html"><a href="anova.html#alternatives-to-classical-one-way-anova"><i class="fa fa-check"></i><b>9.6</b> Alternatives to Classical One-way ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="anova.html"><a href="anova.html#welchs-anova"><i class="fa fa-check"></i><b>9.6.1</b> Welch’s ANOVA</a></li>
+<li class="chapter" data-level="9.6.2" data-path="anova.html"><a href="anova.html#kruskalwallis-and-robust-methods"><i class="fa fa-check"></i><b>9.6.2</b> Kruskal–Wallis and robust methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="anova.html"><a href="anova.html#one-way-examples"><i class="fa fa-check"></i><b>9.7</b> One-way Examples</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="anova.html"><a href="anova.html#corrected-example-systolic-blood-pressure-and-treatment"><i class="fa fa-check"></i><b>9.7.1</b> Corrected example: systolic blood pressure and treatment</a></li>
+<li class="chapter" data-level="9.7.2" data-path="anova.html"><a href="anova.html#presurgical-fitness-and-recovery-time"><i class="fa fa-check"></i><b>9.7.2</b> Presurgical fitness and recovery time</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="anova.html"><a href="anova.html#factorial-anova"><i class="fa fa-check"></i><b>9.8</b> Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="anova.html"><a href="anova.html#additive-effects-and-interaction-effects"><i class="fa fa-check"></i><b>9.8.1</b> Additive effects and interaction effects</a></li>
+<li class="chapter" data-level="9.8.2" data-path="anova.html"><a href="anova.html#drug-and-diet-factorial-example"><i class="fa fa-check"></i><b>9.8.2</b> Drug and diet factorial example</a></li>
+<li class="chapter" data-level="9.8.3" data-path="anova.html"><a href="anova.html#pedagogy-and-subject-follow-the-interaction"><i class="fa fa-check"></i><b>9.8.3</b> Pedagogy and subject: follow the interaction</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="anova.html"><a href="anova.html#balanced-and-unbalanced-designs"><i class="fa fa-check"></i><b>9.9</b> Balanced and Unbalanced Designs</a></li>
+<li class="chapter" data-level="9.10" data-path="anova.html"><a href="anova.html#related-designs-that-require-different-models"><i class="fa fa-check"></i><b>9.10</b> Related Designs That Require Different Models</a>
+<ul>
+<li class="chapter" data-level="9.10.1" data-path="anova.html"><a href="anova.html#repeated-measures-and-clustered-observations"><i class="fa fa-check"></i><b>9.10.1</b> Repeated measures and clustered observations</a></li>
+<li class="chapter" data-level="9.10.2" data-path="anova.html"><a href="anova.html#ancova"><i class="fa fa-check"></i><b>9.10.2</b> ANCOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="9.11" data-path="anova.html"><a href="anova.html#power-and-sample-size-planning"><i class="fa fa-check"></i><b>9.11</b> Power and Sample-size Planning</a></li>
+<li class="chapter" data-level="9.12" data-path="anova.html"><a href="anova.html#a-practical-anova-workflow"><i class="fa fa-check"></i><b>9.12</b> A Practical ANOVA Workflow</a></li>
+<li class="chapter" data-level="9.13" data-path="anova.html"><a href="anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.13</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
 <ul>
@@ -341,33 +425,43 @@ div.csl-indent {
 <li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
 <li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
 <li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
-<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-7"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-8"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#binary-outcomes-and-the-sampling-distribution-of-hat-p"><i class="fa fa-check"></i><b>11.1</b> Binary Outcomes and the Sampling Distribution of <span class="math inline">\(\hat p\)</span></a></li>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#one-population-proportion"><i class="fa fa-check"></i><b>11.2</b> One Population Proportion</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
-<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#confidence-intervals"><i class="fa fa-check"></i><b>11.2.1</b> Confidence intervals</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#one-proportion-hypothesis-tests"><i class="fa fa-check"></i><b>11.2.2</b> One-proportion hypothesis tests</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#two-independent-proportions"><i class="fa fa-check"></i><b>11.3</b> Two Independent Proportions</a>
 <ul>
-<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-11"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
-<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
-<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#the-two-proportion-z-test"><i class="fa fa-check"></i><b>11.3.1</b> The two-proportion z-test</a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#titanic-example"><i class="fa fa-check"></i><b>11.3.2</b> Titanic example</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#effect-sizes-for-a-2times2-table"><i class="fa fa-check"></i><b>11.3.3</b> Effect sizes for a <span class="math inline">\(2\times2\)</span> table</a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#a-more-informative-plot"><i class="fa fa-check"></i><b>11.3.4</b> A more informative plot</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#paired-proportions-mcnemars-test"><i class="fa fa-check"></i><b>11.4</b> Paired Proportions: McNemar’s Test</a></li>
+<li class="chapter" data-level="11.5" data-path="props.html"><a href="props.html#three-or-more-groups-pearsons-chi-square-test"><i class="fa fa-check"></i><b>11.5</b> Three or More Groups: Pearson’s Chi-square Test</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
-<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
-<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
-<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
-<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
-<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
-<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+<li class="chapter" data-level="11.5.1" data-path="props.html"><a href="props.html#follow-up-comparisons-and-residuals"><i class="fa fa-check"></i><b>11.5.1</b> Follow-up comparisons and residuals</a></li>
+<li class="chapter" data-level="11.5.2" data-path="props.html"><a href="props.html#effect-size-for-larger-tables"><i class="fa fa-check"></i><b>11.5.2</b> Effect size for larger tables</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#practice-problems-8"><i class="fa fa-check"></i><b>11.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.6" data-path="props.html"><a href="props.html#sparse-tables-and-fishers-exact-test"><i class="fa fa-check"></i><b>11.6</b> Sparse Tables and Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.7" data-path="props.html"><a href="props.html#ordered-groups-a-test-for-trend"><i class="fa fa-check"></i><b>11.7</b> Ordered Groups: A Test for Trend</a></li>
+<li class="chapter" data-level="11.8" data-path="props.html"><a href="props.html#stratified-comparisons-and-confounding"><i class="fa fa-check"></i><b>11.8</b> Stratified Comparisons and Confounding</a></li>
+<li class="chapter" data-level="11.9" data-path="props.html"><a href="props.html#complex-survey-data"><i class="fa fa-check"></i><b>11.9</b> Complex Survey Data</a></li>
+<li class="chapter" data-level="11.10" data-path="props.html"><a href="props.html#practical-significance-power-and-study-planning"><i class="fa fa-check"></i><b>11.10</b> Practical Significance, Power, and Study Planning</a>
+<ul>
+<li class="chapter" data-level="11.10.1" data-path="props.html"><a href="props.html#statistical-versus-practical-significance"><i class="fa fa-check"></i><b>11.10.1</b> Statistical versus practical significance</a></li>
+<li class="chapter" data-level="11.10.2" data-path="props.html"><a href="props.html#power-and-sample-size"><i class="fa fa-check"></i><b>11.10.2</b> Power and sample size</a></li>
+<li class="chapter" data-level="11.10.3" data-path="props.html"><a href="props.html#equivalence-and-noninferiority"><i class="fa fa-check"></i><b>11.10.3</b> Equivalence and noninferiority</a></li>
+</ul></li>
+<li class="chapter" data-level="11.11" data-path="props.html"><a href="props.html#choosing-the-appropriate-procedure"><i class="fa fa-check"></i><b>11.11</b> Choosing the Appropriate Procedure</a></li>
+<li class="chapter" data-level="11.12" data-path="props.html"><a href="props.html#reporting-and-interpretation"><i class="fa fa-check"></i><b>11.12</b> Reporting and Interpretation</a></li>
+<li class="chapter" data-level="11.13" data-path="props.html"><a href="props.html#optional-other-measures-of-categorical-association"><i class="fa fa-check"></i><b>11.13</b> Optional: Other Measures of Categorical Association</a></li>
+<li class="chapter" data-level="11.14" data-path="props.html"><a href="props.html#practice-problems-9"><i class="fa fa-check"></i><b>11.14</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
 <ul>
@@ -389,7 +483,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
 <li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
-<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
 <ul>
@@ -401,7 +495,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
 <li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-9"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-10"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
 <ul>
@@ -462,11 +556,11 @@ H_0: \rho=0 \\
 H_A: \rho \neq 0
 \end{array}\]</span></p>
 <p>The test statistic is <span class="math inline">\(t = \dfrac{r}{SE_r}\)</span>; where <span class="math inline">\(SE_r = \sqrt{\dfrac{1-r^2}{n-2}}\)</span> and as usual we reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(p-value \leq \alpha\)</span>. We can also calculate asymptotic approximate confidence intervals for <span class="math inline">\(\rho\)</span> as</p>
-<p><span class="math display">\[z - 1.96\sigma_z &lt; \zeta &lt; z + 1.96\sigma_z \text{ where } z=0.5ln\left( \dfrac{1+r}{1-r} \right)\]</span></p>
-<p>where <span class="math inline">\(\sigma_z = \sqrt{\dfrac{1}{n-3}}\)</span> and <span class="math inline">\(\zeta\)</span> is the population analogue of the <span class="math inline">\(z\)</span> used to calculate confidence intervals. Because the <span class="math inline">\(z\)</span> involves the natural logarithm we back-transform via taking the antilog of the lower and upper bounds of the confidence interval.</p>
+<p><span class="math display">\[z - 1.96\sigma_z &lt; \zeta &lt; z + 1.96\sigma_z \text{ where } z=0.5\ln\left( \dfrac{1+r}{1-r} \right)\]</span></p>
+<p>where <span class="math inline">\(\sigma_z=1/\sqrt{n-3}\)</span>. Each Fisher-<span class="math inline">\(z\)</span> bound is transformed back to the correlation scale with <span class="math inline">\(r=(e^{2z}-1)/(e^{2z}+1)\)</span>.</p>
 <p>Let us see scatter-plots and correlations in action with some real-world data to get a feel for patterns we might encounter.</p>
-<div id="example-1-12" class="section level4 unnumbered hasAnchor">
-<h4>Example 1<a href="linreg.html#example-1-12" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1-10" class="section level4 unnumbered hasAnchor">
+<h4>Example 1<a href="linreg.html#example-1-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><a href="http://www.countyhealthrankings.org/our-approach">The Robert Wood Johnson Foundation’s County Health Rankings</a> measure the health of nearly all counties in the nation and rank them within states. The Rankings are compiled using county-level measures from a variety of national and state data sources. The rankings employ a number of measures but those of interest and in use below are: (a) Adult Obesity (Percentage of adults that report a BMI of 30 or more), (b) Physical Inactivity (Percentage of adults aged 20 and over reporting no leisure-time physical activity), (c) Uninsured (Percentage of population under age 65 without health insurance), (d) High School Graduation (Percentage of ninth-grade cohort that graduates in four years), and (e) Unemployment (Percentage of population ages 16 and older unemployed but seeking work).</p>
 <p>If we look at some of these measures, what do we see?</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chr2"></span>
@@ -477,19 +571,19 @@ FIGURE 12.2: Select Correlations in the 2017 County Health Rankings Data
 </div>
 <p>I’ll setup a single pair of hypotheses so that you get the basic idea.</p>
 <p><span class="math display">\[\begin{array}{l}
-H_0: \text{ Percent of Adults Uninsured and Percent Reporting Poor/Fair Health are not correlated } (\rho = 0) \\
-H_1: \text{ Percent of Adults Uninsured and Percent Reporting Poor/Fair Health are correlated } (\rho \neq 0)
+H_0: \text{ Adult Smoking and Poor/Fair Health are not linearly correlated } (\rho = 0) \\
+H_1: \text{ Adult Smoking and Poor/Fair Health are linearly correlated } (\rho \neq 0)
 \end{array}\]</span></p>
 <p>As usual, we reject the null hypothesis if <span class="math inline">\(p-value \leq \alpha\)</span></p>
 <blockquote>
-<p>Adult Obesity and the Percent Uninsured is correlated at 0.049, p-value = 0.0056, and 95% CI is 0.014-0.084.</p>
+<p>The sample correlation between Adult Obesity and Percent Uninsured is 0.049, with p-value = 0.0056 and a 95% CI of 0.014-0.084.</p>
 </blockquote>
 <blockquote>
-<p>Adult Smoking and Poor/Fair Health is correlated at 0.711, with a p-value of &lt; 0.001, and 95% CI is 0.694-0.728</p>
+<p>The sample correlation between Adult Smoking and Poor/Fair Health is 0.711, with p-value &lt; 0.001 and a 95% CI of 0.694-0.728.</p>
 </blockquote>
 </div>
-<div id="example-2-13" class="section level4 unnumbered hasAnchor">
-<h4>Example 2<a href="linreg.html#example-2-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-2-11" class="section level4 unnumbered hasAnchor">
+<h4>Example 2<a href="linreg.html#example-2-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Are care insurance premiums correlated with the percentage of drivers who were involved in fatal collisions and were speeding?</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{ Insurance premiums are not correlated with the percentage of drivers who were involved in fatal collisions and were speeding } (\rho = 0) \\
@@ -520,14 +614,14 @@ FIGURE 12.3: Correlation between fatal collisions involving speeding and insuran
 <ol style="list-style-type: decimal">
 <li>Rank the scores of each variable separately, from low to high</li>
 <li>Average the ranks in the presence of ties</li>
-<li>Calculate <span class="math inline">\(r_s=\dfrac{\sum \left(R - \bar{R} \right)\left( S - \bar{S}\right) }{\sum \left(R - \bar{R} \right)^2 \sum \left(S - \bar{S} \right)^2}\)</span></li>
+<li>Calculate <span class="math inline">\(r_s=\dfrac{\sum \left(R - \bar{R} \right)\left( S - \bar{S}\right) }{\sqrt{\sum \left(R - \bar{R} \right)^2\sum \left(S - \bar{S} \right)^2}}\)</span></li>
 <li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\rho_s = 0\)</span>; <span class="math inline">\(H_1\)</span>: <span class="math inline">\(\rho_s \neq 0\)</span></li>
 <li>Set <span class="math inline">\(\alpha\)</span></li>
 <li>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(P-value \leq \alpha\)</span>; Do not reject <span class="math inline">\(H_0\)</span> otherwise</li>
 </ol>
 <p>Let us see a particularly interesting example.</p>
-<div id="example-1-13" class="section level4 hasAnchor" number="12.1.2.1">
-<h4><span class="header-section-number">12.1.2.1</span> Example 1<a href="linreg.html#example-1-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1-11" class="section level4 hasAnchor" number="12.1.2.1">
+<h4><span class="header-section-number">12.1.2.1</span> Example 1<a href="linreg.html#example-1-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>How reliable are witness accounts of “miracles”? One means of testing this is by comparing different accounts of extraordinary magic tricks. Of the many illusions performed by magicians, none is more renowned than the Indian rope trick. In brief, a magician tosses the end of a rope into the air and the rope forms a rigid pole. A boy climbs up the rope and disappears at the top. The magicians scolds the boy and asks him to return but with no response, and so climbs the rope himself, with a knife in hand, and does not return. The boy’s body falls in pieces from the sky into a basket on the ground. The magician then drops back to the ground and retrieves the boy from the basket, revealing him to be unharmed and in one piece.</p>
 <p>Researchers tracked down 21 first-hand accounts and scored each narrative according to how impressive it was, on a scale of 1 to 5. The researchers also recorded the number of years that had lapsed between the date that the trick was witnessed and the date when the memory of the trick being performed was written down. Is there any association between the impressiveness of eyewitness accounts and the time lapsed since the account was penned?</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:spearman1"></span>
@@ -538,8 +632,8 @@ FIGURE 12.4: The Indian rope trick
 </div>
 <p>The figure is hard to read but it looks as if the more the years that have lapsed the higher the impressiveness score. The estimated correlation is <span class="math inline">\(0.7843\)</span> and has a <span class="math inline">\(p-value = 2.571e-05\)</span>. The null hypothesis, of no correlation, is soundly rejected.</p>
 </div>
-<div id="example-2-14" class="section level4 hasAnchor" number="12.1.2.2">
-<h4><span class="header-section-number">12.1.2.2</span> Example 2<a href="linreg.html#example-2-14" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-2-12" class="section level4 hasAnchor" number="12.1.2.2">
+<h4><span class="header-section-number">12.1.2.2</span> Example 2<a href="linreg.html#example-2-12" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>You may have heard about the <a href="http://www.oecd.org/pisa/">PISA Report</a> every now and then when there are moans and groans about how the United States is performing academically compared to other Organization for Economic Cooperation and Development (OECD) nations. The report ranks countries in terms of students’ academic achievements and while it has its detractors (largely because of how the data are generated), PISA remains one of those obelisks policymakers and politicians can’t help but stare at even if they wished it would crumble into a mound of stand before next Monday. Well, if we look at how countries rank in terms of reading scores versus mathematics scores, what do we see? Are country ranks on these subjects correlated? Here is the scatter-plot:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:spearman2"></span>
 <img src="_stats_files/figure-html/spearman2-1.png" alt="PISA ranks on Reading and Mathematics" width="70%" />
@@ -787,7 +881,7 @@ FIGURE 12.8: The regression line and cloud of points
 FIGURE 12.9: Sir Francis Galton’s data: Heights of parents and children
 </p>
 </div>
-<p>Given the multiple <span class="math inline">\(y\)</span> values for each <span class="math inline">\(x\)</span> value we knew the straight line could not touch every point. Instead, it runs through the middle of the range of <span class="math inline">\(x\)</span> values for each <span class="math inline">\(y\)</span>, except for the maximum value of <span class="math inline">\(x\)</span> where both points are well above the line. How close does this line come to the average of children’s heights calculated for each parent mid-height? Quite well, it turns out, except for the two highest values of parents’ mid-heights.</p>
+<p>Given multiple <span class="math inline">\(y\)</span> values for each <span class="math inline">\(x\)</span>, the fitted line cannot pass through every point. It estimates the conditional mean of <span class="math inline">\(y\)</span> at each value of <span class="math inline">\(x\)</span> and minimizes the sum of squared vertical residuals. It comes reasonably close to the observed mean child height at most parent mid-heights, with larger discrepancies at the sparsely represented extremes.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:galton5"></span>
 <img src="_stats_files/figure-html/galton5-1.png" alt="Sir Francis Galton's data: Heights of parents and children" width="70%" />
 <p class="caption">
@@ -1260,7 +1354,7 @@ var(e_i) = \dfrac{\sum\left(e_i - \bar{e}\right)^2}{n-2} \\
 = \dfrac{\sum\left(e_i\right)^2}{n-2} \\
 = \dfrac{\sum\left(y_i - \hat{y}_i\right)^2}{n-2}
 \end{array}\]</span></p>
-<p>This is the <span class="math inline">\(\dfrac{\text{ Sum of Squares of the Residuals}}{n-2} = \text{Mean of the Sum of Squares of the Residuals} = MS_{residual}\)</span>. This is the average prediction error in squared units so if we take the square-root, we get the <code>average prediction error</code> <span class="math inline">\(RMSE = \sqrt{\text{Mean of the Sum of Squares of the Residuals}}\)</span>. The smaller is this value, the better is the regression line fitting the data.</p>
+<p>The residual mean square is <span class="math inline">\(MSE=SSE/(n-2)\)</span> in simple linear regression, and <span class="math inline">\(RMSE=\sqrt{MSE}\)</span>. RMSE is the typical size of an in-sample residual in the outcome’s units; it is not a guaranteed plus-or-minus bound for a new prediction.</p>
 <div id="the-method-of-ordinary-least-squares" class="section level3 hasAnchor" number="12.2.1">
 <h3><span class="header-section-number">12.2.1</span> The Method of Ordinary Least Squares<a href="linreg.html#the-method-of-ordinary-least-squares" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The method of ordinary least squares estimates the slope and the intercept by looking to minimize the <code>sum of squared errors (SSE)</code>, i.e., <span class="math inline">\(\sum(e_i)^2 = \sum\left(y_i - \hat{y}_i\right)^2\)</span> with the slope estimated as <span class="math inline">\(\hat{\beta} = \dfrac{\sum\left(x_i - \bar{x}\right)\left(y_i - \bar{y}\right)}{\sum\left(x_i - \bar{x}\right)^2}\)</span>. Once <span class="math inline">\(\hat{\beta}\)</span> is estimated, the intercept can be calculated via <span class="math inline">\(\hat{\alpha} = \bar{y} - \hat{\beta}\left(\bar{x}\right)\)</span>. The standard error of the slope is <span class="math inline">\(s.e._{\hat{\beta}} = \sqrt{ \dfrac{\text{Mean of the Sum of Squares of the Residuals}}{\sum\left(x_i - \bar{x}\right)^2} }\)</span>.</p>
@@ -1292,7 +1386,7 @@ H_1: \beta \neq 0
 </div>
 <div id="the-r2" class="section level3 hasAnchor" number="12.2.4">
 <h3><span class="header-section-number">12.2.4</span> The <span class="math inline">\(R^2\)</span><a href="linreg.html#the-r2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In addition to the RMSE, the average prediction error, we also rely on the <span class="math inline">\(R^2\)</span>, which tells us what percent of the variation in <span class="math inline">\(y\)</span> can be explained by the regression model. How is this calculated? Well, we already calculated the sum of squares for the residuals (SSE), which was <span class="math inline">\(\sum \left(y_i - \bar{y}\right)^2\)</span>. Now, we do know that the total variation in <span class="math inline">\(y\)</span> can be calculated as <span class="math inline">\(\sum\left(y_i - \bar{y}\right)^2\)</span>, so let us label this SST. The total variation in <span class="math inline">\(y\)</span> has to be made up of the SSE and the amount of variation being captured by the regression. Let us label this latter quantity SSR, and note that it can be calculated as <span class="math inline">\(SSR = \sum\left(\hat{y}_i - \bar{y}\right)^2\)</span>. Since <span class="math inline">\(SST = SSR + SSE\)</span>, we can assess what proportion of variance in <span class="math inline">\(y\)</span> is explained by the regression by calculating <span class="math inline">\(\dfrac{SSR}{SST} \ldots\)</span> which is the <span class="math inline">\(R^2\)</span>.</p>
+<p>In addition to RMSE, we use <span class="math inline">\(R^2\)</span> to summarize the proportion of sample variation in <span class="math inline">\(y\)</span> accounted for by the fitted model. The residual sum of squares is <span class="math inline">\(SSE=\sum(y_i-\hat y_i)^2\)</span>, total variation is <span class="math inline">\(SST=\sum(y_i-\bar y)^2\)</span>, and explained variation is <span class="math inline">\(SSR=\sum(\hat y_i-\bar y)^2\)</span>. With an intercept, <span class="math inline">\(SST=SSR+SSE\)</span> and <span class="math inline">\(R^2=SSR/SST=1-SSE/SST\)</span>.</p>
 <p>If the regression model is terrible, <span class="math inline">\(R^2 \to 0\)</span> and if the regression model is excellent, <span class="math inline">\(R^2 \to 1\)</span>. That is, <span class="math inline">\(0 \leq R^2 \leq 1\)</span> … the <span class="math inline">\(R^2\)</span> will lie in the <span class="math inline">\(\left[0, 1\right]\)</span> interval. In practice, we adjust the <span class="math inline">\(R^2\)</span> for the number of independent variables used and rely on this adjusted <span class="math inline">\(R^2\)</span>, denoted as <span class="math inline">\(\bar{R}^2\)</span>, and calculated as <span class="math inline">\(\bar{R}^2 = 1 - \left(1 - R^2\right)\left(\dfrac{n-1}{n-k-1}\right)\)</span> where <span class="math inline">\(k =\)</span> the number of independent variables being used.</p>
 </div>
 <div id="confidence-intervals-vs.-prediction-intervals" class="section level3 hasAnchor" number="12.2.5">
@@ -1308,10 +1402,10 @@ H_1: \beta \neq 0
 FIGURE 12.12: Confidence vs. Prediction Intervals
 </p>
 </div>
-<p>Notice how much wider the prediction intervals are (the red dashed lines); this is because we have made an adjustment for the additional uncertainty surrounding an <code>individual prediction</code>. Notice also that the confidence intervals flex inward, toward the regression line, in the center of the distribution but then flew outward at either extreme of the regression line. This is a result of the fact that the regression estimates are built around <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\bar{y}\)</span> and hence the greatest precision we have is when we are predicting <span class="math inline">\(y\)</span> for <span class="math inline">\(\bar{x}\)</span>, i.e., when predicting <span class="math inline">\(\hat{y}_{\bar{x}} = \hat{a} + \hat{b}\left(\bar{x}\right)\)</span>.</p>
+<p>Notice how much wider the prediction intervals are (the red dashed lines); this is because we have made an adjustment for the additional uncertainty surrounding an <code>individual prediction</code>. Notice also that the confidence intervals flex inward, toward the regression line, in the center of the distribution but then flared outward at either extreme of the regression line. This is a result of the fact that the regression estimates are built around <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\bar{y}\)</span> and hence the greatest precision we have is when we are predicting <span class="math inline">\(y\)</span> for <span class="math inline">\(\bar{x}\)</span>, i.e., when predicting <span class="math inline">\(\hat{y}_{\bar{x}} = \hat{a} + \hat{b}\left(\bar{x}\right)\)</span>.</p>
 <p>To sum up our discussion of interval estimates, remember that the confidence interval is in use when predicting the average value of <span class="math inline">\(y\)</span> for a specific value of <span class="math inline">\(x\)</span>. However, when we are predicting a specific value of <span class="math inline">\(y\)</span> for a given <span class="math inline">\(x\)</span>, then the prediction interval comes into use. Further, confidence intervals will hug the regression line most closely around <span class="math inline">\(\bar{x}\)</span>, and widen as you progressively move towards <span class="math inline">\(x_{min}\)</span> and <span class="math inline">\(x_{max}\)</span>.</p>
-<div id="example-1-14" class="section level4 hasAnchor" number="12.2.5.1">
-<h4><span class="header-section-number">12.2.5.1</span> Example 1<a href="linreg.html#example-1-14" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-1-12" class="section level4 hasAnchor" number="12.2.5.1">
+<h4><span class="header-section-number">12.2.5.1</span> Example 1<a href="linreg.html#example-1-12" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table style="border-collapse:collapse; border:none;">
 <tr>
 <th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">
@@ -1391,8 +1485,8 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 </ul>
 <p>Note that the intercept will not always make sense from a real-world perspective, i.e., you can’t have parents’ mid-height be <span class="math inline">\(0\)</span> since that would mean there are no parents! However, we retain the intercept for mathematical necessity but accommodate for the often nonsensical meaning of the intercept by not interpreting it all. It is needed for the mathematics to work out but need not be interpreted. Note also that since we are only explaining about <span class="math inline">\(25.68\%\)</span> of the variation in children’s heights, there is <span class="math inline">\(100 - 25.68 = 74.32\%\)</span> of the variation left to be explained. Maybe there are other independent variables we could have used that would do a better job of predicting the child’s height as in, for example, nutrition, physical activity, good health care during the child’s early years, and so on.</p>
 </div>
-<div id="example-2-15" class="section level4 hasAnchor" number="12.2.5.2">
-<h4><span class="header-section-number">12.2.5.2</span> Example 2<a href="linreg.html#example-2-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-2-13" class="section level4 hasAnchor" number="12.2.5.2">
+<h4><span class="header-section-number">12.2.5.2</span> Example 2<a href="linreg.html#example-2-13" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Let us visit the question of premature death and adult obesity. How well can we predict premature death from adult obesity? Since the original data we looked at included all counties in the U.S., I will draw a random sample of 100 counties to fit the regression model.</p>
 <table style="border-collapse:collapse; border:none;">
 <tr>
@@ -1422,10 +1516,10 @@ p
 (Intercept)
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-72044.41
+720.44
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
--315184.26 – 459273.07
+-3151.84 – 4592.73
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 0.713
@@ -1436,10 +1530,10 @@ p
 Adult Obesity
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-24445.46
+244.45
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-11804.17 – 37086.74
+118.04 – 370.87
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 <strong>&lt;0.001</strong>
@@ -1462,12 +1556,7 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 </td>
 </tr>
 </table>
-<ul>
-<li>The intercept is <span class="math inline">\(72044.41\)</span> but is not statistically significant since the <span class="math inline">\(p-value = 0.713\)</span></li>
-<li>The slope is <span class="math inline">\(24445.46\)</span> and is statistically significant given the <span class="math inline">\(p-value &lt; 0.001\)</span>, indicating that as the percent of adults obese in the county increases by <span class="math inline">\(1\)</span>, the years of life lost increases by about <span class="math inline">\(24445\)</span>.</li>
-<li>The <span class="math inline">\(\bar{R}^2 = 0.123\)</span>, indicating that we can explain about <span class="math inline">\(12.3\%\)</span> of the variation in premature deaths with this regression model.</li>
-<li>The <span class="math inline">\(RMSE = 1774\)</span>, indicating that average prediction error would be <span class="math inline">\(\pm 1774\)</span> if this model were used for prediction purposes.</li>
-</ul>
+<p>The earlier version of this example accidentally multiplied both Median Household Income and Premature Death by 100. Those measures are already recorded in dollars and years of potential life lost per 100,000, respectively, so multiplying them by 100 inflated the intercept and slope by a factor of 100. The model above now uses the original units. Interpret the fitted slope as the estimated difference in years of potential life lost per 100,000 associated with a one-percentage-point difference in adult obesity. The model summary supplies the current p-value, adjusted <span class="math inline">\(R^2\)</span>, and residual standard error; the latter is a typical residual magnitude, not a guaranteed <span class="math inline">\(\pm\)</span> prediction bound.</p>
 <p>Here are the data with the scatter-plot, regression line, and confidence intervals. Note that the regression equation superimposed on the plot has estimates rounded up; hence the marginal difference between these and the estimates interpreted above. Note also that the <span class="math inline">\(R^2\)</span> is being reported, not <span class="math inline">\(\bar{R}^2\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chrplots"></span>
 <img src="_stats_files/figure-html/chrplots-1.png" alt="Predicting Premature Death from Adult Obesity" width="70%" />
@@ -1627,8 +1716,8 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 </tr>
 </table>
 <p>The box-plots show an outlier for law = “no” and a higher median robbery rate for the “no” group versus the “yes” group; seemingly, states without concealed carry laws have on average higher robbery rates.</p>
-<p>The estimated regression line is <span class="math inline">\(\hat{y} = 155.09 -59.59\left(law\right)\)</span>. That is, states without a law are predicted to have about <span class="math inline">\(114\)</span> robberies per 100,000 persons. States with a law, on the other hand, are predicted to have almost 114 fewer robberies per 100,000 persons. Note that both the intercept and the slope are statistically significant, the <span class="math inline">\(RMSE = 95.36\)</span> and the <span class="math inline">\(\bar{R}^2 = 0.0720 = 7.20\%\)</span>.</p>
-<p>Wait a minute. What about that outlier we see in the box-plot? Couldn’t that be influencing our regression estimates? Let us check by dropping that data point and re-estimating the regression model.</p>
+<p>The estimated regression line is <span class="math inline">\(\hat{y}=155.09-59.59(law)\)</span>, where <code>law = 0</code> means no law and <code>law = 1</code> means a law is present. States without a law are therefore predicted to have 155.09 robberies per 100,000, while states with a law are predicted to have <span class="math inline">\(155.09-59.59=95.50\)</span>. The estimated difference is 59.59 robberies per 100,000. Because these are observational data, this is an association and should not be interpreted as a causal effect of the law. The <span class="math inline">\(RMSE=95.36\)</span> and <span class="math inline">\(\bar{R}^2=0.0720\)</span>.</p>
+<p>The visible point may be influential. The following deletion is a sensitivity analysis, not an automatic justification for excluding the observation. In practice, investigate data quality, leverage, and influence and report results with and without a defensible exclusion.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:guns2"></span>
 <img src="_stats_files/figure-html/guns2-1.png" alt="Box-plots of Robbery rates by Law (no outlier)" width="65%" />
 <p class="caption">
@@ -1771,7 +1860,7 @@ H_1: \text{ Wages do differ by Census regions }
 \text{South}: = 1 \text{ if in the South }; 0 \text{ otherwise (i.e., if in the Northeast, Midwest, West)} \\
 \text{West}: = 1 \text{ if in the West }; 0 \text{ otherwise (i.e., if in the Northeast, Midwest, South)}
 \end{array}\]</span></p>
-<p>This leads to the regression equation being <span class="math inline">\(\hat{y} = \hat{a} + \hat{b}_1\left(Northeast\right) + \hat{b}_2\left(Midwest\right) + \hat{b}_3\left(South\right) + \hat{b}_4\left(West\right)\)</span> but in estimating the regression model we only use three of the dummy variables. This is a general rule: With a categorical variable that results in <span class="math inline">\(k\)</span> dummy variables only <span class="math inline">\(k-1\)</span> dummy variables should be included in the model unless the intercept is excluded. How do we decide which region to leave out? The rule of thumb is to <code>leave out the modal category</code> (i.e., the category that has the highest frequency).</p>
+<p>This leads to the regression equation <span class="math inline">\(\hat{y}=\hat{a}+\hat{b}_1(Northeast)+\hat{b}_2(Midwest)+\hat{b}_3(South)+\hat{b}_4(West)\)</span>, but with an intercept we include only <span class="math inline">\(k-1\)</span> indicators to avoid perfect collinearity. Any category can serve as the reference. Choose one that makes comparisons substantively clear; using the modal category can be convenient but is not a statistical requirement.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:cps1">TABLE 12.4: </span>Frequency Table for Census Regions
@@ -2007,10 +2096,10 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 <ul>
 <li>Predicted average wage in the Northeast is <span class="math inline">\(558.308 + 95.731 = 654.039\)</span></li>
 <li>Predicted average wage in the Midwest is <span class="math inline">\(558.308 + 46.371 = 604.679\)</span></li>
-<li>Predicted average wage in the Northeast is <span class="math inline">\(558.308 + 56.463 =  614.771\)</span></li>
+<li>Predicted average wage in the West is <span class="math inline">\(558.308 + 56.463 = 614.771\)</span></li>
 <li>Predicted average wage in the South is <span class="math inline">\(558.308\)</span></li>
 </ul>
-<p>The <span class="math inline">\(p-values\)</span> are basically <span class="math inline">\(0\)</span> for the intercept and the the three dummy variables and hence these results suggest that region does matter; wages differ by Census region, with those in the Northeast having the highest average wage, followed by the Northeast, then the Midwest, and finally the West. In closing, the <span class="math inline">\(RMSE = 452.2\)</span> and the <span class="math inline">\(\bar{R}^2 = 0.005959 = 0.5959\%\)</span>. Clearly this is a terrible regression model because we are hardly explaining any of the variation in wages.</p>
+<p>The very small p-values for the three region contrasts provide evidence that average wages differ from the South reference category. Predicted wages rank Northeast highest, followed by West, Midwest, and South. The <span class="math inline">\(RMSE=452.2\)</span> and <span class="math inline">\(\bar{R}^2=0.005959\)</span>, so region alone explains very little of the variation in wages; a low <span class="math inline">\(R^2\)</span> does not by itself make the fitted contrasts invalid.</p>
 </div>
 </div>
 <div id="multiple-regression" class="section level2 hasAnchor" number="12.3">
@@ -2082,7 +2171,7 @@ p
 13.24
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
-0.00
+-0.00
 </td>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
 0.01
@@ -2590,8 +2679,8 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 <li>Full-time living in the West: <span class="math inline">\(wage = 593.921 + 62.544 - 405.684 = 250.781\)</span></li>
 </ul>
 </div>
-<div id="interaction-effects-1" class="section level3 hasAnchor" number="12.3.3">
-<h3><span class="header-section-number">12.3.3</span> Interaction Effects<a href="linreg.html#interaction-effects-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="interaction-effects" class="section level3 hasAnchor" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> Interaction Effects<a href="linreg.html#interaction-effects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Say we are back in the world of the regression model with <em>education</em> and <em>parttime</em>. When we fit this model before, we saw a constant difference in <em>predicted wage</em> for the employee’s full-time/part-time status. In particular, we saw predicted wage being lower by a constant amount for every level of education. However, what if part-time/full-time status has more of an impact on wage at low education levels than it does at high education levels? This is quite likely to be true if, once you have sufficient education, part-time status does not depress your wage as much as it does when you have low educational attainment. Situations such as these are referred to as <code>interaction effects</code>. In general, An interaction effect exists when the magnitude of the effect of one independent variable <span class="math inline">\((x_1)\)</span> on a dependent variable <span class="math inline">\((y)\)</span> varies as a function of a second independent variable <span class="math inline">\((x_2)\)</span>. Models such as these are written as follows:</p>
 <p><span class="math display">\[wage = \hat{\alpha} + \hat{\beta_1}(education) + \hat{\beta_2}(parttime) + \hat{\beta_3}(education \times parttime) + e\]</span></p>
 <p>Now, we may either have <em>a priori</em> expectations of an interaction effect or just be looking to see if an interaction effect exists. Regardless, if we were to fit such a model to the data, we would see the following:</p>
@@ -3062,7 +3151,7 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 </tr>
 </table>
 <p>These results are for the <code>no interaction model</code>. Note the essential message here: average wage increases with experience, and males earn, on average, more than women, for the same level of experience. So what is being inferred here is that the <code>slope is the same</code> for both men and women; they differ only in the sense of a constant wage differential.</p>
-<p>We then re-estimate the model to soothe the <code>with interaction group</code>. When we do so, we see the following results:</p>
+<p>We then re-estimate the model to satisfy the <code>with interaction group</code>. When we do so, we see the following results:</p>
 <table style="border-collapse:collapse; border:none;">
 <tr>
 <th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">
@@ -3264,11 +3353,11 @@ R<sup>2</sup> / R<sup>2</sup> adjusted
 </td>
 </tr>
 </table>
-<p>Note what these results tell us. First, neither experience nor sex matter on their own; the p-values are way above <span class="math inline">\(0.05\)</span> so on it’s own neither variable influences wage. However, the interaction is significant. What this is telling us is that while neither variable shapes wage on its own, the two interact to do so! The interaction is clearly visible in the plot below:</p>
+<p>In a model with an interaction, the “main-effect” coefficient for experience is the experience slope for the reference sex, and the sex coefficient is the sex difference when experience equals zero. Their p-values do not mean that experience or sex “does not matter.” The significant interaction indicates that the experience slope differs by sex. Predicted values and marginal slopes make that difference easier to interpret.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:interactionsa"></span>
-<img src="_stats_files/figure-html/interactionsa-1.png" alt="No Interaction Model" width="60%" />
+<img src="_stats_files/figure-html/interactionsa-1.png" alt="Wage-Experience Relationship by Sex" width="60%" />
 <p class="caption">
-FIGURE 12.17: No Interaction Model
+FIGURE 12.17: Wage-Experience Relationship by Sex
 </p>
 </div>
 <p>Note the differing slopes, with the regression line for Males being steeper than that for the Females.</p>
@@ -3889,13 +3978,13 @@ FIGURE 12.19: Holding age at Median and Quartiles vs. Mean and unit Standard De
 <h2><span class="header-section-number">12.4</span> Assumptions of Linear Regression<a href="linreg.html#assumptions-of-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Classical Linear Regression Model (CLRM) is built upon the following assumptions, though some of these are assumed to be true prior to any data analysis being initiated.</p>
 <ol style="list-style-type: decimal">
-<li>The regression model is linear in terms of <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span></li>
-<li>The values of <span class="math inline">\(x\)</span> are fixed in repeated sampling</li>
-<li>Zero mean value of the residuals, i.e., <span class="math inline">\(E(e_i | x_i) = 0\)</span></li>
-<li>Homoscedasticity, i.e., the residuals have a constant variance for each <span class="math inline">\(x_i\)</span>, that is <span class="math inline">\(var(e_i|x_i = \sigma^2)\)</span><br />
+<li>The conditional-mean model is linear in its parameters and correctly specified</li>
+<li>Observations are independent, or dependence is modeled appropriately</li>
+<li>Exogeneity: <span class="math inline">\(E(\epsilon_i\mid X)=0\)</span></li>
+<li>Homoscedasticity for conventional standard errors: <span class="math inline">\(Var(\epsilon_i\mid X)=\sigma^2\)</span><br />
 </li>
-<li>No autocorrelation or serial correlation between the disturbances, i.e., <span class="math inline">\(cov(e_i e_j | x_i x_j = 0)\)</span></li>
-<li>Zero covariance between <span class="math inline">\(e_i\)</span> and <span class="math inline">\(x_i\)</span> i.e., <span class="math inline">\(E(e_i x_i = 0)\)</span></li>
+<li>No serial correlation when order matters: <span class="math inline">\(Cov(\epsilon_i,\epsilon_j\mid X)=0\)</span> for <span class="math inline">\(i\neq j\)</span></li>
+<li>Normal errors are needed for exact small-sample <span class="math inline">\(t\)</span> and <span class="math inline">\(F\)</span> inference, but not for OLS unbiasedness</li>
 <li>The number of observations exceeds the number of parameters to be estimated</li>
 <li>Variability in <span class="math inline">\(x\)</span> values</li>
 <li>The regression model is correctly specified</li>
@@ -3903,7 +3992,7 @@ FIGURE 12.19: Holding age at Median and Quartiles vs. Mean and unit Standard De
 </ol>
 <div id="assumption-1-linear-regression-model" class="section level3 hasAnchor" number="12.4.1">
 <h3><span class="header-section-number">12.4.1</span> Assumption 1: Linear Regression Model<a href="linreg.html#assumption-1-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The regression model is assumedly <code>linear in parameters</code>. That is, a function is said to be linear in <span class="math inline">\(x\)</span> if the value of the change in <span class="math inline">\(y\)</span> does not depend upon the value of <span class="math inline">\(x\)</span> when <span class="math inline">\(x\)</span> changes by a unit. Thus if <span class="math inline">\(y = 4x\)</span>, <span class="math inline">\(y\)</span> changes by <span class="math inline">\(4\)</span> for every unit change in <span class="math inline">\(x\)</span>, regardless of whether <span class="math inline">\(x\)</span> changes from <span class="math inline">\(1\)</span> to <span class="math inline">\(2\)</span> or from <span class="math inline">\(19\)</span> to <span class="math inline">\(20\)</span>. But if <span class="math inline">\(y=4x^2\)</span>, then when <span class="math inline">\(x=1\)</span>, <span class="math inline">\(y=4(1^1) = 4\)</span> and when <span class="math inline">\(x\)</span> increases by a unit to <span class="math inline">\(x=2\)</span>, we have <span class="math inline">\(y=4(2^2) = 16\)</span>. When <span class="math inline">\(x\)</span> increase by another unit, <span class="math inline">\(y=4(3^2) = 36\)</span> <span class="math inline">\(\ldots\)</span> note that the value <span class="math inline">\(y\)</span> assumes is now dependent upon what <span class="math inline">\(x\)</span> was when it increased (or decreased) by <span class="math inline">\(1\)</span>. In sum, a function <span class="math inline">\(y = \beta(x)\)</span> is linear in parameters if the coefficient <span class="math inline">\(\beta\)</span> appears with a power of <span class="math inline">\(1\)</span>. In this sense, <span class="math inline">\(y=\beta(x^2)\)</span> is linear in parameters, as is <span class="math inline">\(y=\beta(\sqrt{x})\)</span>. In the regression framework, then, <span class="math inline">\(y = \alpha + \beta_1x + \beta_2x^2\)</span>, <span class="math inline">\(y=\alpha + \beta_1x + \beta_2x^2 + \beta_3x^3\)</span> and so on are all <code>linear in parameters</code> but not so regressions such as <span class="math inline">\(y = \alpha + \beta_1^2x + \beta_2x^2\)</span> or <span class="math inline">\(y = \alpha + \beta_1^{1/3}x + \beta_2x^2\)</span>, etc.</p>
+<p>The regression model is assumedly <code>linear in parameters</code>. That is, a function is said to be linear in <span class="math inline">\(x\)</span> if the value of the change in <span class="math inline">\(y\)</span> does not depend upon the value of <span class="math inline">\(x\)</span> when <span class="math inline">\(x\)</span> changes by a unit. Thus if <span class="math inline">\(y = 4x\)</span>, <span class="math inline">\(y\)</span> changes by <span class="math inline">\(4\)</span> for every unit change in <span class="math inline">\(x\)</span>, regardless of whether <span class="math inline">\(x\)</span> changes from <span class="math inline">\(1\)</span> to <span class="math inline">\(2\)</span> or from <span class="math inline">\(19\)</span> to <span class="math inline">\(20\)</span>. But if <span class="math inline">\(y=4x^2\)</span>, then when <span class="math inline">\(x=1\)</span>, <span class="math inline">\(y=4(1^2) = 4\)</span> and when <span class="math inline">\(x\)</span> increases by a unit to <span class="math inline">\(x=2\)</span>, we have <span class="math inline">\(y=4(2^2) = 16\)</span>. When <span class="math inline">\(x\)</span> increase by another unit, <span class="math inline">\(y=4(3^2) = 36\)</span> <span class="math inline">\(\ldots\)</span> note that the value <span class="math inline">\(y\)</span> assumes is now dependent upon what <span class="math inline">\(x\)</span> was when it increased (or decreased) by <span class="math inline">\(1\)</span>. In sum, a function <span class="math inline">\(y = \beta(x)\)</span> is linear in parameters if the coefficient <span class="math inline">\(\beta\)</span> appears with a power of <span class="math inline">\(1\)</span>. In this sense, <span class="math inline">\(y=\beta(x^2)\)</span> is linear in parameters, as is <span class="math inline">\(y=\beta(\sqrt{x})\)</span>. In the regression framework, then, <span class="math inline">\(y = \alpha + \beta_1x + \beta_2x^2\)</span>, <span class="math inline">\(y=\alpha + \beta_1x + \beta_2x^2 + \beta_3x^3\)</span> and so on are all <code>linear in parameters</code> but not so regressions such as <span class="math inline">\(y = \alpha + \beta_1^2x + \beta_2x^2\)</span> or <span class="math inline">\(y = \alpha + \beta_1^{1/3}x + \beta_2x^2\)</span>, etc.</p>
 </div>
 <div id="assumption-2-x-values-fixed-in-repeated-sampling" class="section level3 hasAnchor" number="12.4.2">
 <h3><span class="header-section-number">12.4.2</span> Assumption 2: <span class="math inline">\(x\)</span> values fixed in repeated sampling<a href="linreg.html#assumption-2-x-values-fixed-in-repeated-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -4782,11 +4871,11 @@ Residuals
 </tr>
 </tbody>
 </table>
-<p>Look at the values of <span class="math inline">\(y\)</span> when <span class="math inline">\(x=80\)</span>. The mean of <span class="math inline">\(y\)</span> for <span class="math inline">\(x-80\)</span> is <span class="math inline">\(\bar{y}=65\)</span>. The gap between <span class="math inline">\(y_i\)</span> and <span class="math inline">\(\bar{y}\)</span> is <span class="math inline">\(-10, -5, 0, +5, +10\)</span> and when you add them, you get <span class="math inline">\(\sum (y_i - \bar{y}) | x_i=80 = 0\)</span>. Repeat this for <span class="math inline">\(x=260\)</span> … Note that the errors are <span class="math inline">\(-23, -21, 2, 5,   7, 12, 18\)</span> … and these add up to <span class="math inline">\(0\)</span>. So it must be that the regression line passes through <span class="math inline">\(\bar{y}\)</span> for each <span class="math inline">\(x\)</span> value.</p>
+<p>Look at the values of <span class="math inline">\(y\)</span> when <span class="math inline">\(x=80\)</span>. The mean of <span class="math inline">\(y\)</span> for <span class="math inline">\(x=80\)</span> is <span class="math inline">\(\bar{y}=65\)</span>. The deviations from that group mean are <span class="math inline">\(-10,-5,0,+5,+10\)</span>, which sum to zero. This illustrates the conditional-mean idea, but ordinary least squares guarantees that residuals sum to zero overall when an intercept is included—not necessarily within every repeated value of <span class="math inline">\(x\)</span> in arbitrary sample data.</p>
 </div>
 <div id="assumption-4-homoscedasticity" class="section level3 hasAnchor" number="12.4.4">
 <h3><span class="header-section-number">12.4.4</span> Assumption 4: Homoscedasticity<a href="linreg.html#assumption-4-homoscedasticity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Formally, <code>homoscedasticity</code> means that the conditional variance of the residuals <span class="math inline">\((e_i)\)</span> is constant across <span class="math inline">\(x_i\)</span>. That is, no matter what <span class="math inline">\(x\)</span> value we select, it should be that <span class="math inline">\(y\)</span> varies the same. A violation would be evident if, say, at <span class="math inline">\(x= 80\)</span> we see a lot of variance in <span class="math inline">\(y\)</span> but at <span class="math inline">\(x=160\)</span> we see minimal variance in <span class="math inline">\(y\)</span>. When might this happen? Imagine <span class="math inline">\(x\)</span> is income and <span class="math inline">\(y\)</span> is consumption expenditure. For low levels of income you are likely to see consumption varying narrowly. But as income rises, some people with the same income may consume quite a bit more or less than <code>others with the same income</code>. In such a case <span class="math inline">\(var(e_i|x_i \neq \sigma^2)\)</span> but rather <span class="math inline">\(var(e_i|x_i = \sigma^2_i)\)</span>. If homoscedasticity is violated we <code>heteroscedasticity</code>, and as a consequence the standard errors of the regression coefficients will be unreliable, which in turn means the significance tests and confidence intervals that use these standard errors will be unreliable as well.</p>
+<p>Formally, <code>homoscedasticity</code> means that the conditional variance of the residuals <span class="math inline">\((e_i)\)</span> is constant across <span class="math inline">\(x_i\)</span>. That is, no matter what <span class="math inline">\(x\)</span> value we select, it should be that <span class="math inline">\(y\)</span> varies the same. A violation would be evident if, say, at <span class="math inline">\(x= 80\)</span> we see a lot of variance in <span class="math inline">\(y\)</span> but at <span class="math inline">\(x=160\)</span> we see minimal variance in <span class="math inline">\(y\)</span>. When might this happen? Imagine <span class="math inline">\(x\)</span> is income and <span class="math inline">\(y\)</span> is consumption expenditure. For low levels of income you are likely to see consumption varying narrowly. But as income rises, some people with the same income may consume quite a bit more or less than <code>others with the same income</code>. In such a case <span class="math inline">\(var(e_i|x_i \neq \sigma^2)\)</span> but rather <span class="math inline">\(var(e_i|x_i = \sigma^2_i)\)</span>. If homoscedasticity is violated, we have <code>heteroscedasticity</code>, and as a consequence the standard errors of the regression coefficients will be unreliable, which in turn means the significance tests and confidence intervals that use these standard errors will be unreliable as well.</p>
 </div>
 <div id="assumption-5-no-autocorrelation" class="section level3 hasAnchor" number="12.4.5">
 <h3><span class="header-section-number">12.4.5</span> Assumption 5: No Autocorrelation<a href="linreg.html#assumption-5-no-autocorrelation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -4820,8 +4909,8 @@ FIGURE 12.22: Model Misspecification
 <hr />
 </div>
 </div>
-<div id="practice-problems-9" class="section level2 hasAnchor" number="12.5">
-<h2><span class="header-section-number">12.5</span> Practice Problems<a href="linreg.html#practice-problems-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="practice-problems-10" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Practice Problems<a href="linreg.html#practice-problems-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Problem 1</strong></p>
 <p>Open up <a href="https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip">EPA’s Fuel Economy data</a>. These data are the result of vehicle testing done at the Environmental Protection Agency’s National Vehicle and Fuel Emissions Laboratory in Ann Arbor, Michigan, and by vehicle manufacturers with oversight by EPA. Read the accompanying document <a href="https://www.fueleconomy.gov/feg/ws/index.shtml#fuelType1">available here</a> to understand how some attribute is being measured.</p>
 <ul>
@@ -5120,6 +5209,30 @@ on the IQ scores of some children and, for each child, information about their m
 <li>Add yet another variable, <strong>Income group</strong>. How do the results and the model fit change?</li>
 <li>Given all the models you have fit, which model has the best overall fit? Focus on <span class="math inline">\(\bar{R}^2\)</span> and on the average prediction error.</li>
 </ol>
+<details class="practice-answer">
+<summary>
+Click here to see the answers
+</summary>
+<p>These exercises intentionally use external datasets and model-building judgment, so the answer key gives reproducible specifications and the criteria a correct interpretation must include. Exact estimates should be generated from the current files.</p>
+<p><strong>1–3.</strong> Start with plots and correlations, then fit the requested bivariate regressions. A correct answer reports the slope in outcome units per one-unit change in the predictor, its uncertainty, adjusted <span class="math inline">\(R^2\)</span>, RMSE, and diagnostics. Do not interpret association as causation. For County Health Rankings percentage fields, multiply proportions by 100 only when the raw field is stored from 0 to 1; do not multiply income or premature-death rates by 100.</p>
+<details class="practice-code">
+<summary>
+Show optional R code
+</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="linreg.html#cb8-1" tabindex="-1"></a><span class="fu">cor.test</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y, <span class="at">use =</span> <span class="st">&quot;complete.obs&quot;</span>)</span>
+<span id="cb8-2"><a href="linreg.html#cb8-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> df)</span>
+<span id="cb8-3"><a href="linreg.html#cb8-3" tabindex="-1"></a><span class="fu">summary</span>(m); <span class="fu">confint</span>(m); <span class="fu">plot</span>(m)</span></code></pre></div>
+</details>
+<p><strong>4.</strong> Fit nested Mroz models with <code>hours</code> as the outcome. The coefficient on a continuous predictor is the adjusted difference in expected annual hours per unit, holding the other included predictors fixed. Compare models with adjusted <span class="math inline">\(R^2\)</span>, RMSE, an appropriate nested-model test, and diagnostics; adding husband’s wage does not “improve” the model merely because its coefficient is significant.</p>
+<p><strong>5.</strong> For STAR, begin by predicting third-grade reading from kindergarten reading, then add gender, ethnicity, and third-grade class type. Add teacher experience and lunch eligibility in later models. Because treatment was randomized, class-type contrasts have a stronger causal basis than ordinary observational coefficients, subject to attrition and implementation. Preserve factor reference categories when interpreting contrasts.</p>
+<p><strong>6.</strong> Use a correlation matrix and scatterplots for <code>piscore</code>, <code>pctdisabled</code>, <code>pctecon</code>, <code>pctlep</code>, and <code>pctminority</code>; then fit nested models adding enrollment and school type. Compare adjusted <span class="math inline">\(R^2\)</span>, RMSE, confidence intervals, residual plots, and influential cases. The charter coefficient is an adjusted association unless the design supports causal identification.</p>
+<p><strong>7.</strong> Treat cylinders and origin as factors. Fit <code>mpg ~ weight</code>, then <code>mpg ~ cylinders2 + acceleration + weight + origin</code>, then add <code>acceleration:origin</code>. Respect model hierarchy by retaining lower-order terms. Interpret the interaction with predicted slopes/plots at the modal cylinder count and median weight.</p>
+<p><strong>8–10.</strong> Split model development from evaluation where possible. Explore distributions and missingness, specify plausible models, preserve hierarchical terms, and compare out-of-sample RMSE in addition to adjusted <span class="math inline">\(R^2\)</span>. Do not delete variables solely because <span class="math inline">\(p&gt;0.05\)</span>, and do not use the same data repeatedly for selection and an optimistic assessment of predictive performance.</p>
+<p><strong>11.</strong> Fit and save the requested 2003 wage model, then use those fixed 2003 estimates to generate predictions for the 2009 observations. The age-by-education interaction means the age slope differs by education; use predicted values rather than interpreting lower-order coefficients as unconditional effects.</p>
+<p><strong>12.</strong> With occupation type as a factor, coefficients compare each level with the reference type. Add women, income, and education sequentially. High income–education correlation may inflate standard errors, but correlation and statistical significance alone do not require dropping one; use theory, VIFs, coefficient stability, and predictive performance.</p>
+<p><strong>13.</strong> Fit <code>kid_score ~ mom_iq + mom_hs</code>, then add <code>mom_iq:mom_hs</code>, and later <code>mom_work</code> plus defensible interactions. With an interaction, the <code>mom_iq</code> coefficient is the slope for the reference education group and the education coefficient is the group difference at <code>mom_iq = 0</code>; centering mother’s IQ makes that contrast meaningful.</p>
+<p><strong>14.</strong> Build nested turnout models and compare adjusted <span class="math inline">\(R^2\)</span>, RMSE, residual diagnostics, and—preferably—held-out performance. Country-year observations may be repeated within country, so ordinary independent-error standard errors can be too small; a fuller analysis should account for clustering or panel structure. Population is highly skewed, so inspect a log transformation.</p>
+</details>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
 <script>

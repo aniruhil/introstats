@@ -58,15 +58,73 @@
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
-<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -320,17 +378,43 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#why-not-run-many-unadjusted-t-tests"><i class="fa fa-check"></i><b>9.1</b> Why Not Run Many Unadjusted <span class="math inline">\(t\)</span>-tests?</a></li>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#the-logic-of-one-way-anova"><i class="fa fa-check"></i><b>9.2</b> The Logic of One-way ANOVA</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
-<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
+<li class="chapter" data-level="9.2.1" data-path="anova.html"><a href="anova.html#manual-decomposition-for-the-call-center-data"><i class="fa fa-check"></i><b>9.2.1</b> Manual decomposition for the call-center data</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
-<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#estimation-and-effect-size"><i class="fa fa-check"></i><b>9.3</b> Estimation and Effect Size</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
-<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#mean-differences-and-confidence-intervals"><i class="fa fa-check"></i><b>9.3.1</b> Mean differences and confidence intervals</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#eta2-and-omega2"><i class="fa fa-check"></i><b>9.3.2</b> <span class="math inline">\(\eta^2\)</span> and <span class="math inline">\(\omega^2\)</span></a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="anova.html"><a href="anova.html#planned-contrasts-and-post-hoc-comparisons"><i class="fa fa-check"></i><b>9.4</b> Planned Contrasts and Post-hoc Comparisons</a></li>
+<li class="chapter" data-level="9.5" data-path="anova.html"><a href="anova.html#assumptions-and-diagnostics"><i class="fa fa-check"></i><b>9.5</b> Assumptions and Diagnostics</a></li>
+<li class="chapter" data-level="9.6" data-path="anova.html"><a href="anova.html#alternatives-to-classical-one-way-anova"><i class="fa fa-check"></i><b>9.6</b> Alternatives to Classical One-way ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="anova.html"><a href="anova.html#welchs-anova"><i class="fa fa-check"></i><b>9.6.1</b> Welch’s ANOVA</a></li>
+<li class="chapter" data-level="9.6.2" data-path="anova.html"><a href="anova.html#kruskalwallis-and-robust-methods"><i class="fa fa-check"></i><b>9.6.2</b> Kruskal–Wallis and robust methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="anova.html"><a href="anova.html#one-way-examples"><i class="fa fa-check"></i><b>9.7</b> One-way Examples</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="anova.html"><a href="anova.html#corrected-example-systolic-blood-pressure-and-treatment"><i class="fa fa-check"></i><b>9.7.1</b> Corrected example: systolic blood pressure and treatment</a></li>
+<li class="chapter" data-level="9.7.2" data-path="anova.html"><a href="anova.html#presurgical-fitness-and-recovery-time"><i class="fa fa-check"></i><b>9.7.2</b> Presurgical fitness and recovery time</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="anova.html"><a href="anova.html#factorial-anova"><i class="fa fa-check"></i><b>9.8</b> Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="anova.html"><a href="anova.html#additive-effects-and-interaction-effects"><i class="fa fa-check"></i><b>9.8.1</b> Additive effects and interaction effects</a></li>
+<li class="chapter" data-level="9.8.2" data-path="anova.html"><a href="anova.html#drug-and-diet-factorial-example"><i class="fa fa-check"></i><b>9.8.2</b> Drug and diet factorial example</a></li>
+<li class="chapter" data-level="9.8.3" data-path="anova.html"><a href="anova.html#pedagogy-and-subject-follow-the-interaction"><i class="fa fa-check"></i><b>9.8.3</b> Pedagogy and subject: follow the interaction</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="anova.html"><a href="anova.html#balanced-and-unbalanced-designs"><i class="fa fa-check"></i><b>9.9</b> Balanced and Unbalanced Designs</a></li>
+<li class="chapter" data-level="9.10" data-path="anova.html"><a href="anova.html#related-designs-that-require-different-models"><i class="fa fa-check"></i><b>9.10</b> Related Designs That Require Different Models</a>
+<ul>
+<li class="chapter" data-level="9.10.1" data-path="anova.html"><a href="anova.html#repeated-measures-and-clustered-observations"><i class="fa fa-check"></i><b>9.10.1</b> Repeated measures and clustered observations</a></li>
+<li class="chapter" data-level="9.10.2" data-path="anova.html"><a href="anova.html#ancova"><i class="fa fa-check"></i><b>9.10.2</b> ANCOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="9.11" data-path="anova.html"><a href="anova.html#power-and-sample-size-planning"><i class="fa fa-check"></i><b>9.11</b> Power and Sample-size Planning</a></li>
+<li class="chapter" data-level="9.12" data-path="anova.html"><a href="anova.html#a-practical-anova-workflow"><i class="fa fa-check"></i><b>9.12</b> A Practical ANOVA Workflow</a></li>
+<li class="chapter" data-level="9.13" data-path="anova.html"><a href="anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.13</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
 <ul>
@@ -341,33 +425,43 @@ div.csl-indent {
 <li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
 <li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
 <li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
-<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-7"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-8"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#binary-outcomes-and-the-sampling-distribution-of-hat-p"><i class="fa fa-check"></i><b>11.1</b> Binary Outcomes and the Sampling Distribution of <span class="math inline">\(\hat p\)</span></a></li>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#one-population-proportion"><i class="fa fa-check"></i><b>11.2</b> One Population Proportion</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
-<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#confidence-intervals"><i class="fa fa-check"></i><b>11.2.1</b> Confidence intervals</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#one-proportion-hypothesis-tests"><i class="fa fa-check"></i><b>11.2.2</b> One-proportion hypothesis tests</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#two-independent-proportions"><i class="fa fa-check"></i><b>11.3</b> Two Independent Proportions</a>
 <ul>
-<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-11"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
-<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
-<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#the-two-proportion-z-test"><i class="fa fa-check"></i><b>11.3.1</b> The two-proportion z-test</a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#titanic-example"><i class="fa fa-check"></i><b>11.3.2</b> Titanic example</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#effect-sizes-for-a-2times2-table"><i class="fa fa-check"></i><b>11.3.3</b> Effect sizes for a <span class="math inline">\(2\times2\)</span> table</a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#a-more-informative-plot"><i class="fa fa-check"></i><b>11.3.4</b> A more informative plot</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#paired-proportions-mcnemars-test"><i class="fa fa-check"></i><b>11.4</b> Paired Proportions: McNemar’s Test</a></li>
+<li class="chapter" data-level="11.5" data-path="props.html"><a href="props.html#three-or-more-groups-pearsons-chi-square-test"><i class="fa fa-check"></i><b>11.5</b> Three or More Groups: Pearson’s Chi-square Test</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
-<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
-<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
-<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
-<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
-<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
-<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+<li class="chapter" data-level="11.5.1" data-path="props.html"><a href="props.html#follow-up-comparisons-and-residuals"><i class="fa fa-check"></i><b>11.5.1</b> Follow-up comparisons and residuals</a></li>
+<li class="chapter" data-level="11.5.2" data-path="props.html"><a href="props.html#effect-size-for-larger-tables"><i class="fa fa-check"></i><b>11.5.2</b> Effect size for larger tables</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#practice-problems-8"><i class="fa fa-check"></i><b>11.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.6" data-path="props.html"><a href="props.html#sparse-tables-and-fishers-exact-test"><i class="fa fa-check"></i><b>11.6</b> Sparse Tables and Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.7" data-path="props.html"><a href="props.html#ordered-groups-a-test-for-trend"><i class="fa fa-check"></i><b>11.7</b> Ordered Groups: A Test for Trend</a></li>
+<li class="chapter" data-level="11.8" data-path="props.html"><a href="props.html#stratified-comparisons-and-confounding"><i class="fa fa-check"></i><b>11.8</b> Stratified Comparisons and Confounding</a></li>
+<li class="chapter" data-level="11.9" data-path="props.html"><a href="props.html#complex-survey-data"><i class="fa fa-check"></i><b>11.9</b> Complex Survey Data</a></li>
+<li class="chapter" data-level="11.10" data-path="props.html"><a href="props.html#practical-significance-power-and-study-planning"><i class="fa fa-check"></i><b>11.10</b> Practical Significance, Power, and Study Planning</a>
+<ul>
+<li class="chapter" data-level="11.10.1" data-path="props.html"><a href="props.html#statistical-versus-practical-significance"><i class="fa fa-check"></i><b>11.10.1</b> Statistical versus practical significance</a></li>
+<li class="chapter" data-level="11.10.2" data-path="props.html"><a href="props.html#power-and-sample-size"><i class="fa fa-check"></i><b>11.10.2</b> Power and sample size</a></li>
+<li class="chapter" data-level="11.10.3" data-path="props.html"><a href="props.html#equivalence-and-noninferiority"><i class="fa fa-check"></i><b>11.10.3</b> Equivalence and noninferiority</a></li>
+</ul></li>
+<li class="chapter" data-level="11.11" data-path="props.html"><a href="props.html#choosing-the-appropriate-procedure"><i class="fa fa-check"></i><b>11.11</b> Choosing the Appropriate Procedure</a></li>
+<li class="chapter" data-level="11.12" data-path="props.html"><a href="props.html#reporting-and-interpretation"><i class="fa fa-check"></i><b>11.12</b> Reporting and Interpretation</a></li>
+<li class="chapter" data-level="11.13" data-path="props.html"><a href="props.html#optional-other-measures-of-categorical-association"><i class="fa fa-check"></i><b>11.13</b> Optional: Other Measures of Categorical Association</a></li>
+<li class="chapter" data-level="11.14" data-path="props.html"><a href="props.html#practice-problems-9"><i class="fa fa-check"></i><b>11.14</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
 <ul>
@@ -389,7 +483,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
 <li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
-<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
 <ul>
@@ -401,7 +495,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
 <li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-9"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-10"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
 <ul>
@@ -444,16 +538,14 @@ div.csl-indent {
 <li><span class="math inline">\(H\)</span>: Mean county unemployment rate in an Appalachian county is 12.1%</li>
 <li><span class="math inline">\(H\)</span>: The Dropout Recovery program has reduced average dropout rates to be no higher than 30%</li>
 </ul>
-<p>Hypotheses come in pairs, one the <code>null hypothesis</code> and the other the <code>alternative hypothesis</code>. The null hypothesis, often denoted as <span class="math inline">\(H_{0}\)</span>, is the assumption believed to be true while the alternative hypothesis, often denoted as <span class="math inline">\(H_{a}\)</span> or <span class="math inline">\(H_{1}\)</span> is the statement believed to be true if <span class="math inline">\(H_{0}\)</span> is rejected by the statistical test. Some expressions follow, all in the context of average heights of adult males in North America</p>
+<p>Hypotheses come in pairs: a <code>null hypothesis</code> and an <code>alternative hypothesis</code>. The null hypothesis, denoted <span class="math inline">\(H_{0}\)</span>, is the reference claim evaluated by the test. The alternative hypothesis, denoted <span class="math inline">\(H_{a}\)</span> or <span class="math inline">\(H_{1}\)</span>, is the claim for which the data may provide evidence. Rejecting <span class="math inline">\(H_0\)</span> supports <span class="math inline">\(H_1\)</span> at the chosen significance level; it does not prove that <span class="math inline">\(H_1\)</span> is true. Standard forms, using average adult-male height as an example, are:</p>
 <ul>
-<li><span class="math inline">\(H_{0}\)</span>: <span class="math inline">\(\mu &gt; 72\)</span> inches; <span class="math inline">\(H_{1}\)</span>: <span class="math inline">\(\mu \leq 72\)</span></li>
-<li><span class="math inline">\(H_{0}\)</span>: <span class="math inline">\(\mu &lt; 72\)</span> inches; <span class="math inline">\(H_{1}\)</span>: <span class="math inline">\(\mu \geq 72\)</span></li>
 <li><span class="math inline">\(H_{0}\)</span>: <span class="math inline">\(\mu \leq 72\)</span> inches; <span class="math inline">\(H_{1}\)</span>: <span class="math inline">\(\mu &gt; 72\)</span></li>
 <li><span class="math inline">\(H_{0}\)</span>: <span class="math inline">\(\mu \geq 72\)</span> inches; <span class="math inline">\(H_{1}\)</span>: <span class="math inline">\(\mu &lt; 72\)</span></li>
 <li><span class="math inline">\(H_{0}\)</span>: <span class="math inline">\(\mu = 72\)</span> inches; <span class="math inline">\(H_{1}\)</span>: <span class="math inline">\(\mu \neq 72\)</span></li>
 </ul>
 <p><span class="math inline">\(H_{0}\)</span> and <span class="math inline">\(H_{1}\)</span> are <code>mutually exclusive</code> and <code>exhaustive</code>, mutually exclusive in the sense that either <span class="math inline">\(H_{0}\)</span> or <span class="math inline">\(H_{1}\)</span> can be true at a given point in time (both cannot be true at the same point in time), and exhaustive in that <span class="math inline">\(H_{0} + H_{1}\)</span> exhaust the <code>sample space</code> (there is no third or fourth possibility unknown to us).</p>
-<p>When we setup our null and alternative hypotheses we must pay careful attention to how we word each hypothesis. In particular, we usually want the alternative hypothesis to be the one we hope is supported by the data and the statistical test while the null hypothesis is the one to be rejected. Why? Because rejecting the null implies the alternative must be true. As a rule, then, always setup the alternative hypothesis first and then setup the null hypothesis. For example, say I suspect that dropout rates have dropped below 30% and I hope to find this suspicion supported by the test. I would then setup the hypotheses as follows:</p>
+<p>When we set up null and alternative hypotheses, we must pay careful attention to how each is worded. The alternative should reflect the research question and must be specified before examining the results. Rejecting the null means that the observed data would be sufficiently unusual under <span class="math inline">\(H_0\)</span> to favor <span class="math inline">\(H_1\)</span> at the chosen significance level; it is not a logical proof that <span class="math inline">\(H_1\)</span> is true. For example, say I suspect that dropout rates have dropped below 30%. I would set up the hypotheses as follows:</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{ mean dropout rate } \geq 30\% \\
 H_1: \text{ mean dropout rate } &lt; 30\%
@@ -518,7 +610,7 @@ Type II error
 <div id="the-process-of-hypothesis-testing-an-example" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> The Process of Hypothesis Testing: An Example<a href="hypothesis.html#the-process-of-hypothesis-testing-an-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Assume we want to know whether the roundabout on SR682 in Athens, Ohio, has had an impact on traffic accidents in Athens. We have historical data on the number of accidents in years past. Say the average per day used to be 6 (i.e., <span class="math inline">\(\mu = 6\)</span>). To see if the roundabout has had an impact, we could gather accident data for a random sample of 100 days <span class="math inline">\((n=100)\)</span> from the period after the roundabout was built. Before we do that though, we will need to specify our hypotheses. What do we think might be the impact? Let us say the City Engineer argues that the roundabout should have decreased accidents. If he is correct then the sample mean (<span class="math inline">\(\bar{x}\)</span>) should be less than the population mean (<span class="math inline">\(\mu\)</span>) i.e., <span class="math inline">\(\bar{x} &lt; \mu\)</span>. If he is wrong then the sample mean (<span class="math inline">\(\bar{x}\)</span>) should be at least as much as the population mean (<span class="math inline">\(\mu\)</span>) i.e., <span class="math inline">\(\bar{x} \geq \mu\)</span>.</p>
-<p>We know from the theory of sampling distributions that the distribution of sample means, for all samples of size <span class="math inline">\(n\)</span>, will be normally distributed. Most sample means would be in the middle of the distribution but, of course, we know that by sheer chance we could end up with a sample mean from the tails (the upper and lower extremes of the distribution). This will happen with a very small probability but it could happen, so bear this possibility in mind. The sampling distribution is shown below:</p>
+<p>If the population is normal, the sampling distribution of the mean is normal. For a sufficiently large independent sample, the Central Limit Theorem often makes the normal approximation reasonable even when the population itself is not normal. Most sample means would be near the population mean, although chance alone can produce a sample mean in either tail. The sampling distribution is shown below:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-77"></span>
 <img src="images/hyp.png" alt="Sampling Distribution of Mean Traffic Accidents" width="65%" />
 <p class="caption">
@@ -526,8 +618,7 @@ FIGURE 8.1: Sampling Distribution of Mean Traffic Accidents
 </p>
 </div>
 <p>If we believe the City Engineer, we would setup the hypotheses as <span class="math inline">\(H_0\)</span>: The roundabout does not reduce accidents, i.e., <span class="math inline">\(\mu \geq \mu_0\)</span>, and <span class="math inline">\(H_1\)</span>: The roundabout does reduce accidents, i.e., <span class="math inline">\(\mu &lt; \mu_0\)</span>.</p>
-<p>We then calculate the sample mean <span class="math inline">\((\bar{x})\)</span> and the sample standard deviation <span class="math inline">\((s)\)</span>, then the standard error of the sample mean: <span class="math inline">\(s_{\bar{x}} = \dfrac{s}{\sqrt{n}}\)</span>, and finally the <span class="math inline">\(t_{calculated} = \dfrac{\bar{x} - \mu}{s_{\bar{x}}}\)</span>. The next step would involve using <span class="math inline">\(df=n-1\)</span> and finding the area to the left of <span class="math inline">\(t_{calculated})\)</span>. If this area were very small then we could conclude that the roundabout must have worked to reduce accidents. How should we define ``very small’’? By setting <span class="math inline">\(\alpha\)</span> either to 0.05 or to 0.01. Once we set <span class="math inline">\(\alpha\)</span> we would Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(P(t_{calculated}) \leq \alpha\)</span> because this would imply that the probability of getting a <span class="math inline">\(t\)</span> value such as the one we calculated so far from the middle of the distribution, by sheer chance, is very small. Thus our findings must be reliable, the data must be providing sufficient evidence to conclude that the roundabout has reduced accidents.
-If, however, <span class="math inline">\(P(t_{calculated}) &gt; \alpha\)</span> then we would Fail to reject <span class="math inline">\(H_0\)</span>; the data would be providing us with insufficient evidence to conclude that the roundabout has reduced accidents.</p>
+<p>We then calculate the sample mean <span class="math inline">\((\bar{x})\)</span>, sample standard deviation <span class="math inline">\((s)\)</span>, standard error <span class="math inline">\(s_{\bar{x}}=s/\sqrt{n}\)</span>, and test statistic <span class="math inline">\(t=(\bar{x}-\mu_0)/s_{\bar{x}}\)</span>. For this left-tailed test, the p-value is the probability, assuming <span class="math inline">\(H_0\)</span> is true, of obtaining a <span class="math inline">\(t\)</span> statistic at least as small as the observed statistic. We reject <span class="math inline">\(H_0\)</span> when the p-value is less than or equal to the preselected <span class="math inline">\(\alpha\)</span>; otherwise we fail to reject <span class="math inline">\(H_0\)</span>. A small p-value is evidence against <span class="math inline">\(H_0\)</span>, not a guarantee that the conclusion is correct.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-78"></span>
 <img src="images/hyp3.png" alt="Rejecting the Null" width="65%" />
 <p class="caption">
@@ -541,7 +632,7 @@ FIGURE 8.3: Failing to Reject the Null
 </p>
 </div>
 <p>In the plots above, the green region in the figure shows where we need our calculated <span class="math inline">\(t\)</span> to fall before we can reject the null hypothesis, and the grey region shows the area where we need our calculated <span class="math inline">\(t\)</span> to fall if we are not rejecting the null hypothesis. The green region is often referred to as the <code>critical region</code> or the <code>rejection region</code>.</p>
-<p>What if the City Engineer had no clue whether accidents might have decreased or increased? Well, in that case we would we would setup the hypotheses as <span class="math inline">\(H_0\)</span>: The roundabout has no impact on accidents, i.e., <span class="math inline">\(\mu = \mu_0\)</span>, and <span class="math inline">\(H_1\)</span>: The roundabout has an impact on accidents, i.e., <span class="math inline">\(\mu \neq \mu_0\)</span>. Next steps would be to calculate the sample mean <span class="math inline">\((\bar{x})\)</span> and the sample standard deviation <span class="math inline">\((s)\)</span>, followed by the standard error of the sample mean: <span class="math inline">\(s_{\bar{x}} = \dfrac{s}{\sqrt{n}}\)</span>, then <span class="math inline">\(t_{calculated} = \dfrac{\bar{x} - \mu}{s_{\bar{x}}}\)</span>. Using <span class="math inline">\(df=n-1\)</span>, we would then find the area to the left/right of <span class="math inline">\(\pm t_{calculated})\)</span>. If this area were very small we would conclude that the roundabout must have worked to reduce accidents. Once again, how should we define “very small”? By setting <span class="math inline">\(\alpha\)</span> either to 0.05 or to 0.01. We could then Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(P(\pm t_{calculated}) \leq \alpha\)</span>; the data would be providing us with sufficient evidence to conclude that the roundabout had an impact on accidents. If <span class="math inline">\(P(\pm t_{calculated}) &gt; \alpha\)</span> then we would Fail to reject <span class="math inline">\(H_0\)</span>; the data would be providing us with insufficient evidence to conclude that the roundabout had an impact on accidents. Watch the plots below to see the <code>critical region</code> in this particular scenario.</p>
+<p>What if the City Engineer did not know whether accidents might decrease or increase? In that case we would set up <span class="math inline">\(H_0:\mu=\mu_0\)</span> and <span class="math inline">\(H_1:\mu\neq\mu_0\)</span>. After calculating <span class="math inline">\(t=(\bar{x}-\mu_0)/s_{\bar{x}}\)</span> with <span class="math inline">\(df=n-1\)</span>, we find the combined probability in both tails of obtaining a statistic at least as far from zero as the observed <span class="math inline">\(t\)</span>. We reject <span class="math inline">\(H_0\)</span> when this two-sided p-value is no greater than <span class="math inline">\(\alpha\)</span>. Rejection supports the conclusion that the mean accident rate changed; it does not, by itself, establish a decrease. Watch the plots below to see the <code>critical region</code> in this scenario.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-80"></span>
 <img src="images/hyp5.png" alt="Rejecting the Null" width="65%" />
 <p class="caption">
@@ -559,7 +650,7 @@ FIGURE 8.5: Failing to Reject the Null
 <li>In the first instance he/she had a very specific hypothesis, that accidents would have decreased. This led us to specify <span class="math inline">\(H_1: \mu &lt; \mu_{0}\)</span>. Given the inequality <span class="math inline">\(&lt;\)</span> we focused only on the left side of the distribution to decide whether to reject the null hypothesis or not.</li>
 <li>In the second instance he/she had a vague hypothesis, that accidents will occur at a different rate post-construction of the roundabout. This led us to specify <span class="math inline">\(H_1: \mu \neq \mu_{0}\)</span>. Given the possibility that accidents could have increased/decreased, we now focused on both sides of the distribution (left and right) to decide whether to reject the null hypothesis or not.</li>
 </ul>
-<p>Hypothesis tests of the first kind are what we call <code>one-tailed tests</code> and those of the second kind are what we call <code>two-tailed tests</code>. Once we do a few hypothesis tests I will explain how two-tailed tests require more evidence from your data in order to reject the null hypothesis; one-tailed tests make it relatively easier to reject the null hypothesis. For now, here is recipe for specifying hypotheses …</p>
+<p>Hypothesis tests of the first kind are <code>one-tailed tests</code>; those of the second kind are <code>two-tailed tests</code>. At the same <span class="math inline">\(\alpha\)</span>, a pre-specified one-tailed test places the rejection region in one direction and therefore has more power in that direction, but it cannot detect a departure in the opposite direction. The direction must be chosen before examining the data. For now, here is a recipe for specifying hypotheses …</p>
 <ul>
 <li>State the hypotheses
 <ul>
@@ -590,15 +681,15 @@ FIGURE 8.6: Example 1
 <p>How did we find the critical region? We found it by looking up what we call the <code>critical t</code> value for given degrees of freedom. Here we have <span class="math inline">\(df = 35\)</span>. If I use an online table for finding <span class="math inline">\(t\)</span> values and areas under the distribution, like the one <a href="https://sites.csn.edu/mgreenwich/stat/t.htm">here</a>, I see that the critical region starts at <span class="math inline">\(t=-1.69\)</span> and extends left to the end of the distribution’s left-tail. This is the green area in the plot.</p>
 <p>So another way of deciding whether to reject the null or not is to compare the calculated <span class="math inline">\(t\)</span> to the critical <span class="math inline">\(t\)</span> using the following guidelines:</p>
 <ul>
-<li><span class="math inline">\(H_1: \mu &lt; \mu_{0}\)</span>, reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(-t_{calculated} \leq -t_{critical}\)</span></li>
+<li><span class="math inline">\(H_1: \mu &lt; \mu_{0}\)</span>, reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(t_{calculated} \leq -t_{critical}\)</span></li>
 <li><span class="math inline">\(H_1: \mu &gt; \mu_{0}\)</span>, reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(t_{calculated} \geq t_{critical}\)</span></li>
 <li><span class="math inline">\(H_1: \mu \neq \mu_{0}\)</span>, reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(\lvert{t_{calculated}}\rvert \geq \lvert{t_{critical}}\rvert\)</span>
 Using this rule, my calculated <span class="math inline">\(t = -0.80\)</span> is not less than or equal to the critical <span class="math inline">\(t = -1.69\)</span> and so I cannot reject the null hypothesis.</li>
 </ul>
 <p>I could have also just looked up my calculated <span class="math inline">\(t\)</span> and then found <span class="math inline">\(P(t \leq -0.80)\)</span>. If this area were smaller than <span class="math inline">\(\alpha\)</span>, I could reject the null hypothesis. If this area were greater than <span class="math inline">\(\alpha\)</span> I would fail to reject the null hypothesis. Using the online table if I enter values for the calculated <span class="math inline">\(t\)</span> and the degrees of freedom I see the area to be <span class="math inline">\(0.2146\)</span>. This is quite a bit larger than <span class="math inline">\(\alpha = 0.05\)</span> so I fail to reject the null hypothesis. This is the more common way of making decisions about hypothesis tests so let us memorize this rule:</p>
 <ul>
-<li><span class="math inline">\(P(t \leq t_{calculated}) \leq \alpha\)</span>: Reject the null hypothesis</li>
-<li><span class="math inline">\(P(t \leq t_{calculated}) &gt; \alpha\)</span>: Do not reject the null hypothesis</li>
+<li>p-value <span class="math inline">\(\leq \alpha\)</span>: Reject the null hypothesis</li>
+<li>p-value <span class="math inline">\(&gt; \alpha\)</span>: Do not reject the null hypothesis</li>
 </ul>
 </div>
 <div id="example-2-7" class="section level3 hasAnchor" number="8.3.2">
@@ -745,28 +836,7 @@ FIGURE 8.10: Separate Parent Populations
 </div>
 <div id="assumptions-1" class="section level3 unnumbered hasAnchor">
 <h3>Assumptions<a href="hypothesis.html#assumptions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The two-group t-test is driven by some assumptions.</p>
-<ol style="list-style-type: decimal">
-<li>Random samples … usually assumed to be true otherwise there would be no point to doing any statistical test</li>
-<li>Variables are drawn from normally distributed Populations … this can be formally tested and we will see how to carry out these tests shortly. However, I wouldn’t worry too much if normality is violated. Bear this in mind.<br />
-</li>
-<li>Variables have equal variances in the Population … this can be formally tested and we will see how to carry out these tests shortly</li>
-</ol>
-<p>Although we will be testing two of the assumptions, you may want to bear the following rules of thumb in mind since testing assumptions is not always a cut-and-dried affair.</p>
-<ol style="list-style-type: decimal">
-<li>Draw larger samples if you suspect the Population(s) may be skewed</li>
-<li>Go with <em>equal variances</em> if both the following are met:
-<ol style="list-style-type: lower-alpha">
-<li>Assumption theoretically justified, standard deviations fairly close</li>
-<li><span class="math inline">\(n_1 \geq 30\)</span> and <span class="math inline">\(n_2 \geq 30\)</span></li>
-</ol></li>
-<li>Go with <em>unequal variances</em> if both the following are met:
-<ol style="list-style-type: lower-alpha">
-<li>One standard deviation is at least twice the other standard deviation</li>
-<li><span class="math inline">\(n_1 &lt;  30\)</span> or <span class="math inline">\(n_2 &lt; 30\)</span></li>
-</ol></li>
-</ol>
-<p>Note also that the t-test is robust in large samples and survives some degree of skewness so long as the skew is of similar degree and direction in each group. How large is “large”? Excellent question but one without a formulaic answer since disciplines define large differently and the sample sample size that someone might see as “small” would appear “large” to others.</p>
+<p>The two-group t-test assumes independent observations within and between groups. For small samples, each group’s outcome should be approximately normal and free of severe outliers; with larger samples, inference about means is often robust to moderate nonnormality. Equal population variances are required only for the pooled-variance t-test. Welch’s t-test does not require equal variances and is generally the safer default. Design, plots, and subject-matter knowledge are more informative than choosing a test solely from a preliminary significance test of variances.</p>
 </div>
 <div id="example-1-7" class="section level3 hasAnchor" number="8.6.1">
 <h3><span class="header-section-number">8.6.1</span> Example 1<a href="hypothesis.html#example-1-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -776,7 +846,7 @@ FIGURE 8.10: Separate Parent Populations
 H_0: \text{ There is no difference in average circulation counts } (\mu_1 = \mu_2) \\
 H_1: \text{ There is a difference in average circulation counts } (\mu_1 \neq \mu_2)
 \end{array}\]</span></p>
-<p>Since both groups have sample sizes that exceed 30 we can proceed with the assumption of equal variances and calculate the standard error and the degrees of freedom. The degrees of freedom as easy: <span class="math inline">\(df = n_1 + n_2 - 2 = 50 + 50 - 2 = 98\)</span>. The standard error is <span class="math inline">\(s_{\bar{x}_1 - \bar{x}_2} = \sqrt{\dfrac{n_1 + n_2}{n_1n_2}}\sqrt{\dfrac{(n_1 -1)s^{2}_{x_{1}} + (n_2 -1)s^{2}_{x_2}}{\left(n_1 + n_2\right) -2}}\)</span> and plugging in the values we have</p>
+<p>The group standard deviations (125 and 115) and equal sample sizes make the pooled and Welch results very similar here. We show the pooled calculation for illustration, although Welch’s test is a sound default when equality of population variances is uncertain. The degrees of freedom are <span class="math inline">\(df=n_1+n_2-2=98\)</span>. The pooled standard error is <span class="math inline">\(s_{\bar{x}_1 - \bar{x}_2} = \sqrt{\dfrac{n_1 + n_2}{n_1n_2}}\sqrt{\dfrac{(n_1 -1)s^{2}_{x_{1}} + (n_2 -1)s^{2}_{x_2}}{\left(n_1 + n_2\right) -2}}\)</span>.</p>
 <p><span class="math display">\[s_{\bar{x}_1 - \bar{x}_2} = \sqrt{\dfrac{50 + 50}{2500}} \sqrt{\dfrac{(50 -1)(125^2) + (50 -1)(115^2)}{\left(50 + 50\right) -2}} = (0.2)(120.1041) = 24.02082\]</span></p>
 <p>The test statistic is</p>
 <p><span class="math display">\[t = \dfrac{\left( \bar{x}_1 - \bar{x}_2 \right) - \left( \mu_1 - \mu_2 \right) }{s_{\bar{x}_1 - \bar{x}_2}} = \dfrac{(526 - 475) - 0}{24.02082} = \dfrac{51}{24.02082} = 2.123158\]</span></p>
@@ -789,10 +859,10 @@ H_1: \text{ There is a difference in average circulation counts } (\mu_1 \neq \m
 <p>Say we have a large data-set with a variety of information about several cars, gathered in 1974. One of the questions we have been tasked with testing is whether the miles per gallon yield of manual transmission cars in 1974 was greater than that of automatic transmission cars. Assume they want us to use <span class="math inline">\(\alpha = 0.05\)</span>.</p>
 <p>We have thirteen manual transmission cars and 19 automatic transmission cars, and the means and standard deviations are 24.3923 and 6.1665 for manual, and 17.1473 and 3.8339 for automatic cars, respectively. The hypotheses are:</p>
 <p><span class="math display">\[\begin{array}{l}
-H_0: \text{Mean mpg of manual cars is } \leq \text{ the mean mpg of automatic cars} (\bar{x}_{man} \leq  \bar{x}_{auto}) \\
-H_1: \text{Mean mpg of manual cars is } &gt; \text{ the mean mpg of automatic cars} (\bar{x}_{man} &gt; \bar{x}_{auto})
+H_0: \text{Population mean mpg of manual cars is } \leq \text{ that of automatic cars} (\mu_{man} \leq \mu_{auto}) \\
+H_1: \text{Population mean mpg of manual cars is } &gt; \text{ that of automatic cars} (\mu_{man} &gt; \mu_{auto})
 \end{array}\]</span></p>
-<p>The calculated <span class="math inline">\(t\)</span> is 4.1061 and the p-value is 0.0001425, allowing us to reject the null hypothesis. The data suggest that average mpg of manual cars is not not <span class="math inline">\(\leq\)</span> that of automatic cars.</p>
+<p>The calculated <span class="math inline">\(t\)</span> is 4.1061 and the p-value is 0.0001425, allowing us to reject the null hypothesis. The data provide evidence that the population mean mpg of manual cars is greater than that of automatic cars.</p>
 <p>Note a couple of things here: (i) We have a one-tailed hypothesis test, and (ii) we are assuming equal variances since both conditions are not met for assuming unequal variances. In addition, note that the confidence interval is found to be <span class="math inline">\((3.6415, 10.8483)\)</span>, indicating that we can be 95% confident that the average manual mpg is higher than average automatic mpg by anywhere between 3.64 mpg and 10.84 mpg.</p>
 </div>
 <div id="caution" class="section level3 hasAnchor" number="8.6.3">
@@ -806,11 +876,7 @@ H_1: \text{Mean mpg of manual cars is } &gt; \text{ the mean mpg of automatic ca
 <p>We need not have the same individuals measured twice; paired t-tests also work with two groups with different individuals in each group <code>so long as the groups are similar</code>. What does that mean? Well, think of it as follows. Say I am interested in the hospitalization question. I know that if I administer some mental health assessment (most likely with a battery of survey-type questions) prior to hospitalization, and then I go back with the same battery of questions post-hospitalization, the patients might catch on to the purpose of my study and tailor their responses accordingly. If they don’t respond honestly to my questions, the resulting data will be contaminated. How can I get around this hurdle? A common technique used in situations such as these, where you cannot go back to the same set of individuals, involves finding individuals who are similar to the first group such that both groups have the same average age of the patients, the same proportion of males versus females, similar distributions of income, pre-existing medical conditions, and so on. If we employ such an approach then we have what we call a <code>matched pairs design</code>.</p>
 <div id="assumptions-2" class="section level3 unnumbered hasAnchor">
 <h3>Assumptions<a href="hypothesis.html#assumptions-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The following assumptions apply to paired t-tests:</p>
-<ol style="list-style-type: decimal">
-<li>Random samples … usually assumed to be true otherwise there would be no point to doing any statistical test</li>
-<li>Variables are drawn from normally distributed Populations … this can be formally tested and we will see how to carry out these tests shortly</li>
-</ol>
+<p>The paired t-test requires correctly matched pairs, independence between pairs, and an outcome measured on a quantitative scale. For small samples, the <em>pairwise differences</em> should be approximately normally distributed and free of severe outliers; the two raw variables themselves need not each be normal.</p>
 </div>
 <div id="the-testing-protocol" class="section level3 unnumbered hasAnchor">
 <h3>The Testing Protocol<a href="hypothesis.html#the-testing-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1136,7 +1202,7 @@ H_1: \text{ Intervention did boost ELA scores } (d &gt; 0)
 <div id="practice-problems-6" class="section level2 hasAnchor" number="8.8">
 <h2><span class="header-section-number">8.8</span> Practice Problems<a href="hypothesis.html#practice-problems-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Problem 1</strong>
-In the last few years Ohio, like many other states, established a framework for rating teachers and principals/assistant principals. Prior to this policy shift, the existing approach to rating educators yielded very few ineffective teachers, a problem well documented by <a href="https://tntp.org/assets/documents/TheWidgetEffect_2nd_ed.pdf">The Widget Effect</a>. Under the new rating system, the expectation is that the percentage of ineffective teachers will be greater than in the past. Assume that the old system yielded an average of 0.5% of ineffective educators in any school district., (i.e., <span class="math inline">\(\mu = 0.5\)</span>). Given this reality, establish the appropriate null and alternative hypotheses.</p>
+In the last few years Ohio, like many other states, established a framework for rating teachers and principals/assistant principals. Prior to this policy shift, the existing approach to rating educators yielded very few ineffective teachers, a problem well documented by <a href="https://tntp.org/assets/documents/TheWidgetEffect_2nd_ed.pdf">The Widget Effect</a>. Under the new rating system, the expectation is that the percentage of ineffective teachers will be greater than in the past. Assume that the old system yielded an average of 0.5% ineffective educators in a school district (i.e., <span class="math inline">\(\mu = 0.5\%\)</span>). Given this reality, establish the appropriate null and alternative hypotheses.</p>
 <p>Assume that your team of program evaluators carries out a statistical test and rejects the null hypothesis. Which error – Type I or Type II – should you be more concerned about?</p>
 <ol style="list-style-type: lower-alpha">
 <li>Explain, in the context of the problem, what committing a Type I error would mean.</li>
@@ -1154,7 +1220,7 @@ In the last few years Ohio, like many other states, established a framework for 
 <li><span class="math inline">\(H_0\)</span>: The number of migrant deaths in Mediterranean waters have not changed since last year</li>
 </ol>
 <p><strong>Problem 3</strong></p>
-<p>What factor can a research control to reduce the risk of committing a Type I error? What factor can a researcher control to reduce the standard error?</p>
+<p>What factor can a researcher control to reduce the risk of committing a Type I error? What factor can a researcher control to reduce the standard error?</p>
 <p><strong>Problem 4</strong></p>
 <p>A researcher carried out a one-tailed hypothesis test using <span class="math inline">\(\alpha = 0.01\)</span> and rejected <span class="math inline">\(H_0\)</span>. Another researcher repeated the hypothesis test but with <span class="math inline">\(\alpha = 0.05\)</span> and as a two-tailed test, and failed to reject <span class="math inline">\(H_0\)</span>. Can both analyses be correct? Explain your answer.</p>
 <p><strong>Problem 5</strong></p>
@@ -1295,14 +1361,43 @@ The <strong>Lalonde</strong> data-set with 722 observations on the following 12 
 <li>Was the average sentence length greater for Black versus non-Black individuals?</li>
 <li>What about for Hispanic versus non-Hispanic individuals?</li>
 </ol>
+<details class="practice-answer">
+<summary>
+Click here to see the answers
+</summary>
+<p><strong>1.</strong> <span class="math inline">\(H_0:p\leq0.005\)</span> and <span class="math inline">\(H_1:p&gt;0.005\)</span>. A Type I error would incorrectly conclude that the new system identifies a higher ineffective proportion; a Type II error would miss a real increase. Which matters more is a policy judgment about the costs of false labeling versus missed ineffective performance.</p>
+<p><strong>2.</strong> Complements are: (a) <span class="math inline">\(H_1:\mu_{now}\neq\mu_{1977}\)</span>; (b) <span class="math inline">\(H_0:\mu_{now}\leq\mu_{past}\)</span>; (c) <span class="math inline">\(H_1:p_{firstgen}&gt;p_{nonfirstgen}\)</span>; (d) <span class="math inline">\(H_0:\mu_{syrup}\leq\mu_{water}\)</span>; (e) <span class="math inline">\(H_0:\mu\leq20\)</span>; (f) <span class="math inline">\(H_1:\mu_{tutorial}\neq\mu_{control}\)</span>; (g) <span class="math inline">\(H_1:\mu_{now}\neq\mu_{lastyear}\)</span>.</p>
+<p><strong>3.</strong> Lowering <span class="math inline">\(\alpha\)</span> reduces the long-run Type I error rate. Increasing sample size, improving measurement reliability, or using a more efficient design reduces standard error.</p>
+<p><strong>4.</strong> Yes. The first test puts all of <span class="math inline">\(\alpha=0.01\)</span> in one tail; the second splits <span class="math inline">\(\alpha=0.05\)</span> across two tails. Depending on the observed direction and p-value, the rejection thresholds can produce different decisions. The alternative and <span class="math inline">\(\alpha\)</span> must be selected before seeing the data.</p>
+<p><strong>5–14 reproducible test guide.</strong> Use a one-sample t-test for a quantitative outcome against a benchmark, Welch’s two-sample t-test for independent groups, and a paired t-test when the same cities/countries are measured twice. Always report the estimate, difference direction, confidence interval, p-value, and a conclusion in context.</p>
+<details class="practice-code">
+<summary>
+Show optional R code
+</summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="hypothesis.html#cb4-1" tabindex="-1"></a><span class="co"># P5: 2015 violent-crime rate versus 800</span></span>
+<span id="cb4-2"><a href="hypothesis.html#cb4-2" tabindex="-1"></a><span class="fu">t.test</span>(<span class="fu">subset</span>(crime, year <span class="sc">==</span> <span class="dv">2015</span>)<span class="sc">$</span>violent_per_100k,</span>
+<span id="cb4-3"><a href="hypothesis.html#cb4-3" tabindex="-1"></a>       <span class="at">mu =</span> <span class="dv">800</span>, <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span>
+<span id="cb4-4"><a href="hypothesis.html#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="hypothesis.html#cb4-5" tabindex="-1"></a><span class="co"># P6: large versus smaller cities in 2015 (Welch is the default)</span></span>
+<span id="cb4-6"><a href="hypothesis.html#cb4-6" tabindex="-1"></a>d15 <span class="ot">&lt;-</span> <span class="fu">subset</span>(crime, year <span class="sc">==</span> <span class="dv">2015</span>)</span>
+<span id="cb4-7"><a href="hypothesis.html#cb4-7" tabindex="-1"></a>d15<span class="sc">$</span>large <span class="ot">&lt;-</span> d15<span class="sc">$</span>total_pop <span class="sc">&gt;=</span> <span class="dv">500000</span></span>
+<span id="cb4-8"><a href="hypothesis.html#cb4-8" tabindex="-1"></a><span class="fu">t.test</span>(violent_per_100k <span class="sc">~</span> large, <span class="at">data =</span> d15, <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>)</span>
+<span id="cb4-9"><a href="hypothesis.html#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="hypothesis.html#cb4-10" tabindex="-1"></a><span class="co"># P7: pair jurisdictions before testing 1975 versus 2015</span></span>
+<span id="cb4-11"><a href="hypothesis.html#cb4-11" tabindex="-1"></a>wide <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="fu">subset</span>(crime, year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1975</span>, <span class="dv">2015</span>)),</span>
+<span id="cb4-12"><a href="hypothesis.html#cb4-12" tabindex="-1"></a>                           <span class="at">id_cols =</span> jurisdiction,</span>
+<span id="cb4-13"><a href="hypothesis.html#cb4-13" tabindex="-1"></a>                           <span class="at">names_from =</span> year, <span class="at">values_from =</span> homicides_per_100k)</span>
+<span id="cb4-14"><a href="hypothesis.html#cb4-14" tabindex="-1"></a><span class="fu">t.test</span>(wide<span class="sc">$</span><span class="st">`</span><span class="at">2015</span><span class="st">`</span>, wide<span class="sc">$</span><span class="st">`</span><span class="at">1975</span><span class="st">`</span>, <span class="at">paired =</span> <span class="cn">TRUE</span>, <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>)</span></code></pre></div>
+</details>
+<p>For Problems 8–9, country measurements at two dates or for males/females are paired by country; remove aggregates and retain complete pairs. Problem 10 is a two-group comparison of district-level reading-proficiency rates. Problem 11 compares randomized treatment and control earnings with Welch’s t-test; randomization supports a causal interpretation. Problems 12–14 use Welch tests unless observations are explicitly matched. Check unit definitions and missing values before interpreting any result.</p>
+</details>
 
 <!-- Global site tag (gtag.js) - Google Analytics for introbook -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-107619033-2');
 </script>
 </div>

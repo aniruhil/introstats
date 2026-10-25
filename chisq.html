@@ -58,15 +58,73 @@
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
-<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -320,17 +378,43 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#why-not-run-many-unadjusted-t-tests"><i class="fa fa-check"></i><b>9.1</b> Why Not Run Many Unadjusted <span class="math inline">\(t\)</span>-tests?</a></li>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#the-logic-of-one-way-anova"><i class="fa fa-check"></i><b>9.2</b> The Logic of One-way ANOVA</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
-<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
+<li class="chapter" data-level="9.2.1" data-path="anova.html"><a href="anova.html#manual-decomposition-for-the-call-center-data"><i class="fa fa-check"></i><b>9.2.1</b> Manual decomposition for the call-center data</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
-<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#estimation-and-effect-size"><i class="fa fa-check"></i><b>9.3</b> Estimation and Effect Size</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
-<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#mean-differences-and-confidence-intervals"><i class="fa fa-check"></i><b>9.3.1</b> Mean differences and confidence intervals</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#eta2-and-omega2"><i class="fa fa-check"></i><b>9.3.2</b> <span class="math inline">\(\eta^2\)</span> and <span class="math inline">\(\omega^2\)</span></a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="anova.html"><a href="anova.html#planned-contrasts-and-post-hoc-comparisons"><i class="fa fa-check"></i><b>9.4</b> Planned Contrasts and Post-hoc Comparisons</a></li>
+<li class="chapter" data-level="9.5" data-path="anova.html"><a href="anova.html#assumptions-and-diagnostics"><i class="fa fa-check"></i><b>9.5</b> Assumptions and Diagnostics</a></li>
+<li class="chapter" data-level="9.6" data-path="anova.html"><a href="anova.html#alternatives-to-classical-one-way-anova"><i class="fa fa-check"></i><b>9.6</b> Alternatives to Classical One-way ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="anova.html"><a href="anova.html#welchs-anova"><i class="fa fa-check"></i><b>9.6.1</b> Welch’s ANOVA</a></li>
+<li class="chapter" data-level="9.6.2" data-path="anova.html"><a href="anova.html#kruskalwallis-and-robust-methods"><i class="fa fa-check"></i><b>9.6.2</b> Kruskal–Wallis and robust methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="anova.html"><a href="anova.html#one-way-examples"><i class="fa fa-check"></i><b>9.7</b> One-way Examples</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="anova.html"><a href="anova.html#corrected-example-systolic-blood-pressure-and-treatment"><i class="fa fa-check"></i><b>9.7.1</b> Corrected example: systolic blood pressure and treatment</a></li>
+<li class="chapter" data-level="9.7.2" data-path="anova.html"><a href="anova.html#presurgical-fitness-and-recovery-time"><i class="fa fa-check"></i><b>9.7.2</b> Presurgical fitness and recovery time</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="anova.html"><a href="anova.html#factorial-anova"><i class="fa fa-check"></i><b>9.8</b> Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="anova.html"><a href="anova.html#additive-effects-and-interaction-effects"><i class="fa fa-check"></i><b>9.8.1</b> Additive effects and interaction effects</a></li>
+<li class="chapter" data-level="9.8.2" data-path="anova.html"><a href="anova.html#drug-and-diet-factorial-example"><i class="fa fa-check"></i><b>9.8.2</b> Drug and diet factorial example</a></li>
+<li class="chapter" data-level="9.8.3" data-path="anova.html"><a href="anova.html#pedagogy-and-subject-follow-the-interaction"><i class="fa fa-check"></i><b>9.8.3</b> Pedagogy and subject: follow the interaction</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="anova.html"><a href="anova.html#balanced-and-unbalanced-designs"><i class="fa fa-check"></i><b>9.9</b> Balanced and Unbalanced Designs</a></li>
+<li class="chapter" data-level="9.10" data-path="anova.html"><a href="anova.html#related-designs-that-require-different-models"><i class="fa fa-check"></i><b>9.10</b> Related Designs That Require Different Models</a>
+<ul>
+<li class="chapter" data-level="9.10.1" data-path="anova.html"><a href="anova.html#repeated-measures-and-clustered-observations"><i class="fa fa-check"></i><b>9.10.1</b> Repeated measures and clustered observations</a></li>
+<li class="chapter" data-level="9.10.2" data-path="anova.html"><a href="anova.html#ancova"><i class="fa fa-check"></i><b>9.10.2</b> ANCOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="9.11" data-path="anova.html"><a href="anova.html#power-and-sample-size-planning"><i class="fa fa-check"></i><b>9.11</b> Power and Sample-size Planning</a></li>
+<li class="chapter" data-level="9.12" data-path="anova.html"><a href="anova.html#a-practical-anova-workflow"><i class="fa fa-check"></i><b>9.12</b> A Practical ANOVA Workflow</a></li>
+<li class="chapter" data-level="9.13" data-path="anova.html"><a href="anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.13</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
 <ul>
@@ -341,33 +425,43 @@ div.csl-indent {
 <li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
 <li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
 <li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
-<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-7"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-8"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#binary-outcomes-and-the-sampling-distribution-of-hat-p"><i class="fa fa-check"></i><b>11.1</b> Binary Outcomes and the Sampling Distribution of <span class="math inline">\(\hat p\)</span></a></li>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#one-population-proportion"><i class="fa fa-check"></i><b>11.2</b> One Population Proportion</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
-<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#confidence-intervals"><i class="fa fa-check"></i><b>11.2.1</b> Confidence intervals</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#one-proportion-hypothesis-tests"><i class="fa fa-check"></i><b>11.2.2</b> One-proportion hypothesis tests</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#two-independent-proportions"><i class="fa fa-check"></i><b>11.3</b> Two Independent Proportions</a>
 <ul>
-<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-11"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
-<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
-<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#the-two-proportion-z-test"><i class="fa fa-check"></i><b>11.3.1</b> The two-proportion z-test</a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#titanic-example"><i class="fa fa-check"></i><b>11.3.2</b> Titanic example</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#effect-sizes-for-a-2times2-table"><i class="fa fa-check"></i><b>11.3.3</b> Effect sizes for a <span class="math inline">\(2\times2\)</span> table</a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#a-more-informative-plot"><i class="fa fa-check"></i><b>11.3.4</b> A more informative plot</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#paired-proportions-mcnemars-test"><i class="fa fa-check"></i><b>11.4</b> Paired Proportions: McNemar’s Test</a></li>
+<li class="chapter" data-level="11.5" data-path="props.html"><a href="props.html#three-or-more-groups-pearsons-chi-square-test"><i class="fa fa-check"></i><b>11.5</b> Three or More Groups: Pearson’s Chi-square Test</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
-<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
-<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
-<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
-<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
-<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
-<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+<li class="chapter" data-level="11.5.1" data-path="props.html"><a href="props.html#follow-up-comparisons-and-residuals"><i class="fa fa-check"></i><b>11.5.1</b> Follow-up comparisons and residuals</a></li>
+<li class="chapter" data-level="11.5.2" data-path="props.html"><a href="props.html#effect-size-for-larger-tables"><i class="fa fa-check"></i><b>11.5.2</b> Effect size for larger tables</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#practice-problems-8"><i class="fa fa-check"></i><b>11.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.6" data-path="props.html"><a href="props.html#sparse-tables-and-fishers-exact-test"><i class="fa fa-check"></i><b>11.6</b> Sparse Tables and Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.7" data-path="props.html"><a href="props.html#ordered-groups-a-test-for-trend"><i class="fa fa-check"></i><b>11.7</b> Ordered Groups: A Test for Trend</a></li>
+<li class="chapter" data-level="11.8" data-path="props.html"><a href="props.html#stratified-comparisons-and-confounding"><i class="fa fa-check"></i><b>11.8</b> Stratified Comparisons and Confounding</a></li>
+<li class="chapter" data-level="11.9" data-path="props.html"><a href="props.html#complex-survey-data"><i class="fa fa-check"></i><b>11.9</b> Complex Survey Data</a></li>
+<li class="chapter" data-level="11.10" data-path="props.html"><a href="props.html#practical-significance-power-and-study-planning"><i class="fa fa-check"></i><b>11.10</b> Practical Significance, Power, and Study Planning</a>
+<ul>
+<li class="chapter" data-level="11.10.1" data-path="props.html"><a href="props.html#statistical-versus-practical-significance"><i class="fa fa-check"></i><b>11.10.1</b> Statistical versus practical significance</a></li>
+<li class="chapter" data-level="11.10.2" data-path="props.html"><a href="props.html#power-and-sample-size"><i class="fa fa-check"></i><b>11.10.2</b> Power and sample size</a></li>
+<li class="chapter" data-level="11.10.3" data-path="props.html"><a href="props.html#equivalence-and-noninferiority"><i class="fa fa-check"></i><b>11.10.3</b> Equivalence and noninferiority</a></li>
+</ul></li>
+<li class="chapter" data-level="11.11" data-path="props.html"><a href="props.html#choosing-the-appropriate-procedure"><i class="fa fa-check"></i><b>11.11</b> Choosing the Appropriate Procedure</a></li>
+<li class="chapter" data-level="11.12" data-path="props.html"><a href="props.html#reporting-and-interpretation"><i class="fa fa-check"></i><b>11.12</b> Reporting and Interpretation</a></li>
+<li class="chapter" data-level="11.13" data-path="props.html"><a href="props.html#optional-other-measures-of-categorical-association"><i class="fa fa-check"></i><b>11.13</b> Optional: Other Measures of Categorical Association</a></li>
+<li class="chapter" data-level="11.14" data-path="props.html"><a href="props.html#practice-problems-9"><i class="fa fa-check"></i><b>11.14</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
 <ul>
@@ -389,7 +483,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
 <li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
-<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
 <ul>
@@ -401,7 +495,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
 <li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-9"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-10"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
 <ul>
@@ -438,7 +532,7 @@ div.csl-indent {
 <p>Is this what we expected to see? We had no clue going in as to which one would be more effective than another and so the best we can do is admit that we started airing the PSAs assuming each was equally effective. If they were equally effective, then recall should be evenly distributed as well, i.e., exactly one-fourth of those surveyed should have recalled PSA a, another fourth b, another fourth c, and the last fourth d. That is, we expected to see the following distribution: PSA a = 75; PSA b= 75; PSA c = 75; PSA d = 75. This situation naturally leads to specific hypotheses:</p>
 <p><span class="math display">\[\begin{array}{l}
 H_0: \text{PSAs are equally effective, (i.e., } P_a = P_b = P_c = P_d = 25\%) \\  
-H_1: \text{PSAs are NOT equally effective, (i.e., } P_a \neq P_b \neq P_c \neq P_d = 25\%)
+H_1: \text{At least one PSA recall probability differs from 25\%}
 \end{array}\]</span></p>
 <p>Let us organize these two sets of numbers, the observed frequencies <span class="math inline">\((f_i)\)</span> and the expected frequencies <span class="math inline">\((e_i)\)</span>, into a table.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -646,14 +740,14 @@ Total
 </tr>
 </tbody>
 </table>
-<p>There is a unique <span class="math inline">\(\chi^2\)</span> distribution for each degree of freedom, as shown below. The horizontal “dashed” line shows you where the <span class="math inline">\(p-value = 0.05\)</span> lies on the <span class="math inline">\(y-axis\)</span> while the <span class="math inline">\(x-axis\)</span> shows you the <span class="math inline">\(\chi^2\)</span> values. For a given degrees of freedom, we look at where the calculated <span class="math inline">\(\chi^2\)</span> lies and if it is at or below the horizontal line, then we know the calculated <span class="math inline">\(\chi^2\)</span> has a <span class="math inline">\(p-value \leq 0.05\)</span>.</p>
+<p>There is a unique <span class="math inline">\(\chi^2\)</span> distribution for each degree of freedom, as shown below. The vertical axis is a probability <em>density</em>, not a p-value. For a goodness-of-fit statistic, the p-value is the area under the appropriate curve to the right of the observed <span class="math inline">\(\chi^2\)</span> value.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq2"></span>
 <img src="images/chisq_dist.png" alt="The Chi-Square distribution for specific degrees of freedom" width="70%" />
 <p class="caption">
 FIGURE 10.1: The Chi-Square distribution for specific degrees of freedom
 </p>
 </div>
-<p>In our case, the <span class="math inline">\(\chi^2_{df=3} = 15.33\)</span> is marked by the red dot and is clearly located well below the <span class="math inline">\(p-value = 0.05\)</span> line. In fact, the <span class="math inline">\(\chi^2_{df=3}\)</span> has a <span class="math inline">\(p-value = 0.001555293\)</span>. Consequently, we can reject the null hypothesis; the four PSAs are not recalled with equal frequency.</p>
+<p>In our case, <span class="math inline">\(\chi^2_{df=3}=15.33\)</span> and the right-tail area is <span class="math inline">\(p=0.001555293\)</span>. Consequently, we reject the null hypothesis; the four PSAs are not recalled with equal frequency.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq3"></span>
 <img src="_stats_files/figure-html/chisq3-1.png" alt="Chi-Square = 15.33, df = 3" width="70%" />
 <p class="caption">
@@ -935,14 +1029,14 @@ Total
 </tr>
 </tbody>
 </table>
-<p>We have six categories so <span class="math inline">\(df = 6 - 1 = 5\)</span>. The calculated <span class="math inline">\(\chi^2_{df=5} = 2.388461\)</span>, and has a <span class="math inline">\(p-value = 0.7931913\)</span>. Since this is greater than <span class="math inline">\(\alpha = 0.05\)</span> we fail to reject the null hypothesis; This sample suggests that M&amp;M colors are likely distributed as claimed by Mars Inc. The graph shows you where the <span class="math inline">\(p-value\)</span> falls for our calculated <span class="math inline">\(\chi^2\)</span>.</p>
+<p>We have six categories, so <span class="math inline">\(df=5\)</span>. The calculated <span class="math inline">\(\chi^2_{df=5}=2.388461\)</span> has a p-value of <span class="math inline">\(0.7931913\)</span>. Since this is greater than <span class="math inline">\(\alpha=0.05\)</span>, we fail to reject the null hypothesis. This sample does not provide evidence against Mars Inc.’s claimed color distribution. The graph shades the right-tail area that equals the p-value.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:chisq4"></span>
 <img src="_stats_files/figure-html/chisq4-1.png" alt="Chi-Square = 2.388461, df = 5" width="70%" />
 <p class="caption">
 FIGURE 10.3: Chi-Square = 2.388461, df = 5
 </p>
 </div>
-<p>In this example, we were unable to reject the null hypothesis because the difference between the observed and the expected frequencies was too small and these small differences yielded a small <span class="math inline">\(\chi^2\)</span> value. One simple takeaway, therefore, should be that if we see large differences <em>before we start the test</em> we should anticipate that the null hypothesis will not be rejected.</p>
+<p>In this example, the observed and expected frequencies were close, yielding a small <span class="math inline">\(\chi^2\)</span> value and a large p-value. In general, larger standardized observed-minus-expected differences produce a larger <span class="math inline">\(\chi^2\)</span> statistic and stronger evidence against the null hypothesis.</p>
 </div>
 <div id="example-2-10" class="section level4 hasAnchor" number="10.1.0.2">
 <h4><span class="header-section-number">10.1.0.2</span> Example 2<a href="chisq.html#example-2-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1465,7 +1559,7 @@ Total
 </table>
 <p>So we have <span class="math inline">\(\chi^2_{df=2} \approx 6.13\)</span>. Looking up the p-value in the <a href="http://www.socscistatistics.com/pvalues/chidistribution.aspx">online calculator</a> shows the <span class="math inline">\(p-value\)</span> to be <span class="math inline">\(0.046654\)</span>.</p>
 <p>Note that you can also <a href="http://vassarstats.net/newcs.html">conduct the test online</a> so long as you have the observed and expected frequencies.</p>
-<p>Note also that you cannot have more than 20% of your cells with an expected frequency <span class="math inline">\(&lt; 5\)</span> or any cell with expected frequencies <span class="math inline">\(&lt; 1\)</span>. When that happens, an alternative test, <code>Fisher's Exact Test</code>, is recommended.</p>
+<p>Observations must be independent and each observation must contribute to exactly one cell. A common approximation guideline is that no expected count should be below 1 and no more than 20% should be below 5. For sparse tables, consider combining categories only when substantively defensible, or use an exact or Monte Carlo procedure; Fisher’s exact test is especially common for small contingency tables.</p>
 <p>Here is another example, this time from the <a href="https://opendatapolicing.com/il/agency/168/">Open Data Policing project</a>. The specific piece of data I want to look at are the number of traffic stops resulting in a ticket, by race, in the Greater Chicago area.</p>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
@@ -2022,7 +2116,7 @@ Total
 </tbody>
 </table>
 <p>The probability of observing a given table would have to be calculated as <span class="math inline">\(\dfrac{(a+b)!(c+d)!(a+c)!(b+d)!}{n!a!b!c!d!}\)</span>, and once that is done, the <span class="math inline">\(p-value\)</span> for Fisher’s exact test calculated by summing all probabilities less than or equal to the probability of the observed table. I am sure it is clear why you would only do this test via a computer, not by hand. There is an <a href="http://vassarstats.net/index.html">online calculator</a> as well for <span class="math inline">\(2 \times 2\)</span>, <span class="math inline">\(2 \times 4\)</span>, and <span class="math inline">\(3 \times 3\)</span> contingency tables.</p>
-<p>To complete the example, note that the observed table has a probability of <span class="math inline">\(0.132\)</span>. The <span class="math inline">\(p-value\)</span> for Fisher’s exact test is the sum of four of the other tables <span class="math inline">\(0.132 + 0.132 + 0.0147 + 0.0147 = 0.293\)</span>. This <span class="math inline">\(pvalue\)</span> is not <span class="math inline">\(\leq 0.05\)</span> so we would fail to reject the null hypothesis; the data suggest that the row variable and the column variable are independent.</p>
+<p>To complete the example, note that the observed table has a probability of <span class="math inline">\(0.132\)</span>. The p-value for Fisher’s exact test is <span class="math inline">\(0.293\)</span>. Because it exceeds <span class="math inline">\(0.05\)</span>, we fail to reject the null hypothesis; the data provide insufficient evidence of an association between the row and column variables. Failure to reject does not prove independence.</p>
 </div>
 <div id="a-cautionary-tale" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> A Cautionary Tale<a href="chisq.html#a-cautionary-tale" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -2215,11 +2309,11 @@ Total
 </tbody>
 </table>
 <p>Now, if you calculated the <span class="math inline">\(\chi^2\)</span> for both sample sizes, the Small Sample would yield <span class="math inline">\(\chi^2_{df=4} = 10.59\)</span> and with <span class="math inline">\(\alpha = 0.01\)</span> you would be unable to reject the null hypothesis because the <span class="math inline">\(p-value = 0.03157959\)</span>.</p>
-<p>In contrast, the large sample would yield <span class="math inline">\(\chi^2_{df=4} = 106.03\)</span> and this would have a <span class="math inline">\(p-value = 5.109665e-22\)</span>, which is practically <span class="math inline">\(0\)</span>, easily allowing you to reject the null hypothesis of no association. How come such contrasting conclusions? Strictly because of a difference in sample size. What should we do then? For the moment, nothing, since the solutions go beyond the purview of this course. I do, however, want you to recognize the issue of large samples being preordained to more often than not yield statistically significant results. This recognition will come in handy should you ever have large samples to work with.</p>
+<p>In contrast, the large sample yields <span class="math inline">\(\chi^2_{df=4}=106.03\)</span> and an extremely small p-value. Multiplying every cell by 10 leaves the proportions and Cramér’s <span class="math inline">\(V\)</span> unchanged but multiplies Pearson’s <span class="math inline">\(\chi^2\)</span> by 10. Large samples can therefore detect very small departures from independence. Report an effect-size measure such as Cramér’s <span class="math inline">\(V\)</span> and interpret practical importance alongside the p-value.</p>
 </div>
-<div id="practice-problems-7" class="section level2 hasAnchor" number="10.5">
-<h2><span class="header-section-number">10.5</span> Practice Problems<a href="chisq.html#practice-problems-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For all problems involving a hypothesis test, you must state the null and the alternative nhypotheses AND your conclusion, in words. Merely saying “we reject” or “we fail to reject” is insufficient.</p>
+<div id="practice-problems-8" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Practice Problems<a href="chisq.html#practice-problems-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For all problems involving a hypothesis test, you must state the null and alternative hypotheses AND your conclusion, in words. Merely saying “we reject” or “we fail to reject” is insufficient.</p>
 <p><strong>Problem 1</strong></p>
 <p>Revisit the <code>Titanic</code> data-set and answer the following questions with a suitable test:</p>
 <ol style="list-style-type: lower-alpha">
@@ -2256,7 +2350,7 @@ questions:</p>
 <p>There is a common perception that hate crimes on university/college campuses tend to occur on the basis of sexual orientation (60%), then on the basis of race (30%), and the remaining hate crimes occur on the basis of religion. In 2015, the following number of hate crimes were recorded by the Federal Bureau of Investigation (FBI): Race = 108, Religion = 51, Sexual Orientation = 32. Does this suggest that the common perception should be rejected?</p>
 <p><strong>Problem 7</strong></p>
 <p>Windows kill more birds than any other human-related factor. Somewhere between 100 million and a billion birds die each year by crashing into windows on buildings in North America alone, which represents up to 5% of the total number of birds in the area. One possible mechanism to prevent this mortality is angling windows downwards slightly, which would then reflect the ground rather than an image of the sky to the flying bird. An experiment was done to look at the number of birds that died as a result of vertical windows, windows angled 20 degrees off vertical and 40 degrees off vertical (<span class="citation">Klem Jr et al. (<a href="#ref-KlemJr2004">2004</a>)</span>). The angles were randomly assigned to six identical windows, and the assignments were randomly varied daily for four months. The amount of time that windows were at each of the three angles was the same. Over the course of the experiment, 30 birds were killed by windows in the vertical orientation, 15 were killed by windows set at 20 degrees off vertical, and 8 were killed by windows set at 40 degrees.</p>
-<p>Use an appropriate test to determine if bird deaths are independent of window angles.</p>
+<p>Use a goodness-of-fit test to determine whether bird deaths are equally distributed across the three angle conditions, which had equal exposure time.</p>
 <p><strong>Problem 8</strong></p>
 <p>To the casual observer, any profession must have as many highly rated workers as there are poorly rated workers. Most of us assume the same should be true for education. In the recent past, <a href="https://www.regents.nysed.gov/common/regents/files/2014-2015%20STATEWIDE%20EVALUATION%20RESULTS.pdf">New York</a> had the following distribution of the 35,752 teachers for whom the state had calculated a teacher effectiveness rating: 7% Highly Effective; 77% Effective; 11% Developing, and 5% Ineffective.</p>
 <p>Use an appropriate test to determine if the casual observer’s assumption of evenly distributed teacher effectiveness has any merit to it.</p>
@@ -2364,7 +2458,7 @@ Number of Years
 <li>Is whether an employee left or stayed related to the relative level of their salary?</li>
 </ol>
 <p><strong>Problem 14</strong></p>
-<p>Since 1972, the <a href="http://gss.norc.org/Get-Documentation">General Social Survey (GSS)</a> has provided politicians, policymakers, and scholars with a clear and unbiased perspective on what Americans think and feel about such issues as national spending priorities, crime and punishment, intergroup relations, and confidence in institutions. Use the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/GSS2016.sav">2016 GSS data available here in SPSS format</a> or the [Excel data here]((<a href="https://aniruhil.github.io/avsr/teaching/dataviz/GSS2016.xlsx" class="uri">https://aniruhil.github.io/avsr/teaching/dataviz/GSS2016.xlsx</a>) to answer the following questions:</p>
+<p>Since 1972, the <a href="http://gss.norc.org/Get-Documentation">General Social Survey (GSS)</a> has provided politicians, policymakers, and scholars with a clear and unbiased perspective on what Americans think and feel about such issues as national spending priorities, crime and punishment, intergroup relations, and confidence in institutions. Use the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/GSS2016.sav">2016 GSS data available here in SPSS format</a> or the <a href="https://aniruhil.github.io/avsr/teaching/dataviz/GSS2016.xlsx">Excel data here</a> to answer the following questions:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Is there any relationship between an individual’s sex (<em>sex</em>) and their view of their own spirituality (<em>sprtprsn</em>)?</li>
 <li>Is there any relationship between an individual’s sex (<em>sex</em>) and whether they oppose or support capital punishment (<em>cappun</em>)?</li>
@@ -2383,16 +2477,39 @@ Number of Years
 </ul>
 <p>The threat level column was used to flag incidents for the story by Amy Brittain in October 2015. <a href="http://www.washingtonpost.com/sf/investigative/2015/10/24/on-duty-under-fire/" class="uri">http://www.washingtonpost.com/sf/investigative/2015/10/24/on-duty-under-fire/</a> As described in the story, the general criteria for the attack label was that there was the most direct and immediate threat to life. That would include incidents where officers or others were shot at, threatened with a gun, attacked with other weapons or physical force, etc. The attack category is meant to flag the highest level of threat. The other and undetermined categories represent all remaining cases. Other includes many incidents where officers or others faced significant threats. The threat column and the fleeing column are not necessarily related. For example, there is an incident in which the suspect is moving away from officers (fleeing) and at the same time turns to fire at gun at the officer. Also, attacks represent a status immediately before fatal shots by police; while fleeing could begin slightly earlier and involve a chase.</p>
 <ol style="list-style-type: lower-alpha">
-<li>Is there a relationship between the victim’s race/ethnicity and if the office was wearing a body camera or not?</li>
+<li>Is there a relationship between the victim’s race/ethnicity and whether the officer was wearing a body camera?</li>
 <li>Is there a relationship between the victim’s race/ethnicity and the victim’s sex?</li>
 </ol>
+<details class="practice-answer">
+<summary>
+Click here to see the answers
+</summary>
+<p>For every contingency-table test, state <span class="math inline">\(H_0\)</span>: the variables are independent, and <span class="math inline">\(H_1\)</span>: they are associated. Use <code>chisq.test(tab)</code> when expected counts are adequate; otherwise consider an exact or simulated p-value. Report conditional percentages for direction and Cramér’s <span class="math inline">\(V\)</span> for strength.</p>
+<details class="practice-code">
+<summary>
+Show optional R code
+</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="chisq.html#cb6-1" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">table</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y, <span class="at">useNA =</span> <span class="st">&quot;no&quot;</span>)</span>
+<span id="cb6-2"><a href="chisq.html#cb6-2" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(tab)</span>
+<span id="cb6-3"><a href="chisq.html#cb6-3" tabindex="-1"></a>fit<span class="sc">$</span>expected</span>
+<span id="cb6-4"><a href="chisq.html#cb6-4" tabindex="-1"></a><span class="fu">prop.table</span>(tab, <span class="dv">1</span>)</span>
+<span id="cb6-5"><a href="chisq.html#cb6-5" tabindex="-1"></a>DescTools<span class="sc">::</span><span class="fu">CramerV</span>(tab)</span></code></pre></div>
+</details>
+<p><strong>1–2 and 4–5.</strong> These are chi-square tests of independence. Recode documented missing/refused values to <code>NA</code> before testing. For ordered variables, the omnibus chi-square tests association but does not itself estimate a linear trend.</p>
+<p><strong>3.</strong> Expected counts are <span class="math inline">\(1746(0.31,0.33,0.36)\)</span>, matched to the observed category order. Compare observed and expected counts with a goodness-of-fit test.</p>
+<p><strong>6.</strong> Expected counts under the stated perception are <span class="math inline">\(191(0.30,0.10,0.60)\)</span>. The goodness-of-fit test strongly rejects that distribution; the observed counts contradict the claimed race/sexual-orientation pattern.</p>
+<p><strong>7.</strong> Equal exposure implies expected counts <span class="math inline">\(53/3\)</span> in each condition. A goodness-of-fit test assesses equal distribution. The decline as angle increases identifies the substantive pattern.</p>
+<p><strong>8.</strong> Equal ratings imply 25% in each category. Comparing that expectation with the observed 7%, 77%, 11%, and 5% overwhelmingly rejects equality.</p>
+<p><strong>9.</strong> The reported distribution—33%, 59%, 1%, 6%, and 1%—is plainly not equal. If treated as a sample, a goodness-of-fit test against 20% each rejects equality.</p>
+<p><strong>10.</strong> Compare observed counts (50, 39, 7, 4, 0) with expected counts (52, 34, 11, 2, 1). Sparse upper categories make the ordinary approximation questionable, so combine scientifically defensible tail categories or use a simulated or exact p-value.</p>
+<p><strong>11–15.</strong> Build the requested tables, remove documented missing codes, run the independence test, and describe conditional percentages. For loan amount in Problem 12, define five nonoverlapping bins before looking at the outcome; the modal group has the largest count. In large samples, emphasize Cramér’s <span class="math inline">\(V\)</span> and practical patterns rather than p-values alone.</p>
+</details>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-107619033-1');
 </script>
 </div>

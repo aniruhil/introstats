@@ -58,15 +58,73 @@
 <script src="libs/d3-4.10.2/d3.min.js"></script>
 <link href="libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet" />
 <script src="libs/collapsibleTree-binding-0.1.8/collapsibleTree.js"></script>
-<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.34.0/datatables.js"></script>
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -320,17 +378,43 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> Analysis of Variance (ANOVA)</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#the-logic-of-anova"><i class="fa fa-check"></i><b>9.1</b> The Logic of ANOVA</a>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#why-not-run-many-unadjusted-t-tests"><i class="fa fa-check"></i><b>9.1</b> Why Not Run Many Unadjusted <span class="math inline">\(t\)</span>-tests?</a></li>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#the-logic-of-one-way-anova"><i class="fa fa-check"></i><b>9.2</b> The Logic of One-way ANOVA</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="anova.html"><a href="anova.html#example-1-systolic-blood-pressure-and-treatments"><i class="fa fa-check"></i><b>9.1.1</b> Example 1: Systolic Blood Pressure and Treatments</a></li>
-<li class="chapter" data-level="9.1.2" data-path="anova.html"><a href="anova.html#example-2-pre-surgical-fitness-and-recovery-times"><i class="fa fa-check"></i><b>9.1.2</b> Example 2: Pre-surgical Fitness and Recovery Times</a></li>
+<li class="chapter" data-level="9.2.1" data-path="anova.html"><a href="anova.html#manual-decomposition-for-the-call-center-data"><i class="fa fa-check"></i><b>9.2.1</b> Manual decomposition for the call-center data</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#anova-with-two-independent-variables-aka-factors"><i class="fa fa-check"></i><b>9.2</b> ANOVA with two independent variables (aka factors)</a></li>
-<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#interaction-effects"><i class="fa fa-check"></i><b>9.3</b> Interaction effects</a>
+<li class="chapter" data-level="9.3" data-path="anova.html"><a href="anova.html#estimation-and-effect-size"><i class="fa fa-check"></i><b>9.3</b> Estimation and Effect Size</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#example-01-the-drug-and-diet-example-modified"><i class="fa fa-check"></i><b>9.3.1</b> Example 01: The Drug and Diet Example Modified</a></li>
-<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#example-02-pedagogy-subject-and-learning"><i class="fa fa-check"></i><b>9.3.2</b> Example 02: Pedagogy, Subject, and Learning</a></li>
+<li class="chapter" data-level="9.3.1" data-path="anova.html"><a href="anova.html#mean-differences-and-confidence-intervals"><i class="fa fa-check"></i><b>9.3.1</b> Mean differences and confidence intervals</a></li>
+<li class="chapter" data-level="9.3.2" data-path="anova.html"><a href="anova.html#eta2-and-omega2"><i class="fa fa-check"></i><b>9.3.2</b> <span class="math inline">\(\eta^2\)</span> and <span class="math inline">\(\omega^2\)</span></a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="anova.html"><a href="anova.html#planned-contrasts-and-post-hoc-comparisons"><i class="fa fa-check"></i><b>9.4</b> Planned Contrasts and Post-hoc Comparisons</a></li>
+<li class="chapter" data-level="9.5" data-path="anova.html"><a href="anova.html#assumptions-and-diagnostics"><i class="fa fa-check"></i><b>9.5</b> Assumptions and Diagnostics</a></li>
+<li class="chapter" data-level="9.6" data-path="anova.html"><a href="anova.html#alternatives-to-classical-one-way-anova"><i class="fa fa-check"></i><b>9.6</b> Alternatives to Classical One-way ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="anova.html"><a href="anova.html#welchs-anova"><i class="fa fa-check"></i><b>9.6.1</b> Welch’s ANOVA</a></li>
+<li class="chapter" data-level="9.6.2" data-path="anova.html"><a href="anova.html#kruskalwallis-and-robust-methods"><i class="fa fa-check"></i><b>9.6.2</b> Kruskal–Wallis and robust methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="anova.html"><a href="anova.html#one-way-examples"><i class="fa fa-check"></i><b>9.7</b> One-way Examples</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="anova.html"><a href="anova.html#corrected-example-systolic-blood-pressure-and-treatment"><i class="fa fa-check"></i><b>9.7.1</b> Corrected example: systolic blood pressure and treatment</a></li>
+<li class="chapter" data-level="9.7.2" data-path="anova.html"><a href="anova.html#presurgical-fitness-and-recovery-time"><i class="fa fa-check"></i><b>9.7.2</b> Presurgical fitness and recovery time</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="anova.html"><a href="anova.html#factorial-anova"><i class="fa fa-check"></i><b>9.8</b> Factorial ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="anova.html"><a href="anova.html#additive-effects-and-interaction-effects"><i class="fa fa-check"></i><b>9.8.1</b> Additive effects and interaction effects</a></li>
+<li class="chapter" data-level="9.8.2" data-path="anova.html"><a href="anova.html#drug-and-diet-factorial-example"><i class="fa fa-check"></i><b>9.8.2</b> Drug and diet factorial example</a></li>
+<li class="chapter" data-level="9.8.3" data-path="anova.html"><a href="anova.html#pedagogy-and-subject-follow-the-interaction"><i class="fa fa-check"></i><b>9.8.3</b> Pedagogy and subject: follow the interaction</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="anova.html"><a href="anova.html#balanced-and-unbalanced-designs"><i class="fa fa-check"></i><b>9.9</b> Balanced and Unbalanced Designs</a></li>
+<li class="chapter" data-level="9.10" data-path="anova.html"><a href="anova.html#related-designs-that-require-different-models"><i class="fa fa-check"></i><b>9.10</b> Related Designs That Require Different Models</a>
+<ul>
+<li class="chapter" data-level="9.10.1" data-path="anova.html"><a href="anova.html#repeated-measures-and-clustered-observations"><i class="fa fa-check"></i><b>9.10.1</b> Repeated measures and clustered observations</a></li>
+<li class="chapter" data-level="9.10.2" data-path="anova.html"><a href="anova.html#ancova"><i class="fa fa-check"></i><b>9.10.2</b> ANCOVA</a></li>
+</ul></li>
+<li class="chapter" data-level="9.11" data-path="anova.html"><a href="anova.html#power-and-sample-size-planning"><i class="fa fa-check"></i><b>9.11</b> Power and Sample-size Planning</a></li>
+<li class="chapter" data-level="9.12" data-path="anova.html"><a href="anova.html#a-practical-anova-workflow"><i class="fa fa-check"></i><b>9.12</b> A Practical ANOVA Workflow</a></li>
+<li class="chapter" data-level="9.13" data-path="anova.html"><a href="anova.html#practice-problems-7"><i class="fa fa-check"></i><b>9.13</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Working with Multinomial Data</a>
 <ul>
@@ -341,33 +425,43 @@ div.csl-indent {
 <li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#the-chi2-test-of-independenceassociation"><i class="fa fa-check"></i><b>10.2</b> The <span class="math inline">\(\chi^2\)</span> Test of Independence/Association</a></li>
 <li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#fishers-exact-test"><i class="fa fa-check"></i><b>10.3</b> Fisher’s Exact Test</a></li>
 <li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#a-cautionary-tale"><i class="fa fa-check"></i><b>10.4</b> A Cautionary Tale</a></li>
-<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-7"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#practice-problems-8"><i class="fa fa-check"></i><b>10.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="props.html"><a href="props.html"><i class="fa fa-check"></i><b>11</b> Comparing Proportions</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#specifyng-hypotheses-for-one-group-tests"><i class="fa fa-check"></i><b>11.1</b> Specifyng Hypotheses for One-group Tests</a>
+<li class="chapter" data-level="11.1" data-path="props.html"><a href="props.html#binary-outcomes-and-the-sampling-distribution-of-hat-p"><i class="fa fa-check"></i><b>11.1</b> Binary Outcomes and the Sampling Distribution of <span class="math inline">\(\hat p\)</span></a></li>
+<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#one-population-proportion"><i class="fa fa-check"></i><b>11.2</b> One Population Proportion</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="props.html"><a href="props.html#the-normal-approximation-to-one-group-tests"><i class="fa fa-check"></i><b>11.1.1</b> The Normal Approximation to One-group Tests</a></li>
-<li class="chapter" data-level="11.1.2" data-path="props.html"><a href="props.html#the-binomial-test"><i class="fa fa-check"></i><b>11.1.2</b> The Binomial Test</a></li>
+<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#confidence-intervals"><i class="fa fa-check"></i><b>11.2.1</b> Confidence intervals</a></li>
+<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#one-proportion-hypothesis-tests"><i class="fa fa-check"></i><b>11.2.2</b> One-proportion hypothesis tests</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="props.html"><a href="props.html#two-group-tests"><i class="fa fa-check"></i><b>11.2</b> Two-group Tests</a>
+<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#two-independent-proportions"><i class="fa fa-check"></i><b>11.3</b> Two Independent Proportions</a>
 <ul>
-<li class="chapter" data-level="11.2.1" data-path="props.html"><a href="props.html#example-1-11"><i class="fa fa-check"></i><b>11.2.1</b> Example 1</a></li>
-<li class="chapter" data-level="11.2.2" data-path="props.html"><a href="props.html#the-chi2-test"><i class="fa fa-check"></i><b>11.2.2</b> The <span class="math inline">\(\chi^2\)</span> Test</a></li>
-<li class="chapter" data-level="11.2.3" data-path="props.html"><a href="props.html#fishers-exact-test-1"><i class="fa fa-check"></i><b>11.2.3</b> Fisher’s Exact Test</a></li>
-<li class="chapter" data-level="11.2.4" data-path="props.html"><a href="props.html#example-2-12"><i class="fa fa-check"></i><b>11.2.4</b> Example 2</a></li>
+<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#the-two-proportion-z-test"><i class="fa fa-check"></i><b>11.3.1</b> The two-proportion z-test</a></li>
+<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#titanic-example"><i class="fa fa-check"></i><b>11.3.2</b> Titanic example</a></li>
+<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#effect-sizes-for-a-2times2-table"><i class="fa fa-check"></i><b>11.3.3</b> Effect sizes for a <span class="math inline">\(2\times2\)</span> table</a></li>
+<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#a-more-informative-plot"><i class="fa fa-check"></i><b>11.3.4</b> A more informative plot</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="props.html"><a href="props.html#measuring-the-strength-of-the-association"><i class="fa fa-check"></i><b>11.3</b> Measuring the Strength of the Association</a>
+<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#paired-proportions-mcnemars-test"><i class="fa fa-check"></i><b>11.4</b> Paired Proportions: McNemar’s Test</a></li>
+<li class="chapter" data-level="11.5" data-path="props.html"><a href="props.html#three-or-more-groups-pearsons-chi-square-test"><i class="fa fa-check"></i><b>11.5</b> Three or More Groups: Pearson’s Chi-square Test</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="props.html"><a href="props.html#goodman-kruskal-lambda-lambda"><i class="fa fa-check"></i><b>11.3.1</b> Goodman-Kruskal Lambda <span class="math inline">\((\lambda)\)</span></a></li>
-<li class="chapter" data-level="11.3.2" data-path="props.html"><a href="props.html#phi-phi-coefficient"><i class="fa fa-check"></i><b>11.3.2</b> Phi <span class="math inline">\((\phi)\)</span> Coefficient</a></li>
-<li class="chapter" data-level="11.3.3" data-path="props.html"><a href="props.html#cramers-v-and-contingency-c"><i class="fa fa-check"></i><b>11.3.3</b> Cramer’s <span class="math inline">\(V\)</span> and Contingency <span class="math inline">\(C\)</span></a></li>
-<li class="chapter" data-level="11.3.4" data-path="props.html"><a href="props.html#goodman-kruskal-gamma-gamma"><i class="fa fa-check"></i><b>11.3.4</b> Goodman-Kruskal Gamma <span class="math inline">\((\gamma)\)</span></a></li>
-<li class="chapter" data-level="11.3.5" data-path="props.html"><a href="props.html#kendalls-tau_b"><i class="fa fa-check"></i><b>11.3.5</b> Kendall’s <span class="math inline">\((\tau_b)\)</span></a></li>
-<li class="chapter" data-level="11.3.6" data-path="props.html"><a href="props.html#kendalls-tau_c"><i class="fa fa-check"></i><b>11.3.6</b> Kendall’s <span class="math inline">\((\tau_c)\)</span></a></li>
-<li class="chapter" data-level="11.3.7" data-path="props.html"><a href="props.html#somers-d"><i class="fa fa-check"></i><b>11.3.7</b> Somer’s <span class="math inline">\(D\)</span></a></li>
+<li class="chapter" data-level="11.5.1" data-path="props.html"><a href="props.html#follow-up-comparisons-and-residuals"><i class="fa fa-check"></i><b>11.5.1</b> Follow-up comparisons and residuals</a></li>
+<li class="chapter" data-level="11.5.2" data-path="props.html"><a href="props.html#effect-size-for-larger-tables"><i class="fa fa-check"></i><b>11.5.2</b> Effect size for larger tables</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="props.html"><a href="props.html#practice-problems-8"><i class="fa fa-check"></i><b>11.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.6" data-path="props.html"><a href="props.html#sparse-tables-and-fishers-exact-test"><i class="fa fa-check"></i><b>11.6</b> Sparse Tables and Fisher’s Exact Test</a></li>
+<li class="chapter" data-level="11.7" data-path="props.html"><a href="props.html#ordered-groups-a-test-for-trend"><i class="fa fa-check"></i><b>11.7</b> Ordered Groups: A Test for Trend</a></li>
+<li class="chapter" data-level="11.8" data-path="props.html"><a href="props.html#stratified-comparisons-and-confounding"><i class="fa fa-check"></i><b>11.8</b> Stratified Comparisons and Confounding</a></li>
+<li class="chapter" data-level="11.9" data-path="props.html"><a href="props.html#complex-survey-data"><i class="fa fa-check"></i><b>11.9</b> Complex Survey Data</a></li>
+<li class="chapter" data-level="11.10" data-path="props.html"><a href="props.html#practical-significance-power-and-study-planning"><i class="fa fa-check"></i><b>11.10</b> Practical Significance, Power, and Study Planning</a>
+<ul>
+<li class="chapter" data-level="11.10.1" data-path="props.html"><a href="props.html#statistical-versus-practical-significance"><i class="fa fa-check"></i><b>11.10.1</b> Statistical versus practical significance</a></li>
+<li class="chapter" data-level="11.10.2" data-path="props.html"><a href="props.html#power-and-sample-size"><i class="fa fa-check"></i><b>11.10.2</b> Power and sample size</a></li>
+<li class="chapter" data-level="11.10.3" data-path="props.html"><a href="props.html#equivalence-and-noninferiority"><i class="fa fa-check"></i><b>11.10.3</b> Equivalence and noninferiority</a></li>
+</ul></li>
+<li class="chapter" data-level="11.11" data-path="props.html"><a href="props.html#choosing-the-appropriate-procedure"><i class="fa fa-check"></i><b>11.11</b> Choosing the Appropriate Procedure</a></li>
+<li class="chapter" data-level="11.12" data-path="props.html"><a href="props.html#reporting-and-interpretation"><i class="fa fa-check"></i><b>11.12</b> Reporting and Interpretation</a></li>
+<li class="chapter" data-level="11.13" data-path="props.html"><a href="props.html#optional-other-measures-of-categorical-association"><i class="fa fa-check"></i><b>11.13</b> Optional: Other Measures of Categorical Association</a></li>
+<li class="chapter" data-level="11.14" data-path="props.html"><a href="props.html#practice-problems-9"><i class="fa fa-check"></i><b>11.14</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>12</b> Linear Regression</a>
 <ul>
@@ -389,7 +483,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="12.3.1" data-path="linreg.html"><a href="linreg.html#two-numeric-i.e.-continuous-independent-variables"><i class="fa fa-check"></i><b>12.3.1</b> Two Numeric (i.e., Continuous) Independent Variables</a></li>
 <li class="chapter" data-level="12.3.2" data-path="linreg.html"><a href="linreg.html#one-numeric-and-one-categorical-independent-variable"><i class="fa fa-check"></i><b>12.3.2</b> One Numeric and One Categorical Independent Variable</a></li>
-<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects-1"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
+<li class="chapter" data-level="12.3.3" data-path="linreg.html"><a href="linreg.html#interaction-effects"><i class="fa fa-check"></i><b>12.3.3</b> Interaction Effects</a></li>
 </ul></li>
 <li class="chapter" data-level="12.4" data-path="linreg.html"><a href="linreg.html#assumptions-of-linear-regression"><i class="fa fa-check"></i><b>12.4</b> Assumptions of Linear Regression</a>
 <ul>
@@ -401,7 +495,7 @@ div.csl-indent {
 <li class="chapter" data-level="12.4.6" data-path="linreg.html"><a href="linreg.html#assumptions-6-7-and-8"><i class="fa fa-check"></i><b>12.4.6</b> Assumptions 6, 7, and 8</a></li>
 <li class="chapter" data-level="12.4.7" data-path="linreg.html"><a href="linreg.html#assumptions-9-and-10"><i class="fa fa-check"></i><b>12.4.7</b> Assumptions 9 and 10</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-9"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
+<li class="chapter" data-level="12.5" data-path="linreg.html"><a href="linreg.html#practice-problems-10"><i class="fa fa-check"></i><b>12.5</b> Practice Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="summation.html"><a href="summation.html"><i class="fa fa-check"></i><b>13</b> The Summation Operator</a>
 <ul>
@@ -1615,6 +1709,24 @@ FIGURE 7.9: Student’s t versus the Standard Normal z Distribution
 <li>What is the 95% confidence interval for each estimate calculated above?</li>
 </ol>
 <script src="book-module03-apps.js"></script>
+<details class="practice-answer">
+<summary>
+Click here to see the answers
+</summary>
+<p>All decimals are truncated after four places.</p>
+<p><strong>1.</strong> (a) 0.0001; (b) 0.0342. The larger sample has the smaller standard error and therefore the smaller upper-tail probability.</p>
+<p><strong>2.</strong> (a) less than 0.0001; (b) 0.9701.</p>
+<p><strong>3.</strong> (a) <span class="math inline">\(z=-3.5355\)</span>; (b) 0.0002; (c) 0.9997.</p>
+<p><strong>4.</strong> Probability that <span class="math inline">\(\bar x\)</span> is within $0.03 of <span class="math inline">\(\mu\)</span>: (a) 0.7266; (b) 0.8427; (c) 0.9544; (d) choose <span class="math inline">\(n=100\)</span> to exceed 0.95.</p>
+<p><strong>5.</strong> (a) The point estimate is 3.7500. (b) 95% CI: (3.6999, 3.8000). (c) 99% CI: (3.6841, 3.8158). (d) The 99% interval is wider because greater confidence requires a larger critical value.</p>
+<p><strong>6.</strong> Calculate the sample mean, sample standard deviation, and <span class="math inline">\(SE=s/\sqrt n\)</span> after excluding missing values. Construct the requested t intervals with <span class="math inline">\(df=n-1\)</span>. Doubling <span class="math inline">\(n\)</span> multiplies the SE by <span class="math inline">\(1/\sqrt2\)</span>; quadrupling <span class="math inline">\(n\)</span> halves it.</p>
+<p><strong>7.</strong> (a) 6.9600%. (b) A one-sample upper-tail t-test of <span class="math inline">\(H_0:\mu\leq10\)</span> gives <span class="math inline">\(t=-3.2249\)</span>, <span class="math inline">\(df=4\)</span>, <span class="math inline">\(p=0.9839\)</span>; there is no evidence that the district mean exceeds 10%. (c) 95% CI: (4.3427%, 9.5772%). (d) Sample more schools with a representative design; precision improves roughly with <span class="math inline">\(1/\sqrt n\)</span>.</p>
+<p><strong>8.</strong> (a) <span class="math inline">\(91/220=0.4136\)</span>. (b) Wald 95% CI: (0.3485, 0.4787); a Wilson interval is preferable. This volunteer/occupational cohort does not identify a causal effect of radiation or support generalization to everyone exposed.</p>
+<p><strong>9.</strong> (a) Before: 0.5031; after: 0.4968. (b) Approximate 95% CI for “before”: (0.4942, 0.5120); the “after” interval is its complement. These counts do not establish that individuals delayed death.</p>
+<p><strong>10.</strong> (a) 95% CI: (0.0935, 0.1823). (b) 99% CI: (0.0796, 0.1962). (c) Both intervals lie well below 0.5, so the data strongly support planning alternative water delivery.</p>
+<p><strong>11.</strong> Treating 38% as exact, the conventional random-sample CI would be approximately <span class="math inline">\(0.38\pm1.96\sqrt{0.38(0.62)/4955}\)</span>. However, volunteer-sample selection bias is not represented by that margin of error, so the interval cannot validly be generalized to all adult males.</p>
+<p><strong>12.</strong> A death <em>rate per 100,000</em> is not a sample proportion. Report the state-specific 2012 and 2014 rates as point estimates. A confidence interval cannot be reconstructed from rates alone; it requires the death count and population denominator (or a supplied standard error). The original question’s request for a “population proportion of the death rate” was therefore misstated.</p>
+</details>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107619033-1"></script>
 <script>
